@@ -1,0 +1,2871 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-0 vector-feature-client-preferences-disabled vector-feature-client-prefs-pinned-disabled vector-feature-night-mode-disabled skin-night-mode-clientpref-0 vector-toc-available" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Single-precision floating-point format - Wikipedia</title>
+<script>(function(){var className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-0 vector-feature-client-preferences-disabled vector-feature-client-prefs-pinned-disabled vector-feature-night-mode-disabled skin-night-mode-clientpref-0 vector-toc-available";var cookie=document.cookie.match(/(?:^|; )enwikimwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],
+"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"63cd8f7c-5617-4af7-942c-5f8d9941ed6c","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Single-precision_floating-point_format","wgTitle":"Single-precision floating-point format","wgCurRevisionId":1204707580,"wgRevisionId":1204707580,"wgArticleId":23552864,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with short description","Short description matches Wikidata","Articles that may contain original research from February 2020","All articles that may contain original research","Wikipedia articles needing clarification from February 2020","All Wikipedia articles needing clarification","Binary arithmetic","Computer arithmetic","Floating point types"],
+"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Single-precision_floating-point_format","wgRelevantArticleId":23552864,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Single-precision","wgNoticeProject":"wikipedia","wgFlaggedRevsParams":{"tags":{"status":{"levels":1}}},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsFlags":6,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":false,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":20000,"wgULSCurrentAutonym":"English","wgInternalRedirectTargetUrl":"/wiki/Single-precision_floating-point_format","wgCentralAuthMobileDomain":false,"wgEditSubmitButtonLabelPublish":true,"wgULSPosition":"interlanguage",
+"wgULSisCompactLinksEnabled":false,"wgVector2022LanguageInHeader":true,"wgULSisLanguageSelectorEmpty":false,"wgWikibaseItemId":"Q1307173","wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"],"GEHomepageSuggestedEditsEnableTopics":true,"wgGETopicsMatchModeEnabled":false,"wgGEStructuredTaskRejectionReasonTextInputEnabled":false,"wgGELevelingUpEnabledForUser":false};RLSTATE={"skins.vector.user.styles":"ready","ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","skins.vector.user":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","codex-search-styles":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","jquery.makeCollapsible.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready","ext.wikimediaBadges":
+"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","mediawiki.toggleAllCollapsibles","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.js","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.gadget.ReferenceTooltips","ext.gadget.switcher","ext.urlShortener.toolbar","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.echo.centralauth","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.cx.uls.quick.actions","wikibase.client.vector-2022","ext.checkUser.clientHints","ext.growthExperiments.SuggestedEditSession"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=codex-search-styles%7Cext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cskins.vector.icons%2Cstyles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector-2022">
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022">
+<meta name="generator" content="MediaWiki 1.42.0-wmf.17">
+<meta name="referrer" content="origin">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1000">
+<meta property="og:title" content="Single-precision floating-point format - Wikipedia">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="//upload.wikimedia.org">
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Single-precision_floating-point_format">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Single-precision_floating-point_format&amp;action=edit">
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png">
+<link rel="icon" href="/static/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd">
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="//login.wikimedia.org">
+</head>
+<body class="skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Single-precision_floating-point_format rootpage-Single-precision_floating-point_format skin-vector-2022 action-view"><a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+<div class="vector-header-container">
+	<header class="vector-header mw-header">
+		<div class="vector-header-start">
+			<nav class="vector-main-menu-landmark" aria-label="Site" role="navigation">
+				
+<div id="vector-main-menu-dropdown" class="vector-dropdown vector-main-menu-dropdown vector-button-flush-left vector-button-flush-right"  >
+	<input type="checkbox" id="vector-main-menu-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-main-menu-dropdown" class="vector-dropdown-checkbox "  aria-label="Main menu"  >
+	<label id="vector-main-menu-dropdown-label" for="vector-main-menu-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu"></span>
+
+<span class="vector-dropdown-label-text">Main menu</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+				<div id="vector-main-menu-unpinned-container" class="vector-unpinned-container">
+		
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-main-menu-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="main-menu-pinned"
+	data-pinnable-element-id="vector-main-menu"
+	data-pinned-container-id="vector-main-menu-pinned-container"
+	data-unpinned-container-id="vector-main-menu-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Main menu</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-main-menu.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-main-menu.unpin">hide</button>
+</div>
+
+	
+<div id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation"  >
+	<div class="vector-menu-heading">
+		Navigation
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-contents" class="mw-list-item"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia"><span>Contents</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="/wiki/Portal:Current_events" title="Articles related to current events"><span>Current events</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x"><span>Random article</span></a></li><li id="n-aboutsite" class="mw-list-item"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works"><span>About Wikipedia</span></a></li><li id="n-contactpage" class="mw-list-item"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia"><span>Contact us</span></a></li><li id="n-sitesupport" class="mw-list-item"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation"><span>Donate</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	
+<div id="p-interaction" class="vector-menu mw-portlet mw-portlet-interaction"  >
+	<div class="vector-menu-heading">
+		Contribute
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-help" class="mw-list-item"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia"><span>Help</span></a></li><li id="n-introduction" class="mw-list-item"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia"><span>Learn to edit</span></a></li><li id="n-portal" class="mw-list-item"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors"><span>Community portal</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_upload_wizard" title="Add images or other media for use on Wikipedia"><span>Upload file</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div class="vector-main-menu-action vector-main-menu-action-lang-alert">
+	<div class="vector-main-menu-action-item">
+		<div class="vector-main-menu-action-heading vector-menu-heading">Languages</div>
+		<div class="vector-main-menu-action-content vector-menu-content">
+			<div class="mw-message-box cdx-message cdx-message--block mw-message-box-notice cdx-message--notice vector-language-sidebar-alert"><span class="cdx-message__icon"></span><div class="cdx-message__content">Language links are at the top of the page.</div></div>
+		</div>
+	</div>
+</div>
+
+</div>
+
+				</div>
+
+	</div>
+</div>
+
+		</nav>
+			
+<a href="/wiki/Main_Page" class="mw-logo">
+	<img class="mw-logo-icon" src="/static/images/icons/wikipedia.png" alt="" aria-hidden="true" height="50" width="50">
+	<span class="mw-logo-container">
+		<img class="mw-logo-wordmark" alt="Wikipedia" src="/static/images/mobile/copyright/wikipedia-wordmark-en.svg" style="width: 7.5em; height: 1.125em;">
+		<img class="mw-logo-tagline" alt="The Free Encyclopedia" src="/static/images/mobile/copyright/wikipedia-tagline-en.svg" width="117" height="13" style="width: 7.3125em; height: 0.8125em;">
+	</span>
+</a>
+
+		</div>
+		<div class="vector-header-end">
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<a href="/wiki/Special:Search" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only search-toggle" id="" title="Search Wikipedia [f]" accesskey="f"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search"></span>
+
+<span>Search</span>
+	</a>
+	<div class="vector-typeahead-search-container">
+		<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail cdx-typeahead-search--auto-expand-width">
+			<form action="/w/index.php" id="searchform" class="cdx-search-input cdx-search-input--has-end-button">
+				<div id="simpleSearch" class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+					<div class="cdx-text-input cdx-text-input--has-start-icon">
+						<input
+							class="cdx-text-input__input"
+							 type="search" name="search" placeholder="Search Wikipedia" aria-label="Search Wikipedia" autocapitalize="sentences" title="Search Wikipedia [f]" accesskey="f" id="searchInput"
+							>
+						<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+					</div>
+					<input type="hidden" name="title" value="Special:Search">
+				</div>
+				<button class="cdx-button cdx-search-input__end-button">Search</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+			<nav class="vector-user-links vector-user-links-wide" aria-label="Personal tools" role="navigation" >
+	<div class="vector-user-links-main">
+	
+<div id="p-vector-user-menu-preferences" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-userpage" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	<nav class="vector-client-prefs-landmark" aria-label="Appearance">
+		
+		
+	</nav>
+	
+<div id="p-vector-user-menu-notifications" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-createaccount-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="/w/index.php?title=Special:CreateAccount&amp;returnto=Single-precision+floating-point+format" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span>Create account</span></a>
+</li>
+<li id="pt-login-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="/w/index.php?title=Special:UserLogin&amp;returnto=Single-precision+floating-point+format" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o" class=""><span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	</div>
+	
+<div id="vector-user-links-dropdown" class="vector-dropdown vector-user-menu vector-button-flush-right vector-user-menu-logged-out"  title="Log in and more options" >
+	<input type="checkbox" id="vector-user-links-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-user-links-dropdown" class="vector-dropdown-checkbox "  aria-label="Personal tools"  >
+	<label id="vector-user-links-dropdown-label" for="vector-user-links-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-ellipsis mw-ui-icon-wikimedia-ellipsis"></span>
+
+<span class="vector-dropdown-label-text">Personal tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal user-links-collapsible-item"  title="User menu" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="user-links-collapsible-item mw-list-item"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Single-precision+floating-point+format" title="You are encouraged to create an account and log in; however, it is not mandatory"><span class="vector-icon mw-ui-icon-userAdd mw-ui-icon-wikimedia-userAdd"></span> <span>Create account</span></a></li><li id="pt-login" class="user-links-collapsible-item mw-list-item"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Single-precision+floating-point+format" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o"><span class="vector-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn"></span> <span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-user-menu-anon-editor" class="vector-menu mw-portlet mw-portlet-user-menu-anon-editor"  >
+	<div class="vector-menu-heading">
+		Pages for logged out editors <a href="/wiki/Help:Introduction" aria-label="Learn more about editing"><span>learn more</span></a>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-anoncontribs" class="mw-list-item"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y"><span>Contributions</span></a></li><li id="pt-anontalk" class="mw-list-item"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n"><span>Talk</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+
+</nav>
+
+		</div>
+	</header>
+</div>
+<div class="mw-page-container">
+	<div class="mw-page-container-inner">
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><!-- CentralNotice --></div>
+		</div>
+		<div class="vector-column-start">
+			<div class="vector-main-menu-container">
+		<div id="mw-navigation">
+			<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site" role="navigation">
+				<div id="vector-main-menu-pinned-container" class="vector-pinned-container">
+				
+				</div>
+		</nav>
+		</div>
+	</div>
+	<div class="vector-sticky-pinned-container">
+				<nav id="mw-panel-toc" role="navigation" aria-label="Contents" data-event-name="ui.sidebar-toc" class="mw-table-of-contents-container vector-toc-landmark">
+					<div id="vector-toc-pinned-container" class="vector-pinned-container">
+					<div id="vector-toc" class="vector-toc vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="toc-pinned"
+	data-pinnable-element-id="vector-toc"
+	
+	
+>
+	<h2 class="vector-pinnable-header-label">Contents</h2>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-toc.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-toc.unpin">hide</button>
+</div>
+
+
+	<ul class="vector-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="vector-toc-list-item vector-toc-level-1">
+			<a href="#" class="vector-toc-link">
+				<div class="vector-toc-text">(Top)</div>
+			</a>
+		</li>
+		<li id="toc-IEEE_754_standard:_binary32"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#IEEE_754_standard:_binary32">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">1</span>IEEE 754 standard: binary32</div>
+		</a>
+		
+			<button aria-controls="toc-IEEE_754_standard:_binary32-sublist" class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-toc-toggle">
+				<span class="vector-icon vector-icon--x-small mw-ui-icon-wikimedia-expand"></span>
+				<span>Toggle IEEE 754 standard: binary32 subsection</span>
+			</button>
+		
+		<ul id="toc-IEEE_754_standard:_binary32-sublist" class="vector-toc-list">
+			<li id="toc-Exponent_encoding"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Exponent_encoding">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">1.1</span>Exponent encoding</div>
+			</a>
+			
+			<ul id="toc-Exponent_encoding-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Converting_decimal_to_binary32"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Converting_decimal_to_binary32">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">1.2</span>Converting decimal to binary32</div>
+			</a>
+			
+			<ul id="toc-Converting_decimal_to_binary32-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Converting_binary32_to_decimal"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Converting_binary32_to_decimal">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">1.3</span>Converting binary32 to decimal</div>
+			</a>
+			
+			<ul id="toc-Converting_binary32_to_decimal-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Precision_limitations_on_decimal_values_(between_1_and_16777216)"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Precision_limitations_on_decimal_values_(between_1_and_16777216)">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">1.4</span>Precision limitations on decimal values (between 1 and 16777216)</div>
+			</a>
+			
+			<ul id="toc-Precision_limitations_on_decimal_values_(between_1_and_16777216)-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Precision_limitations_on_integer_values"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Precision_limitations_on_integer_values">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">1.5</span>Precision limitations on integer values</div>
+			</a>
+			
+			<ul id="toc-Precision_limitations_on_integer_values-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Notable_single-precision_cases"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Notable_single-precision_cases">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">1.6</span>Notable single-precision cases</div>
+			</a>
+			
+			<ul id="toc-Notable_single-precision_cases-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Optimizations"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Optimizations">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">1.7</span>Optimizations</div>
+			</a>
+			
+			<ul id="toc-Optimizations-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+	</li>
+	<li id="toc-See_also"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#See_also">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">2</span>See also</div>
+		</a>
+		
+		<ul id="toc-See_also-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-References"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#References">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">3</span>References</div>
+		</a>
+		
+		<ul id="toc-References-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-External_links"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#External_links">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">4</span>External links</div>
+		</a>
+		
+		<ul id="toc-External_links-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+</ul>
+</div>
+
+					</div>
+		</nav>
+			</div>
+		</div>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body" role="main">
+				<header class="mw-body-header vector-page-titlebar">
+					<nav role="navigation" aria-label="Contents" class="vector-toc-landmark">
+						
+<div id="vector-page-titlebar-toc" class="vector-dropdown vector-page-titlebar-toc vector-button-flush-left"  >
+	<input type="checkbox" id="vector-page-titlebar-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-titlebar-toc" class="vector-dropdown-checkbox "  aria-label="Toggle the table of contents"  >
+	<label id="vector-page-titlebar-toc-label" for="vector-page-titlebar-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet"></span>
+
+<span class="vector-dropdown-label-text">Toggle the table of contents</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+							<div id="vector-page-titlebar-toc-unpinned-container" class="vector-unpinned-container">
+			</div>
+		
+	</div>
+</div>
+
+					</nav>
+					<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Single-precision floating-point format</span></h1>
+							
+<div id="p-lang-btn" class="vector-dropdown mw-portlet mw-portlet-lang"  >
+	<input type="checkbox" id="p-lang-btn-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-lang-btn" class="vector-dropdown-checkbox mw-interlanguage-selector" aria-label="Go to an article in another language. Available in 12 languages"   >
+	<label id="p-lang-btn-label" for="p-lang-btn-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive mw-portlet-lang-heading-12" aria-hidden="true"  ><span class="vector-icon mw-ui-icon-language-progressive mw-ui-icon-wikimedia-language-progressive"></span>
+
+<span class="vector-dropdown-label-text">12 languages</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+		<div class="vector-menu-content">
+			
+			<ul class="vector-menu-content-list">
+				
+				<li class="interlanguage-link interwiki-ca mw-list-item"><a href="https://ca.wikipedia.org/wiki/Format_de_coma_flotant_de_precisi%C3%B3_simple" title="Format de coma flotant de precisió simple – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target"><span>Català</span></a></li><li class="interlanguage-link interwiki-cs mw-list-item"><a href="https://cs.wikipedia.org/wiki/Single_(form%C3%A1t_%C4%8D%C3%ADsla_v_pohybliv%C3%A9_%C5%99%C3%A1dov%C3%A9_%C4%8D%C3%A1rce)" title="Single (formát čísla v pohyblivé řádové čárce) – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target"><span>Čeština</span></a></li><li class="interlanguage-link interwiki-de mw-list-item"><a href="https://de.wikipedia.org/wiki/Einfache_Genauigkeit" title="Einfache Genauigkeit – German" lang="de" hreflang="de" class="interlanguage-link-target"><span>Deutsch</span></a></li><li class="interlanguage-link interwiki-es mw-list-item"><a href="https://es.wikipedia.org/wiki/Formato_en_coma_flotante_de_simple_precisi%C3%B3n" title="Formato en coma flotante de simple precisión – Spanish" lang="es" hreflang="es" class="interlanguage-link-target"><span>Español</span></a></li><li class="interlanguage-link interwiki-kk mw-list-item"><a href="https://kk.wikipedia.org/wiki/%D0%94%D0%B0%D1%80%D0%B0_%D0%B4%D3%99%D0%BB%D0%B4%D1%96%D0%BA" title="Дара дәлдік – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target"><span>Қазақша</span></a></li><li class="interlanguage-link interwiki-ja mw-list-item"><a href="https://ja.wikipedia.org/wiki/%E5%8D%98%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0" title="単精度浮動小数点数 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target"><span>日本語</span></a></li><li class="interlanguage-link interwiki-ru mw-list-item"><a href="https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D0%BB%D0%BE_%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0%D1%80%D0%BD%D0%BE%D0%B9_%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D0%B8" title="Число одинарной точности – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target"><span>Русский</span></a></li><li class="interlanguage-link interwiki-sr mw-list-item"><a href="https://sr.wikipedia.org/wiki/%D0%88%D0%B5%D0%B4%D0%BD%D0%BE%D1%81%D1%82%D1%80%D1%83%D0%BA%D0%B0_%D1%82%D0%B0%D1%87%D0%BD%D0%BE%D1%81%D1%82" title="Једнострука тачност – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target"><span>Српски / srpski</span></a></li><li class="interlanguage-link interwiki-tr mw-list-item"><a href="https://tr.wikipedia.org/wiki/Tek_duyarl%C4%B1kl%C4%B1_kayan_noktal%C4%B1_say%C4%B1_bi%C3%A7imi" title="Tek duyarlıklı kayan noktalı sayı biçimi – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target"><span>Türkçe</span></a></li><li class="interlanguage-link interwiki-uk mw-list-item"><a href="https://uk.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D0%BB%D0%BE_%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0%D1%80%D0%BD%D0%BE%D1%97_%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%96" title="Число одинарної точності – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target"><span>Українська</span></a></li><li class="interlanguage-link interwiki-vi mw-list-item"><a href="https://vi.wikipedia.org/wiki/%C4%90%E1%BB%8Bnh_d%E1%BA%A1ng_d%E1%BA%A5u_ph%E1%BA%A9y_%C4%91%E1%BB%99ng_%C4%91%E1%BB%99_ch%C3%ADnh_x%C3%A1c_%C4%91%C6%A1n" title="Định dạng dấu phẩy động độ chính xác đơn – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target"><span>Tiếng Việt</span></a></li><li class="interlanguage-link interwiki-zh mw-list-item"><a href="https://zh.wikipedia.org/wiki/%E5%96%AE%E7%B2%BE%E5%BA%A6%E6%B5%AE%E9%BB%9E%E6%95%B8" title="單精度浮點數 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target"><span>中文</span></a></li>
+			</ul>
+			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1307173#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+		</div>
+
+	</div>
+</div>
+</header>
+				<div class="vector-page-toolbar">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/Single-precision_floating-point_format" title="View the content page [c]" accesskey="c"><span>Article</span></a></li><li id="ca-talk" class="vector-tab-noicon mw-list-item"><a href="/wiki/Talk:Single-precision_floating-point_format" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t"><span>Talk</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+								
+<div id="p-variants" class="vector-dropdown emptyPortlet"  >
+	<input type="checkbox" id="p-variants-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-variants" class="vector-dropdown-checkbox " aria-label="Change language variant"   >
+	<label id="p-variants-label" for="p-variants-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">English</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+					
+<div id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+								
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/Single-precision_floating-point_format"><span>Read</span></a></li><li id="ca-edit" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=Single-precision_floating-point_format&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-history" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=Single-precision_floating-point_format&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+							</nav>
+				
+							<nav class="vector-page-tools-landmark" aria-label="Page tools">
+								
+<div id="vector-page-tools-dropdown" class="vector-dropdown vector-page-tools-dropdown"  >
+	<input type="checkbox" id="vector-page-tools-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-tools-dropdown" class="vector-dropdown-checkbox "  aria-label="Tools"  >
+	<label id="vector-page-tools-dropdown-label" for="vector-page-tools-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">Tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+									<div id="vector-page-tools-unpinned-container" class="vector-unpinned-container">
+						
+<div id="vector-page-tools" class="vector-page-tools vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-page-tools-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="page-tools-pinned"
+	data-pinnable-element-id="vector-page-tools"
+	data-pinned-container-id="vector-page-tools-pinned-container"
+	data-unpinned-container-id="vector-page-tools-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Tools</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-page-tools.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-page-tools.unpin">hide</button>
+</div>
+
+	
+<div id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-has-collapsible-items"  title="More options" >
+	<div class="vector-menu-heading">
+		Actions
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-more-view" class="selected vector-more-collapsible-item mw-list-item"><a href="/wiki/Single-precision_floating-point_format"><span>Read</span></a></li><li id="ca-more-edit" class="vector-more-collapsible-item mw-list-item"><a href="/w/index.php?title=Single-precision_floating-point_format&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-more-history" class="vector-more-collapsible-item mw-list-item"><a href="/w/index.php?title=Single-precision_floating-point_format&amp;action=history"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-tb" class="vector-menu mw-portlet mw-portlet-tb"  >
+	<div class="vector-menu-heading">
+		General
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/Single-precision_floating-point_format" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/Single-precision_floating-point_format" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u"><span>Upload file</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=Single-precision_floating-point_format&amp;oldid=1204707580" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=Single-precision_floating-point_format&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Single-precision_floating-point_format&amp;id=1204707580&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=Special:UrlShortener&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSingle-precision_floating-point_format"><span>Get shortened URL</span></a></li><li id="t-urlshortener-qrcode" class="mw-list-item"><a href="/w/index.php?title=Special:QrCode&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSingle-precision_floating-point_format"><span>Download QR code</span></a></li><li id="t-wikibase" class="mw-list-item"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1307173" title="Structured data on this page hosted by Wikidata [g]" accesskey="g"><span>Wikidata item</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-coll-print_export" class="vector-menu mw-portlet mw-portlet-coll-print_export"  >
+	<div class="vector-menu-heading">
+		Print/export
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="coll-download-as-rl" class="mw-list-item"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Single-precision_floating-point_format&amp;action=show-download-screen" title="Download this page as a PDF file"><span>Download as PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="/w/index.php?title=Single-precision_floating-point_format&amp;printable=yes" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+									</div>
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="vector-column-end">
+					<div class="vector-sticky-pinned-container">
+						<nav class="vector-page-tools-landmark" aria-label="Page tools">
+							<div id="vector-page-tools-pinned-container" class="vector-pinned-container">
+				
+							</div>
+		</nav>
+						<nav class="vector-client-prefs-landmark" aria-label="Appearance">
+						</nav>
+					</div>
+				</div>
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		</div>
+
+						<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+					</div>
+					<div id="contentSub"><div id="mw-content-subtitle"><span class="mw-redirectedfrom">(Redirected from <a href="/w/index.php?title=Single-precision&amp;redirect=no" class="mw-redirect" title="Single-precision">Single-precision</a>)</span></div></div>
+					
+					
+					<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">32-bit computer number format</div>
+<p><b>Single-precision floating-point format</b> (sometimes called <b>FP32</b> or <b>float32</b>) is a <a href="/wiki/Computer_number_format" title="Computer number format">computer number format</a>, usually occupying <a href="/wiki/32_bits" class="mw-redirect" title="32 bits">32 bits</a> in <a href="/wiki/Computer_memory" title="Computer memory">computer memory</a>; it represents a wide <a href="/wiki/Dynamic_range" title="Dynamic range">dynamic range</a> of numeric values by using a <a href="/wiki/Floating_point" class="mw-redirect" title="Floating point">floating radix point</a>.
+</p><p>A floating-point variable can represent a wider range of numbers than a <a href="/wiki/Fixed-point_arithmetic" title="Fixed-point arithmetic">fixed-point</a> variable of the same bit width at the cost of precision. A <a href="/wiki/Signedness" title="Signedness">signed</a> 32-bit <a href="/wiki/Integer" title="Integer">integer</a> variable has a maximum value of 2<sup>31</sup> − 1 = 2,147,483,647, whereas an <a href="/wiki/IEEE_754" title="IEEE 754">IEEE 754</a> 32-bit base-2 floating-point variable has a maximum value of (2 − 2<sup>−23</sup>) × 2<sup>127</sup> ≈ 3.4028235 × 10<sup>38</sup>. All integers with 7 or fewer decimal digits, and any 2<sup><i>n</i></sup> for a whole number −149 ≤ <i>n</i> ≤ 127, can be converted exactly into an IEEE 754 single-precision floating-point value.
+</p><p>In the <a href="/wiki/IEEE_754-2008" class="mw-redirect" title="IEEE 754-2008">IEEE 754-2008</a> <a href="/wiki/Standardization" title="Standardization">standard</a>, the 32-bit base-2 format is officially referred to as <b>binary32</b>; it was called <b>single</b> in <a href="/wiki/IEEE_754-1985" title="IEEE 754-1985">IEEE 754-1985</a>. IEEE 754 specifies additional floating-point types, such as 64-bit base-2 <i><a href="/wiki/Double-precision_floating-point_format" title="Double-precision floating-point format">double precision</a></i> and, more recently, base-10 representations.
+</p><p>One of the first <a href="/wiki/Programming_language" title="Programming language">programming languages</a> to provide single- and double-precision floating-point data types was <a href="/wiki/Fortran" title="Fortran">Fortran</a>. Before the widespread adoption of IEEE 754-1985, the representation and properties of floating-point data types depended on the <a href="/wiki/Computer_manufacturer" class="mw-redirect" title="Computer manufacturer">computer manufacturer</a> and computer model, and upon decisions made by programming-language designers. E.g., <a href="/wiki/GW-BASIC" title="GW-BASIC">GW-BASIC</a>'s single-precision data type was the <a href="/wiki/32-bit_MBF" class="mw-redirect" title="32-bit MBF">32-bit MBF</a> floating-point format.
+</p><p>Single precision is termed <i>REAL</i> in <a href="/wiki/Fortran" title="Fortran">Fortran</a>,<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> <i>SINGLE-FLOAT</i> in <a href="/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a>,<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> <i>float</i> in <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a>, <a href="/wiki/C%2B%2B" title="C++">C++</a>, <a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>, <a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a>,<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> <i>Float</i> in <a href="/wiki/Haskell_(programming_language)" class="mw-redirect" title="Haskell (programming language)">Haskell</a><sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> and <a href="/wiki/Swift_(programming_language)" title="Swift (programming language)">Swift</a>,<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> and <i>Single</i> in <a href="/wiki/Object_Pascal" title="Object Pascal">Object Pascal</a> (<a href="/wiki/Delphi_(programming_language)" class="mw-redirect" title="Delphi (programming language)">Delphi</a>), <a href="/wiki/Visual_Basic" title="Visual Basic">Visual Basic</a>, and <a href="/wiki/MATLAB" title="MATLAB">MATLAB</a>. However, <i>float</i> in <a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python</a>, <a href="/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a>, <a href="/wiki/PHP" title="PHP">PHP</a>, and <a href="/wiki/OCaml" title="OCaml">OCaml</a> and <i>single</i> in versions of <a href="/wiki/GNU_Octave" title="GNU Octave">Octave</a> before 3.2 refer to <a href="/wiki/Double-precision_floating-point_format" title="Double-precision floating-point format">double-precision</a> numbers. In most implementations of <a href="/wiki/PostScript" title="PostScript">PostScript</a>, and some <a href="/wiki/Embedded_systems" class="mw-redirect" title="Embedded systems">embedded systems</a>, the only supported precision is single.
+</p>
+<style data-mw-deduplicate="TemplateStyles:r1129693374">.mw-parser-output .hlist dl,.mw-parser-output .hlist ol,.mw-parser-output .hlist ul{margin:0;padding:0}.mw-parser-output .hlist dd,.mw-parser-output .hlist dt,.mw-parser-output .hlist li{margin:0;display:inline}.mw-parser-output .hlist.inline,.mw-parser-output .hlist.inline dl,.mw-parser-output .hlist.inline ol,.mw-parser-output .hlist.inline ul,.mw-parser-output .hlist dl dl,.mw-parser-output .hlist dl ol,.mw-parser-output .hlist dl ul,.mw-parser-output .hlist ol dl,.mw-parser-output .hlist ol ol,.mw-parser-output .hlist ol ul,.mw-parser-output .hlist ul dl,.mw-parser-output .hlist ul ol,.mw-parser-output .hlist ul ul{display:inline}.mw-parser-output .hlist .mw-empty-li{display:none}.mw-parser-output .hlist dt::after{content:": "}.mw-parser-output .hlist dd::after,.mw-parser-output .hlist li::after{content:" · ";font-weight:bold}.mw-parser-output .hlist dd:last-child::after,.mw-parser-output .hlist dt:last-child::after,.mw-parser-output .hlist li:last-child::after{content:none}.mw-parser-output .hlist dd dd:first-child::before,.mw-parser-output .hlist dd dt:first-child::before,.mw-parser-output .hlist dd li:first-child::before,.mw-parser-output .hlist dt dd:first-child::before,.mw-parser-output .hlist dt dt:first-child::before,.mw-parser-output .hlist dt li:first-child::before,.mw-parser-output .hlist li dd:first-child::before,.mw-parser-output .hlist li dt:first-child::before,.mw-parser-output .hlist li li:first-child::before{content:" (";font-weight:normal}.mw-parser-output .hlist dd dd:last-child::after,.mw-parser-output .hlist dd dt:last-child::after,.mw-parser-output .hlist dd li:last-child::after,.mw-parser-output .hlist dt dd:last-child::after,.mw-parser-output .hlist dt dt:last-child::after,.mw-parser-output .hlist dt li:last-child::after,.mw-parser-output .hlist li dd:last-child::after,.mw-parser-output .hlist li dt:last-child::after,.mw-parser-output .hlist li li:last-child::after{content:")";font-weight:normal}.mw-parser-output .hlist ol{counter-reset:listitem}.mw-parser-output .hlist ol>li{counter-increment:listitem}.mw-parser-output .hlist ol>li::before{content:" "counter(listitem)"\a0 "}.mw-parser-output .hlist dd ol>li:first-child::before,.mw-parser-output .hlist dt ol>li:first-child::before,.mw-parser-output .hlist li ol>li:first-child::before{content:" ("counter(listitem)"\a0 "}</style><style data-mw-deduplicate="TemplateStyles:r1126788409">.mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}</style><style data-mw-deduplicate="TemplateStyles:r1045330069">.mw-parser-output .sidebar{width:22em;float:right;clear:right;margin:0.5em 0 1em 1em;background:#f8f9fa;border:1px solid #aaa;padding:0.2em;text-align:center;line-height:1.4em;font-size:88%;border-collapse:collapse;display:table}body.skin-minerva .mw-parser-output .sidebar{display:table!important;float:right!important;margin:0.5em 0 1em 1em!important}.mw-parser-output .sidebar-subgroup{width:100%;margin:0;border-spacing:0}.mw-parser-output .sidebar-left{float:left;clear:left;margin:0.5em 1em 1em 0}.mw-parser-output .sidebar-none{float:none;clear:both;margin:0.5em 1em 1em 0}.mw-parser-output .sidebar-outer-title{padding:0 0.4em 0.2em;font-size:125%;line-height:1.2em;font-weight:bold}.mw-parser-output .sidebar-top-image{padding:0.4em}.mw-parser-output .sidebar-top-caption,.mw-parser-output .sidebar-pretitle-with-top-image,.mw-parser-output .sidebar-caption{padding:0.2em 0.4em 0;line-height:1.2em}.mw-parser-output .sidebar-pretitle{padding:0.4em 0.4em 0;line-height:1.2em}.mw-parser-output .sidebar-title,.mw-parser-output .sidebar-title-with-pretitle{padding:0.2em 0.8em;font-size:145%;line-height:1.2em}.mw-parser-output .sidebar-title-with-pretitle{padding:0.1em 0.4em}.mw-parser-output .sidebar-image{padding:0.2em 0.4em 0.4em}.mw-parser-output .sidebar-heading{padding:0.1em 0.4em}.mw-parser-output .sidebar-content{padding:0 0.5em 0.4em}.mw-parser-output .sidebar-content-with-subgroup{padding:0.1em 0.4em 0.2em}.mw-parser-output .sidebar-above,.mw-parser-output .sidebar-below{padding:0.3em 0.8em;font-weight:bold}.mw-parser-output .sidebar-collapse .sidebar-above,.mw-parser-output .sidebar-collapse .sidebar-below{border-top:1px solid #aaa;border-bottom:1px solid #aaa}.mw-parser-output .sidebar-navbar{text-align:right;font-size:115%;padding:0 0.4em 0.4em}.mw-parser-output .sidebar-list-title{padding:0 0.4em;text-align:left;font-weight:bold;line-height:1.6em;font-size:105%}.mw-parser-output .sidebar-list-title-c{padding:0 0.4em;text-align:center;margin:0 3.3em}@media(max-width:720px){body.mediawiki .mw-parser-output .sidebar{width:100%!important;clear:both;float:none!important;margin-left:0!important;margin-right:0!important}}</style><table class="sidebar nomobile nowraplinks plainlist"><tbody><tr><th class="sidebar-title"><a href="/wiki/Floating-point_arithmetic" title="Floating-point arithmetic">Floating-point</a> <a href="/wiki/Computer_number_format" title="Computer number format">formats</a></th></tr><tr><th class="sidebar-heading">
+<a href="/wiki/IEEE_754" title="IEEE 754">IEEE 754</a></th></tr><tr><td class="sidebar-content">
+<ul><li>16-bit: <a href="/wiki/Half-precision_floating-point_format" title="Half-precision floating-point format">Half</a> (binary16)</li>
+<li>32-bit: <a class="mw-selflink selflink">Single</a> (binary32), <a href="/wiki/Decimal32_floating-point_format" title="Decimal32 floating-point format">decimal32</a></li>
+<li>64-bit: <a href="/wiki/Double-precision_floating-point_format" title="Double-precision floating-point format">Double</a> (binary64), <a href="/wiki/Decimal64_floating-point_format" title="Decimal64 floating-point format">decimal64</a></li>
+<li>128-bit: <a href="/wiki/Quadruple-precision_floating-point_format" title="Quadruple-precision floating-point format">Quadruple</a> (binary128), <a href="/wiki/Decimal128_floating-point_format" title="Decimal128 floating-point format">decimal128</a></li>
+<li>256-bit: <a href="/wiki/Octuple-precision_floating-point_format" title="Octuple-precision floating-point format">Octuple</a> (binary256)</li>
+<li><a href="/wiki/Extended_precision" title="Extended precision">Extended precision</a></li></ul></td>
+</tr><tr><th class="sidebar-heading">
+Other</th></tr><tr><td class="sidebar-content">
+<ul><li><a href="/wiki/Minifloat" title="Minifloat">Minifloat</a></li>
+<li><a href="/wiki/Bfloat16_floating-point_format" title="Bfloat16 floating-point format">bfloat16</a></li>
+<li><a href="/w/index.php?title=TensorFloat-32&amp;action=edit&amp;redlink=1" class="new" title="TensorFloat-32 (page does not exist)">TensorFloat-32</a></li>
+<li><a href="/wiki/Microsoft_Binary_Format" title="Microsoft Binary Format">Microsoft Binary Format</a></li>
+<li><a href="/wiki/IBM_hexadecimal_floating-point" title="IBM hexadecimal floating-point">IBM floating-point architecture</a></li>
+<li><a href="/wiki/Power_Management_Bus#Linear11_Floating_Point_Format" title="Power Management Bus">PMBus Linear-11</a></li>
+<li><a href="/wiki/G.711" title="G.711">G.711 8-bit floats</a></li></ul></td>
+</tr><tr><th class="sidebar-heading">
+Alternatives</th></tr><tr><td class="sidebar-content">
+<ul><li><a href="/wiki/Arbitrary-precision_arithmetic" title="Arbitrary-precision arithmetic">Arbitrary precision</a></li></ul></td>
+</tr><tr><td class="sidebar-navbar"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1129693374"><style data-mw-deduplicate="TemplateStyles:r1063604349">.mw-parser-output .navbar{display:inline;font-size:88%;font-weight:normal}.mw-parser-output .navbar-collapse{float:left;text-align:left}.mw-parser-output .navbar-boxtext{word-spacing:0}.mw-parser-output .navbar ul{display:inline-block;white-space:nowrap;line-height:inherit}.mw-parser-output .navbar-brackets::before{margin-right:-0.125em;content:"[ "}.mw-parser-output .navbar-brackets::after{margin-left:-0.125em;content:" ]"}.mw-parser-output .navbar li{word-spacing:-0.125em}.mw-parser-output .navbar a>span,.mw-parser-output .navbar a>abbr{text-decoration:inherit}.mw-parser-output .navbar-mini abbr{font-variant:small-caps;border-bottom:none;text-decoration:none;cursor:inherit}.mw-parser-output .navbar-ct-full{font-size:114%;margin:0 7em}.mw-parser-output .navbar-ct-mini{font-size:114%;margin:0 4em}</style><div class="navbar plainlinks hlist navbar-mini"><ul><li class="nv-view"><a href="/wiki/Template:Floating-point" title="Template:Floating-point"><abbr title="View this template">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Floating-point" title="Template talk:Floating-point"><abbr title="Discuss this template">t</abbr></a></li><li class="nv-edit"><a href="/wiki/Special:EditPage/Template:Floating-point" title="Special:EditPage/Template:Floating-point"><abbr title="Edit this template">e</abbr></a></li></ul></div></td></tr></tbody></table>
+<meta property="mw:PageProp/toc" />
+<h2><span class="mw-headline" id="IEEE_754_standard:_binary32">IEEE 754 standard: binary32</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Single-precision_floating-point_format&amp;action=edit&amp;section=1" title="Edit section: IEEE 754 standard: binary32"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The IEEE 754 standard specifies a <i>binary32</i> as having:
+</p>
+<ul><li><a href="/wiki/Sign_bit" title="Sign bit">Sign bit</a>: 1 bit</li>
+<li><a href="/wiki/Exponent" class="mw-redirect" title="Exponent">Exponent</a> width: 8 bits</li>
+<li><a href="/wiki/Significand" title="Significand">Significand</a> <a href="/wiki/Precision_(arithmetic)" class="mw-redirect" title="Precision (arithmetic)">precision</a>: 24 bits (23 explicitly stored)</li></ul>
+<p>This gives from 6 to 9 <a href="/wiki/Significant_figures" title="Significant figures">significant decimal digits</a> precision. If a decimal string with at most 6 significant digits is converted to the IEEE 754 single-precision format, giving a normal number, and then converted back to a decimal string with the same number of digits, the final result should match the original string. If an IEEE 754 single-precision number is converted to a decimal string with at least 9 significant digits, and then converted back to single-precision representation, the final result must match the original number.<sup id="cite_ref-whyieee_6-0" class="reference"><a href="#cite_note-whyieee-6">&#91;6&#93;</a></sup>
+</p><p>The sign bit determines the sign of the number, which is the sign of the significand as well. The exponent is an 8-bit unsigned integer from 0 to 255, in <a href="/wiki/Exponent_bias" title="Exponent bias">biased form</a>: an exponent value of 127 represents the actual zero. Exponents range from −126 to +127 because exponents of −127 (all 0s) and +128 (all 1s) are reserved for special numbers.
+</p><p>The true significand includes 23 fraction bits to the right of the binary point and an <i>implicit leading bit</i> (to the left of the binary point) with value 1, unless the exponent is stored with all zeros. Thus only 23 fraction bits of the <a href="/wiki/Significand" title="Significand">significand</a> appear in the memory format, but the total precision is 24 bits (equivalent to log<sub>10</sub>(2<sup>24</sup>) ≈ 7.225 decimal digits). The bits are laid out as follows:
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="/wiki/File:Float_example.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Float_example.svg/590px-Float_example.svg.png" decoding="async" width="590" height="75" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Float_example.svg/885px-Float_example.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Float_example.svg/1180px-Float_example.svg.png 2x" data-file-width="590" data-file-height="75" /></a></span>
+</p><p>The real value assumed by a given 32-bit <i>binary32</i> data with a given <i>sign</i>, biased exponent <i>e</i> (the 8-bit unsigned integer), and a <i>23-bit fraction</i> is
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (-1)^{b_{31}}\times 2^{(b_{30}b_{29}\dots b_{23})_{2}-127}\times (1.b_{22}b_{21}\dots b_{0})_{2}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <msub>
+              <mi>b</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>31</mn>
+              </mrow>
+            </msub>
+          </mrow>
+        </msup>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo stretchy="false">(</mo>
+            <msub>
+              <mi>b</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>30</mn>
+              </mrow>
+            </msub>
+            <msub>
+              <mi>b</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>29</mn>
+              </mrow>
+            </msub>
+            <mo>&#x2026;<!-- … --></mo>
+            <msub>
+              <mi>b</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>23</mn>
+              </mrow>
+            </msub>
+            <msub>
+              <mo stretchy="false">)</mo>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msub>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>127</mn>
+          </mrow>
+        </msup>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mo stretchy="false">(</mo>
+        <mn>1.</mn>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>22</mn>
+          </mrow>
+        </msub>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>21</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2026;<!-- … --></mo>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (-1)^{b_{31}}\times 2^{(b_{30}b_{29}\dots b_{23})_{2}-127}\times (1.b_{22}b_{21}\dots b_{0})_{2}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5858d28deea4237a7c1320f7e649fb104aecb0e5" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:44.655ex; height:3.343ex;" alt="{\displaystyle (-1)^{b_{31}}\times 2^{(b_{30}b_{29}\dots b_{23})_{2}-127}\times (1.b_{22}b_{21}\dots b_{0})_{2}}"></span>,</dd></dl>
+<p>which yields
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\text{value}}=(-1)^{\text{sign}}\times 2^{(E-127)}\times \left(1+\sum _{i=1}^{23}b_{23-i}2^{-i}\right).}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>value</mtext>
+        </mrow>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtext>sign</mtext>
+          </mrow>
+        </msup>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo stretchy="false">(</mo>
+            <mi>E</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>127</mn>
+            <mo stretchy="false">)</mo>
+          </mrow>
+        </msup>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mn>1</mn>
+            <mo>+</mo>
+            <munderover>
+              <mo>&#x2211;<!-- ∑ --></mo>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>i</mi>
+                <mo>=</mo>
+                <mn>1</mn>
+              </mrow>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>23</mn>
+              </mrow>
+            </munderover>
+            <msub>
+              <mi>b</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>23</mn>
+                <mo>&#x2212;<!-- − --></mo>
+                <mi>i</mi>
+              </mrow>
+            </msub>
+            <msup>
+              <mn>2</mn>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mo>&#x2212;<!-- − --></mo>
+                <mi>i</mi>
+              </mrow>
+            </msup>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\text{value}}=(-1)^{\text{sign}}\times 2^{(E-127)}\times \left(1+\sum _{i=1}^{23}b_{23-i}2^{-i}\right).}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/908c155d6002beadf2df5a7c05e954ec2373ca16" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -3.171ex; width:50.089ex; height:7.509ex;" alt="{\displaystyle {\text{value}}=(-1)^{\text{sign}}\times 2^{(E-127)}\times \left(1+\sum _{i=1}^{23}b_{23-i}2^{-i}\right).}"></span></dd></dl>
+<p>In this example:
+</p>
+<ul><li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\text{sign}}=b_{31}=0}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>sign</mtext>
+        </mrow>
+        <mo>=</mo>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>31</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\text{sign}}=b_{31}=0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/96081f6275fd96ac2f4c372a99815666b0cd8578" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.671ex; width:14.251ex; height:2.509ex;" alt="{\displaystyle {\text{sign}}=b_{31}=0}"></span>,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (-1)^{\text{sign}}=(-1)^{0}=+1\in \{-1,+1\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtext>sign</mtext>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mo fence="false" stretchy="false">{</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (-1)^{\text{sign}}=(-1)^{0}=+1\in \{-1,+1\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0a90f54d0fe45a9887712a22af41d2bca3280f40" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:34.996ex; height:3.176ex;" alt="{\displaystyle (-1)^{\text{sign}}=(-1)^{0}=+1\in \{-1,+1\}}"></span>,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle E=(b_{30}b_{29}\dots b_{23})_{2}=\sum _{i=0}^{7}b_{23+i}2^{+i}=124\in \{1,\ldots ,(2^{8}-1)-1\}=\{1,\ldots ,254\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>E</mi>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>30</mn>
+          </mrow>
+        </msub>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>29</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2026;<!-- … --></mo>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>23</mn>
+          </mrow>
+        </msub>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>7</mn>
+          </mrow>
+        </munderover>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>23</mn>
+            <mo>+</mo>
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>+</mo>
+            <mi>i</mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mn>124</mn>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mo fence="false" stretchy="false">{</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo>,</mo>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>8</mn>
+          </mrow>
+        </msup>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <mo fence="false" stretchy="false">}</mo>
+        <mo>=</mo>
+        <mo fence="false" stretchy="false">{</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo>,</mo>
+        <mn>254</mn>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle E=(b_{30}b_{29}\dots b_{23})_{2}=\sum _{i=0}^{7}b_{23+i}2^{+i}=124\in \{1,\ldots ,(2^{8}-1)-1\}=\{1,\ldots ,254\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0748952cf41422005210266aa788bdff6a682e93" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -3.005ex; width:80.032ex; height:7.343ex;" alt="{\displaystyle E=(b_{30}b_{29}\dots b_{23})_{2}=\sum _{i=0}^{7}b_{23+i}2^{+i}=124\in \{1,\ldots ,(2^{8}-1)-1\}=\{1,\ldots ,254\}}"></span>,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 2^{(E-127)}=2^{124-127}=2^{-3}\in \{2^{-126},\ldots ,2^{127}\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo stretchy="false">(</mo>
+            <mi>E</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>127</mn>
+            <mo stretchy="false">)</mo>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>124</mn>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>127</mn>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>3</mn>
+          </mrow>
+        </msup>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mo fence="false" stretchy="false">{</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>126</mn>
+          </mrow>
+        </msup>
+        <mo>,</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo>,</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>127</mn>
+          </mrow>
+        </msup>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 2^{(E-127)}=2^{124-127}=2^{-3}\in \{2^{-126},\ldots ,2^{127}\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2b299142776e4561b6df482e5055abe73717ea5f" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:44.315ex; height:3.343ex;" alt="{\displaystyle 2^{(E-127)}=2^{124-127}=2^{-3}\in \{2^{-126},\ldots ,2^{127}\}}"></span>,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 1.b_{22}b_{21}...b_{0}=1+\sum _{i=1}^{23}b_{23-i}2^{-i}=1+1\cdot 2^{-2}=1.25\in \{1,1+2^{-23},\ldots ,2-2^{-23}\}\subset [1;2-2^{-23}]\subset [1;2)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>1.</mn>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>22</mn>
+          </mrow>
+        </msub>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>21</mn>
+          </mrow>
+        </msub>
+        <mo>.</mo>
+        <mo>.</mo>
+        <mo>.</mo>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mn>1</mn>
+        <mo>+</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>23</mn>
+          </mrow>
+        </munderover>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>23</mn>
+            <mo>&#x2212;<!-- − --></mo>
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mi>i</mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mn>1</mn>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo>&#x22C5;<!-- ⋅ --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mn>1.25</mn>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mo fence="false" stretchy="false">{</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mn>1</mn>
+        <mo>+</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>23</mn>
+          </mrow>
+        </msup>
+        <mo>,</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo>,</mo>
+        <mn>2</mn>
+        <mo>&#x2212;<!-- − --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>23</mn>
+          </mrow>
+        </msup>
+        <mo fence="false" stretchy="false">}</mo>
+        <mo>&#x2282;<!-- ⊂ --></mo>
+        <mo stretchy="false">[</mo>
+        <mn>1</mn>
+        <mo>;</mo>
+        <mn>2</mn>
+        <mo>&#x2212;<!-- − --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>23</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">]</mo>
+        <mo>&#x2282;<!-- ⊂ --></mo>
+        <mo stretchy="false">[</mo>
+        <mn>1</mn>
+        <mo>;</mo>
+        <mn>2</mn>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 1.b_{22}b_{21}...b_{0}=1+\sum _{i=1}^{23}b_{23-i}2^{-i}=1+1\cdot 2^{-2}=1.25\in \{1,1+2^{-23},\ldots ,2-2^{-23}\}\subset [1;2-2^{-23}]\subset [1;2)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4c8b8c401c6cf3993878f339f4a19970db99f883" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -3.005ex; width:104.283ex; height:7.343ex;" alt="{\displaystyle 1.b_{22}b_{21}...b_{0}=1+\sum _{i=1}^{23}b_{23-i}2^{-i}=1+1\cdot 2^{-2}=1.25\in \{1,1+2^{-23},\ldots ,2-2^{-23}\}\subset [1;2-2^{-23}]\subset [1;2)}"></span>.</li></ul>
+<p>thus:
+</p>
+<ul><li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\text{value}}=(+1)\times 2^{-3}\times 1.25=+0.15625}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>value</mtext>
+        </mrow>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>3</mn>
+          </mrow>
+        </msup>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mn>1.25</mn>
+        <mo>=</mo>
+        <mo>+</mo>
+        <mn>0.15625</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\text{value}}=(+1)\times 2^{-3}\times 1.25=+0.15625}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cd5edd892c8f3ec5d72a54e21d3a019316210d87" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:39.078ex; height:3.176ex;" alt="{\displaystyle {\text{value}}=(+1)\times 2^{-3}\times 1.25=+0.15625}"></span>.</li></ul>
+<p>Note:
+</p>
+<ul><li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 1+2^{-23}\approx 1.000\,000\,119}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>1</mn>
+        <mo>+</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>23</mn>
+          </mrow>
+        </msup>
+        <mo>&#x2248;<!-- ≈ --></mo>
+        <mn>1.000</mn>
+        <mspace width="thinmathspace" />
+        <mn>000</mn>
+        <mspace width="thinmathspace" />
+        <mn>119</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 1+2^{-23}\approx 1.000\,000\,119}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d08053f4baddc21bfcdbec8c89b8e735be52f27d" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.505ex; width:24.464ex; height:2.843ex;" alt="{\displaystyle 1+2^{-23}\approx 1.000\,000\,119}"></span>,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 2-2^{-23}\approx 1.999\,999\,881}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>2</mn>
+        <mo>&#x2212;<!-- − --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>23</mn>
+          </mrow>
+        </msup>
+        <mo>&#x2248;<!-- ≈ --></mo>
+        <mn>1.999</mn>
+        <mspace width="thinmathspace" />
+        <mn>999</mn>
+        <mspace width="thinmathspace" />
+        <mn>881</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 2-2^{-23}\approx 1.999\,999\,881}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ce47f6c39e0335b80947ddc95583c868f8c0321b" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.505ex; width:24.464ex; height:2.843ex;" alt="{\displaystyle 2-2^{-23}\approx 1.999\,999\,881}"></span>,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 2^{-126}\approx 1.175\,494\,35\times 10^{-38}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>126</mn>
+          </mrow>
+        </msup>
+        <mo>&#x2248;<!-- ≈ --></mo>
+        <mn>1.175</mn>
+        <mspace width="thinmathspace" />
+        <mn>494</mn>
+        <mspace width="thinmathspace" />
+        <mn>35</mn>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>10</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>38</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 2^{-126}\approx 1.175\,494\,35\times 10^{-38}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7bfb26bc897cf01e8e7902165a4524a9b72d40c1" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:28.441ex; height:2.676ex;" alt="{\displaystyle 2^{-126}\approx 1.175\,494\,35\times 10^{-38}}"></span>,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 2^{+127}\approx 1.701\,411\,83\times 10^{+38}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>+</mo>
+            <mn>127</mn>
+          </mrow>
+        </msup>
+        <mo>&#x2248;<!-- ≈ --></mo>
+        <mn>1.701</mn>
+        <mspace width="thinmathspace" />
+        <mn>411</mn>
+        <mspace width="thinmathspace" />
+        <mn>83</mn>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>10</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>+</mo>
+            <mn>38</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 2^{+127}\approx 1.701\,411\,83\times 10^{+38}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1ab06d44d76052baf79579bb30739f07ea8cfd84" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:28.441ex; height:2.676ex;" alt="{\displaystyle 2^{+127}\approx 1.701\,411\,83\times 10^{+38}}"></span>.</li></ul>
+<h3><span class="mw-headline" id="Exponent_encoding">Exponent encoding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Single-precision_floating-point_format&amp;action=edit&amp;section=2" title="Edit section: Exponent encoding"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The single-precision binary floating-point exponent is encoded using an <a href="/wiki/Offset_binary" title="Offset binary">offset-binary</a> representation, with the zero offset being 127; also known as exponent bias in the IEEE 754 standard.
+</p>
+<ul><li>E<sub>min</sub> = 01<sub>H</sub>−7F<sub>H</sub> = −126</li>
+<li>E<sub>max</sub> = FE<sub>H</sub>−7F<sub>H</sub> = 127</li>
+<li><a href="/wiki/Exponent_bias" title="Exponent bias">Exponent bias</a> = 7F<sub>H</sub> = 127</li></ul>
+<p>Thus, in order to get the true exponent as defined by the offset-binary representation, the offset of 127 has to be subtracted from the stored exponent.
+</p><p>The stored exponents 00<sub>H</sub> and FF<sub>H</sub> are interpreted specially.
+</p>
+<table class="wikitable" style="text-align:center">
+<tbody><tr>
+<th>Exponent</th>
+<th>fraction = 0</th>
+<th>fraction ≠ 0</th>
+<th>Equation
+</th></tr>
+<tr>
+<td>00<sub>H</sub> = 00000000<sub>2</sub></td>
+<td><a href="/wiki/Signed_zero" title="Signed zero">±zero</a></td>
+<td><a href="/wiki/Denormal_numbers" class="mw-redirect" title="Denormal numbers">subnormal number</a></td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (-1)^{\text{sign}}\times 2^{-126}\times 0.{\text{fraction}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtext>sign</mtext>
+          </mrow>
+        </msup>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>126</mn>
+          </mrow>
+        </msup>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mn>0.</mn>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>fraction</mtext>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (-1)^{\text{sign}}\times 2^{-126}\times 0.{\text{fraction}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/89aa571d7222a6f40b9555e223f39841a66769de" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:28.307ex; height:3.176ex;" alt="{\displaystyle (-1)^{\text{sign}}\times 2^{-126}\times 0.{\text{fraction}}}"></span>
+</td></tr>
+<tr>
+<td>01<sub>H</sub>, ..., FE<sub>H</sub> = 00000001<sub>2</sub>, ..., 11111110<sub>2</sub></td>
+<td colspan="2">normal value</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (-1)^{\text{sign}}\times 2^{{\text{exponent}}-127}\times 1.{\text{fraction}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtext>sign</mtext>
+          </mrow>
+        </msup>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mtext>exponent</mtext>
+            </mrow>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>127</mn>
+          </mrow>
+        </msup>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mn>1.</mn>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>fraction</mtext>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (-1)^{\text{sign}}\times 2^{{\text{exponent}}-127}\times 1.{\text{fraction}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/880024aafd9dc9d2bdcdfe96230e48d4321b0df0" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:34.839ex; height:3.176ex;" alt="{\displaystyle (-1)^{\text{sign}}\times 2^{{\text{exponent}}-127}\times 1.{\text{fraction}}}"></span>
+</td></tr>
+<tr>
+<td>FF<sub>H</sub> = 11111111<sub>2</sub></td>
+<td>±<a href="/wiki/Infinity" title="Infinity">infinity</a></td>
+<td><a href="/wiki/NaN" title="NaN">NaN</a> (quiet, signalling)</td>
+<td>
+</td></tr></tbody></table>
+<p>The minimum positive normal value is <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 2^{-126}\approx 1.18\times 10^{-38}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>126</mn>
+          </mrow>
+        </msup>
+        <mo>&#x2248;<!-- ≈ --></mo>
+        <mn>1.18</mn>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>10</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>38</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 2^{-126}\approx 1.18\times 10^{-38}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c29435f115a741dcf10c151572c8d4868cc6ccf4" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:20.692ex; height:2.676ex;" alt="{\displaystyle 2^{-126}\approx 1.18\times 10^{-38}}"></span> and the minimum positive (subnormal) value is <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 2^{-149}\approx 1.4\times 10^{-45}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>149</mn>
+          </mrow>
+        </msup>
+        <mo>&#x2248;<!-- ≈ --></mo>
+        <mn>1.4</mn>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>10</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>45</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 2^{-149}\approx 1.4\times 10^{-45}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ca993e63a5aefe58fcccc9b2d52c260c80a67c77" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:19.529ex; height:2.676ex;" alt="{\displaystyle 2^{-149}\approx 1.4\times 10^{-45}}"></span>.
+</p>
+<h3><span class="mw-headline" id="Converting_decimal_to_binary32">Converting decimal to binary32</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Single-precision_floating-point_format&amp;action=edit&amp;section=3" title="Edit section: Converting decimal to binary32"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<style data-mw-deduplicate="TemplateStyles:r1097763485">.mw-parser-output .ambox{border:1px solid #a2a9b1;border-left:10px solid #36c;background-color:#fbfbfb;box-sizing:border-box}.mw-parser-output .ambox+link+.ambox,.mw-parser-output .ambox+link+style+.ambox,.mw-parser-output .ambox+link+link+.ambox,.mw-parser-output .ambox+.mw-empty-elt+link+.ambox,.mw-parser-output .ambox+.mw-empty-elt+link+style+.ambox,.mw-parser-output .ambox+.mw-empty-elt+link+link+.ambox{margin-top:-1px}html body.mediawiki .mw-parser-output .ambox.mbox-small-left{margin:4px 1em 4px 0;overflow:hidden;width:238px;border-collapse:collapse;font-size:88%;line-height:1.25em}.mw-parser-output .ambox-speedy{border-left:10px solid #b32424;background-color:#fee7e6}.mw-parser-output .ambox-delete{border-left:10px solid #b32424}.mw-parser-output .ambox-content{border-left:10px solid #f28500}.mw-parser-output .ambox-style{border-left:10px solid #fc3}.mw-parser-output .ambox-move{border-left:10px solid #9932cc}.mw-parser-output .ambox-protection{border-left:10px solid #a2a9b1}.mw-parser-output .ambox .mbox-text{border:none;padding:0.25em 0.5em;width:100%}.mw-parser-output .ambox .mbox-image{border:none;padding:2px 0 2px 0.5em;text-align:center}.mw-parser-output .ambox .mbox-imageright{border:none;padding:2px 0.5em 2px 0;text-align:center}.mw-parser-output .ambox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .ambox .mbox-image-div{width:52px}html.client-js body.skin-minerva .mw-parser-output .mbox-text-span{margin-left:23px!important}@media(min-width:720px){.mw-parser-output .ambox{margin:0 10%}}</style><table class="box-Original_research plainlinks metadata ambox ambox-content ambox-Original_research" role="presentation"><tbody><tr><td class="mbox-image"><div class="mbox-image-div"><span typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></span></span></div></td><td class="mbox-text"><div class="mbox-text-span">This section <b>possibly contains <a href="/wiki/Wikipedia:No_original_research" title="Wikipedia:No original research">original research</a></b>.<span class="hide-when-compact"> Please <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Single-precision_floating-point_format&amp;action=edit">improve it</a> by <a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verifying</a> the claims made and adding <a href="/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a>. Statements consisting only of original research should be removed.</span>  <span class="date-container"><i>(<span class="date">February 2020</span>)</i></span><span class="hide-when-compact"><i> (<small><a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a></small>)</i></span></div></td></tr></tbody></table>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1097763485"><table class="box-Confusing plainlinks metadata ambox ambox-style ambox-confusing" role="presentation"><tbody><tr><td class="mbox-image"><div class="mbox-image-div"><span typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" data-file-width="48" data-file-height="48" /></span></span></div></td><td class="mbox-text"><div class="mbox-text-span">This section <b>may be <a href="/wiki/Wikipedia:Vagueness" title="Wikipedia:Vagueness">confusing or unclear</a> to readers</b>. In particular, the examples are simple particular cases (simple values exactly representable in binary, without an exponent part). This section is also probably off-topic: this is not an article about conversion, and conversion from decimal using decimal arithmetic (as opposed to conversion from a character string) is uncommon.<span class="hide-when-compact"> Please help <a href="/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify">clarify the section</a>. There might be a discussion about this on <a href="/wiki/Talk:Single-precision_floating-point_format" title="Talk:Single-precision floating-point format">the talk page</a>.</span>  <span class="date-container"><i>(<span class="date">February 2020</span>)</i></span><span class="hide-when-compact"><i> (<small><a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a></small>)</i></span></div></td></tr></tbody></table>
+<p>In general, refer to the IEEE 754 standard itself for the strict conversion (including the rounding behaviour) of a real number into its equivalent binary32 format.
+</p><p>Here we can show how to convert a base-10 real number into an IEEE 754 binary32 format using the following outline:
+</p>
+<ul><li>Consider a real number with an integer and a fraction part such as 12.375</li>
+<li>Convert and <a href="/wiki/Normalized_number" title="Normalized number">normalize</a> the integer part into <a href="/wiki/Binary_numeral_system" class="mw-redirect" title="Binary numeral system">binary</a></li>
+<li>Convert the fraction part using the following technique as shown here</li>
+<li>Add the two results and adjust them to produce a proper final conversion</li></ul>
+<p><b>Conversion of the fractional part:</b>
+Consider 0.375, the fractional part of 12.375. To convert it into a binary fraction, multiply the fraction by 2, take the integer part and repeat with the new fraction by 2 until a fraction of zero is found or until the precision limit is reached which is 23 fraction digits for IEEE 754 binary32 format.
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 0.375\times 2=0.750=0+0.750\Rightarrow b_{-1}=0}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>0.375</mn>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mn>2</mn>
+        <mo>=</mo>
+        <mn>0.750</mn>
+        <mo>=</mo>
+        <mn>0</mn>
+        <mo>+</mo>
+        <mn>0.750</mn>
+        <mo stretchy="false">&#x21D2;<!-- ⇒ --></mo>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 0.375\times 2=0.750=0+0.750\Rightarrow b_{-1}=0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/175a1b5f84f1027452ed6acce97271f62fed3c83" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.671ex; width:41.298ex; height:2.509ex;" alt="{\displaystyle 0.375\times 2=0.750=0+0.750\Rightarrow b_{-1}=0}"></span>, the integer part represents the binary fraction digit. Re-multiply 0.750 by 2 to proceed</dd></dl>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 0.750\times 2=1.500=1+0.500\Rightarrow b_{-2}=1}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>0.750</mn>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mn>2</mn>
+        <mo>=</mo>
+        <mn>1.500</mn>
+        <mo>=</mo>
+        <mn>1</mn>
+        <mo>+</mo>
+        <mn>0.500</mn>
+        <mo stretchy="false">&#x21D2;<!-- ⇒ --></mo>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 0.750\times 2=1.500=1+0.500\Rightarrow b_{-2}=1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/018b02e5a166f89a989ed463a66791f8f7884dc4" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.671ex; width:41.298ex; height:2.509ex;" alt="{\displaystyle 0.750\times 2=1.500=1+0.500\Rightarrow b_{-2}=1}"></span></dd></dl>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 0.500\times 2=1.000=1+0.000\Rightarrow b_{-3}=1}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>0.500</mn>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mn>2</mn>
+        <mo>=</mo>
+        <mn>1.000</mn>
+        <mo>=</mo>
+        <mn>1</mn>
+        <mo>+</mo>
+        <mn>0.000</mn>
+        <mo stretchy="false">&#x21D2;<!-- ⇒ --></mo>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>3</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 0.500\times 2=1.000=1+0.000\Rightarrow b_{-3}=1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/94ae5cb2ba10ba8201b4e2bca991297777c20662" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.671ex; width:41.298ex; height:2.509ex;" alt="{\displaystyle 0.500\times 2=1.000=1+0.000\Rightarrow b_{-3}=1}"></span>, fraction = 0.011, terminate</dd></dl>
+<p>We see that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (0.375)_{10}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mn>0.375</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (0.375)_{10}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5b6661427cc5016e99a4ed1436cdf81e233a3d96" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:8.982ex; height:2.843ex;" alt="{\displaystyle (0.375)_{10}}"></span> can be exactly represented in binary as <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (0.011)_{2}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mn>0.011</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (0.011)_{2}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/979f7aaa676ea76e78a1cd022bfcf23bae6472ab" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:8.16ex; height:2.843ex;" alt="{\displaystyle (0.011)_{2}}"></span>. Not all decimal fractions can be represented in a finite digit binary fraction. For example, decimal 0.1 cannot be represented in binary exactly, only approximated. Therefore:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (12.375)_{10}=(12)_{10}+(0.375)_{10}=(1100)_{2}+(0.011)_{2}=(1100.011)_{2}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mn>12.375</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>12</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mn>0.375</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>1100</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mn>0.011</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>1100.011</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (12.375)_{10}=(12)_{10}+(0.375)_{10}=(1100)_{2}+(0.011)_{2}=(1100.011)_{2}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/31459c99cb3d5b764529d598673e1553075ddccd" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:67.435ex; height:2.843ex;" alt="{\displaystyle (12.375)_{10}=(12)_{10}+(0.375)_{10}=(1100)_{2}+(0.011)_{2}=(1100.011)_{2}}"></span></dd></dl>
+<p>Since IEEE 754 binary32 format requires real values to be represented in <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (1.x_{1}x_{2}...x_{23})_{2}\times 2^{e}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mn>1.</mn>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>.</mo>
+        <mo>.</mo>
+        <mo>.</mo>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>23</mn>
+          </mrow>
+        </msub>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>e</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (1.x_{1}x_{2}...x_{23})_{2}\times 2^{e}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b5b31375d17ae38016357921c122b02780042dc0" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:20.75ex; height:2.843ex;" alt="{\displaystyle (1.x_{1}x_{2}...x_{23})_{2}\times 2^{e}}"></span> format (see <a href="/wiki/Normalized_number" title="Normalized number">Normalized number</a>, <a href="/wiki/Denormalized_number" class="mw-redirect" title="Denormalized number">Denormalized number</a>), 1100.011 is shifted to the right by 3 digits to become <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (1.100011)_{2}\times 2^{3}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mn>1.100011</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (1.100011)_{2}\times 2^{3}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a68ee65379f6115f71972a170872d3e5e71950ba" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:16.705ex; height:3.176ex;" alt="{\displaystyle (1.100011)_{2}\times 2^{3}}"></span>
+</p><p>Finally we can see that: <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (12.375)_{10}=(1.100011)_{2}\times 2^{3}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mn>12.375</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>1.100011</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (12.375)_{10}=(1.100011)_{2}\times 2^{3}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a695b7128b8c4a0fdfeafbf5240519bacbdf12ae" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:29.948ex; height:3.176ex;" alt="{\displaystyle (12.375)_{10}=(1.100011)_{2}\times 2^{3}}"></span>
+</p><p>From which we deduce:
+</p>
+<ul><li>The exponent is 3 (and in the biased form it is therefore <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (127+3)_{10}=(130)_{10}=(1000\ 0010)_{2}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mn>127</mn>
+        <mo>+</mo>
+        <mn>3</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>130</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>1000</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>0010</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (127+3)_{10}=(130)_{10}=(1000\ 0010)_{2}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9f28fa9f23013c8dbbdaf4345a32ad163389578e" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:37.289ex; height:2.843ex;" alt="{\displaystyle (127+3)_{10}=(130)_{10}=(1000\ 0010)_{2}}"></span></li>
+<li>The fraction is 100011 (looking to the right of the binary point)</li></ul>
+<p>From these we can form the resulting 32-bit IEEE 754 binary32 format representation of 12.375:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (12.375)_{10}=(0\ 10000010\ 10001100000000000000000)_{2}=(41460000)_{16}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mn>12.375</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>0</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>10000010</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>10001100000000000000000</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>41460000</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>16</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (12.375)_{10}=(0\ 10000010\ 10001100000000000000000)_{2}=(41460000)_{16}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/48ff92b9d55f9f902b1aefc8bee995d64bd85113" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:70.55ex; height:2.843ex;" alt="{\displaystyle (12.375)_{10}=(0\ 10000010\ 10001100000000000000000)_{2}=(41460000)_{16}}"></span></dd></dl>
+<p>Note: consider converting 68.123 into IEEE 754 binary32 format: Using the above procedure you expect to get <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle ({\text{42883EF9}})_{16}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>42883EF9</mtext>
+        </mrow>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>16</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle ({\text{42883EF9}})_{16}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/46b35fccaa2ef586252baca997b8327989783ab3" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:13.761ex; height:2.843ex;" alt="{\displaystyle ({\text{42883EF9}})_{16}}"></span> with the last 4 bits being 1001. However, due to the default rounding behaviour of IEEE 754 format, what you get is <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle ({\text{42883EFA}})_{16}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>42883EFA</mtext>
+        </mrow>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>16</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle ({\text{42883EFA}})_{16}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/04cbb1a413380fa2f5a55ce91d80769fdb4c3a48" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:14.342ex; height:2.843ex;" alt="{\displaystyle ({\text{42883EFA}})_{16}}"></span>, whose last 4 bits are 1010.
+</p><p><b>Example 1:</b>
+Consider decimal 1. We can see that: <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (1)_{10}=(1.0)_{2}\times 2^{0}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mn>1</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>1.0</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (1)_{10}=(1.0)_{2}\times 2^{0}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c8855fde0d37a8e1ea86864b72ee6ace44c54839" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:18.839ex; height:3.176ex;" alt="{\displaystyle (1)_{10}=(1.0)_{2}\times 2^{0}}"></span>
+</p><p>From which we deduce:
+</p>
+<ul><li>The exponent is 0 (and in the biased form it is therefore <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (127+0)_{10}=(127)_{10}=(0111\ 1111)_{2}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mn>127</mn>
+        <mo>+</mo>
+        <mn>0</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>127</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>0111</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>1111</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (127+0)_{10}=(127)_{10}=(0111\ 1111)_{2}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3a6a6c520edb097b1b30673de107b5412607b88f" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:37.289ex; height:2.843ex;" alt="{\displaystyle (127+0)_{10}=(127)_{10}=(0111\ 1111)_{2}}"></span></li>
+<li>The fraction is 0 (looking to the right of the binary point in 1.0 is all <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 0=000...0}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>0</mn>
+        <mo>=</mo>
+        <mn>000...0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 0=000...0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/39f0e4fbd3e6259824fa4064fa3abbd3b98f3e98" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:10.851ex; height:2.176ex;" alt="{\displaystyle 0=000...0}"></span>)</li></ul>
+<p>From these we can form the resulting 32-bit IEEE 754 binary32 format representation of real number 1:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (1)_{10}=(0\ 01111111\ 00000000000000000000000)_{2}=({\text{3F800000}})_{16}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mn>1</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>0</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>01111111</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>00000000000000000000000</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>3F800000</mtext>
+        </mrow>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>16</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (1)_{10}=(0\ 01111111\ 00000000000000000000000)_{2}=({\text{3F800000}})_{16}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/632fe233cc0515c95b9ede4083cf2396647edb78" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:65.609ex; height:2.843ex;" alt="{\displaystyle (1)_{10}=(0\ 01111111\ 00000000000000000000000)_{2}=({\text{3F800000}})_{16}}"></span></dd></dl>
+<p><b>Example 2:</b>
+Consider a value 0.25. We can see that: <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (0.25)_{10}=(1.0)_{2}\times 2^{-2}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mn>0.25</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>1.0</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>2</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (0.25)_{10}=(1.0)_{2}\times 2^{-2}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/77e5775f7df1615d44136d9a4e9e19d32a728d88" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:23.089ex; height:3.176ex;" alt="{\displaystyle (0.25)_{10}=(1.0)_{2}\times 2^{-2}}"></span>
+</p><p>From which we deduce:
+</p>
+<ul><li>The exponent is −2 (and in the biased form it is <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (127+(-2))_{10}=(125)_{10}=(0111\ 1101)_{2}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mn>127</mn>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>2</mn>
+        <mo stretchy="false">)</mo>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>125</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>0111</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>1101</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (127+(-2))_{10}=(125)_{10}=(0111\ 1101)_{2}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c5677ad870fb341bad7b7b797acb0c968250331f" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:40.907ex; height:2.843ex;" alt="{\displaystyle (127+(-2))_{10}=(125)_{10}=(0111\ 1101)_{2}}"></span>)</li>
+<li>The fraction is 0 (looking to the right of binary point in 1.0 is all zeroes)</li></ul>
+<p>From these we can form the resulting 32-bit IEEE 754 binary32 format representation of real number 0.25:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (0.25)_{10}=(0\ 01111101\ 00000000000000000000000)_{2}=({\text{3E800000}})_{16}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mn>0.25</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>0</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>01111101</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>00000000000000000000000</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>3E800000</mtext>
+        </mrow>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>16</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (0.25)_{10}=(0\ 01111101\ 00000000000000000000000)_{2}=({\text{3E800000}})_{16}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e1d0215dba4cd38019cb8aeb5e8d11c06045788e" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:68.646ex; height:2.843ex;" alt="{\displaystyle (0.25)_{10}=(0\ 01111101\ 00000000000000000000000)_{2}=({\text{3E800000}})_{16}}"></span></dd></dl>
+<p><b>Example 3:</b>
+Consider a value of 0.375. We saw that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 0.375={(0.011)_{2}}={(1.1)_{2}}\times 2^{-2}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>0.375</mn>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">(</mo>
+          <mn>0.011</mn>
+          <msub>
+            <mo stretchy="false">)</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mn>2</mn>
+            </mrow>
+          </msub>
+        </mrow>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">(</mo>
+          <mn>1.1</mn>
+          <msub>
+            <mo stretchy="false">)</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mn>2</mn>
+            </mrow>
+          </msub>
+        </mrow>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>2</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 0.375={(0.011)_{2}}={(1.1)_{2}}\times 2^{-2}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a4ee7524f6087f648e8ea549a6baaf26094a9cc3" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:31.825ex; height:3.176ex;" alt="{\displaystyle 0.375={(0.011)_{2}}={(1.1)_{2}}\times 2^{-2}}"></span>
+</p><p>Hence after determining a representation of 0.375 as <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {(1.1)_{2}}\times 2^{-2}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">(</mo>
+          <mn>1.1</mn>
+          <msub>
+            <mo stretchy="false">)</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mn>2</mn>
+            </mrow>
+          </msub>
+        </mrow>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>2</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {(1.1)_{2}}\times 2^{-2}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/777c26d786586917845289b6e37daea4125d1c50" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:12.171ex; height:3.176ex;" alt="{\displaystyle {(1.1)_{2}}\times 2^{-2}}"></span> we can proceed as above:
+</p>
+<ul><li>The exponent is −2 (and in the biased form it is <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (127+(-2))_{10}=(125)_{10}=(0111\ 1101)_{2}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mn>127</mn>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>2</mn>
+        <mo stretchy="false">)</mo>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>125</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>0111</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>1101</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (127+(-2))_{10}=(125)_{10}=(0111\ 1101)_{2}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c5677ad870fb341bad7b7b797acb0c968250331f" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:40.907ex; height:2.843ex;" alt="{\displaystyle (127+(-2))_{10}=(125)_{10}=(0111\ 1101)_{2}}"></span>)</li>
+<li>The fraction is 1 (looking to the right of binary point in 1.1 is a single <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 1=x_{1}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>1</mn>
+        <mo>=</mo>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 1=x_{1}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/69ba09b905081bb18e3962c71e83825f2668adc7" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.671ex; width:6.645ex; height:2.509ex;" alt="{\displaystyle 1=x_{1}}"></span>)</li></ul>
+<p>From these we can form the resulting 32-bit IEEE 754 binary32 format representation of real number 0.375:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (0.375)_{10}=(0\ 01111101\ 10000000000000000000000)_{2}=({\text{3EC00000}})_{16}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mn>0.375</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>0</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>01111101</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>10000000000000000000000</mn>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>3EC00000</mtext>
+        </mrow>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>16</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (0.375)_{10}=(0\ 01111101\ 10000000000000000000000)_{2}=({\text{3EC00000}})_{16}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3272237ed3ac1f934a8a078348534745715fec72" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:70.324ex; height:2.843ex;" alt="{\displaystyle (0.375)_{10}=(0\ 01111101\ 10000000000000000000000)_{2}=({\text{3EC00000}})_{16}}"></span></dd></dl>
+<h3><span class="mw-headline" id="Converting_binary32_to_decimal">Converting binary32 to decimal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Single-precision_floating-point_format&amp;action=edit&amp;section=4" title="Edit section: Converting binary32 to decimal"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1097763485"><table class="box-Original_research plainlinks metadata ambox ambox-content ambox-Original_research" role="presentation"><tbody><tr><td class="mbox-image"><div class="mbox-image-div"><span typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></span></span></div></td><td class="mbox-text"><div class="mbox-text-span">This section <b>possibly contains <a href="/wiki/Wikipedia:No_original_research" title="Wikipedia:No original research">original research</a></b>.<span class="hide-when-compact"> Please <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Single-precision_floating-point_format&amp;action=edit">improve it</a> by <a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verifying</a> the claims made and adding <a href="/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a>. Statements consisting only of original research should be removed.</span>  <span class="date-container"><i>(<span class="date">February 2020</span>)</i></span><span class="hide-when-compact"><i> (<small><a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a></small>)</i></span></div></td></tr></tbody></table>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1097763485"><table class="box-Confusing plainlinks metadata ambox ambox-style ambox-confusing" role="presentation"><tbody><tr><td class="mbox-image"><div class="mbox-image-div"><span typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" data-file-width="48" data-file-height="48" /></span></span></div></td><td class="mbox-text"><div class="mbox-text-span">This section <b>may be <a href="/wiki/Wikipedia:Vagueness" title="Wikipedia:Vagueness">confusing or unclear</a> to readers</b>. In particular, there is only a very simple example, without rounding. This section is also probably off-topic: this is not an article about conversion, and conversion to decimal, using decimal arithmetic, is uncommon.<span class="hide-when-compact"> Please help <a href="/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify">clarify the section</a>. There might be a discussion about this on <a href="/wiki/Talk:Single-precision_floating-point_format" title="Talk:Single-precision floating-point format">the talk page</a>.</span>  <span class="date-container"><i>(<span class="date">February 2020</span>)</i></span><span class="hide-when-compact"><i> (<small><a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a></small>)</i></span></div></td></tr></tbody></table>
+<p>If the binary32 value, <style data-mw-deduplicate="TemplateStyles:r886049734">.mw-parser-output .monospaced{font-family:monospace,monospace}</style><span class="monospaced">41C80000</span> in this example, is in hexadecimal we first convert it to binary:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\text{41C8 0000}}_{16}=0100\ 0001\ 1100\ 1000\ 0000\ 0000\ 0000\ 0000_{2}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtext>41C8 0000</mtext>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>16</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mn>0100</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>0001</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>1100</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>1000</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>0000</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>0000</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>0000</mn>
+        <mtext>&#xA0;</mtext>
+        <msub>
+          <mn>0000</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\text{41C8 0000}}_{16}=0100\ 0001\ 1100\ 1000\ 0000\ 0000\ 0000\ 0000_{2}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8f02f9c23d86bf0574e9424cca6a1f6df049bf00" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.671ex; width:57.688ex; height:2.509ex;" alt="{\displaystyle {\text{41C8 0000}}_{16}=0100\ 0001\ 1100\ 1000\ 0000\ 0000\ 0000\ 0000_{2}}"></span></dd></dl>
+<p>then we break it down into three parts: sign bit, exponent, and significand.
+</p>
+<ul><li>Sign bit: <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 0_{2}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mn>0</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 0_{2}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/10730d2cb2d29b632e4f4c5290bb74e09eaf2bbb" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.671ex; width:2.217ex; height:2.509ex;" alt="{\displaystyle 0_{2}}"></span></li>
+<li>Exponent: <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 1000\ 0011_{2}=83_{16}=131_{10}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>1000</mn>
+        <mtext>&#xA0;</mtext>
+        <msub>
+          <mn>0011</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <msub>
+          <mn>83</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>16</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <msub>
+          <mn>131</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 1000\ 0011_{2}=83_{16}=131_{10}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c39aa9f0cac943d83514bce1c474164baa5a326a" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.671ex; width:26.696ex; height:2.509ex;" alt="{\displaystyle 1000\ 0011_{2}=83_{16}=131_{10}}"></span></li>
+<li>Significand: <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 100\ 1000\ 0000\ 0000\ 0000\ 0000_{2}=480000_{16}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>100</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>1000</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>0000</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>0000</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>0000</mn>
+        <mtext>&#xA0;</mtext>
+        <msub>
+          <mn>0000</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <msub>
+          <mn>480000</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>16</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 100\ 1000\ 0000\ 0000\ 0000\ 0000_{2}=480000_{16}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a4d2122e0c5cbb58f3b3dca412dbcd9f5a20e627" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.671ex; width:42.643ex; height:2.509ex;" alt="{\displaystyle 100\ 1000\ 0000\ 0000\ 0000\ 0000_{2}=480000_{16}}"></span></li></ul>
+<p>We then add the implicit 24th bit to the significand:
+</p>
+<ul><li>Significand: <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbf {1} 100\ 1000\ 0000\ 0000\ 0000\ 0000_{2}={\text{C80000}}_{16}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mn mathvariant="bold">1</mn>
+        </mrow>
+        <mn>100</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>1000</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>0000</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>0000</mn>
+        <mtext>&#xA0;</mtext>
+        <mn>0000</mn>
+        <mtext>&#xA0;</mtext>
+        <msub>
+          <mn>0000</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtext>C80000</mtext>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>16</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbf {1} 100\ 1000\ 0000\ 0000\ 0000\ 0000_{2}={\text{C80000}}_{16}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ca40575bad95a36d35ba8ea456311be81dd91ce1" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.671ex; width:44.496ex; height:2.509ex;" alt="{\displaystyle \mathbf {1} 100\ 1000\ 0000\ 0000\ 0000\ 0000_{2}={\text{C80000}}_{16}}"></span></li></ul>
+<p>and decode the exponent value by subtracting 127:
+</p>
+<ul><li>Raw exponent: <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 83_{16}=131_{10}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mn>83</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>16</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <msub>
+          <mn>131</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 83_{16}=131_{10}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/07fd44f173c109d341f90bf1a63cd432412710dc" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.671ex; width:12.663ex; height:2.509ex;" alt="{\displaystyle 83_{16}=131_{10}}"></span></li>
+<li>Decoded exponent: <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 131-127=4}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>131</mn>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>127</mn>
+        <mo>=</mo>
+        <mn>4</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 131-127=4}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5feccf1de9051e3101a2738a3fcad826a0826242" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.505ex; width:14.076ex; height:2.343ex;" alt="{\displaystyle 131-127=4}"></span></li></ul>
+<p>Each of the 24 bits of the significand (including the implicit 24th bit), bit 23 to bit 0, represents a value, starting at 1 and halves for each bit, as follows:
+</p>
+<pre>bit 23 = 1
+bit 22 = 0.5
+bit 21 = 0.25
+bit 20 = 0.125
+bit 19 = 0.0625
+bit 18 = 0.03125
+bit 17 = 0.015625
+.
+.
+bit 6 = 0.00000762939453125
+bit 5 = 0.000003814697265625
+bit 4 = 0.0000019073486328125
+bit 3 = 0.00000095367431640625
+bit 2 = 0.000000476837158203125
+bit 1 = 0.0000002384185791015625
+bit 0 = 0.00000011920928955078125
+</pre>
+<p>The significand in this example has three bits set: bit 23, bit 22, and bit 19. We can now decode the significand by adding the values represented by these bits.
+</p>
+<ul><li>Decoded significand: <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 1+0.5+0.0625=1.5625={\text{C80000}}/2^{23}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>1</mn>
+        <mo>+</mo>
+        <mn>0.5</mn>
+        <mo>+</mo>
+        <mn>0.0625</mn>
+        <mo>=</mo>
+        <mn>1.5625</mn>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>C80000</mtext>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>23</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 1+0.5+0.0625=1.5625={\text{C80000}}/2^{23}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d0962d7c90c780744c0843be69589377d1517fab" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:40.622ex; height:3.176ex;" alt="{\displaystyle 1+0.5+0.0625=1.5625={\text{C80000}}/2^{23}}"></span></li></ul>
+<p>Then we need to multiply with the base, 2, to the power of the exponent, to get the final result:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 1.5625\times 2^{4}=25}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>1.5625</mn>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>4</mn>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mn>25</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 1.5625\times 2^{4}=25}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d97fd64f7bebe5f4b7aa2660996c13976579415f" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:16.94ex; height:2.676ex;" alt="{\displaystyle 1.5625\times 2^{4}=25}"></span></dd></dl>
+<p>Thus
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\text{41C8 0000}}=25}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>41C8 0000</mtext>
+        </mrow>
+        <mo>=</mo>
+        <mn>25</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\text{41C8 0000}}=25}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6343c3308f5cd2c352898bca4bd622438a151a7c" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:15.819ex; height:2.176ex;" alt="{\displaystyle {\text{41C8 0000}}=25}"></span></dd></dl>
+<p>This is equivalent to:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle n=(-1)^{s}\times (1+m*2^{-23})\times 2^{x-127}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>n</mi>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>s</mi>
+          </mrow>
+        </msup>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mo stretchy="false">(</mo>
+        <mn>1</mn>
+        <mo>+</mo>
+        <mi>m</mi>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>23</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>x</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>127</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle n=(-1)^{s}\times (1+m*2^{-23})\times 2^{x-127}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0f553a703be41870d46dde39fceffedbfa7b72aa" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:36.401ex; height:3.176ex;" alt="{\displaystyle n=(-1)^{s}\times (1+m*2^{-23})\times 2^{x-127}}"></span></dd></dl>
+<p>where <span class="texhtml mvar" style="font-style:italic;">s</span> is the sign bit, <span class="texhtml mvar" style="font-style:italic;">x</span> is the exponent, and <span class="texhtml mvar" style="font-style:italic;">m</span> is the significand.
+</p>
+<h3><span id="Precision_limitations_on_decimal_values_.28between_1_and_16777216.29"></span><span class="mw-headline" id="Precision_limitations_on_decimal_values_(between_1_and_16777216)">Precision limitations on decimal values (between 1 and 16777216)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Single-precision_floating-point_format&amp;action=edit&amp;section=5" title="Edit section: Precision limitations on decimal values (between 1 and 16777216)"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Decimals between 1 and 2: fixed interval 2<sup>−23</sup> (1+2<sup>−23</sup> is the next largest float after 1)</li>
+<li>Decimals between 2 and 4: fixed interval 2<sup>−22</sup></li>
+<li>Decimals between 4 and 8: fixed interval 2<sup>−21</sup></li>
+<li>...</li>
+<li>Decimals between 2<sup>n</sup> and 2<sup>n+1</sup>: fixed interval 2<sup>n-23</sup></li>
+<li>...</li>
+<li>Decimals between 2<sup>22</sup>=4194304 and 2<sup>23</sup>=8388608: fixed interval 2<sup>−1</sup>=0.5</li>
+<li>Decimals between 2<sup>23</sup>=8388608 and 2<sup>24</sup>=16777216: fixed interval 2<sup>0</sup>=1</li></ul>
+<h3><span class="mw-headline" id="Precision_limitations_on_integer_values">Precision limitations on integer values</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Single-precision_floating-point_format&amp;action=edit&amp;section=6" title="Edit section: Precision limitations on integer values"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Integers between 0 and 16777216 can be exactly represented (also applies for negative integers between −16777216 and 0)</li>
+<li>Integers between 2<sup>24</sup>=16777216 and 2<sup>25</sup>=33554432 round to a multiple of 2 (even number)</li>
+<li>Integers between 2<sup>25</sup> and 2<sup>26</sup> round to a multiple of 4</li>
+<li>...</li>
+<li>Integers between 2<sup>n</sup> and 2<sup>n+1</sup> round to a multiple of 2<sup>n-23</sup></li>
+<li>...</li>
+<li>Integers between 2<sup>127</sup> and 2<sup>128</sup> round to a multiple of 2<sup>104</sup></li>
+<li>Integers greater than or equal to 2<sup>128</sup> are rounded to "infinity".</li></ul>
+<h3><span class="mw-headline" id="Notable_single-precision_cases">Notable single-precision cases</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Single-precision_floating-point_format&amp;action=edit&amp;section=7" title="Edit section: Notable single-precision cases"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>These examples are given in bit <i>representation</i>, in <a href="/wiki/Hexadecimal" title="Hexadecimal">hexadecimal</a> and <a href="/wiki/Binary_number" title="Binary number">binary</a>, of the floating-point value. This includes the sign, (biased) exponent, and significand.
+</p>
+<pre>0 00000000 00000000000000000000001<sub>2</sub> = 0000 0001<sub>16</sub> = 2<sup>−126</sup> × 2<sup>−23</sup> = 2<sup>−149</sup> ≈ 1.4012984643 × 10<sup>−45</sup>
+                                                   (smallest positive subnormal number)
+</pre>
+<pre>0 00000000 11111111111111111111111<sub>2</sub> = 007f ffff<sub>16</sub> = 2<sup>−126</sup> × (1 − 2<sup>−23</sup>) ≈ 1.1754942107 ×10<sup>−38</sup>
+                                                   (largest subnormal number)
+</pre>
+<pre>0 00000001 00000000000000000000000<sub>2</sub> = 0080 0000<sub>16</sub> = 2<sup>−126</sup> ≈ 1.1754943508 × 10<sup>−38</sup>
+                                                   (smallest positive normal number)
+</pre>
+<pre>0 11111110 11111111111111111111111<sub>2</sub> = 7f7f ffff<sub>16</sub> = 2<sup>127</sup> × (2 − 2<sup>−23</sup>) ≈ 3.4028234664 × 10<sup>38</sup>
+                                                   (largest normal number)
+</pre>
+<pre>0 01111110 11111111111111111111111<sub>2</sub> = 3f7f ffff<sub>16</sub> = 1 − 2<sup>−24</sup> ≈ 0.999999940395355225
+                                                   (largest number less than one)
+</pre>
+<pre>0 01111111 00000000000000000000000<sub>2</sub> = 3f80 0000<sub>16</sub> = 1 (one)
+</pre>
+<pre>0 01111111 00000000000000000000001<sub>2</sub> = 3f80 0001<sub>16</sub> = 1 + 2<sup>−23</sup> ≈ 1.00000011920928955
+                                                   (smallest number larger than one)
+</pre>
+<pre>1 10000000 00000000000000000000000<sub>2</sub> = c000 0000<sub>16</sub> = −2
+0 00000000 00000000000000000000000<sub>2</sub> = 0000 0000<sub>16</sub> = 0
+1 00000000 00000000000000000000000<sub>2</sub> = 8000 0000<sub>16</sub> = −0
+                                   
+0 11111111 00000000000000000000000<sub>2</sub> = 7f80 0000<sub>16</sub> = infinity
+1 11111111 00000000000000000000000<sub>2</sub> = ff80 0000<sub>16</sub> = −infinity
+                                   
+0 10000000 10010010000111111011011<sub>2</sub> = 4049 0fdb<sub>16</sub> ≈ 3.14159274101257324 ≈ π ( pi )
+0 01111101 01010101010101010101011<sub>2</sub> = 3eaa aaab<sub>16</sub> ≈ 0.333333343267440796 ≈ 1/3
+                                   
+x 11111111 10000000000000000000001<sub>2</sub> = ffc0 0001<sub>16</sub> = qNaN (on x86 and ARM processors)
+x 11111111 00000000000000000000001<sub>2</sub> = ff80 0001<sub>16</sub> = sNaN (on x86 and ARM processors)
+</pre>
+<p>By default, 1/3 rounds up, instead of down like <a href="/wiki/Double_precision" class="mw-redirect" title="Double precision">double precision</a>, because of the even number of bits in the significand. The bits of 1/3 beyond the rounding point are <code>1010...</code> which is more than 1/2 of a <a href="/wiki/Unit_in_the_last_place" title="Unit in the last place">unit in the last place</a>.
+</p><p>Encodings of qNaN and sNaN are not specified in <a href="/wiki/IEEE_floating_point" class="mw-redirect" title="IEEE floating point">IEEE 754</a> and implemented differently on different processors. The <a href="/wiki/X86" title="X86">x86</a> family and the <a href="/wiki/ARM_architecture" class="mw-redirect" title="ARM architecture">ARM</a> family processors use the most significant bit of the significand field to indicate a quiet NaN. The <a href="/wiki/PA-RISC" title="PA-RISC">PA-RISC</a> processors use the bit to indicate a signalling NaN.
+</p>
+<h3><span class="mw-headline" id="Optimizations">Optimizations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Single-precision_floating-point_format&amp;action=edit&amp;section=8" title="Edit section: Optimizations"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The design of floating-point format allows various optimisations, resulting from the easy generation of a <a href="/wiki/Base-2_logarithm" class="mw-redirect" title="Base-2 logarithm">base-2 logarithm</a> approximation from an integer view of the raw bit pattern. Integer arithmetic and bit-shifting can yield an approximation to <a href="/wiki/Reciprocal_square_root" class="mw-redirect" title="Reciprocal square root">reciprocal square root</a> (<a href="/wiki/Fast_inverse_square_root" title="Fast inverse square root">fast inverse square root</a>), commonly required in <a href="/wiki/Computer_graphics" title="Computer graphics">computer graphics</a>.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Single-precision_floating-point_format&amp;action=edit&amp;section=9" title="Edit section: See also"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/IEEE_754" title="IEEE 754">IEEE 754</a></li>
+<li><a href="/wiki/ISO/IEC_10967" title="ISO/IEC 10967">ISO/IEC 10967</a>, language independent arithmetic</li>
+<li><a href="/wiki/Primitive_data_type" title="Primitive data type">Primitive data type</a></li>
+<li><a href="/wiki/Numerical_stability" title="Numerical stability">Numerical stability</a></li>
+<li><a href="/wiki/Scientific_notation" title="Scientific notation">Scientific notation</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Single-precision_floating-point_format&amp;action=edit&amp;section=10" title="Edit section: References"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1011085734">.mw-parser-output .reflist{font-size:90%;margin-bottom:0.5em;list-style-type:decimal}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}</style><div class="reflist">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><style data-mw-deduplicate="TemplateStyles:r1133582631">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:#d33}.mw-parser-output .cs1-visible-error{color:#d33}.mw-parser-output .cs1-maint{display:none;color:#3a3;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20210224045812/http://scc.ustc.edu.cn/zlsc/sugon/intel/compiler_f/main_for/lref_for/source_files/rfreals.htm">"REAL Statement"</a>. <i>scc.ustc.edu.cn</i>. Archived from <a rel="nofollow" class="external text" href="http://scc.ustc.edu.cn/zlsc/sugon/intel/compiler_f/main_for/lref_for/source_files/rfreals.htm">the original</a> on 2021-02-24<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-02-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=scc.ustc.edu.cn&amp;rft.atitle=REAL+Statement&amp;rft_id=http%3A%2F%2Fscc.ustc.edu.cn%2Fzlsc%2Fsugon%2Fintel%2Fcompiler_f%2Fmain_for%2Flref_for%2Fsource_files%2Frfreals.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASingle-precision+floating-point+format" class="Z3988"></span></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.lispworks.com/documentation/HyperSpec/Body/t_short_.htm">"CLHS: Type SHORT-FLOAT, SINGLE-FLOAT, DOUBLE-FLOAT..."</a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=CLHS%3A+Type+SHORT-FLOAT%2C+SINGLE-FLOAT%2C+DOUBLE-FLOAT...&amp;rft_id=http%3A%2F%2Fwww.lispworks.com%2Fdocumentation%2FHyperSpec%2FBody%2Ft_short_.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASingle-precision+floating-point+format" class="Z3988"></span></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/datatypes.html">"Primitive Data Types"</a>. <i>Java Documentation</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Java+Documentation&amp;rft.atitle=Primitive+Data+Types&amp;rft_id=http%3A%2F%2Fjava.sun.com%2Fdocs%2Fbooks%2Ftutorial%2Fjava%2Fnutsandbolts%2Fdatatypes.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASingle-precision+floating-point+format" class="Z3988"></span></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.haskell.org/onlinereport/haskell2010/haskellch6.html#x13-1350006.4">"6 Predefined Types and Classes"</a>. <i>haskell.org</i>. 20 July 2010.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=haskell.org&amp;rft.atitle=6+Predefined+Types+and+Classes&amp;rft.date=2010-07-20&amp;rft_id=https%3A%2F%2Fwww.haskell.org%2Fonlinereport%2Fhaskell2010%2Fhaskellch6.html%23x13-1350006.4&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASingle-precision+floating-point+format" class="Z3988"></span></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://developer.apple.com/documentation/swift/float">"Float"</a>. <i>Apple Developer Documentation</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Apple+Developer+Documentation&amp;rft.atitle=Float&amp;rft_id=https%3A%2F%2Fdeveloper.apple.com%2Fdocumentation%2Fswift%2Ffloat&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASingle-precision+floating-point+format" class="Z3988"></span></span>
+</li>
+<li id="cite_note-whyieee-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-whyieee_6-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFWilliam_Kahan1997" class="citation web cs1">William Kahan (1 October 1997). <a rel="nofollow" class="external text" href="http://www.cs.berkeley.edu/~wkahan/ieee754status/IEEE754.PDF">"Lecture Notes on the Status of IEEE Standard 754 for Binary Floating-Point Arithmetic"</a> <span class="cs1-format">(PDF)</span>. p.&#160;4.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Lecture+Notes+on+the+Status+of+IEEE+Standard+754+for+Binary+Floating-Point+Arithmetic&amp;rft.pages=4&amp;rft.date=1997-10-01&amp;rft.au=William+Kahan&amp;rft_id=http%3A%2F%2Fwww.cs.berkeley.edu%2F~wkahan%2Fieee754status%2FIEEE754.PDF&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASingle-precision+floating-point+format" class="Z3988"></span></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Single-precision_floating-point_format&amp;action=edit&amp;section=11" title="Edit section: External links"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://evanw.github.io/float-toy/">Live floating-point bit pattern editor</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.h-schmidt.net/FloatConverter/IEEE754.html">Online calculator</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.binaryconvert.com/convert_float.html">Online converter for IEEE 754 numbers with single precision</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20091031135212/http://www.mathworks.com/matlabcentral/fileexchange/23173">C source code to convert between IEEE double, single, and half precision</a></li></ul>
+<div class="navbox-styles"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1129693374"><style data-mw-deduplicate="TemplateStyles:r1061467846">.mw-parser-output .navbox{box-sizing:border-box;border:1px solid #a2a9b1;width:100%;clear:both;font-size:88%;text-align:center;padding:1px;margin:1em auto 0}.mw-parser-output .navbox .navbox{margin-top:0}.mw-parser-output .navbox+.navbox,.mw-parser-output .navbox+.navbox-styles+.navbox{margin-top:-1px}.mw-parser-output .navbox-inner,.mw-parser-output .navbox-subgroup{width:100%}.mw-parser-output .navbox-group,.mw-parser-output .navbox-title,.mw-parser-output .navbox-abovebelow{padding:0.25em 1em;line-height:1.5em;text-align:center}.mw-parser-output .navbox-group{white-space:nowrap;text-align:right}.mw-parser-output .navbox,.mw-parser-output .navbox-subgroup{background-color:#fdfdfd}.mw-parser-output .navbox-list{line-height:1.5em;border-color:#fdfdfd}.mw-parser-output .navbox-list-with-group{text-align:left;border-left-width:2px;border-left-style:solid}.mw-parser-output tr+tr>.navbox-abovebelow,.mw-parser-output tr+tr>.navbox-group,.mw-parser-output tr+tr>.navbox-image,.mw-parser-output tr+tr>.navbox-list{border-top:2px solid #fdfdfd}.mw-parser-output .navbox-title{background-color:#ccf}.mw-parser-output .navbox-abovebelow,.mw-parser-output .navbox-group,.mw-parser-output .navbox-subgroup .navbox-title{background-color:#ddf}.mw-parser-output .navbox-subgroup .navbox-group,.mw-parser-output .navbox-subgroup .navbox-abovebelow{background-color:#e6e6ff}.mw-parser-output .navbox-even{background-color:#f7f7f7}.mw-parser-output .navbox-odd{background-color:transparent}.mw-parser-output .navbox .hlist td dl,.mw-parser-output .navbox .hlist td ol,.mw-parser-output .navbox .hlist td ul,.mw-parser-output .navbox td.hlist dl,.mw-parser-output .navbox td.hlist ol,.mw-parser-output .navbox td.hlist ul{padding:0.125em 0}.mw-parser-output .navbox .navbar{display:block;font-size:100%}.mw-parser-output .navbox-title .navbar{float:left;text-align:left;margin-right:0.5em}</style></div><div role="navigation" class="navbox" aria-labelledby="Data_types" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1129693374"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1063604349"><div class="navbar plainlinks hlist navbar-mini"><ul><li class="nv-view"><a href="/wiki/Template:Data_types" title="Template:Data types"><abbr title="View this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Data_types" title="Template talk:Data types"><abbr title="Discuss this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">t</abbr></a></li><li class="nv-edit"><a href="/wiki/Special:EditPage/Template:Data_types" title="Special:EditPage/Template:Data types"><abbr title="Edit this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">e</abbr></a></li></ul></div><div id="Data_types" style="font-size:114%;margin:0 4em"><a href="/wiki/Data_type" title="Data type">Data types</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Units_of_information" title="Units of information">Uninterpreted</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Bit" title="Bit">Bit</a></li>
+<li><a href="/wiki/Byte" title="Byte">Byte</a></li>
+<li><a href="/wiki/Ternary_numeral_system" title="Ternary numeral system">Trit</a></li>
+<li><a href="/wiki/Ternary_numeral_system#Tryte" title="Ternary numeral system">Tryte</a></li>
+<li><a href="/wiki/Word_(computer_architecture)" title="Word (computer architecture)">Word</a></li>
+<li><a href="/wiki/Bit_array" title="Bit array">Bit array</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Numeric</th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Arbitrary-precision_arithmetic" title="Arbitrary-precision arithmetic">Arbitrary-precision or bignum</a></li>
+<li><a href="/wiki/Complex_data_type" title="Complex data type">Complex</a></li>
+<li><a href="/wiki/Decimal_data_type" title="Decimal data type">Decimal</a></li>
+<li><a href="/wiki/Fixed-point_arithmetic" title="Fixed-point arithmetic">Fixed point</a></li>
+<li><a href="/wiki/Floating-point_arithmetic" title="Floating-point arithmetic">Floating point</a>
+<ul><li>Reduced precision
+<ul><li><a href="/wiki/Minifloat" title="Minifloat">Minifloat</a></li>
+<li><a href="/wiki/Half-precision_floating-point_format" title="Half-precision floating-point format">Half precision</a></li>
+<li><a href="/wiki/Bfloat16_floating-point_format" title="Bfloat16 floating-point format">bfloat16</a></li></ul></li>
+<li><a class="mw-selflink selflink">Single precision</a></li>
+<li><a href="/wiki/Double-precision_floating-point_format" title="Double-precision floating-point format">Double precision</a></li>
+<li><a href="/wiki/Quadruple-precision_floating-point_format" title="Quadruple-precision floating-point format">Quadruple precision</a></li>
+<li><a href="/wiki/Octuple-precision_floating-point_format" title="Octuple-precision floating-point format">Octuple precision</a></li>
+<li><a href="/wiki/Extended_precision" title="Extended precision">Extended precision</a>
+<ul><li><a href="/wiki/Long_double" title="Long double">Long double</a></li></ul></li></ul></li>
+<li><a href="/wiki/Integer_(computer_science)" title="Integer (computer science)">Integer</a>
+<ul><li><a href="/wiki/Signedness" title="Signedness">signedness</a></li></ul></li>
+<li><a href="/wiki/Interval_arithmetic#Implementations" title="Interval arithmetic">Interval</a></li>
+<li><a href="/wiki/Rational_data_type" title="Rational data type">Rational</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Pointer_(computer_programming)" title="Pointer (computer programming)">Pointer</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Memory_address" title="Memory address">Address</a>
+<ul><li><a href="/wiki/Physical_address" title="Physical address">physical</a></li>
+<li><a href="/wiki/Virtual_address_space" title="Virtual address space">virtual</a></li></ul></li>
+<li><a href="/wiki/Reference_(computer_science)" title="Reference (computer science)">Reference</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Plain_text" title="Plain text">Text</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Character_(computing)" title="Character (computing)">Character</a></li>
+<li><a href="/wiki/String_(computer_science)" title="String (computer science)">String</a>
+<ul><li><a href="/wiki/Null-terminated_string" title="Null-terminated string">null-terminated</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Composite_data_type" title="Composite data type">Composite</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Algebraic_data_type" title="Algebraic data type">Algebraic data type</a>
+<ul><li><a href="/wiki/Generalized_algebraic_data_type" title="Generalized algebraic data type">generalized</a></li></ul></li>
+<li><a href="/wiki/Array_data_type" class="mw-redirect" title="Array data type">Array</a></li>
+<li><a href="/wiki/Associative_array" title="Associative array">Associative array</a></li>
+<li><a href="/wiki/Class_(computer_programming)" title="Class (computer programming)">Class</a></li>
+<li><a href="/wiki/Dependent_type" title="Dependent type">Dependent</a></li>
+<li><a href="/wiki/Intuitionistic_type_theory#Equality_type" title="Intuitionistic type theory">Equality</a></li>
+<li><a href="/wiki/Inductive_type" title="Inductive type">Inductive</a></li>
+<li><a href="/wiki/Intersection_type" title="Intersection type">Intersection</a></li>
+<li><a href="/wiki/List_(abstract_data_type)" title="List (abstract data type)">List</a></li>
+<li><a href="/wiki/Object_(computer_science)" title="Object (computer science)">Object</a>
+<ul><li><a href="/wiki/Metaobject" title="Metaobject">metaobject</a></li></ul></li>
+<li><a href="/wiki/Option_type" title="Option type">Option type</a></li>
+<li><a href="/wiki/Product_type" title="Product type">Product</a></li>
+<li><a href="/wiki/Record_(computer_science)" title="Record (computer science)">Record or Struct</a></li>
+<li><a href="/wiki/Refinement_type" title="Refinement type">Refinement</a></li>
+<li><a href="/wiki/Set_(abstract_data_type)" title="Set (abstract data type)">Set</a></li>
+<li><a href="/wiki/Union_type" title="Union type">Union</a>
+<ul><li><a href="/wiki/Tagged_union" title="Tagged union">tagged</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Other</th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Boolean_data_type" title="Boolean data type">Boolean</a></li>
+<li><a href="/wiki/Bottom_type" title="Bottom type">Bottom type</a></li>
+<li><a href="/wiki/Container_(abstract_data_type)" title="Container (abstract data type)">Collection</a></li>
+<li><a href="/wiki/Enumerated_type" title="Enumerated type">Enumerated type</a></li>
+<li><a href="/wiki/Exception_handling" title="Exception handling">Exception</a></li>
+<li><a href="/wiki/Function_type" title="Function type">Function type</a></li>
+<li><a href="/wiki/Opaque_data_type" title="Opaque data type">Opaque data type</a></li>
+<li><a href="/wiki/Recursive_data_type" title="Recursive data type">Recursive data type</a></li>
+<li><a href="/wiki/Semaphore_(programming)" title="Semaphore (programming)">Semaphore</a></li>
+<li><a href="/wiki/Stream_(computing)" title="Stream (computing)">Stream</a></li>
+<li><a href="/wiki/Strongly_typed_identifier" title="Strongly typed identifier">Strongly typed identifier</a></li>
+<li><a href="/wiki/Top_type" title="Top type">Top type</a></li>
+<li><a href="/wiki/Type_class" title="Type class">Type class</a></li>
+<li><a href="/wiki/Empty_type" title="Empty type">Empty type</a></li>
+<li><a href="/wiki/Unit_type" title="Unit type">Unit type</a></li>
+<li><a href="/wiki/Void_type" title="Void type">Void</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Related<br />topics</th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Abstract_data_type" title="Abstract data type">Abstract data type</a></li>
+<li><a href="/wiki/Boxing_(computer_science)" title="Boxing (computer science)">Boxing</a></li>
+<li><a href="/wiki/Data_structure" title="Data structure">Data structure</a></li>
+<li><a href="/wiki/Generic_programming" title="Generic programming">Generic</a></li>
+<li><a href="/wiki/Kind_(type_theory)" title="Kind (type theory)">Kind</a>
+<ul><li><a href="/wiki/Metaclass" title="Metaclass">metaclass</a></li></ul></li>
+<li><a href="/wiki/Parametric_polymorphism" title="Parametric polymorphism">Parametric polymorphism</a></li>
+<li><a href="/wiki/Primitive_data_type" title="Primitive data type">Primitive data type</a></li>
+<li><a href="/wiki/Interface_(object-oriented_programming)" title="Interface (object-oriented programming)">Interface</a></li>
+<li><a href="/wiki/Subtyping" title="Subtyping">Subtyping</a></li>
+<li><a href="/wiki/Type_constructor" title="Type constructor">Type constructor</a></li>
+<li><a href="/wiki/Type_conversion" title="Type conversion">Type conversion</a></li>
+<li><a href="/wiki/Type_system" title="Type system">Type system</a></li>
+<li><a href="/wiki/Type_theory" title="Type theory">Type theory</a></li>
+<li><a href="/wiki/Variable_(computer_science)" title="Variable (computer science)">Variable</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw‐api‐ext.eqiad.main‐84b7c4fdd‐hc6bq
+Cached time: 20240207200147
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, show‐toc]
+CPU time usage: 0.362 seconds
+Real time usage: 0.723 seconds
+Preprocessor visited node count: 1306/1000000
+Post‐expand include size: 61373/2097152 bytes
+Template argument size: 2235/2097152 bytes
+Highest expansion depth: 10/100
+Expensive parser function count: 2/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 41329/5000000 bytes
+Lua time usage: 0.210/10.000 seconds
+Lua memory usage: 4967651/52428800 bytes
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  369.074      1 -total
+ 29.91%  110.376      1 Template:Reflist
+ 26.36%   97.276      6 Template:Cite_web
+ 21.41%   79.019      1 Template:Short_description
+ 20.76%   76.627      1 Template:Floating-point
+ 20.28%   74.835      1 Template:Sidebar
+ 14.59%   53.855      2 Template:Pagetype
+ 13.99%   51.625      2 Template:Original_research_section
+ 13.10%   48.337      4 Template:Ambox
+ 12.60%   46.488      2 Template:Original_research
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:23552864-0!canonical and timestamp 20240207200146 and revision id 1204707580. Rendering was triggered because: api-parse
+ -->
+</div><!--esi <esi:include src="/esitest-fa8a495983347898/content" /> --><noscript><img src="https://login.wikimedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" width="1" height="1" style="border: none; position: absolute;"></noscript>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Single-precision_floating-point_format&amp;oldid=1204707580">https://en.wikipedia.org/w/index.php?title=Single-precision_floating-point_format&amp;oldid=1204707580</a>"</div></div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Binary_arithmetic" title="Category:Binary arithmetic">Binary arithmetic</a></li><li><a href="/wiki/Category:Computer_arithmetic" title="Category:Computer arithmetic">Computer arithmetic</a></li><li><a href="/wiki/Category:Floating_point_types" title="Category:Floating point types">Floating point types</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_matches_Wikidata" title="Category:Short description matches Wikidata">Short description matches Wikidata</a></li><li><a href="/wiki/Category:Articles_that_may_contain_original_research_from_February_2020" title="Category:Articles that may contain original research from February 2020">Articles that may contain original research from February 2020</a></li><li><a href="/wiki/Category:All_articles_that_may_contain_original_research" title="Category:All articles that may contain original research">All articles that may contain original research</a></li><li><a href="/wiki/Category:Wikipedia_articles_needing_clarification_from_February_2020" title="Category:Wikipedia articles needing clarification from February 2020">Wikipedia articles needing clarification from February 2020</a></li><li><a href="/wiki/Category:All_Wikipedia_articles_needing_clarification" title="Category:All Wikipedia articles needing clarification">All Wikipedia articles needing clarification</a></li></ul></div></div>
+				</div>
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 7 February 2024, at 20:01<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License">Creative Commons Attribution-ShareAlike License 4.0</a><a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/Wikipedia:General_disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-wm-codeofconduct"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct">Code of Conduct</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement">Cookie statement</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Single-precision_floating-point_format&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"></a></li>
+</ul>
+
+</footer>
+
+		</div>
+	</div> 
+</div> 
+<div class="vector-settings" id="p-dock-bottom">
+	<ul>
+		<li>
+		<button class="cdx-button cdx-button--icon-only vector-limited-width-toggle" id=""><span class="vector-icon mw-ui-icon-fullScreen mw-ui-icon-wikimedia-fullScreen"></span>
+
+<span>Toggle limited content width</span>
+</button>
+</li>
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw-web.codfw.main-894d4d6c9-rwdfx","wgBackendResponseTime":147,"wgPageParseReport":{"limitreport":{"cputime":"0.362","walltime":"0.723","ppvisitednodes":{"value":1306,"limit":1000000},"postexpandincludesize":{"value":61373,"limit":2097152},"templateargumentsize":{"value":2235,"limit":2097152},"expansiondepth":{"value":10,"limit":100},"expensivefunctioncount":{"value":2,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":41329,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  369.074      1 -total"," 29.91%  110.376      1 Template:Reflist"," 26.36%   97.276      6 Template:Cite_web"," 21.41%   79.019      1 Template:Short_description"," 20.76%   76.627      1 Template:Floating-point"," 20.28%   74.835      1 Template:Sidebar"," 14.59%   53.855      2 Template:Pagetype"," 13.99%   51.625      2 Template:Original_research_section"," 13.10%   48.337      4 Template:Ambox"," 12.60%   46.488      2 Template:Original_research"]},"scribunto":{"limitreport-timeusage":{"value":"0.210","limit":"10.000"},"limitreport-memusage":{"value":4967651,"limit":52428800}},"cachereport":{"origin":"mw-api-ext.eqiad.main-84b7c4fdd-hc6bq","timestamp":"20240207200147","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Single-precision floating-point format","url":"https:\/\/en.wikipedia.org\/wiki\/Single-precision_floating-point_format","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1307173","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1307173","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2001-04-04T14:48:00Z","dateModified":"2024-02-07T20:01:46Z","headline":"32-bit computer number format"}</script>
+</body>
+</html>

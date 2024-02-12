@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-0 vector-feature-client-preferences-disabled vector-feature-client-prefs-pinned-disabled vector-feature-night-mode-disabled skin-night-mode-clientpref-0 vector-toc-available" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Tail call - Wikipedia</title>
+<script>(function(){var className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-0 vector-feature-client-preferences-disabled vector-feature-client-prefs-pinned-disabled vector-feature-night-mode-disabled skin-night-mode-clientpref-0 vector-toc-available";var cookie=document.cookie.match(/(?:^|; )enwikimwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],
+"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"49c0d4f9-4d87-48e6-966f-84455e63bd70","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Tail_call","wgTitle":"Tail call","wgCurRevisionId":1206402809,"wgRevisionId":1206402809,"wgArticleId":1110903,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with short description","Short description is different from Wikidata","All articles with unsourced statements","Articles with unsourced statements from April 2007","Articles needing additional references from June 2014","All articles needing additional references","Articles with example C code","Articles with example Scheme (programming language) code","Programming language implementation",
+"Implementation of functional programming languages","Subroutines","Control flow","Recursion","Scheme (programming language)"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Tail_call","wgRelevantArticleId":1110903,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgNoticeProject":"wikipedia","wgFlaggedRevsParams":{"tags":{"status":{"levels":1}}},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsFlags":6,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":false,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":40000,"wgULSCurrentAutonym":"English","wgCentralAuthMobileDomain":false,"wgEditSubmitButtonLabelPublish":true,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":false,
+"wgVector2022LanguageInHeader":true,"wgULSisLanguageSelectorEmpty":false,"wgWikibaseItemId":"Q1340959","wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"],"GEHomepageSuggestedEditsEnableTopics":true,"wgGETopicsMatchModeEnabled":false,"wgGEStructuredTaskRejectionReasonTextInputEnabled":false,"wgGELevelingUpEnabledForUser":false};RLSTATE={"skins.vector.user.styles":"ready","ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","skins.vector.user":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","codex-search-styles":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements",
+"mediawiki.toggleAllCollapsibles","site","mediawiki.page.ready","mediawiki.toc","skins.vector.js","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.gadget.ReferenceTooltips","ext.gadget.switcher","ext.urlShortener.toolbar","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.echo.centralauth","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.cx.uls.quick.actions","wikibase.client.vector-2022","ext.checkUser.clientHints","ext.growthExperiments.SuggestedEditSession"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=codex-search-styles%7Cext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.vector.icons%2Cstyles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector-2022">
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022">
+<meta name="generator" content="MediaWiki 1.42.0-wmf.17">
+<meta name="referrer" content="origin">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1000">
+<meta property="og:title" content="Tail call - Wikipedia">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="//upload.wikimedia.org">
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Tail_call">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Tail_call&amp;action=edit">
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png">
+<link rel="icon" href="/static/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd">
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Tail_call">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="//login.wikimedia.org">
+</head>
+<body class="skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Tail_call rootpage-Tail_call skin-vector-2022 action-view"><a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+<div class="vector-header-container">
+	<header class="vector-header mw-header">
+		<div class="vector-header-start">
+			<nav class="vector-main-menu-landmark" aria-label="Site" role="navigation">
+				
+<div id="vector-main-menu-dropdown" class="vector-dropdown vector-main-menu-dropdown vector-button-flush-left vector-button-flush-right"  >
+	<input type="checkbox" id="vector-main-menu-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-main-menu-dropdown" class="vector-dropdown-checkbox "  aria-label="Main menu"  >
+	<label id="vector-main-menu-dropdown-label" for="vector-main-menu-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu"></span>
+
+<span class="vector-dropdown-label-text">Main menu</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+				<div id="vector-main-menu-unpinned-container" class="vector-unpinned-container">
+		
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-main-menu-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="main-menu-pinned"
+	data-pinnable-element-id="vector-main-menu"
+	data-pinned-container-id="vector-main-menu-pinned-container"
+	data-unpinned-container-id="vector-main-menu-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Main menu</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-main-menu.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-main-menu.unpin">hide</button>
+</div>
+
+	
+<div id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation"  >
+	<div class="vector-menu-heading">
+		Navigation
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-contents" class="mw-list-item"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia"><span>Contents</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="/wiki/Portal:Current_events" title="Articles related to current events"><span>Current events</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x"><span>Random article</span></a></li><li id="n-aboutsite" class="mw-list-item"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works"><span>About Wikipedia</span></a></li><li id="n-contactpage" class="mw-list-item"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia"><span>Contact us</span></a></li><li id="n-sitesupport" class="mw-list-item"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation"><span>Donate</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	
+<div id="p-interaction" class="vector-menu mw-portlet mw-portlet-interaction"  >
+	<div class="vector-menu-heading">
+		Contribute
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-help" class="mw-list-item"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia"><span>Help</span></a></li><li id="n-introduction" class="mw-list-item"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia"><span>Learn to edit</span></a></li><li id="n-portal" class="mw-list-item"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors"><span>Community portal</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_upload_wizard" title="Add images or other media for use on Wikipedia"><span>Upload file</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div class="vector-main-menu-action vector-main-menu-action-lang-alert">
+	<div class="vector-main-menu-action-item">
+		<div class="vector-main-menu-action-heading vector-menu-heading">Languages</div>
+		<div class="vector-main-menu-action-content vector-menu-content">
+			<div class="mw-message-box cdx-message cdx-message--block mw-message-box-notice cdx-message--notice vector-language-sidebar-alert"><span class="cdx-message__icon"></span><div class="cdx-message__content">Language links are at the top of the page.</div></div>
+		</div>
+	</div>
+</div>
+
+</div>
+
+				</div>
+
+	</div>
+</div>
+
+		</nav>
+			
+<a href="/wiki/Main_Page" class="mw-logo">
+	<img class="mw-logo-icon" src="/static/images/icons/wikipedia.png" alt="" aria-hidden="true" height="50" width="50">
+	<span class="mw-logo-container">
+		<img class="mw-logo-wordmark" alt="Wikipedia" src="/static/images/mobile/copyright/wikipedia-wordmark-en.svg" style="width: 7.5em; height: 1.125em;">
+		<img class="mw-logo-tagline" alt="The Free Encyclopedia" src="/static/images/mobile/copyright/wikipedia-tagline-en.svg" width="117" height="13" style="width: 7.3125em; height: 0.8125em;">
+	</span>
+</a>
+
+		</div>
+		<div class="vector-header-end">
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<a href="/wiki/Special:Search" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only search-toggle" id="" title="Search Wikipedia [f]" accesskey="f"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search"></span>
+
+<span>Search</span>
+	</a>
+	<div class="vector-typeahead-search-container">
+		<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail cdx-typeahead-search--auto-expand-width">
+			<form action="/w/index.php" id="searchform" class="cdx-search-input cdx-search-input--has-end-button">
+				<div id="simpleSearch" class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+					<div class="cdx-text-input cdx-text-input--has-start-icon">
+						<input
+							class="cdx-text-input__input"
+							 type="search" name="search" placeholder="Search Wikipedia" aria-label="Search Wikipedia" autocapitalize="sentences" title="Search Wikipedia [f]" accesskey="f" id="searchInput"
+							>
+						<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+					</div>
+					<input type="hidden" name="title" value="Special:Search">
+				</div>
+				<button class="cdx-button cdx-search-input__end-button">Search</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+			<nav class="vector-user-links vector-user-links-wide" aria-label="Personal tools" role="navigation" >
+	<div class="vector-user-links-main">
+	
+<div id="p-vector-user-menu-preferences" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-userpage" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	<nav class="vector-client-prefs-landmark" aria-label="Appearance">
+		
+		
+	</nav>
+	
+<div id="p-vector-user-menu-notifications" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-createaccount-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="/w/index.php?title=Special:CreateAccount&amp;returnto=Tail+call" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span>Create account</span></a>
+</li>
+<li id="pt-login-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="/w/index.php?title=Special:UserLogin&amp;returnto=Tail+call" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o" class=""><span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	</div>
+	
+<div id="vector-user-links-dropdown" class="vector-dropdown vector-user-menu vector-button-flush-right vector-user-menu-logged-out"  title="Log in and more options" >
+	<input type="checkbox" id="vector-user-links-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-user-links-dropdown" class="vector-dropdown-checkbox "  aria-label="Personal tools"  >
+	<label id="vector-user-links-dropdown-label" for="vector-user-links-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-ellipsis mw-ui-icon-wikimedia-ellipsis"></span>
+
+<span class="vector-dropdown-label-text">Personal tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal user-links-collapsible-item"  title="User menu" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="user-links-collapsible-item mw-list-item"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Tail+call" title="You are encouraged to create an account and log in; however, it is not mandatory"><span class="vector-icon mw-ui-icon-userAdd mw-ui-icon-wikimedia-userAdd"></span> <span>Create account</span></a></li><li id="pt-login" class="user-links-collapsible-item mw-list-item"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Tail+call" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o"><span class="vector-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn"></span> <span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-user-menu-anon-editor" class="vector-menu mw-portlet mw-portlet-user-menu-anon-editor"  >
+	<div class="vector-menu-heading">
+		Pages for logged out editors <a href="/wiki/Help:Introduction" aria-label="Learn more about editing"><span>learn more</span></a>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-anoncontribs" class="mw-list-item"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y"><span>Contributions</span></a></li><li id="pt-anontalk" class="mw-list-item"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n"><span>Talk</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+
+</nav>
+
+		</div>
+	</header>
+</div>
+<div class="mw-page-container">
+	<div class="mw-page-container-inner">
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><!-- CentralNotice --></div>
+		</div>
+		<div class="vector-column-start">
+			<div class="vector-main-menu-container">
+		<div id="mw-navigation">
+			<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site" role="navigation">
+				<div id="vector-main-menu-pinned-container" class="vector-pinned-container">
+				
+				</div>
+		</nav>
+		</div>
+	</div>
+	<div class="vector-sticky-pinned-container">
+				<nav id="mw-panel-toc" role="navigation" aria-label="Contents" data-event-name="ui.sidebar-toc" class="mw-table-of-contents-container vector-toc-landmark">
+					<div id="vector-toc-pinned-container" class="vector-pinned-container">
+					<div id="vector-toc" class="vector-toc vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="toc-pinned"
+	data-pinnable-element-id="vector-toc"
+	
+	
+>
+	<h2 class="vector-pinnable-header-label">Contents</h2>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-toc.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-toc.unpin">hide</button>
+</div>
+
+
+	<ul class="vector-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="vector-toc-list-item vector-toc-level-1">
+			<a href="#" class="vector-toc-link">
+				<div class="vector-toc-text">(Top)</div>
+			</a>
+		</li>
+		<li id="toc-Description"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Description">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">1</span>Description</div>
+		</a>
+		
+		<ul id="toc-Description-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Syntactic_form"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Syntactic_form">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">2</span>Syntactic form</div>
+		</a>
+		
+		<ul id="toc-Syntactic_form-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Example_programs"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Example_programs">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">3</span>Example programs</div>
+		</a>
+		
+		<ul id="toc-Example_programs-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Tail_recursion_modulo_cons"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Tail_recursion_modulo_cons">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">4</span>Tail recursion modulo cons</div>
+		</a>
+		
+			<button aria-controls="toc-Tail_recursion_modulo_cons-sublist" class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-toc-toggle">
+				<span class="vector-icon vector-icon--x-small mw-ui-icon-wikimedia-expand"></span>
+				<span>Toggle Tail recursion modulo cons subsection</span>
+			</button>
+		
+		<ul id="toc-Tail_recursion_modulo_cons-sublist" class="vector-toc-list">
+			<li id="toc-Example_code"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Example_code">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.1</span>Example code</div>
+			</a>
+			
+			<ul id="toc-Example_code-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-C_example"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#C_example">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.2</span>C example</div>
+			</a>
+			
+			<ul id="toc-C_example-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+	</li>
+	<li id="toc-History"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#History">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">5</span>History</div>
+		</a>
+		
+		<ul id="toc-History-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Implementation_methods"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Implementation_methods">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">6</span>Implementation methods</div>
+		</a>
+		
+			<button aria-controls="toc-Implementation_methods-sublist" class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-toc-toggle">
+				<span class="vector-icon vector-icon--x-small mw-ui-icon-wikimedia-expand"></span>
+				<span>Toggle Implementation methods subsection</span>
+			</button>
+		
+		<ul id="toc-Implementation_methods-sublist" class="vector-toc-list">
+			<li id="toc-In_assembly"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#In_assembly">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">6.1</span>In assembly</div>
+			</a>
+			
+			<ul id="toc-In_assembly-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Through_trampolining"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Through_trampolining">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">6.2</span>Through trampolining</div>
+			</a>
+			
+			<ul id="toc-Through_trampolining-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+	</li>
+	<li id="toc-Relation_to_the_while_statement"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Relation_to_the_while_statement">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">7</span>Relation to the <i>while</i> statement</div>
+		</a>
+		
+		<ul id="toc-Relation_to_the_while_statement-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Language_support"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Language_support">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">8</span>Language support</div>
+		</a>
+		
+		<ul id="toc-Language_support-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-See_also"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#See_also">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">9</span>See also</div>
+		</a>
+		
+		<ul id="toc-See_also-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Notes"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Notes">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">10</span>Notes</div>
+		</a>
+		
+		<ul id="toc-Notes-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-References"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#References">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">11</span>References</div>
+		</a>
+		
+		<ul id="toc-References-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+</ul>
+</div>
+
+					</div>
+		</nav>
+			</div>
+		</div>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body" role="main">
+				<header class="mw-body-header vector-page-titlebar">
+					<nav role="navigation" aria-label="Contents" class="vector-toc-landmark">
+						
+<div id="vector-page-titlebar-toc" class="vector-dropdown vector-page-titlebar-toc vector-button-flush-left"  >
+	<input type="checkbox" id="vector-page-titlebar-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-titlebar-toc" class="vector-dropdown-checkbox "  aria-label="Toggle the table of contents"  >
+	<label id="vector-page-titlebar-toc-label" for="vector-page-titlebar-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet"></span>
+
+<span class="vector-dropdown-label-text">Toggle the table of contents</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+							<div id="vector-page-titlebar-toc-unpinned-container" class="vector-unpinned-container">
+			</div>
+		
+	</div>
+</div>
+
+					</nav>
+					<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Tail call</span></h1>
+							
+<div id="p-lang-btn" class="vector-dropdown mw-portlet mw-portlet-lang"  >
+	<input type="checkbox" id="p-lang-btn-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-lang-btn" class="vector-dropdown-checkbox mw-interlanguage-selector" aria-label="Go to an article in another language. Available in 18 languages"   >
+	<label id="p-lang-btn-label" for="p-lang-btn-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive mw-portlet-lang-heading-18" aria-hidden="true"  ><span class="vector-icon mw-ui-icon-language-progressive mw-ui-icon-wikimedia-language-progressive"></span>
+
+<span class="vector-dropdown-label-text">18 languages</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+		<div class="vector-menu-content">
+			
+			<ul class="vector-menu-content-list">
+				
+				<li class="interlanguage-link interwiki-cs mw-list-item"><a href="https://cs.wikipedia.org/wiki/Koncov%C3%A1_rekurze" title="Koncová rekurze – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target"><span>Čeština</span></a></li><li class="interlanguage-link interwiki-de mw-list-item"><a href="https://de.wikipedia.org/wiki/Endrekursion" title="Endrekursion – German" lang="de" hreflang="de" class="interlanguage-link-target"><span>Deutsch</span></a></li><li class="interlanguage-link interwiki-es mw-list-item"><a href="https://es.wikipedia.org/wiki/Recursi%C3%B3n_(ciencias_de_computaci%C3%B3n)#Funciones_de_recursión_de_cola" title="Recursión (ciencias de computación) – Spanish" lang="es" hreflang="es" class="interlanguage-link-target"><span>Español</span></a></li><li class="interlanguage-link interwiki-fr mw-list-item"><a href="https://fr.wikipedia.org/wiki/R%C3%A9cursion_terminale" title="Récursion terminale – French" lang="fr" hreflang="fr" class="interlanguage-link-target"><span>Français</span></a></li><li class="interlanguage-link interwiki-ko mw-list-item"><a href="https://ko.wikipedia.org/wiki/%EA%BC%AC%EB%A6%AC_%EC%9E%AC%EA%B7%80" title="꼬리 재귀 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target"><span>한국어</span></a></li><li class="interlanguage-link interwiki-he mw-list-item"><a href="https://he.wikipedia.org/wiki/%D7%A8%D7%A7%D7%95%D7%A8%D7%A1%D7%99%D7%99%D7%AA_%D7%96%D7%A0%D7%91" title="רקורסיית זנב – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target"><span>עברית</span></a></li><li class="interlanguage-link interwiki-lt mw-list-item"><a href="https://lt.wikipedia.org/wiki/Uodegin%C4%97_rekursija" title="Uodeginė rekursija – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target"><span>Lietuvių</span></a></li><li class="interlanguage-link interwiki-nl mw-list-item"><a href="https://nl.wikipedia.org/wiki/Staartrecursie" title="Staartrecursie – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target"><span>Nederlands</span></a></li><li class="interlanguage-link interwiki-ja mw-list-item"><a href="https://ja.wikipedia.org/wiki/%E6%9C%AB%E5%B0%BE%E5%86%8D%E5%B8%B0" title="末尾再帰 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target"><span>日本語</span></a></li><li class="interlanguage-link interwiki-pl mw-list-item"><a href="https://pl.wikipedia.org/wiki/Rekurencja_ogonowa" title="Rekurencja ogonowa – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target"><span>Polski</span></a></li><li class="interlanguage-link interwiki-pt mw-list-item"><a href="https://pt.wikipedia.org/wiki/Recursividade_(ci%C3%AAncia_da_computa%C3%A7%C3%A3o)#Funções_recursivas_em_cauda" title="Recursividade (ciência da computação) – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target"><span>Português</span></a></li><li class="interlanguage-link interwiki-ru mw-list-item"><a href="https://ru.wikipedia.org/wiki/%D0%A5%D0%B2%D0%BE%D1%81%D1%82%D0%BE%D0%B2%D0%B0%D1%8F_%D1%80%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D1%8F" title="Хвостовая рекурсия – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target"><span>Русский</span></a></li><li class="interlanguage-link interwiki-sr mw-list-item"><a href="https://sr.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BF%D0%BD%D0%B0_%D1%80%D0%B5%D0%BA%D1%83%D1%80%D0%B7%D0%B8%D1%98%D0%B0" title="Репна рекурзија – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target"><span>Српски / srpski</span></a></li><li class="interlanguage-link interwiki-fi mw-list-item"><a href="https://fi.wikipedia.org/wiki/H%C3%A4nt%C3%A4rekursio" title="Häntärekursio – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target"><span>Suomi</span></a></li><li class="interlanguage-link interwiki-sv mw-list-item"><a href="https://sv.wikipedia.org/wiki/Svansrekursion" title="Svansrekursion – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target"><span>Svenska</span></a></li><li class="interlanguage-link interwiki-tr mw-list-item"><a href="https://tr.wikipedia.org/wiki/Kuyruk_%C3%B6zyineleme" title="Kuyruk özyineleme – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target"><span>Türkçe</span></a></li><li class="interlanguage-link interwiki-uk mw-list-item"><a href="https://uk.wikipedia.org/wiki/%D0%A5%D0%B2%D0%BE%D1%81%D1%82%D0%BE%D0%B2%D0%B0_%D1%80%D0%B5%D0%BA%D1%83%D1%80%D1%81%D1%96%D1%8F" title="Хвостова рекурсія – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target"><span>Українська</span></a></li><li class="interlanguage-link interwiki-zh mw-list-item"><a href="https://zh.wikipedia.org/wiki/%E5%B0%BE%E8%B0%83%E7%94%A8" title="尾调用 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target"><span>中文</span></a></li>
+			</ul>
+			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1340959#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+		</div>
+
+	</div>
+</div>
+</header>
+				<div class="vector-page-toolbar">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/Tail_call" title="View the content page [c]" accesskey="c"><span>Article</span></a></li><li id="ca-talk" class="vector-tab-noicon mw-list-item"><a href="/wiki/Talk:Tail_call" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t"><span>Talk</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+								
+<div id="p-variants" class="vector-dropdown emptyPortlet"  >
+	<input type="checkbox" id="p-variants-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-variants" class="vector-dropdown-checkbox " aria-label="Change language variant"   >
+	<label id="p-variants-label" for="p-variants-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">English</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+					
+<div id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+								
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/Tail_call"><span>Read</span></a></li><li id="ca-edit" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=Tail_call&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-history" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=Tail_call&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+							</nav>
+				
+							<nav class="vector-page-tools-landmark" aria-label="Page tools">
+								
+<div id="vector-page-tools-dropdown" class="vector-dropdown vector-page-tools-dropdown"  >
+	<input type="checkbox" id="vector-page-tools-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-tools-dropdown" class="vector-dropdown-checkbox "  aria-label="Tools"  >
+	<label id="vector-page-tools-dropdown-label" for="vector-page-tools-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">Tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+									<div id="vector-page-tools-unpinned-container" class="vector-unpinned-container">
+						
+<div id="vector-page-tools" class="vector-page-tools vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-page-tools-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="page-tools-pinned"
+	data-pinnable-element-id="vector-page-tools"
+	data-pinned-container-id="vector-page-tools-pinned-container"
+	data-unpinned-container-id="vector-page-tools-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Tools</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-page-tools.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-page-tools.unpin">hide</button>
+</div>
+
+	
+<div id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-has-collapsible-items"  title="More options" >
+	<div class="vector-menu-heading">
+		Actions
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-more-view" class="selected vector-more-collapsible-item mw-list-item"><a href="/wiki/Tail_call"><span>Read</span></a></li><li id="ca-more-edit" class="vector-more-collapsible-item mw-list-item"><a href="/w/index.php?title=Tail_call&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-more-history" class="vector-more-collapsible-item mw-list-item"><a href="/w/index.php?title=Tail_call&amp;action=history"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-tb" class="vector-menu mw-portlet mw-portlet-tb"  >
+	<div class="vector-menu-heading">
+		General
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/Tail_call" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/Tail_call" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u"><span>Upload file</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=Tail_call&amp;oldid=1206402809" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=Tail_call&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Tail_call&amp;id=1206402809&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=Special:UrlShortener&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTail_call"><span>Get shortened URL</span></a></li><li id="t-urlshortener-qrcode" class="mw-list-item"><a href="/w/index.php?title=Special:QrCode&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTail_call"><span>Download QR code</span></a></li><li id="t-wikibase" class="mw-list-item"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1340959" title="Structured data on this page hosted by Wikidata [g]" accesskey="g"><span>Wikidata item</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-coll-print_export" class="vector-menu mw-portlet mw-portlet-coll-print_export"  >
+	<div class="vector-menu-heading">
+		Print/export
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="coll-download-as-rl" class="mw-list-item"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Tail_call&amp;action=show-download-screen" title="Download this page as a PDF file"><span>Download as PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="/w/index.php?title=Tail_call&amp;printable=yes" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+									</div>
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="vector-column-end">
+					<div class="vector-sticky-pinned-container">
+						<nav class="vector-page-tools-landmark" aria-label="Page tools">
+							<div id="vector-page-tools-pinned-container" class="vector-pinned-container">
+				
+							</div>
+		</nav>
+						<nav class="vector-client-prefs-landmark" aria-label="Appearance">
+						</nav>
+					</div>
+				</div>
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		</div>
+
+						<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+					</div>
+					<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+					
+					
+					<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Subroutine call performed as final action of a procedure</div>
+<p>In <a href="/wiki/Computer_science" title="Computer science">computer science</a>, a <b>tail call</b> is a <a href="/wiki/Subroutine" class="mw-redirect" title="Subroutine">subroutine</a> call performed as the final action of a procedure.<sup id="cite_ref-MuchnickAssociates1997_1-0" class="reference"><a href="#cite_note-MuchnickAssociates1997-1">&#91;1&#93;</a></sup> If the target of a tail is the same subroutine, the subroutine is said to be <b>tail recursive</b>, which is a special case of direct <a href="/wiki/Recursion_(computer_science)" title="Recursion (computer science)">recursion</a>. <b>Tail recursion</b> (or <b>tail-end recursion</b>) is particularly useful, and is often easy to optimize in implementations. 
+</p><p>Tail calls can be implemented without adding a new <a href="/wiki/Stack_frame" class="mw-redirect" title="Stack frame">stack frame</a> to the <a href="/wiki/Call_stack" title="Call stack">call stack</a>. Most of the frame of the current procedure is no longer needed, and can be replaced by the frame of the tail call, modified as appropriate (similar to <a href="/wiki/Exec_(system_call)" title="Exec (system call)">overlay</a> for processes, but for function calls). The program can then <a href="/wiki/Jump_(computer_science)" class="mw-redirect" title="Jump (computer science)">jump</a> to the called subroutine. Producing such code instead of a standard call sequence is called <b>tail-call elimination</b> or <b>tail-call optimization</b>. Tail-call elimination allows procedure calls in tail position to be implemented as efficiently as <a href="/wiki/Goto" title="Goto">goto</a> statements, thus allowing efficient <a href="/wiki/Structured_programming" title="Structured programming">structured programming</a>. In the words of <a href="/wiki/Guy_L._Steele" class="mw-redirect" title="Guy L. Steele">Guy L. Steele</a>, "in general, procedure calls may be usefully thought of as GOTO statements which also pass parameters, and can be uniformly coded as [machine code] JUMP instructions."<sup id="cite_ref-aim-443_2-0" class="reference"><a href="#cite_note-aim-443-2">&#91;2&#93;</a></sup>
+</p><p>Not all programming languages require tail-call elimination. However, in <a href="/wiki/Functional_programming_language" class="mw-redirect" title="Functional programming language">functional programming languages</a>, tail-call elimination is often guaranteed by the <a href="/wiki/Programming_language_specification" title="Programming language specification">language standard</a>, allowing tail recursion to use a similar amount of memory as an equivalent <a href="/wiki/Loop_(computing)" class="mw-redirect" title="Loop (computing)">loop</a>. The special case of tail-recursive calls, when a function calls itself, may be more amenable to call elimination than general tail calls. When the language semantics do not explicitly support general tail calls, a compiler can often still optimize <b>sibling calls</b>, or tail calls to functions which take and return the same types as the caller.<sup id="cite_ref-llvm.org_3-0" class="reference"><a href="#cite_note-llvm.org-3">&#91;3&#93;</a></sup>
+</p>
+<meta property="mw:PageProp/toc" />
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tail_call&amp;action=edit&amp;section=1" title="Edit section: Description"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>When a function is called, the computer must "remember" the place it was called from, the <i><a href="/wiki/Return_address_(computing)" class="mw-redirect" title="Return address (computing)">return address</a></i>, so that it can return to that location with the result once the call is complete. Typically, this information is saved on the <a href="/wiki/Call_stack" title="Call stack">call stack</a>, a list of return locations in the order that the call locations were reached. For tail calls, there is no need to remember the caller – instead, tail-call elimination makes only the minimum necessary changes to the stack frame before passing it on,<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> and the tail-called function will return directly to the <i>original</i> caller. The tail call doesn't have to appear lexically after all other statements in the source code; it is only important that the calling function return immediately after the tail call, returning the tail call's result if any, since the calling function is bypassed when the optimization is performed.
+</p><p>For non-recursive function calls, this is usually an <a href="/wiki/Program_optimization" title="Program optimization">optimization</a> that saves only a little time and space, since there are not that many different functions available to call. When dealing with recursive or <a href="/wiki/Mutually_recursive" class="mw-redirect" title="Mutually recursive">mutually recursive</a> functions where recursion happens through tail calls, however, the stack space and the number of returns saved can grow to be very significant, since a function can call itself, directly or indirectly, creating a new call stack frame each time. Tail-call elimination often reduces asymptotic stack space requirements from linear, or <a href="/wiki/Big-O_notation" class="mw-redirect" title="Big-O notation">O</a>(n), to constant, or <a href="/wiki/Big-O_notation" class="mw-redirect" title="Big-O notation">O</a>(1). Tail-call elimination is thus required by the standard definitions of some programming languages, such as <a href="/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a>,<sup id="cite_ref-SchemeProperTailRec_5-0" class="reference"><a href="#cite_note-SchemeProperTailRec-5">&#91;5&#93;</a></sup><sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> and languages in the <a href="/wiki/ML_(programming_language)" title="ML (programming language)">ML</a> family among others. The Scheme language definition formalizes the intuitive notion of tail position exactly, by specifying which syntactic forms allow having results in tail context.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> Implementations allowing an unlimited number of tail calls to be active at the same moment, thanks to tail-call elimination, can also be called 'properly tail recursive'.<sup id="cite_ref-SchemeProperTailRec_5-1" class="reference"><a href="#cite_note-SchemeProperTailRec-5">&#91;5&#93;</a></sup>
+</p><p>Besides space and execution efficiency, tail-call elimination is important in the <a href="/wiki/Functional_programming" title="Functional programming">functional programming</a> idiom known as <a href="/wiki/Continuation-passing_style" title="Continuation-passing style">continuation-passing style</a> (CPS), which would otherwise quickly run out of stack space.
+</p>
+<h2><span class="mw-headline" id="Syntactic_form">Syntactic form</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tail_call&amp;action=edit&amp;section=2" title="Edit section: Syntactic form"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A tail call can be located just before the syntactical end of a function:
+</p>
+<div class="mw-highlight mw-highlight-lang-javascript mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">foo</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">a</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">b</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>Here, both <code>a(data)</code> and <code>b(data)</code> are calls, but <code>b</code> is the last thing the procedure executes before returning and is thus in tail position. However, not all tail calls are necessarily located at the syntactical end of a subroutine:
+</p>
+<div class="mw-highlight mw-highlight-lang-javascript mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">bar</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">b</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">c</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>Here, both calls to <code>b</code> and <code>c</code> are in tail position. This is because each of them lies in the end of if-branch respectively, even though the first one is not syntactically at the end of <code>bar</code>'s body.
+</p><p>In this code:
+</p>
+<div class="mw-highlight mw-highlight-lang-javascript mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">foo1</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<div class="mw-highlight mw-highlight-lang-javascript mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">foo2</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">a</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">ret</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<div class="mw-highlight mw-highlight-lang-javascript mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">foo3</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">a</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="nx">ret</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">ret</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>the call to <code>a(data)</code> is in tail position in <code>foo2</code>, but it is <b>not</b> in tail position either in <code>foo1</code> or in <code>foo3</code>, because control must return to the caller to allow it to inspect or modify the return value before returning it.
+</p>
+<h2><span class="mw-headline" id="Example_programs">Example programs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tail_call&amp;action=edit&amp;section=3" title="Edit section: Example programs"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following program is an example in <a href="/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a>:<sup id="cite_ref-sicp_8-0" class="reference"><a href="#cite_note-sicp-8">&#91;8&#93;</a></sup>
+</p>
+<div class="mw-highlight mw-highlight-lang-scheme mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">;; factorial&#160;: number -&gt; number</span>
+<span class="c1">;; to calculate the product of all positive</span>
+<span class="c1">;; integers less than or equal to n.</span>
+<span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">factorial</span><span class="w"> </span><span class="nv">n</span><span class="p">)</span>
+<span class="w"> </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">=</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="mi">1</span>
+<span class="w">    </span><span class="p">(</span><span class="nb">*</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="p">(</span><span class="nf">factorial</span><span class="w"> </span><span class="p">(</span><span class="nb">-</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="mi">1</span><span class="p">)))))</span>
+</pre></div>
+<p>This is not written in a tail-recursive style, because the multiplication function ("*") is in the tail position. This can be compared to:
+</p>
+<div class="mw-highlight mw-highlight-lang-scheme mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">;; factorial&#160;: number -&gt; number</span>
+<span class="c1">;; to calculate the product of all positive</span>
+<span class="c1">;; integers less than or equal to n.</span>
+<span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">factorial</span><span class="w"> </span><span class="nv">n</span><span class="p">)</span>
+<span class="w">  </span><span class="p">(</span><span class="nf">fact-iter</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="nv">n</span><span class="p">))</span>
+<span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">fact-iter</span><span class="w"> </span><span class="nv">product</span><span class="w"> </span><span class="nv">n</span><span class="p">)</span>
+<span class="w">  </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">=</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">      </span><span class="nv">product</span>
+<span class="w">      </span><span class="p">(</span><span class="nf">fact-iter</span><span class="w"> </span><span class="p">(</span><span class="nb">*</span><span class="w"> </span><span class="nv">product</span><span class="w"> </span><span class="nv">n</span><span class="p">)</span>
+<span class="w">                 </span><span class="p">(</span><span class="nb">-</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="mi">1</span><span class="p">))))</span>
+</pre></div>
+<p>This program assumes <a href="/wiki/Evaluation_strategy#Applicative_order" title="Evaluation strategy">applicative-order</a> evaluation. The inner procedure <code>fact-iter</code> calls itself <i>last</i> in the control flow. This allows an <a href="/wiki/Interpreter_(computer_software)" class="mw-redirect" title="Interpreter (computer software)">interpreter</a> or <a href="/wiki/Compiler" title="Compiler">compiler</a> to reorganize the execution which would ordinarily look like this:<sup id="cite_ref-sicp_8-1" class="reference"><a href="#cite_note-sicp-8">&#91;8&#93;</a></sup>
+</p>
+<pre>  call factorial (4)
+   call fact-iter (1 4)
+    call fact-iter (4 3)
+     call fact-iter (12 2)
+      call fact-iter (24 1)
+      return 24
+     return 24
+    return 24
+   return 24
+  return 24
+</pre>
+<p>into the more <a href="/wiki/Algorithmic_efficiency" title="Algorithmic efficiency">efficient</a> variant, in terms of both space and time:
+</p>
+<pre>  call factorial (4)
+   call fact-iter (1 4)
+   replace arguments with (4 3)
+   replace arguments with (12 2)
+   replace arguments with (24 1)
+   return 24
+  return 24
+</pre>
+<p>This reorganization saves space because no state except for the calling function's address needs to be saved, either on the stack or on the heap, and the call stack frame for <code>fact-iter</code> is reused for the intermediate results storage. This also means that the programmer need not worry about running out of stack or heap space for extremely deep recursions. In typical implementations, the tail-recursive variant will be substantially faster than the other variant, but only by a constant factor.
+</p><p>Some programmers working in functional languages will rewrite recursive code to be tail recursive so they can take advantage of this feature. This often requires addition of an "accumulator" argument (<code>product</code> in the above example) to the function. In some cases (such as filtering lists) and in some languages, full tail recursion may require a function that was previously purely functional to be written such that it mutates references stored in other variables.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (April 2007)">citation needed</span></a></i>&#93;</sup>
+</p>
+<h2><span class="mw-headline" id="Tail_recursion_modulo_cons">Tail recursion modulo cons</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tail_call&amp;action=edit&amp;section=4" title="Edit section: Tail recursion modulo cons"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>Tail recursion modulo cons</b> is a generalization of tail-recursion optimization introduced by <a href="/wiki/David_H._D._Warren" title="David H. D. Warren">David H. D. Warren</a><sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup> in the context of <a href="/wiki/Compiler" title="Compiler">compilation</a> of <a href="/wiki/Prolog" title="Prolog">Prolog</a>, seen as an <i>explicitly</i> <a href="/wiki/Single_assignment#Single_assignment" class="mw-redirect" title="Single assignment"><i>set once</i></a> language. It was described (though not named) by <a href="/wiki/Daniel_P._Friedman" title="Daniel P. Friedman">Daniel P. Friedman</a> and <a href="/w/index.php?title=David_S._Wise&amp;action=edit&amp;redlink=1" class="new" title="David S. Wise (page does not exist)">David S. Wise</a> in 1974<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup> as a <a href="/wiki/LISP" class="mw-redirect" title="LISP">LISP</a> compilation technique. As the name suggests, it applies when the only operation left to perform after a recursive call is to prepend a known value in front of the list returned from it (or to perform a constant number of simple data-constructing operations, in general). This call would thus be a <i>tail call</i> save for ("<a href="/wiki/Modulo_(jargon)" class="mw-redirect" title="Modulo (jargon)">modulo</a>") the said <i><a href="/wiki/Cons" title="Cons">cons</a></i> operation. But prefixing a value at the start of a list <i>on exit</i> from a recursive call is the same as appending this value at the end of the growing list <i>on entry</i> into the recursive call, thus building the list as a <a href="/wiki/Side_effect_(computer_science)" title="Side effect (computer science)">side effect</a>, as if in an implicit accumulator parameter. The following Prolog fragment illustrates the concept:
+</p>
+<h3><span class="mw-headline" id="Example_code">Example code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tail_call&amp;action=edit&amp;section=5" title="Edit section: Example code"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<table>
+
+<tbody><tr>
+<td><div class="mw-highlight mw-highlight-lang-prolog mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">% Prolog, tail recursive modulo cons:</span>
+<span class="nf">partition</span><span class="p">([],</span> <span class="k">_</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]).</span>
+<span class="nf">partition</span><span class="p">([</span><span class="nv">X</span><span class="p">|</span><span class="nv">Xs</span><span class="p">],</span> <span class="nv">Pivot</span><span class="p">,</span> <span class="p">[</span><span class="nv">X</span><span class="p">|</span><span class="nv">Rest</span><span class="p">],</span> <span class="nv">Bigs</span><span class="p">)</span> <span class="p">:-</span>
+  <span class="nv">X</span> <span class="s s-Atom">@&lt;</span> <span class="nv">Pivot</span><span class="p">,</span> <span class="p">!,</span>
+  <span class="nf">partition</span><span class="p">(</span><span class="nv">Xs</span><span class="p">,</span> <span class="nv">Pivot</span><span class="p">,</span> <span class="nv">Rest</span><span class="p">,</span> <span class="nv">Bigs</span><span class="p">).</span>
+<span class="nf">partition</span><span class="p">([</span><span class="nv">X</span><span class="p">|</span><span class="nv">Xs</span><span class="p">],</span> <span class="nv">Pivot</span><span class="p">,</span> <span class="nv">Smalls</span><span class="p">,</span> <span class="p">[</span><span class="nv">X</span><span class="p">|</span><span class="nv">Rest</span><span class="p">])</span> <span class="p">:-</span>
+  <span class="nf">partition</span><span class="p">(</span><span class="nv">Xs</span><span class="p">,</span> <span class="nv">Pivot</span><span class="p">,</span> <span class="nv">Smalls</span><span class="p">,</span> <span class="nv">Rest</span><span class="p">).</span>
+</pre></div>
+</td>
+<td><div class="mw-highlight mw-highlight-lang-haskell mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">-- In Haskell, guarded recursion:</span>
+<span class="nf">partition</span><span class="w"> </span><span class="kt">[]</span><span class="w"> </span><span class="kr">_</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="p">(</span><span class="kt">[]</span><span class="p">,</span><span class="kt">[]</span><span class="p">)</span>
+<span class="nf">partition</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="kt">:</span><span class="n">xs</span><span class="p">)</span><span class="w"> </span><span class="n">p</span><span class="w"> </span>
+<span class="w">        </span><span class="o">|</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">p</span><span class="w">     </span><span class="ow">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="kt">:</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="w">        </span><span class="o">|</span><span class="w"> </span><span class="n">otherwise</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">x</span><span class="kt">:</span><span class="n">b</span><span class="p">)</span>
+<span class="w">   </span><span class="kr">where</span>
+<span class="w">      </span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">partition</span><span class="w"> </span><span class="n">xs</span><span class="w"> </span><span class="n">p</span>
+</pre></div>
+</td></tr>
+<tr>
+<td><div class="mw-highlight mw-highlight-lang-prolog mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">% Prolog, with explicit unifications:</span>
+<span class="c1">%     non-tail recursive translation:</span>
+<span class="nf">partition</span><span class="p">([],</span> <span class="k">_</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]).</span>
+<span class="nf">partition</span><span class="p">(</span><span class="nv">L</span><span class="p">,</span> <span class="nv">Pivot</span><span class="p">,</span> <span class="nv">Smalls</span><span class="p">,</span> <span class="nv">Bigs</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">L</span><span class="o">=</span><span class="p">[</span><span class="nv">X</span><span class="p">|</span><span class="nv">Xs</span><span class="p">],</span>
+ <span class="p">(</span>  <span class="nv">X</span> <span class="s s-Atom">@&lt;</span> <span class="nv">Pivot</span>
+ <span class="s s-Atom">-&gt;</span> <span class="nf">partition</span><span class="p">(</span><span class="nv">Xs</span><span class="p">,</span><span class="nv">Pivot</span><span class="p">,</span><span class="nv">Rest</span><span class="p">,</span><span class="nv">Bigs</span><span class="p">),</span> <span class="nv">Smalls</span><span class="o">=</span><span class="p">[</span><span class="nv">X</span><span class="p">|</span><span class="nv">Rest</span><span class="p">]</span>
+ <span class="p">;</span>  <span class="nf">partition</span><span class="p">(</span><span class="nv">Xs</span><span class="p">,</span><span class="nv">Pivot</span><span class="p">,</span><span class="nv">Smalls</span><span class="p">,</span><span class="nv">Rest</span><span class="p">),</span> <span class="nv">Bigs</span><span class="o">=</span><span class="p">[</span><span class="nv">X</span><span class="p">|</span><span class="nv">Rest</span><span class="p">]</span>
+ <span class="p">).</span>
+</pre></div>
+</td>
+<td><div class="mw-highlight mw-highlight-lang-prolog mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">% Prolog, with explicit unifications:</span>
+<span class="c1">%     tail-recursive translation:</span>
+<span class="nf">partition</span><span class="p">([],</span> <span class="k">_</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[]).</span>
+<span class="nf">partition</span><span class="p">(</span><span class="nv">L</span><span class="p">,</span> <span class="nv">Pivot</span><span class="p">,</span> <span class="nv">Smalls</span><span class="p">,</span> <span class="nv">Bigs</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">L</span><span class="o">=</span><span class="p">[</span><span class="nv">X</span><span class="p">|</span><span class="nv">Xs</span><span class="p">],</span>
+ <span class="p">(</span>  <span class="nv">X</span> <span class="s s-Atom">@&lt;</span> <span class="nv">Pivot</span>
+ <span class="s s-Atom">-&gt;</span> <span class="nv">Smalls</span><span class="o">=</span><span class="p">[</span><span class="nv">X</span><span class="p">|</span><span class="nv">Rest</span><span class="p">],</span> <span class="nf">partition</span><span class="p">(</span><span class="nv">Xs</span><span class="p">,</span><span class="nv">Pivot</span><span class="p">,</span><span class="nv">Rest</span><span class="p">,</span><span class="nv">Bigs</span><span class="p">)</span>
+ <span class="p">;</span>  <span class="nv">Bigs</span><span class="o">=</span><span class="p">[</span><span class="nv">X</span><span class="p">|</span><span class="nv">Rest</span><span class="p">],</span> <span class="nf">partition</span><span class="p">(</span><span class="nv">Xs</span><span class="p">,</span><span class="nv">Pivot</span><span class="p">,</span><span class="nv">Smalls</span><span class="p">,</span><span class="nv">Rest</span><span class="p">)</span>
+ <span class="p">).</span>
+</pre></div>
+</td></tr></tbody></table>
+<p>Thus in tail-recursive translation such a call is transformed into first creating a new <a href="/wiki/Node_(computer_science)" title="Node (computer science)">list node</a> and setting its <code>first</code> field, and <i>then</i> making the tail call with the pointer to the node's <code>rest</code> field as argument, to be filled recursively. The same effect is achieved when the recursion is <i>guarded</i> under a lazily evaluated data constructor, which is automatically achieved in lazy programming languages like Haskell.
+</p>
+<h3><span class="mw-headline" id="C_example">C example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tail_call&amp;action=edit&amp;section=6" title="Edit section: C example"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The following fragment defines a recursive function in <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> that duplicates a linked list (with some equivalent Scheme and Prolog code as comments, for comparison):
+</p>
+<table>
+
+<tbody><tr valign="top">
+<td rowspan="2">
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">list</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">value</span><span class="p">;</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">list</span><span class="w"> </span><span class="o">*</span><span class="n">next</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="n">list</span><span class="p">;</span>
+
+<span class="n">list</span><span class="w"> </span><span class="o">*</span><span class="nf">duplicate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">*</span><span class="n">ls</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">list</span><span class="w"> </span><span class="o">*</span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ls</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">list</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">duplicate</span><span class="p">(</span><span class="n">ls</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">);</span>
+<span class="w">        </span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="w"> </span><span class="o">*</span><span class="n">head</span><span class="p">);</span>
+<span class="w">        </span><span class="n">head</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ls</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">;</span>
+<span class="w">        </span><span class="n">head</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">head</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td>
+<td><div class="mw-highlight mw-highlight-lang-scheme mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">;; in Scheme,</span>
+<span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">duplicate</span><span class="w"> </span><span class="nv">ls</span><span class="p">)</span>
+<span class="w">  </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">not</span><span class="w"> </span><span class="p">(</span><span class="nb">null?</span><span class="w"> </span><span class="nv">ls</span><span class="p">))</span>
+<span class="w">    </span><span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="p">(</span><span class="nb">car</span><span class="w"> </span><span class="nv">ls</span><span class="p">)</span>
+<span class="w">          </span><span class="p">(</span><span class="nf">duplicate</span><span class="w"> </span><span class="p">(</span><span class="nb">cdr</span><span class="w"> </span><span class="nv">ls</span><span class="p">)))</span>
+<span class="w">    </span><span class="o">&#39;</span><span class="p">()))</span>
+</pre></div>
+</td></tr>
+<tr>
+<td><div class="mw-highlight mw-highlight-lang-prolog mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">%% in Prolog,</span>
+<span class="nf">duplicate</span><span class="p">([</span><span class="nv">X</span><span class="p">|</span><span class="nv">Xs</span><span class="p">],</span><span class="nv">R</span><span class="p">):-</span>
+  <span class="nf">duplicate</span><span class="p">(</span><span class="nv">Xs</span><span class="p">,</span><span class="nv">Ys</span><span class="p">),</span>
+  <span class="nv">R</span><span class="o">=</span><span class="p">[</span><span class="nv">X</span><span class="p">|</span><span class="nv">Ys</span><span class="p">].</span>
+<span class="nf">duplicate</span><span class="p">([],[]).</span>
+</pre></div>
+</td></tr></tbody></table>
+<p>In this form the function is not tail recursive, because control returns to the caller after the recursive call duplicates the rest of the input list. Even if it were to allocate the <i>head</i> node before duplicating the rest, it would still need to plug in the result of the recursive call into the <code>next</code> field <i>after</i> the call.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;a&#93;</a></sup>
+So the function is <i>almost</i> tail recursive. Warren's method pushes the responsibility of filling the <code>next</code> field into the recursive call itself, which thus becomes tail call.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;b&#93;</a></sup> Using  sentinel head node to simplify the code, 
+</p>
+<table>
+
+<tbody><tr valign="top">
+<td rowspan="2">
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">list</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">value</span><span class="p">;</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">list</span><span class="w"> </span><span class="o">*</span><span class="n">next</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="n">list</span><span class="p">;</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">duplicate_aux</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">*</span><span class="n">ls</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">*</span><span class="n">end</span><span class="p">);</span>
+
+<span class="n">list</span><span class="w"> </span><span class="o">*</span><span class="nf">duplicate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">*</span><span class="n">ls</span><span class="p">)</span>
+<span class="p">{</span><span class="w">  </span>
+<span class="w">    </span><span class="n">list</span><span class="w"> </span><span class="n">head</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">duplicate_aux</span><span class="p">(</span><span class="n">ls</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">head</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">head</span><span class="p">.</span><span class="n">next</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">duplicate_aux</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">*</span><span class="n">ls</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">*</span><span class="n">end</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ls</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">end</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="w"> </span><span class="o">*</span><span class="n">end</span><span class="p">);</span>
+<span class="w">        </span><span class="n">end</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ls</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">;</span>
+<span class="w">        </span><span class="n">duplicate_aux</span><span class="p">(</span><span class="n">ls</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">end</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td>
+<td><div class="mw-highlight mw-highlight-lang-scheme mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">;; in Scheme,</span>
+<span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">duplicate</span><span class="w"> </span><span class="nv">ls</span><span class="p">)</span>
+<span class="w">  </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nf">head</span><span class="w"> </span><span class="p">(</span><span class="nb">list</span><span class="w"> </span><span class="mi">1</span><span class="p">)))</span>
+<span class="w">    </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="nb">dup</span><span class="w"> </span><span class="p">((</span><span class="nf">ls</span><span class="w">  </span><span class="nv">ls</span><span class="p">)</span>
+<span class="w">              </span><span class="p">(</span><span class="nf">end</span><span class="w"> </span><span class="nv">head</span><span class="p">))</span>
+<span class="w">      </span><span class="p">(</span><span class="k">cond</span>
+<span class="w">        </span><span class="p">((</span><span class="nb">not</span><span class="w"> </span><span class="p">(</span><span class="nb">null?</span><span class="w"> </span><span class="nv">ls</span><span class="p">))</span>
+<span class="w">         </span><span class="p">(</span><span class="nb">set-cdr!</span><span class="w"> </span><span class="nv">end</span><span class="w"> </span><span class="p">(</span><span class="nb">list</span><span class="w"> </span><span class="p">(</span><span class="nb">car</span><span class="w"> </span><span class="nv">ls</span><span class="p">)))</span>
+<span class="w">         </span><span class="p">(</span><span class="nb">dup</span><span class="w"> </span><span class="p">(</span><span class="nb">cdr</span><span class="w"> </span><span class="nv">ls</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">cdr</span><span class="w"> </span><span class="nv">end</span><span class="p">)))))</span>
+<span class="w">    </span><span class="p">(</span><span class="nb">cdr</span><span class="w"> </span><span class="nv">head</span><span class="p">)))</span>
+</pre></div>
+</td></tr>
+<tr>
+<td><div class="mw-highlight mw-highlight-lang-prolog mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">%% in Prolog,</span>
+<span class="nf">duplicate</span><span class="p">([</span><span class="nv">X</span><span class="p">|</span><span class="nv">Xs</span><span class="p">],</span><span class="nv">R</span><span class="p">):-</span>
+   <span class="nv">R</span><span class="o">=</span><span class="p">[</span><span class="nv">X</span><span class="p">|</span><span class="nv">Ys</span><span class="p">],</span>
+   <span class="nf">duplicate</span><span class="p">(</span><span class="nv">Xs</span><span class="p">,</span><span class="nv">Ys</span><span class="p">).</span>
+<span class="nf">duplicate</span><span class="p">([],[]).</span>
+</pre></div>
+</td></tr></tbody></table>
+<p>The callee now appends to the end of the growing list, rather than have the caller prepend to the beginning of the returned list. The work is now done on the way <i>forward</i> from the list's start, <i>before</i> the recursive call which then proceeds further, instead of <i>backward</i> from the list's end, <i>after</i> the recursive call has returned its result. It is thus similar to the accumulating parameter technique, turning a recursive computation into an iterative one.
+</p><p>Characteristically for this technique, a parent <a href="/wiki/Call_frame" class="mw-redirect" title="Call frame">frame</a> is created on the execution call stack, which the tail-recursive callee can reuse as its own call frame if the tail-call optimization is present.
+</p><p>The tail-recursive implementation can now be converted into an explicitly iterative implementation, as an accumulating <a href="/wiki/Loop_(computing)#Loops" class="mw-redirect" title="Loop (computing)">loop</a>:
+</p>
+<table>
+
+<tbody><tr valign="top">
+<td rowspan="2">
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">list</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">value</span><span class="p">;</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">list</span><span class="w"> </span><span class="o">*</span><span class="n">next</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="n">list</span><span class="p">;</span>
+
+<span class="n">list</span><span class="w"> </span><span class="o">*</span><span class="nf">duplicate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">*</span><span class="n">ls</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">list</span><span class="w"> </span><span class="n">head</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">end</span><span class="p">;</span>
+<span class="w">    </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">head</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">ls</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">end</span><span class="o">-&gt;</span><span class="n">next</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="w"> </span><span class="o">*</span><span class="n">end</span><span class="p">);</span>
+<span class="w">        </span><span class="n">end</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ls</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ls</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">        </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">end</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">end</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">head</span><span class="p">.</span><span class="n">next</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td>
+<td><div class="mw-highlight mw-highlight-lang-scheme mw-content-ltr" dir="ltr"><pre><span></span><span class="w"> </span><span class="c1">;; in Scheme,</span>
+<span class="w"> </span><span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">duplicate</span><span class="w"> </span><span class="nv">ls</span><span class="p">)</span>
+<span class="w">   </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nf">head</span><span class="w"> </span><span class="p">(</span><span class="nb">list</span><span class="w"> </span><span class="mi">1</span><span class="p">)))</span>
+<span class="w">     </span><span class="p">(</span><span class="k">do</span><span class="w"> </span><span class="p">((</span><span class="nf">end</span><span class="w"> </span><span class="nv">head</span><span class="w"> </span><span class="p">(</span><span class="nb">cdr</span><span class="w"> </span><span class="nv">end</span><span class="p">))</span>
+<span class="w">          </span><span class="p">(</span><span class="nf">ls</span><span class="w">  </span><span class="nv">ls</span><span class="w">   </span><span class="p">(</span><span class="nb">cdr</span><span class="w"> </span><span class="nv">ls</span><span class="w"> </span><span class="p">)))</span>
+<span class="w">         </span><span class="p">((</span><span class="nb">null?</span><span class="w"> </span><span class="nv">ls</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">cdr</span><span class="w"> </span><span class="nv">head</span><span class="p">))</span>
+<span class="w">       </span><span class="p">(</span><span class="nb">set-cdr!</span><span class="w"> </span><span class="nv">end</span><span class="w"> </span><span class="p">(</span><span class="nb">list</span><span class="w"> </span><span class="p">(</span><span class="nb">car</span><span class="w"> </span><span class="nv">ls</span><span class="p">))))))</span>
+</pre></div>
+</td></tr>
+<tr>
+<td><div class="mw-highlight mw-highlight-lang-prolog mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">%% in Prolog,</span>
+<span class="c1">%% N/A</span>
+</pre></div>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tail_call&amp;action=edit&amp;section=7" title="Edit section: History"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In a paper delivered to the <a href="/wiki/Association_for_Computing_Machinery" title="Association for Computing Machinery">ACM</a> conference in Seattle in 1977, <a href="/wiki/Guy_L._Steele" class="mw-redirect" title="Guy L. Steele">Guy L. Steele</a> summarized the debate over the <a href="/wiki/GOTO" class="mw-redirect" title="GOTO">GOTO</a> and <a href="/wiki/Structured_programming" title="Structured programming">structured programming</a>, and observed that procedure calls in the tail position of a procedure can be best treated as a direct transfer of control to the called procedure, typically eliminating unnecessary stack manipulation operations.<sup id="cite_ref-aim-443_2-1" class="reference"><a href="#cite_note-aim-443-2">&#91;2&#93;</a></sup> Since such "tail calls" are very common in <a href="/wiki/Lisp_(programming_language)" title="Lisp (programming language)">Lisp</a>, a language where procedure calls are ubiquitous, this form of optimization considerably reduces the cost of a procedure call compared to other implementations. Steele argued that poorly-implemented procedure calls had led to an artificial perception that the GOTO was cheap compared to the procedure call. Steele further argued that "in general procedure calls may be usefully thought of as GOTO statements which also pass parameters, and can be uniformly coded as [machine code] JUMP instructions", with the machine code stack manipulation instructions "considered an optimization (rather than vice versa!)".<sup id="cite_ref-aim-443_2-2" class="reference"><a href="#cite_note-aim-443-2">&#91;2&#93;</a></sup> Steele cited evidence that well-optimized numerical algorithms in Lisp could execute faster than code produced by then-available commercial Fortran compilers because the cost of a procedure call in Lisp was much lower. In <a href="/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a>, a Lisp dialect developed by Steele with <a href="/wiki/Gerald_Jay_Sussman" title="Gerald Jay Sussman">Gerald Jay Sussman</a>, tail-call elimination is guaranteed to be implemented in any interpreter.<sup id="cite_ref-r5rs_13-0" class="reference"><a href="#cite_note-r5rs-13">&#91;11&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Implementation_methods">Implementation methods</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tail_call&amp;action=edit&amp;section=8" title="Edit section: Implementation methods"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Tail recursion is important to some <a href="/wiki/High-level_programming_language" title="High-level programming language">high-level languages</a>, especially <a href="/wiki/Functional_programming" title="Functional programming">functional</a> and <a href="/wiki/Logic_programming" title="Logic programming">logic</a> languages and members of the <a href="/wiki/Lisp_programming_language" class="mw-redirect" title="Lisp programming language">Lisp</a> family. In these languages, tail recursion is the most commonly used way (and sometimes the only way available) of implementing iteration. The language specification of Scheme requires that tail calls are to be optimized so as not to grow the stack. Tail calls can be made explicitly in <a href="/wiki/Perl" title="Perl">Perl</a>, with a variant of the "goto" statement that takes a function name: <code>goto &amp;NAME;</code><sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;12&#93;</a></sup>
+</p><p>However, for language implementations which store function arguments and local variables on a <a href="/wiki/Call_stack" title="Call stack">call stack</a> (which is the default implementation for many languages, at least on systems with a <a href="/wiki/Hardware_stack" class="mw-redirect" title="Hardware stack">hardware stack</a>, such as the <a href="/wiki/X86" title="X86">x86</a>), implementing generalized tail-call optimization (including mutual tail recursion) presents an issue: if the size of the callee's activation record is different from that of the caller, then additional cleanup or resizing of the stack frame may be required. For these cases, optimizing tail recursion remains trivial, but general tail-call optimization may be harder to implement efficiently.
+</p><p>For example, in the <a href="/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a> (JVM), tail-recursive calls can be eliminated (as this reuses the existing call stack), but general tail calls cannot be (as this changes the call stack).<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;13&#93;</a></sup><sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;14&#93;</a></sup> As a result, functional languages such as <a href="/wiki/Scala_(programming_language)" title="Scala (programming language)">Scala</a> that target the JVM can efficiently implement direct tail recursion, but not mutual tail recursion.
+</p><p>The <a href="/wiki/GNU_Compiler_Collection" title="GNU Compiler Collection">GCC</a>, <a href="/wiki/Clang" title="Clang">LLVM/Clang</a>, and <a href="/wiki/Intel_C_Compiler" class="mw-redirect" title="Intel C Compiler">Intel</a> compiler suites perform tail-call optimization for <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> and other languages at higher optimization levels or when the <code>-foptimize-sibling-calls</code> option is passed.<sup id="cite_ref-llvm-documentation-tco_17-0" class="reference"><a href="#cite_note-llvm-documentation-tco-17">&#91;15&#93;</a></sup><sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;16&#93;</a></sup><sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;17&#93;</a></sup> Though the given language syntax may not explicitly support it, the compiler can make this optimization whenever it can determine that the return types for the caller and callee are equivalent, and that the argument types passed to both function are either the same, or require the same amount of total storage space on the call stack.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;18&#93;</a></sup>
+</p><p>Various implementation methods are available.
+</p>
+<h3><span class="mw-headline" id="In_assembly">In assembly</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tail_call&amp;action=edit&amp;section=9" title="Edit section: In assembly"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<style data-mw-deduplicate="TemplateStyles:r1097763485">.mw-parser-output .ambox{border:1px solid #a2a9b1;border-left:10px solid #36c;background-color:#fbfbfb;box-sizing:border-box}.mw-parser-output .ambox+link+.ambox,.mw-parser-output .ambox+link+style+.ambox,.mw-parser-output .ambox+link+link+.ambox,.mw-parser-output .ambox+.mw-empty-elt+link+.ambox,.mw-parser-output .ambox+.mw-empty-elt+link+style+.ambox,.mw-parser-output .ambox+.mw-empty-elt+link+link+.ambox{margin-top:-1px}html body.mediawiki .mw-parser-output .ambox.mbox-small-left{margin:4px 1em 4px 0;overflow:hidden;width:238px;border-collapse:collapse;font-size:88%;line-height:1.25em}.mw-parser-output .ambox-speedy{border-left:10px solid #b32424;background-color:#fee7e6}.mw-parser-output .ambox-delete{border-left:10px solid #b32424}.mw-parser-output .ambox-content{border-left:10px solid #f28500}.mw-parser-output .ambox-style{border-left:10px solid #fc3}.mw-parser-output .ambox-move{border-left:10px solid #9932cc}.mw-parser-output .ambox-protection{border-left:10px solid #a2a9b1}.mw-parser-output .ambox .mbox-text{border:none;padding:0.25em 0.5em;width:100%}.mw-parser-output .ambox .mbox-image{border:none;padding:2px 0 2px 0.5em;text-align:center}.mw-parser-output .ambox .mbox-imageright{border:none;padding:2px 0.5em 2px 0;text-align:center}.mw-parser-output .ambox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .ambox .mbox-image-div{width:52px}html.client-js body.skin-minerva .mw-parser-output .mbox-text-span{margin-left:23px!important}@media(min-width:720px){.mw-parser-output .ambox{margin:0 10%}}</style><table class="box-Unreferenced_section plainlinks metadata ambox ambox-content ambox-Unreferenced" role="presentation"><tbody><tr><td class="mbox-image"><div class="mbox-image-div"><span typeof="mw:File"><a href="/wiki/File:Question_book-new.svg" class="mw-file-description"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" decoding="async" width="50" height="39" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></span></div></td><td class="mbox-text"><div class="mbox-text-span">This section <b>does not <a href="/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">cite</a> any <a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">sources</a></b>.<span class="hide-when-compact"> Please help <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Tail_call&amp;action=edit">improve this section</a> by <a href="/wiki/Help:Referencing_for_beginners" title="Help:Referencing for beginners">adding citations to reliable sources</a>. Unsourced material may be challenged and <a href="/wiki/Wikipedia:Verifiability#Burden_of_evidence" title="Wikipedia:Verifiability">removed</a>.</span>  <span class="date-container"><i>(<span class="date">June 2014</span>)</i></span><span class="hide-when-compact"><i> (<small><a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a></small>)</i></span></div></td></tr></tbody></table>
+<p>Tail calls are often optimized by <a href="/wiki/Interpreter_(computing)" title="Interpreter (computing)">interpreters</a> and <a href="/wiki/Compiler" title="Compiler">compilers</a> of <a href="/wiki/Functional_programming" title="Functional programming">functional programming</a> and <a href="/wiki/Logic_programming" title="Logic programming">logic programming</a> languages to more efficient forms of <a href="/wiki/Iteration" title="Iteration">iteration</a>. For example, <a href="/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a> programmers commonly express <a href="/wiki/While_loop" title="While loop">while loops</a> as calls to procedures in tail position and rely on the Scheme compiler or interpreter to substitute the tail calls with more efficient <a href="/wiki/Jump_(computer_science)" class="mw-redirect" title="Jump (computer science)">jump</a> instructions.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;19&#93;</a></sup>
+</p><p>For compilers generating assembly directly, tail-call elimination is easy: it suffices to replace a call opcode with a jump one, after fixing parameters on the stack. From a compiler's perspective, the first example above is initially translated into pseudo-<a href="/wiki/Assembly_language" title="Assembly language">assembly language</a> (in fact, this is valid <a href="/wiki/X86_assembly_language" title="X86 assembly language">x86 assembly</a>):
+</p>
+<div class="mw-highlight mw-highlight-lang-asm mw-content-ltr" dir="ltr"><pre><span></span><span class="w"> </span><span class="nl">foo:</span>
+<span class="w">  </span><span class="nf">call</span><span class="w"> </span><span class="no">B</span>
+<span class="w">  </span><span class="nf">call</span><span class="w"> </span><span class="no">A</span>
+<span class="w">  </span><span class="nf">ret</span>
+</pre></div>
+<p>Tail-call elimination replaces the last two lines with a single jump instruction:
+</p>
+<div class="mw-highlight mw-highlight-lang-asm mw-content-ltr" dir="ltr"><pre><span></span><span class="w"> </span><span class="nl">foo:</span>
+<span class="w">  </span><span class="nf">call</span><span class="w"> </span><span class="no">B</span>
+<span class="w">  </span><span class="nf">jmp</span><span class="w">  </span><span class="no">A</span>
+</pre></div>
+<p>After subroutine <code>A</code> completes, it will then return directly to the return address of <code>foo</code>, omitting the unnecessary <code>ret</code> statement.
+</p><p>Typically, the subroutines being called need to be supplied with <a href="/wiki/Parameter_(computer_science)" class="mw-redirect" title="Parameter (computer science)">parameters</a>. The generated code thus needs to make sure that the <a href="/wiki/Call_frame" class="mw-redirect" title="Call frame">call frame</a> for A is properly set up before jumping to the tail-called subroutine. For instance, on <a href="/wiki/Computing_platform" title="Computing platform">platforms</a> where the <a href="/wiki/Call_stack" title="Call stack">call stack</a> does not just contain the <a href="/wiki/Return_statement" title="Return statement">return address</a>, but also the parameters for the subroutine, the compiler may need to emit instructions to adjust the call stack. On such a platform, for the code:
+</p>
+<pre><b>function</b> foo(data1, data2)
+   B(data1)
+   <b>return</b> A(data2)
+</pre>
+<p>(where <code>data1</code> and <code>data2</code> are parameters) a compiler might translate that as:<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">&#91;c&#93;</a></sup>
+</p>
+<div class="mw-highlight mw-highlight-lang-nasm mw-content-ltr mw-highlight-lines" dir="ltr"><pre><span></span><span class="linenos" data-line="1"></span><span class="w"> </span><span class="nl">foo:</span>
+<span class="linenos" data-line="2"></span><span class="w">   </span><span class="nf">mov</span><span class="w">  </span><span class="nv">reg</span><span class="p">,[</span><span class="nb">sp</span><span class="o">+</span><span class="nv">data1</span><span class="p">]</span><span class="w"> </span><span class="c1">; fetch data1 from stack (sp) parameter into a scratch register.</span>
+<span class="linenos" data-line="3"></span><span class="w">   </span><span class="nf">push</span><span class="w"> </span><span class="nv">reg</span><span class="w">            </span><span class="c1">; put data1 on stack where B expects it</span>
+<span class="linenos" data-line="4"></span><span class="w">   </span><span class="nf">call</span><span class="w"> </span><span class="nv">B</span><span class="w">              </span><span class="c1">; B uses data1</span>
+<span class="linenos" data-line="5"></span><span class="w">   </span><span class="nf">pop</span><span class="w">                 </span><span class="c1">; remove data1 from stack</span>
+<span class="linenos" data-line="6"></span><span class="w">   </span><span class="nf">mov</span><span class="w">  </span><span class="nv">reg</span><span class="p">,[</span><span class="nb">sp</span><span class="o">+</span><span class="nv">data2</span><span class="p">]</span><span class="w"> </span><span class="c1">; fetch data2 from stack (sp) parameter into a scratch register.</span>
+<span class="linenos" data-line="7"></span><span class="w">   </span><span class="nf">push</span><span class="w"> </span><span class="nv">reg</span><span class="w">            </span><span class="c1">; put data2 on stack where A expects it</span>
+<span class="linenos" data-line="8"></span><span class="w">   </span><span class="nf">call</span><span class="w"> </span><span class="nv">A</span><span class="w">              </span><span class="c1">; A uses data2</span>
+<span class="linenos" data-line="9"></span><span class="w">   </span><span class="nf">pop</span><span class="w">                 </span><span class="c1">; remove data2 from stack.</span>
+<span class="linenos" data-line="10"></span><span class="w">   </span><span class="nf">ret</span>
+</pre></div>
+<p>A tail-call optimizer could then change the code to:
+</p>
+<div class="mw-highlight mw-highlight-lang-nasm mw-content-ltr mw-highlight-lines" dir="ltr"><pre><span></span><span class="linenos" data-line="1"></span><span class="w"> </span><span class="nl">foo:</span>
+<span class="linenos" data-line="2"></span><span class="w">   </span><span class="nf">mov</span><span class="w">  </span><span class="nv">reg</span><span class="p">,[</span><span class="nb">sp</span><span class="o">+</span><span class="nv">data1</span><span class="p">]</span><span class="w"> </span><span class="c1">; fetch data1 from stack (sp) parameter into a scratch register.</span>
+<span class="linenos" data-line="3"></span><span class="w">   </span><span class="nf">push</span><span class="w"> </span><span class="nv">reg</span><span class="w">            </span><span class="c1">; put data1 on stack where B expects it</span>
+<span class="linenos" data-line="4"></span><span class="w">   </span><span class="nf">call</span><span class="w"> </span><span class="nv">B</span><span class="w">              </span><span class="c1">; B uses data1</span>
+<span class="linenos" data-line="5"></span><span class="w">   </span><span class="nf">pop</span><span class="w">                 </span><span class="c1">; remove data1 from stack</span>
+<span class="linenos" data-line="6"></span><span class="w">   </span><span class="nf">mov</span><span class="w">  </span><span class="nv">reg</span><span class="p">,[</span><span class="nb">sp</span><span class="o">+</span><span class="nv">data2</span><span class="p">]</span><span class="w"> </span><span class="c1">; fetch data2 from stack (sp) parameter into a scratch register.</span>
+<span class="linenos" data-line="7"></span><span class="w">   </span><span class="nf">mov</span><span class="w">  </span><span class="p">[</span><span class="nb">sp</span><span class="o">+</span><span class="nv">data1</span><span class="p">],</span><span class="nv">reg</span><span class="w"> </span><span class="c1">; put data2 where A expects it</span>
+<span class="linenos" data-line="8"></span><span class="w">   </span><span class="nf">jmp</span><span class="w">  </span><span class="nv">A</span><span class="w">              </span><span class="c1">; A uses data2 and returns immediately to caller.</span>
+</pre></div>
+<p>This code is more efficient both in terms of execution speed and use of stack space.
+</p>
+<h3><span class="mw-headline" id="Through_trampolining">Through trampolining</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tail_call&amp;action=edit&amp;section=10" title="Edit section: Through trampolining"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Since many <a href="/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a> compilers use <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> as an intermediate target code, the tail recursion must be encoded in C without growing the stack, even if the C compiler does not optimize tail calls. Many implementations achieve this by using a device known as a <a href="/wiki/Trampoline_(computers)" class="mw-redirect" title="Trampoline (computers)">trampoline</a>, a piece of code that repeatedly calls functions. All functions are entered via the trampoline. When a function has to tail-call another, instead of calling it directly and then returning the result, it returns the address of the function to be called and the call parameters back to the trampoline (from which it was called itself), and the trampoline takes care of calling this function next with the specified parameters. This ensures that the C stack does not grow and iteration can continue indefinitely.
+</p><p>It is possible to implement trampolines using <a href="/wiki/Higher-order_function" title="Higher-order function">higher-order functions</a> in languages that support them, such as <a href="/wiki/Groovy_(programming_language)" class="mw-redirect" title="Groovy (programming language)">Groovy</a>, <a href="/wiki/Visual_Basic_.NET" class="mw-redirect" title="Visual Basic .NET">Visual Basic .NET</a> and <a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>.<sup id="cite_ref-onyourtail_23-0" class="reference"><a href="#cite_note-onyourtail-23">&#91;20&#93;</a></sup>
+</p><p>Using a trampoline for all function calls is rather more expensive than the normal C function call, so at least one Scheme compiler, <a href="/wiki/Chicken_(Scheme_implementation)" title="Chicken (Scheme implementation)">Chicken</a>, uses a technique first described by <a href="/wiki/Henry_Baker_(computer_scientist)" title="Henry Baker (computer scientist)">Henry Baker</a> from an unpublished suggestion by <a href="/wiki/Andrew_Appel" title="Andrew Appel">Andrew Appel</a>,<sup id="cite_ref-Chicken_24-0" class="reference"><a href="#cite_note-Chicken-24">&#91;21&#93;</a></sup> in which normal C&#160;calls are used but the stack size is checked before every call. When the stack reaches its maximum permitted size, objects on the stack are <a href="/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">garbage-collected</a> using the <a href="/wiki/Cheney_algorithm" class="mw-redirect" title="Cheney algorithm">Cheney algorithm</a> by moving all live data into a separate heap. Following this, the stack is unwound ("popped") and the program resumes from the state saved just before the garbage collection. Baker says "Appel's method avoids making a large number of small trampoline bounces by occasionally jumping off the Empire State Building."<sup id="cite_ref-Chicken_24-1" class="reference"><a href="#cite_note-Chicken-24">&#91;21&#93;</a></sup> The garbage collection ensures that mutual tail recursion can continue indefinitely. However, this approach requires that no C function call ever returns, since there is no guarantee that its caller's stack frame still exists; therefore, it involves a much more dramatic internal rewriting of the program code: <a href="/wiki/Continuation-passing_style" title="Continuation-passing style">continuation-passing style</a>.
+</p>
+<h2><span class="mw-headline" id="Relation_to_the_while_statement">Relation to the <i>while</i> statement</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tail_call&amp;action=edit&amp;section=11" title="Edit section: Relation to the while statement"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Tail recursion can be related to the <a href="/wiki/While_loop" title="While loop"><i>while</i> statement</a>, an explicit iteration, for instance by transforming
+</p>
+<pre><b>procedure</b> foo(<i>x</i>)
+    <b>if</b> <i>p</i>(<i>x</i>)
+        <b>return</b> bar(<i>x</i>)
+    <b>else</b>
+        <b>return</b> foo(baz(<i>x</i>))
+</pre>
+<p>into
+</p>
+<pre><b>procedure</b> foo(<i>x</i>)
+    <b>while</b> <b>true</b>
+        <b>if</b> <i>p</i>(<i>x</i>)
+            <b>return</b> bar(<i>x</i>)
+        <b>else</b>
+            <i>x</i> ← baz(<i>x</i>)
+</pre>
+<p>where <i>x</i> may be a tuple involving more than one variable: if so, care must be taken in implementing the <a href="/wiki/Assignment_(computer_science)" title="Assignment (computer science)">assignment statement</a> <i>x</i> ← baz(<i>x</i>) so that dependencies are respected. One may need to introduce auxiliary variables or use a <i><a href="/wiki/Swap_(computer_science)" class="mw-redirect" title="Swap (computer science)">swap</a></i> construct.
+</p><p>More generally,
+</p>
+<pre><b>procedure</b> foo(<i>x</i>)
+    <b>if</b> <i>p</i>(<i>x</i>)
+        <b>return</b> bar(<i>x</i>)
+    <b>else if</b> <i>q</i>(<i>x</i>)
+        <b>return</b> baz(<i>x</i>)
+    ...
+    <b>else if</b> <i>r</i>(<i>x</i>)
+        <b>return</b> foo(qux(<i>x</i>))
+    ...
+    <b>else</b>
+        <b>return</b> foo(quux(<i>x</i>))
+</pre>
+<p>can be transformed into
+</p>
+<pre><b>procedure</b> foo(<i>x</i>)
+    <b>while</b> <b>true</b>
+        <b>if</b> <i>p</i>(<i>x</i>)
+            <b>return</b> bar(<i>x</i>)
+        <b>else if</b> <i>q</i>(<i>x</i>)
+            <b>return</b> baz(<i>x</i>)
+        ...
+        <b>else if</b> <i>r</i>(<i>x</i>)
+            <i>x</i> ← qux(<i>x</i>)
+        ...
+        <b>else</b>
+            <i>x</i> ← quux(<i>x</i>)
+</pre>
+<p>For instance, this <a href="/wiki/Julia_(programming_language)" title="Julia (programming language)">Julia</a> program gives a non-tail recursive definition <code>fact</code> of the factorial:
+</p>
+<div class="mw-highlight mw-highlight-lang-julia mw-content-ltr mw-highlight-lines" dir="ltr"><pre><span></span><span class="linenos" data-line="1"></span><span class="k">function</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="linenos" data-line="2"></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span>
+<span class="linenos" data-line="3"></span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span>
+<span class="linenos" data-line="4"></span><span class="w">    </span><span class="k">else</span>
+<span class="linenos" data-line="5"></span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos" data-line="6"></span><span class="w">    </span><span class="k">end</span>
+<span class="linenos" data-line="7"></span><span class="k">end</span>
+</pre></div>
+<p>Indeed, <code>n * factorial(n - 1)</code> wraps the call to <code>factorial</code>. But it can be transformed into a tail-recursive definition by adding an argument <code>a</code> called an <i>accumulator</i>.<sup id="cite_ref-sicp_8-2" class="reference"><a href="#cite_note-sicp-8">&#91;8&#93;</a></sup>
+</p><p>This Julia program gives a tail-recursive definition <code>fact_iter</code> of the factorial:
+</p>
+<div class="mw-highlight mw-highlight-lang-julia mw-content-ltr mw-highlight-lines" dir="ltr"><pre><span></span><span class="linenos" data-line="1"></span><span class="k">function</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">::</span><span class="kt">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span>
+<span class="linenos" data-line="2"></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="o">:</span>
+<span class="linenos" data-line="3"></span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span>
+<span class="linenos" data-line="4"></span><span class="w">    </span><span class="k">else</span>
+<span class="linenos" data-line="5"></span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="p">)</span>
+<span class="linenos" data-line="6"></span><span class="w">    </span><span class="k">end</span>
+<span class="linenos" data-line="7"></span><span class="k">end</span>
+<span class="linenos" data-line="8"></span>
+<span class="linenos" data-line="9"></span><span class="k">function</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span>
+<span class="linenos" data-line="10"></span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos" data-line="11"></span><span class="k">end</span>
+</pre></div>
+<p>This Julia program gives an iterative definition <code>fact_iter</code> of the factorial:
+</p>
+<div class="mw-highlight mw-highlight-lang-julia mw-content-ltr" dir="ltr"><pre><span></span><span class="k">function</span><span class="w"> </span><span class="n">fact_iter</span><span class="p">(</span><span class="n">n</span><span class="o">::</span><span class="kt">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span>
+<span class="w">        </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span>
+<span class="k">end</span>
+
+<span class="k">function</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">fact_iter</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">one</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<span class="k">end</span>
+</pre></div>
+<h2><span class="mw-headline" id="Language_support">Language support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tail_call&amp;action=edit&amp;section=12" title="Edit section: Language support"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Clojure_(programming_language)" class="mw-redirect" title="Clojure (programming language)">Clojure</a> – Clojure has <code>recur</code> special form.<sup id="cite_ref-25" class="reference"><a href="#cite_note-25">&#91;22&#93;</a></sup></li>
+<li><a href="/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a> – Some implementations perform tail-call optimization during compilation if optimizing for speed</li>
+<li><a href="/wiki/Elixir_(programming_language)" title="Elixir (programming language)">Elixir</a> – Elixir implements tail-call optimization,<sup id="cite_ref-26" class="reference"><a href="#cite_note-26">&#91;23&#93;</a></sup> as do all languages currently targeting the BEAM VM.</li>
+<li><a href="/wiki/Elm_(programming_language)" title="Elm (programming language)">Elm</a> – Yes<sup id="cite_ref-27" class="reference"><a href="#cite_note-27">&#91;24&#93;</a></sup></li>
+<li><a href="/wiki/Erlang_(programming_language)" title="Erlang (programming language)">Erlang</a> – Yes</li>
+<li><a href="/wiki/F_Sharp_(programming_language)" title="F Sharp (programming language)">F#</a> – F# implements TCO by default where possible <sup id="cite_ref-28" class="reference"><a href="#cite_note-28">&#91;25&#93;</a></sup></li>
+<li><a href="/wiki/Go_(programming_language)" title="Go (programming language)">Go</a> – No support<sup id="cite_ref-29" class="reference"><a href="#cite_note-29">&#91;26&#93;</a></sup></li>
+<li><a href="/wiki/Haskell_(programming_language)" class="mw-redirect" title="Haskell (programming language)">Haskell</a> – Yes<sup id="cite_ref-30" class="reference"><a href="#cite_note-30">&#91;27&#93;</a></sup></li>
+<li><a href="/wiki/JavaScript" title="JavaScript">JavaScript</a> – <a href="/wiki/ECMAScript" title="ECMAScript">ECMAScript</a> 6.0 compliant engines should have tail calls<sup id="cite_ref-31" class="reference"><a href="#cite_note-31">&#91;28&#93;</a></sup> which is now implemented on <a href="/wiki/Safari_(browser)" class="mw-redirect" title="Safari (browser)">Safari</a>/<a href="/wiki/WebKit" title="WebKit">WebKit</a><sup id="cite_ref-32" class="reference"><a href="#cite_note-32">&#91;29&#93;</a></sup> but rejected by V8 and SpiderMonkey</li>
+<li><a href="/wiki/Kotlin_(programming_language)" title="Kotlin (programming language)">Kotlin</a> – Has <code>tailrec</code> modifier for functions<sup id="cite_ref-33" class="reference"><a href="#cite_note-33">&#91;30&#93;</a></sup></li>
+<li><a href="/wiki/Lua_(programming_language)" title="Lua (programming language)">Lua</a> – Tail recursion is required by the language definition<sup id="cite_ref-34" class="reference"><a href="#cite_note-34">&#91;31&#93;</a></sup></li>
+<li><a href="/wiki/Objective-C" title="Objective-C">Objective-C</a> – Compiler optimizes tail calls when -O1 (or higher) option specified but it is easily disturbed by calls added by <a href="/wiki/Automatic_Reference_Counting" title="Automatic Reference Counting">Automatic Reference Counting</a> (ARC).</li>
+<li><a href="/wiki/OCaml" title="OCaml">OCaml</a> – Yes</li>
+<li><a href="/wiki/Perl_(programming_language)" class="mw-redirect" title="Perl (programming language)">Perl</a> – Explicit with a variant of the "goto" statement that takes a function name: <code>goto &amp;NAME;</code><sup id="cite_ref-35" class="reference"><a href="#cite_note-35">&#91;32&#93;</a></sup></li>
+<li><a href="/wiki/PureScript" title="PureScript">PureScript</a> – Yes</li>
+<li><a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python</a> – Stock Python implementations do not perform tail-call optimization, though a third-party module is available to do this.<sup id="cite_ref-36" class="reference"><a href="#cite_note-36">&#91;33&#93;</a></sup> Language inventor <a href="/wiki/Guido_van_Rossum" title="Guido van Rossum">Guido van Rossum</a> contends that <a href="/wiki/Stack_traces" class="mw-redirect" title="Stack traces">stack traces</a> are altered by tail-call elimination making debugging harder, and prefers that programmers use explicit <a href="/wiki/Iteration" title="Iteration">iteration</a> instead.<sup id="cite_ref-37" class="reference"><a href="#cite_note-37">&#91;34&#93;</a></sup> For this reason, it is expected that Python will never implement tail-call optimization.</li>
+<li><a href="/wiki/Racket_(programming_language)" title="Racket (programming language)">Racket</a> – Yes<sup id="cite_ref-38" class="reference"><a href="#cite_note-38">&#91;35&#93;</a></sup></li>
+<li><a href="/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a> – Yes, but disabled by default <sup id="cite_ref-39" class="reference"><a href="#cite_note-39">&#91;36&#93;</a></sup></li>
+<li><a href="/wiki/Rust_(programming_language)" title="Rust (programming language)">Rust</a> – tail-call optimization may be done in limited circumstances, but is not guaranteed<sup id="cite_ref-40" class="reference"><a href="#cite_note-40">&#91;37&#93;</a></sup></li>
+<li><a href="/wiki/Scala_(programming_language)" title="Scala (programming language)">Scala</a> – Tail-recursive functions are automatically optimized by the compiler. Such functions can also optionally be marked with a <code>@tailrec</code> annotation, which makes it a compilation error if the function is not tail recursive<sup id="cite_ref-41" class="reference"><a href="#cite_note-41">&#91;38&#93;</a></sup></li>
+<li><a href="/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a> – Required by the language definition<sup id="cite_ref-42" class="reference"><a href="#cite_note-42">&#91;39&#93;</a></sup><sup id="cite_ref-43" class="reference"><a href="#cite_note-43">&#91;40&#93;</a></sup></li>
+<li><a href="/wiki/Tcl" title="Tcl">Tcl</a> – Since Tcl 8.6, Tcl has a tailcall command<sup id="cite_ref-44" class="reference"><a href="#cite_note-44">&#91;41&#93;</a></sup></li>
+<li><a href="/wiki/Zig_(programming_language)" title="Zig (programming language)">Zig</a> – Yes<sup id="cite_ref-45" class="reference"><a href="#cite_note-45">&#91;42&#93;</a></sup></li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tail_call&amp;action=edit&amp;section=13" title="Edit section: See also"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1132942124">.mw-parser-output .portalbox{padding:0;margin:0.5em 0;display:table;box-sizing:border-box;max-width:175px;list-style:none}.mw-parser-output .portalborder{border:solid #aaa 1px;padding:0.1em;background:#f9f9f9}.mw-parser-output .portalbox-entry{display:table-row;font-size:85%;line-height:110%;height:1.9em;font-style:italic;font-weight:bold}.mw-parser-output .portalbox-image{display:table-cell;padding:0.2em;vertical-align:middle;text-align:center}.mw-parser-output .portalbox-link{display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle}@media(min-width:720px){.mw-parser-output .portalleft{clear:left;float:left;margin:0.5em 1em 0.5em 0}.mw-parser-output .portalright{clear:right;float:right;margin:0.5em 0 0.5em 1em}}</style><ul role="navigation" aria-label="Portals" class="noprint portalbox portalborder portalright">
+<li class="portalbox-entry"><span class="portalbox-image"><span class="noviewer" typeof="mw:File"><a href="/wiki/File:Octicons-terminal.svg" class="mw-file-description"><img alt="icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Octicons-terminal.svg/24px-Octicons-terminal.svg.png" decoding="async" width="24" height="28" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Octicons-terminal.svg/37px-Octicons-terminal.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Octicons-terminal.svg/49px-Octicons-terminal.svg.png 2x" data-file-width="896" data-file-height="1024" /></a></span></span><span class="portalbox-link"><a href="/wiki/Portal:Computer_programming" title="Portal:Computer programming">Computer programming portal</a></span></li></ul>
+<style data-mw-deduplicate="TemplateStyles:r1134653256">.mw-parser-output .side-box{margin:4px 0;box-sizing:border-box;border:1px solid #aaa;font-size:88%;line-height:1.25em;background-color:#f9f9f9;display:flow-root}.mw-parser-output .side-box-abovebelow,.mw-parser-output .side-box-text{padding:0.25em 0.9em}.mw-parser-output .side-box-image{padding:2px 0 2px 0.9em;text-align:center}.mw-parser-output .side-box-imageright{padding:2px 0.9em 2px 0;text-align:center}@media(min-width:500px){.mw-parser-output .side-box-flex{display:flex;align-items:center}.mw-parser-output .side-box-text{flex:1}}@media(min-width:720px){.mw-parser-output .side-box{width:238px}.mw-parser-output .side-box-right{clear:right;float:right;margin-left:1em}.mw-parser-output .side-box-left{margin-right:1em}}</style><div class="side-box side-box-right plainlinks sistersitebox"><style data-mw-deduplicate="TemplateStyles:r1126788409">.mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}</style>
+<div class="side-box-flex">
+<div class="side-box-image"><span class="noviewer" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wiktionary-logo-en-v2.svg/40px-Wiktionary-logo-en-v2.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wiktionary-logo-en-v2.svg/60px-Wiktionary-logo-en-v2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wiktionary-logo-en-v2.svg/80px-Wiktionary-logo-en-v2.svg.png 2x" data-file-width="512" data-file-height="512" /></span></span></div>
+<div class="side-box-text plainlist">Look up <i><b><a href="https://en.wiktionary.org/wiki/tail_recursion" class="extiw" title="wiktionary:tail recursion">tail recursion</a></b></i> in Wiktionary, the free dictionary.</div></div>
+</div>
+<ul><li><a href="/wiki/Course-of-values_recursion" title="Course-of-values recursion">Course-of-values recursion</a></li>
+<li><a href="/wiki/Recursion_(computer_science)" title="Recursion (computer science)">Recursion (computer science)</a></li>
+<li><a href="/wiki/Primitive_recursive_function" title="Primitive recursive function">Primitive recursive function</a></li>
+<li><a href="/wiki/Inline_expansion" title="Inline expansion">Inline expansion</a></li>
+<li><a href="/wiki/Leaf_subroutine" title="Leaf subroutine">Leaf subroutine</a></li>
+<li><a href="/wiki/Corecursion" title="Corecursion">Corecursion</a></li></ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tail_call&amp;action=edit&amp;section=14" title="Edit section: Notes"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1011085734">.mw-parser-output .reflist{font-size:90%;margin-bottom:0.5em;list-style-type:decimal}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}</style><div class="reflist reflist-lower-alpha">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text">Like this:
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ls</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="o">*</span><span class="n">head</span><span class="p">);</span>
+<span class="w">  </span><span class="n">head</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ls</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">;</span>
+<span class="w">  </span><span class="n">head</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">duplicate</span><span class="p">(</span><span class="w"> </span><span class="n">ls</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text">Like this:
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ls</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="o">*</span><span class="n">head</span><span class="p">);</span>
+<span class="w">  </span><span class="n">head</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ls</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">;</span>
+<span class="w">  </span><span class="n">duplicate</span><span class="p">(</span><span class="w"> </span><span class="n">ls</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="p">(</span><span class="n">head</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div></span>
+</li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"> The <code>call</code> instruction first pushes the current code location onto the stack and then performs an unconditional jump to the code location indicated by the label. The <code>ret</code> instruction first pops a code location off the stack, then performs an unconditional jump to the retrieved code location. </span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tail_call&amp;action=edit&amp;section=15" title="Edit section: References"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1011085734"><div class="reflist">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-MuchnickAssociates1997-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-MuchnickAssociates1997_1-0">^</a></b></span> <span class="reference-text"><style data-mw-deduplicate="TemplateStyles:r1133582631">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:#d33}.mw-parser-output .cs1-visible-error{color:#d33}.mw-parser-output .cs1-maint{display:none;color:#3a3;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><cite id="CITEREFSteven_MuchnickMuchnick_and_Associates1997" class="citation book cs1">Steven Muchnick; Muchnick and Associates (15 August 1997). <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/advancedcompiler00much"><i>Advanced Compiler Design Implementation</i></a></span>. Morgan Kaufmann. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-55860-320-2" title="Special:BookSources/978-1-55860-320-2"><bdi>978-1-55860-320-2</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Advanced+Compiler+Design+Implementation&amp;rft.pub=Morgan+Kaufmann&amp;rft.date=1997-08-15&amp;rft.isbn=978-1-55860-320-2&amp;rft.au=Steven+Muchnick&amp;rft.au=Muchnick+and+Associates&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fadvancedcompiler00much&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-aim-443-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-aim-443_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-aim-443_2-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-aim-443_2-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFSteele1977" class="citation book cs1">Steele, Guy Lewis (1977). "Debunking the "expensive procedure call" myth or, procedure call implementations considered harmful or, LAMBDA: The Ultimate GOTO". <i>Proceedings of the 1977 annual conference on - ACM '77</i>. pp.&#160;153–162. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1145%2F800179.810196">10.1145/800179.810196</a>. <a href="/wiki/Hdl_(identifier)" class="mw-redirect" title="Hdl (identifier)">hdl</a>:<a rel="nofollow" class="external text" href="https://hdl.handle.net/1721.1%2F5753">1721.1/5753</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4503-2308-6" title="Special:BookSources/978-1-4503-2308-6"><bdi>978-1-4503-2308-6</bdi></a>. <a href="/wiki/S2CID_(identifier)" class="mw-redirect" title="S2CID (identifier)">S2CID</a>&#160;<a rel="nofollow" class="external text" href="https://api.semanticscholar.org/CorpusID:9807843">9807843</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Debunking+the+%E2%80%9Cexpensive+procedure+call%E2%80%9D+myth+or%2C+procedure+call+implementations+considered+harmful+or%2C+LAMBDA%3A+The+Ultimate+GOTO&amp;rft.btitle=Proceedings+of+the+1977+annual+conference+on+-+ACM+%2777&amp;rft.pages=153-162&amp;rft.date=1977&amp;rft_id=info%3Ahdl%2F1721.1%2F5753&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A9807843%23id-name%3DS2CID&amp;rft_id=info%3Adoi%2F10.1145%2F800179.810196&amp;rft.isbn=978-1-4503-2308-6&amp;rft.aulast=Steele&amp;rft.aufirst=Guy+Lewis&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-llvm.org-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-llvm.org_3-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://llvm.org/docs/CodeGenerator.html#sibling-call-optimization">"The LLVM Target-Independent Code Generator — LLVM 7 documentation"</a>. <i>llvm.org</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=llvm.org&amp;rft.atitle=The+LLVM+Target-Independent+Code+Generator+%E2%80%94+LLVM+7+documentation&amp;rft_id=http%3A%2F%2Fllvm.org%2Fdocs%2FCodeGenerator.html%23sibling-call-optimization&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://cstheory.stackexchange.com/q/7540">"recursion - Stack memory usage for tail calls - Theoretical Computer Science"</a>. Cstheory.stackexchange.com. 2011-07-29<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-03-21</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=recursion+-+Stack+memory+usage+for+tail+calls+-+Theoretical+Computer+Science&amp;rft.pub=Cstheory.stackexchange.com&amp;rft.date=2011-07-29&amp;rft_id=https%3A%2F%2Fcstheory.stackexchange.com%2Fq%2F7540&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-SchemeProperTailRec-5"><span class="mw-cite-backlink">^ <a href="#cite_ref-SchemeProperTailRec_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-SchemeProperTailRec_5-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.r6rs.org/final/html/r6rs/r6rs-Z-H-8.html#node_sec_5.11">"Revised^6 Report on the Algorithmic Language Scheme"</a>. R6rs.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-03-21</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Revised%5E6+Report+on+the+Algorithmic+Language+Scheme&amp;rft.pub=R6rs.org&amp;rft_id=http%3A%2F%2Fwww.r6rs.org%2Ffinal%2Fhtml%2Fr6rs%2Fr6rs-Z-H-8.html%23node_sec_5.11&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.r6rs.org/final/html/r6rs-rationale/r6rs-rationale-Z-H-7.html#node_sec_5.3">"Revised^6 Report on the Algorithmic Language Scheme - Rationale"</a>. R6rs.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-03-21</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Revised%5E6+Report+on+the+Algorithmic+Language+Scheme+-+Rationale&amp;rft.pub=R6rs.org&amp;rft_id=http%3A%2F%2Fwww.r6rs.org%2Ffinal%2Fhtml%2Fr6rs-rationale%2Fr6rs-rationale-Z-H-7.html%23node_sec_5.3&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.r6rs.org/final/html/r6rs/r6rs-Z-H-14.html#node_sec_11.20">"Revised^6 Report on the Algorithmic Language Scheme"</a>. R6rs.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-03-21</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Revised%5E6+Report+on+the+Algorithmic+Language+Scheme&amp;rft.pub=R6rs.org&amp;rft_id=http%3A%2F%2Fwww.r6rs.org%2Ffinal%2Fhtml%2Fr6rs%2Fr6rs-Z-H-14.html%23node_sec_11.20&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-sicp-8"><span class="mw-cite-backlink">^ <a href="#cite_ref-sicp_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-sicp_8-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-sicp_8-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFSussmanAbelson1984" class="citation book cs1">Sussman, G. J.; Abelson, Hal (1984). <a rel="nofollow" class="external text" href="https://archive.org/details/structureinterpr00abel"><i>Structure and Interpretation of Computer Programs</i></a>. Cambridge, MA: MIT Press. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-262-01077-1" title="Special:BookSources/0-262-01077-1"><bdi>0-262-01077-1</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Structure+and+Interpretation+of+Computer+Programs&amp;rft.place=Cambridge%2C+MA&amp;rft.pub=MIT+Press&amp;rft.date=1984&amp;rft.isbn=0-262-01077-1&amp;rft.aulast=Sussman&amp;rft.aufirst=G.+J.&amp;rft.au=Abelson%2C+Hal&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fstructureinterpr00abel&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text">D. H. D. Warren, <i>DAI Research Report 141</i>, University of Edinburgh, 1980.</span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text">Daniel P. Friedman and David S. Wise, <a rel="nofollow" class="external text" href="http://www.cs.indiana.edu/cgi-bin/techreports/TRNNN.cgi?trnum=TR19"><i>Technical Report TR19: Unwinding Structured Recursions into Iterations</i></a>, Indiana University, Dec. 1974. PDF available <a rel="nofollow" class="external text" href="https://legacy.cs.indiana.edu/ftp/techreports/TR19.pdf"><i>here</i></a> (webarchived copy <a rel="nofollow" class="external text" href="https://web.archive.org/web/20221023082940/https://legacy.cs.indiana.edu/ftp/techreports/TR19.pdf"><i>here</i></a>).</span>
+</li>
+<li id="cite_note-r5rs-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-r5rs_13-0">^</a></b></span> <span class="reference-text">R5RS Sec. 3.5, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFRichard_KelseyWilliam_ClingerJonathan_Rees1998" class="citation journal cs1">Richard Kelsey; William Clinger; Jonathan Rees; et&#160;al. (August 1998). <a rel="nofollow" class="external text" href="http://www.schemers.org/Documents/Standards/R5RS/">"Revised<sup>5</sup> Report on the Algorithmic Language Scheme"</a>. <i>Higher-Order and Symbolic Computation</i>. <b>11</b> (1): 7–105. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1023%2FA%3A1010051815785">10.1023/A:1010051815785</a>. <a href="/wiki/S2CID_(identifier)" class="mw-redirect" title="S2CID (identifier)">S2CID</a>&#160;<a rel="nofollow" class="external text" href="https://api.semanticscholar.org/CorpusID:14069423">14069423</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Higher-Order+and+Symbolic+Computation&amp;rft.atitle=Revised%3Csup%3E5%3C%2Fsup%3E+Report+on+the+Algorithmic+Language+Scheme&amp;rft.volume=11&amp;rft.issue=1&amp;rft.pages=7-105&amp;rft.date=1998-08&amp;rft_id=info%3Adoi%2F10.1023%2FA%3A1010051815785&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A14069423%23id-name%3DS2CID&amp;rft.au=Richard+Kelsey&amp;rft.au=William+Clinger&amp;rft.au=Jonathan+Rees&amp;rft_id=http%3A%2F%2Fwww.schemers.org%2FDocuments%2FStandards%2FR5RS%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFContact_details" class="citation web cs1">Contact details. <a rel="nofollow" class="external text" href="http://perldoc.perl.org/functions/goto.html">"goto"</a>. perldoc.perl.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-03-21</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=goto&amp;rft.pub=perldoc.perl.org&amp;rft.au=Contact+details&amp;rft_id=http%3A%2F%2Fperldoc.perl.org%2Ffunctions%2Fgoto.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text">"<a rel="nofollow" class="external text" href="https://stackoverflow.com/questions/12045299/what-is-difference-between-tail-calls-and-tail-recursion">What is difference between tail calls and tail recursion?</a>", <i>Stack Overflow</i></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text">"<a rel="nofollow" class="external text" href="http://programmers.stackexchange.com/questions/157684/what-limitations-does-the-jvm-impose-on-tail-call-optimization">What limitations does the JVM impose on tail-call optimization</a>", <i>Programmers Stack Exchange</i></span>
+</li>
+<li id="cite_note-llvm-documentation-tco-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-llvm-documentation-tco_17-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="llvm.org" class="citation web cs1">Lattner, Chris. <a rel="nofollow" class="external text" href="http://llvm.org/docs/CodeGenerator.html#tail-call-optimization">"LLVM Language Reference Manual, section: The LLVM Target-Independent Code Generator, sub: Tail Call Optimization"</a>. <i>The LLVM Compiler Infrastructure</i>. The LLVM Project<span class="reference-accessdate">. Retrieved <span class="nowrap">24 June</span> 2018</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=The+LLVM+Compiler+Infrastructure&amp;rft.atitle=LLVM+Language+Reference+Manual%2C+section%3A+The+LLVM+Target-Independent+Code+Generator%2C+sub%3A+Tail+Call+Optimization&amp;rft.aulast=Lattner&amp;rft.aufirst=Chris&amp;rft_id=http%3A%2F%2Fllvm.org%2Fdocs%2FCodeGenerator.html%23tail-call-optimization&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html">"Using the GNU Compiler Collection (GCC): Optimize Options"</a>. <i>gcc.gnu.org</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=gcc.gnu.org&amp;rft.atitle=Using+the+GNU+Compiler+Collection+%28GCC%29%3A+Optimize+Options&amp;rft_id=https%3A%2F%2Fgcc.gnu.org%2Fonlinedocs%2Fgcc%2FOptimize-Options.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://software.intel.com/en-us/node/522809">"foptimize-sibling-calls"</a>. <i>software.intel.com</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=software.intel.com&amp;rft.atitle=foptimize-sibling-calls&amp;rft_id=https%3A%2F%2Fsoftware.intel.com%2Fen-us%2Fnode%2F522809&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.drdobbs.com/tackling-c-tail-calls/184401756">"Tackling C++ Tail Calls"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Tackling+C%2B%2B+Tail+Calls&amp;rft_id=http%3A%2F%2Fwww.drdobbs.com%2Ftackling-c-tail-calls%2F184401756&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFProbst,_Mark2000" class="citation web cs1">Probst, Mark (20 July 2000). <a rel="nofollow" class="external text" href="https://gcc.gnu.org/ml/gcc/2000-07/msg00595.html">"proper tail recursion for gcc"</a>. GCC Project<span class="reference-accessdate">. Retrieved <span class="nowrap">10 March</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=proper+tail+recursion+for+gcc&amp;rft.pub=GCC+Project&amp;rft.date=2000-07-20&amp;rft.au=Probst%2C+Mark&amp;rft_id=https%3A%2F%2Fgcc.gnu.org%2Fml%2Fgcc%2F2000-07%2Fmsg00595.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-onyourtail-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-onyourtail_23-0">^</a></b></span> <span class="reference-text">Samuel Jack, <a rel="nofollow" class="external text" href="http://blog.functionalfun.net/2008/04/bouncing-on-your-tail.html">Bouncing on your tail</a>. <i>Functional Fun</i>. April 9, 2008.</span>
+</li>
+<li id="cite_note-Chicken-24"><span class="mw-cite-backlink">^ <a href="#cite_ref-Chicken_24-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Chicken_24-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Henry Baker, <a rel="nofollow" class="external text" href="http://home.pipeline.com/~hbaker1/CheneyMTA.html">"CONS Should Not CONS Its Arguments, Part II: Cheney on the M.T.A."</a></span>
+</li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://clojure.org/reference/special_forms#recur">"(recur expr*)"</a>. <i>clojure.org</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=clojure.org&amp;rft.atitle=%28recur+expr%2A%29&amp;rft_id=https%3A%2F%2Fclojure.org%2Freference%2Fspecial_forms%23recur&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://elixir-lang.org/getting-started/recursion.html">"Recursion"</a>. <i>elixir-lang.github.com</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=elixir-lang.github.com&amp;rft.atitle=Recursion&amp;rft_id=http%3A%2F%2Felixir-lang.org%2Fgetting-started%2Frecursion.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFCzaplicki" class="citation web cs1">Czaplicki, Evan. <a rel="nofollow" class="external text" href="https://functional-programming-in-elm.netlify.app/recursion/tail-call-elimination.html">"Functional Programming in Elm: Tail-Call Elimination"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Functional+Programming+in+Elm%3A+Tail-Call+Elimination&amp;rft.aulast=Czaplicki&amp;rft.aufirst=Evan&amp;rft_id=https%3A%2F%2Ffunctional-programming-in-elm.netlify.app%2Frecursion%2Ftail-call-elimination.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://blogs.msdn.microsoft.com/fsharpteam/2011/07/08/tail-calls-in-f/">"Tail Calls in F#"</a>. <i>msdn</i>. Microsoft.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=msdn&amp;rft.atitle=Tail+Calls+in+F%23&amp;rft_id=https%3A%2F%2Fblogs.msdn.microsoft.com%2Ffsharpteam%2F2011%2F07%2F08%2Ftail-calls-in-f%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://github.com/golang/go/issues/22624">"proposal: Go 2: add become statement to support tail calls"</a>. <i>github.com</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=github.com&amp;rft.atitle=proposal%3A+Go+2%3A+add+become+statement+to+support+tail+calls&amp;rft_id=https%3A%2F%2Fgithub.com%2Fgolang%2Fgo%2Fissues%2F22624&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://wiki.haskell.org/Tail_recursion">"Tail recursion - HaskellWiki"</a>. <i>wiki.haskell.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-06-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=wiki.haskell.org&amp;rft.atitle=Tail+recursion+-+HaskellWiki&amp;rft_id=https%3A%2F%2Fwiki.haskell.org%2FTail_recursion&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-31">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFBeres-Deak" class="citation web cs1">Beres-Deak, Adam. <a rel="nofollow" class="external text" href="http://bdadam.com/blog/video-douglas-crockford-about-the-new-good-parts.html">"Worth watching: Douglas Crockford speaking about the new good parts of JavaScript in 2014"</a>. <i>bdadam.com</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=bdadam.com&amp;rft.atitle=Worth+watching%3A+Douglas+Crockford+speaking+about+the+new+good+parts+of+JavaScript+in+2014&amp;rft.aulast=Beres-Deak&amp;rft.aufirst=Adam&amp;rft_id=http%3A%2F%2Fbdadam.com%2Fblog%2Fvideo-douglas-crockford-about-the-new-good-parts.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-32"><span class="mw-cite-backlink"><b><a href="#cite_ref-32">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.webkit.org/blog/4054/es6-in-webkit/">"ECMAScript 6 in WebKit"</a>. 13 October 2015.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=ECMAScript+6+in+WebKit&amp;rft.date=2015-10-13&amp;rft_id=https%3A%2F%2Fwww.webkit.org%2Fblog%2F4054%2Fes6-in-webkit%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-33"><span class="mw-cite-backlink"><b><a href="#cite_ref-33">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://kotlinlang.org/docs/reference/functions.html#tail-recursive-functions">"Functions: infix, vararg, tailrec - Kotlin Programming Language"</a>. <i>Kotlin</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Kotlin&amp;rft.atitle=Functions%3A+infix%2C+vararg%2C+tailrec+-+Kotlin+Programming+Language&amp;rft_id=https%3A%2F%2Fkotlinlang.org%2Fdocs%2Freference%2Ffunctions.html%23tail-recursive-functions&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-34"><span class="mw-cite-backlink"><b><a href="#cite_ref-34">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.lua.org/manual/5.3/manual.html#3.4.10">"Lua 5.3 Reference Manual"</a>. <i>www.lua.org</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.lua.org&amp;rft.atitle=Lua+5.3+Reference+Manual&amp;rft_id=https%3A%2F%2Fwww.lua.org%2Fmanual%2F5.3%2Fmanual.html%233.4.10&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-35"><span class="mw-cite-backlink"><b><a href="#cite_ref-35">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://perldoc.perl.org/functions/goto.html">"goto - perldoc.perl.org"</a>. <i>perldoc.perl.org</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=perldoc.perl.org&amp;rft.atitle=goto+-+perldoc.perl.org&amp;rft_id=http%3A%2F%2Fperldoc.perl.org%2Ffunctions%2Fgoto.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-36"><span class="mw-cite-backlink"><b><a href="#cite_ref-36">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://github.com/baruchel/tco">"baruchel/tco"</a>. <i>GitHub</i>. 29 March 2022.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=GitHub&amp;rft.atitle=baruchel%2Ftco&amp;rft.date=2022-03-29&amp;rft_id=https%3A%2F%2Fgithub.com%2Fbaruchel%2Ftco&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-37"><span class="mw-cite-backlink"><b><a href="#cite_ref-37">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFRossum2009" class="citation web cs1">Rossum, Guido Van (22 April 2009). <a rel="nofollow" class="external text" href="http://neopythonic.blogspot.com/2009/04/tail-recursion-elimination.html">"Neopythonic: Tail Recursion Elimination"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Neopythonic%3A+Tail+Recursion+Elimination&amp;rft.date=2009-04-22&amp;rft.aulast=Rossum&amp;rft.aufirst=Guido+Van&amp;rft_id=http%3A%2F%2Fneopythonic.blogspot.com%2F2009%2F04%2Ftail-recursion-elimination.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-38"><span class="mw-cite-backlink"><b><a href="#cite_ref-38">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://docs.racket-lang.org/reference/eval-model.html#(part._.Tail_.Position)">"The Racket Reference"</a>. <i>docs.racket-lang.org</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=docs.racket-lang.org&amp;rft.atitle=The+Racket+Reference&amp;rft_id=https%3A%2F%2Fdocs.racket-lang.org%2Freference%2Feval-model.html%23%28part._.Tail_.Position%29&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-39"><span class="mw-cite-backlink"><b><a href="#cite_ref-39">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://ruby-doc.org/3.2.2/RubyVM/InstructionSequence.html#method-c-compile_option-3D">"Ruby Tail Call Optimisation"</a>. <i>ruby-doc.org</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=ruby-doc.org&amp;rft.atitle=Ruby+Tail+Call+Optimisation&amp;rft_id=https%3A%2F%2Fruby-doc.org%2F3.2.2%2FRubyVM%2FInstructionSequence.html%23method-c-compile_option-3D&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-40"><span class="mw-cite-backlink"><b><a href="#cite_ref-40">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://prev.rust-lang.org/en-US/faq.html#does-rust-do-tail-call-optimization">"Rust FAQ"</a>. <i>prev.rust-lang.org</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=prev.rust-lang.org&amp;rft.atitle=Rust+FAQ&amp;rft_id=https%3A%2F%2Fprev.rust-lang.org%2Fen-US%2Ffaq.html%23does-rust-do-tail-call-optimization&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-41"><span class="mw-cite-backlink"><b><a href="#cite_ref-41">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.scala-lang.org/api/2.13.0/scala/annotation/tailrec.html">"Scala Standard Library 2.13.0 - scala.annotation.tailrec"</a>. <i>www.scala-lang.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-06-20</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.scala-lang.org&amp;rft.atitle=Scala+Standard+Library+2.13.0+-+scala.annotation.tailrec&amp;rft_id=https%3A%2F%2Fwww.scala-lang.org%2Fapi%2F2.13.0%2Fscala%2Fannotation%2Ftailrec.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-42"><span class="mw-cite-backlink"><b><a href="#cite_ref-42">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.schemers.org/Documents/Standards/R5RS/HTML/r5rs-Z-H-6.html#%25_sec_3.5">"Revised^5 Report on the Algorithmic Language Scheme"</a>. <i>www.schemers.org</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.schemers.org&amp;rft.atitle=Revised%5E5+Report+on+the+Algorithmic+Language+Scheme&amp;rft_id=http%3A%2F%2Fwww.schemers.org%2FDocuments%2FStandards%2FR5RS%2FHTML%2Fr5rs-Z-H-6.html%23%2525_sec_3.5&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-43"><span class="mw-cite-backlink"><b><a href="#cite_ref-43">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.r6rs.org/final/html/r6rs/r6rs-Z-H-8.html#node_sec_5.11">"Revised^6 Report on the Algorithmic Language Scheme"</a>. <i>www.r6rs.org</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.r6rs.org&amp;rft.atitle=Revised%5E6+Report+on+the+Algorithmic+Language+Scheme&amp;rft_id=http%3A%2F%2Fwww.r6rs.org%2Ffinal%2Fhtml%2Fr6rs%2Fr6rs-Z-H-8.html%23node_sec_5.11&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-44"><span class="mw-cite-backlink"><b><a href="#cite_ref-44">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.tcl.tk/man/tcl/TclCmd/tailcall.htm">"tailcall manual page - Tcl Built-In Commands"</a>. <i>www.tcl.tk</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.tcl.tk&amp;rft.atitle=tailcall+manual+page+-+Tcl+Built-In+Commands&amp;rft_id=http%3A%2F%2Fwww.tcl.tk%2Fman%2Ftcl%2FTclCmd%2Ftailcall.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+<li id="cite_note-45"><span class="mw-cite-backlink"><b><a href="#cite_ref-45">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://ziglang.org/documentation/master/#call">"Documentation - the Zig Programming Language"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Documentation+-+the+Zig+Programming+Language&amp;rft_id=https%3A%2F%2Fziglang.org%2Fdocumentation%2Fmaster%2F%23call&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATail+call" class="Z3988"></span></span>
+</li>
+</ol></div></div>
+<!-- 
+NewPP limit report
+Parsed by mw‐api‐int.codfw.main‐6d994b79db‐ss8nf
+Cached time: 20240212020406
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, show‐toc]
+CPU time usage: 0.618 seconds
+Real time usage: 0.712 seconds
+Preprocessor visited node count: 2452/1000000
+Post‐expand include size: 59435/2097152 bytes
+Template argument size: 2048/2097152 bytes
+Highest expansion depth: 12/100
+Expensive parser function count: 32/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 152295/5000000 bytes
+Lua time usage: 0.356/10.000 seconds
+Lua memory usage: 8375359/52428800 bytes
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  603.779      1 -total
+ 51.97%  313.803      2 Template:Reflist
+ 24.94%  150.583     32 Template:Cite_web
+ 20.33%  122.757      1 Template:Short_description
+ 15.54%   93.831      3 Template:Cite_book
+ 15.24%   92.044      2 Template:Pagetype
+  6.69%   40.411      1 Template:Unreferenced_section
+  6.26%   37.794      1 Template:Citation_needed
+  6.23%   37.610      1 Template:Unreferenced
+  5.73%   34.580      1 Template:Ambox
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1110903-0!canonical and timestamp 20240212020405 and revision id 1206402809. Rendering was triggered because: api-parse
+ -->
+</div><!--esi <esi:include src="/esitest-fa8a495983347898/content" /> --><noscript><img src="https://login.wikimedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" width="1" height="1" style="border: none; position: absolute;"></noscript>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Tail_call&amp;oldid=1206402809">https://en.wikipedia.org/w/index.php?title=Tail_call&amp;oldid=1206402809</a>"</div></div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Programming_language_implementation" title="Category:Programming language implementation">Programming language implementation</a></li><li><a href="/wiki/Category:Implementation_of_functional_programming_languages" title="Category:Implementation of functional programming languages">Implementation of functional programming languages</a></li><li><a href="/wiki/Category:Subroutines" title="Category:Subroutines">Subroutines</a></li><li><a href="/wiki/Category:Control_flow" title="Category:Control flow">Control flow</a></li><li><a href="/wiki/Category:Recursion" title="Category:Recursion">Recursion</a></li><li><a href="/wiki/Category:Scheme_(programming_language)" title="Category:Scheme (programming language)">Scheme (programming language)</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_is_different_from_Wikidata" title="Category:Short description is different from Wikidata">Short description is different from Wikidata</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_April_2007" title="Category:Articles with unsourced statements from April 2007">Articles with unsourced statements from April 2007</a></li><li><a href="/wiki/Category:Articles_needing_additional_references_from_June_2014" title="Category:Articles needing additional references from June 2014">Articles needing additional references from June 2014</a></li><li><a href="/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="/wiki/Category:Articles_with_example_C_code" title="Category:Articles with example C code">Articles with example C code</a></li><li><a href="/wiki/Category:Articles_with_example_Scheme_(programming_language)_code" title="Category:Articles with example Scheme (programming language) code">Articles with example Scheme (programming language) code</a></li></ul></div></div>
+				</div>
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 12 February 2024, at 02:04<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License">Creative Commons Attribution-ShareAlike License 4.0</a><a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/Wikipedia:General_disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-wm-codeofconduct"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct">Code of Conduct</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement">Cookie statement</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Tail_call&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"></a></li>
+</ul>
+
+</footer>
+
+		</div>
+	</div> 
+</div> 
+<div class="vector-settings" id="p-dock-bottom">
+	<ul>
+		<li>
+		<button class="cdx-button cdx-button--icon-only vector-limited-width-toggle" id=""><span class="vector-icon mw-ui-icon-fullScreen mw-ui-icon-wikimedia-fullScreen"></span>
+
+<span>Toggle limited content width</span>
+</button>
+</li>
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw-web.codfw.main-894d4d6c9-qdxw8","wgBackendResponseTime":129,"wgPageParseReport":{"limitreport":{"cputime":"0.618","walltime":"0.712","ppvisitednodes":{"value":2452,"limit":1000000},"postexpandincludesize":{"value":59435,"limit":2097152},"templateargumentsize":{"value":2048,"limit":2097152},"expansiondepth":{"value":12,"limit":100},"expensivefunctioncount":{"value":32,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":152295,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  603.779      1 -total"," 51.97%  313.803      2 Template:Reflist"," 24.94%  150.583     32 Template:Cite_web"," 20.33%  122.757      1 Template:Short_description"," 15.54%   93.831      3 Template:Cite_book"," 15.24%   92.044      2 Template:Pagetype","  6.69%   40.411      1 Template:Unreferenced_section","  6.26%   37.794      1 Template:Citation_needed","  6.23%   37.610      1 Template:Unreferenced","  5.73%   34.580      1 Template:Ambox"]},"scribunto":{"limitreport-timeusage":{"value":"0.356","limit":"10.000"},"limitreport-memusage":{"value":8375359,"limit":52428800}},"cachereport":{"origin":"mw-api-int.codfw.main-6d994b79db-ss8nf","timestamp":"20240212020406","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Tail call","url":"https:\/\/en.wikipedia.org\/wiki\/Tail_call","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1340959","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1340959","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-10-28T09:40:12Z","dateModified":"2024-02-12T02:04:00Z","headline":"subroutine that calls itself as its final action"}</script>
+</body>
+</html>

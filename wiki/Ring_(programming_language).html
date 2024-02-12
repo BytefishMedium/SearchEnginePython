@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-0 vector-feature-client-preferences-disabled vector-feature-client-prefs-pinned-disabled vector-feature-night-mode-disabled skin-night-mode-clientpref-0 vector-toc-available" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Ring (programming language) - Wikipedia</title>
+<script>(function(){var className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-0 vector-feature-client-preferences-disabled vector-feature-client-prefs-pinned-disabled vector-feature-night-mode-disabled skin-night-mode-clientpref-0 vector-toc-available";var cookie=document.cookie.match(/(?:^|; )enwikimwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],
+"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"30024273-6e93-4ba0-a643-fa9e7a0ac2f6","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Ring_(programming_language)","wgTitle":"Ring (programming language)","wgCurRevisionId":1202037514,"wgRevisionId":1202037514,"wgArticleId":64207904,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with short description","Short description matches Wikidata","Programming languages","Cross-platform free software","Programming languages created in 2016","High-level programming languages","2016 software","Dynamically typed programming languages","Egyptian inventions","Free software projects","Software using the MIT license","Free software programmed in C",
+"Multi-paradigm programming languages","Extensible syntax programming languages"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Ring_(programming_language)","wgRelevantArticleId":64207904,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgNoticeProject":"wikipedia","wgFlaggedRevsParams":{"tags":{"status":{"levels":1}}},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsFlags":6,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":false,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":30000,"wgULSCurrentAutonym":"English","wgCentralAuthMobileDomain":false,"wgEditSubmitButtonLabelPublish":true,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":false,"wgVector2022LanguageInHeader":true
+,"wgULSisLanguageSelectorEmpty":false,"wgWikibaseItemId":"Q25462748","wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"],"GEHomepageSuggestedEditsEnableTopics":true,"wgGETopicsMatchModeEnabled":false,"wgGEStructuredTaskRejectionReasonTextInputEnabled":false,"wgGELevelingUpEnabledForUser":false};RLSTATE={"skins.vector.user.styles":"ready","ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","skins.vector.user":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","codex-search-styles":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","jquery.makeCollapsible.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","mediawiki.page.media",
+"mediawiki.toggleAllCollapsibles","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.js","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.gadget.ReferenceTooltips","ext.gadget.switcher","ext.urlShortener.toolbar","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.echo.centralauth","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.cx.uls.quick.actions","wikibase.client.vector-2022","ext.checkUser.clientHints","ext.growthExperiments.SuggestedEditSession"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=codex-search-styles%7Cext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cjquery.makeCollapsible.styles%7Cskins.vector.icons%2Cstyles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector-2022">
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022">
+<meta name="generator" content="MediaWiki 1.42.0-wmf.17">
+<meta name="referrer" content="origin">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/f/f7/Ringlogo_transparent.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="702">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/f/f7/Ringlogo_transparent.png">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="468">
+<meta property="og:image:width" content="640">
+<meta property="og:image:height" content="375">
+<meta name="viewport" content="width=1000">
+<meta property="og:title" content="Ring (programming language) - Wikipedia">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="//upload.wikimedia.org">
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Ring_(programming_language)">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Ring_(programming_language)&amp;action=edit">
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png">
+<link rel="icon" href="/static/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd">
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Ring_(programming_language)">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="//login.wikimedia.org">
+</head>
+<body class="skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Ring_programming_language rootpage-Ring_programming_language skin-vector-2022 action-view"><a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+<div class="vector-header-container">
+	<header class="vector-header mw-header">
+		<div class="vector-header-start">
+			<nav class="vector-main-menu-landmark" aria-label="Site" role="navigation">
+				
+<div id="vector-main-menu-dropdown" class="vector-dropdown vector-main-menu-dropdown vector-button-flush-left vector-button-flush-right"  >
+	<input type="checkbox" id="vector-main-menu-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-main-menu-dropdown" class="vector-dropdown-checkbox "  aria-label="Main menu"  >
+	<label id="vector-main-menu-dropdown-label" for="vector-main-menu-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu"></span>
+
+<span class="vector-dropdown-label-text">Main menu</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+				<div id="vector-main-menu-unpinned-container" class="vector-unpinned-container">
+		
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-main-menu-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="main-menu-pinned"
+	data-pinnable-element-id="vector-main-menu"
+	data-pinned-container-id="vector-main-menu-pinned-container"
+	data-unpinned-container-id="vector-main-menu-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Main menu</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-main-menu.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-main-menu.unpin">hide</button>
+</div>
+
+	
+<div id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation"  >
+	<div class="vector-menu-heading">
+		Navigation
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-contents" class="mw-list-item"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia"><span>Contents</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="/wiki/Portal:Current_events" title="Articles related to current events"><span>Current events</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x"><span>Random article</span></a></li><li id="n-aboutsite" class="mw-list-item"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works"><span>About Wikipedia</span></a></li><li id="n-contactpage" class="mw-list-item"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia"><span>Contact us</span></a></li><li id="n-sitesupport" class="mw-list-item"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation"><span>Donate</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	
+<div id="p-interaction" class="vector-menu mw-portlet mw-portlet-interaction"  >
+	<div class="vector-menu-heading">
+		Contribute
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-help" class="mw-list-item"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia"><span>Help</span></a></li><li id="n-introduction" class="mw-list-item"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia"><span>Learn to edit</span></a></li><li id="n-portal" class="mw-list-item"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors"><span>Community portal</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_upload_wizard" title="Add images or other media for use on Wikipedia"><span>Upload file</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div class="vector-main-menu-action vector-main-menu-action-lang-alert">
+	<div class="vector-main-menu-action-item">
+		<div class="vector-main-menu-action-heading vector-menu-heading">Languages</div>
+		<div class="vector-main-menu-action-content vector-menu-content">
+			<div class="mw-message-box cdx-message cdx-message--block mw-message-box-notice cdx-message--notice vector-language-sidebar-alert"><span class="cdx-message__icon"></span><div class="cdx-message__content">Language links are at the top of the page.</div></div>
+		</div>
+	</div>
+</div>
+
+</div>
+
+				</div>
+
+	</div>
+</div>
+
+		</nav>
+			
+<a href="/wiki/Main_Page" class="mw-logo">
+	<img class="mw-logo-icon" src="/static/images/icons/wikipedia.png" alt="" aria-hidden="true" height="50" width="50">
+	<span class="mw-logo-container">
+		<img class="mw-logo-wordmark" alt="Wikipedia" src="/static/images/mobile/copyright/wikipedia-wordmark-en.svg" style="width: 7.5em; height: 1.125em;">
+		<img class="mw-logo-tagline" alt="The Free Encyclopedia" src="/static/images/mobile/copyright/wikipedia-tagline-en.svg" width="117" height="13" style="width: 7.3125em; height: 0.8125em;">
+	</span>
+</a>
+
+		</div>
+		<div class="vector-header-end">
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<a href="/wiki/Special:Search" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only search-toggle" id="" title="Search Wikipedia [f]" accesskey="f"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search"></span>
+
+<span>Search</span>
+	</a>
+	<div class="vector-typeahead-search-container">
+		<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail cdx-typeahead-search--auto-expand-width">
+			<form action="/w/index.php" id="searchform" class="cdx-search-input cdx-search-input--has-end-button">
+				<div id="simpleSearch" class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+					<div class="cdx-text-input cdx-text-input--has-start-icon">
+						<input
+							class="cdx-text-input__input"
+							 type="search" name="search" placeholder="Search Wikipedia" aria-label="Search Wikipedia" autocapitalize="sentences" title="Search Wikipedia [f]" accesskey="f" id="searchInput"
+							>
+						<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+					</div>
+					<input type="hidden" name="title" value="Special:Search">
+				</div>
+				<button class="cdx-button cdx-search-input__end-button">Search</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+			<nav class="vector-user-links vector-user-links-wide" aria-label="Personal tools" role="navigation" >
+	<div class="vector-user-links-main">
+	
+<div id="p-vector-user-menu-preferences" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-userpage" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	<nav class="vector-client-prefs-landmark" aria-label="Appearance">
+		
+		
+	</nav>
+	
+<div id="p-vector-user-menu-notifications" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-createaccount-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="/w/index.php?title=Special:CreateAccount&amp;returnto=Ring+%28programming+language%29" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span>Create account</span></a>
+</li>
+<li id="pt-login-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="/w/index.php?title=Special:UserLogin&amp;returnto=Ring+%28programming+language%29" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o" class=""><span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	</div>
+	
+<div id="vector-user-links-dropdown" class="vector-dropdown vector-user-menu vector-button-flush-right vector-user-menu-logged-out"  title="Log in and more options" >
+	<input type="checkbox" id="vector-user-links-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-user-links-dropdown" class="vector-dropdown-checkbox "  aria-label="Personal tools"  >
+	<label id="vector-user-links-dropdown-label" for="vector-user-links-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-ellipsis mw-ui-icon-wikimedia-ellipsis"></span>
+
+<span class="vector-dropdown-label-text">Personal tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal user-links-collapsible-item"  title="User menu" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="user-links-collapsible-item mw-list-item"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Ring+%28programming+language%29" title="You are encouraged to create an account and log in; however, it is not mandatory"><span class="vector-icon mw-ui-icon-userAdd mw-ui-icon-wikimedia-userAdd"></span> <span>Create account</span></a></li><li id="pt-login" class="user-links-collapsible-item mw-list-item"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Ring+%28programming+language%29" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o"><span class="vector-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn"></span> <span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-user-menu-anon-editor" class="vector-menu mw-portlet mw-portlet-user-menu-anon-editor"  >
+	<div class="vector-menu-heading">
+		Pages for logged out editors <a href="/wiki/Help:Introduction" aria-label="Learn more about editing"><span>learn more</span></a>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-anoncontribs" class="mw-list-item"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y"><span>Contributions</span></a></li><li id="pt-anontalk" class="mw-list-item"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n"><span>Talk</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+
+</nav>
+
+		</div>
+	</header>
+</div>
+<div class="mw-page-container">
+	<div class="mw-page-container-inner">
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><!-- CentralNotice --></div>
+		</div>
+		<div class="vector-column-start">
+			<div class="vector-main-menu-container">
+		<div id="mw-navigation">
+			<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site" role="navigation">
+				<div id="vector-main-menu-pinned-container" class="vector-pinned-container">
+				
+				</div>
+		</nav>
+		</div>
+	</div>
+	<div class="vector-sticky-pinned-container">
+				<nav id="mw-panel-toc" role="navigation" aria-label="Contents" data-event-name="ui.sidebar-toc" class="mw-table-of-contents-container vector-toc-landmark">
+					<div id="vector-toc-pinned-container" class="vector-pinned-container">
+					<div id="vector-toc" class="vector-toc vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="toc-pinned"
+	data-pinnable-element-id="vector-toc"
+	
+	
+>
+	<h2 class="vector-pinnable-header-label">Contents</h2>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-toc.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-toc.unpin">hide</button>
+</div>
+
+
+	<ul class="vector-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="vector-toc-list-item vector-toc-level-1">
+			<a href="#" class="vector-toc-link">
+				<div class="vector-toc-text">(Top)</div>
+			</a>
+		</li>
+		<li id="toc-History"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#History">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">1</span>History</div>
+		</a>
+		
+		<ul id="toc-History-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Goals"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Goals">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">2</span>Goals</div>
+		</a>
+		
+		<ul id="toc-Goals-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Examples"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Examples">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">3</span>Examples</div>
+		</a>
+		
+			<button aria-controls="toc-Examples-sublist" class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-toc-toggle">
+				<span class="vector-icon vector-icon--x-small mw-ui-icon-wikimedia-expand"></span>
+				<span>Toggle Examples subsection</span>
+			</button>
+		
+		<ul id="toc-Examples-sublist" class="vector-toc-list">
+			<li id="toc-Hello_World_program"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Hello_World_program">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">3.1</span>Hello World program</div>
+			</a>
+			
+			<ul id="toc-Hello_World_program-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Change_the_keywords_and_operators"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Change_the_keywords_and_operators">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">3.2</span>Change the keywords and operators</div>
+			</a>
+			
+			<ul id="toc-Change_the_keywords_and_operators-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Loop_command"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Loop_command">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">3.3</span>Loop command</div>
+			</a>
+			
+			<ul id="toc-Loop_command-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Object-oriented_orogramming"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Object-oriented_orogramming">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">3.4</span>Object-oriented orogramming</div>
+			</a>
+			
+			<ul id="toc-Object-oriented_orogramming-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+	</li>
+	<li id="toc-Implementation"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Implementation">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">4</span>Implementation</div>
+		</a>
+		
+			<button aria-controls="toc-Implementation-sublist" class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-toc-toggle">
+				<span class="vector-icon vector-icon--x-small mw-ui-icon-wikimedia-expand"></span>
+				<span>Toggle Implementation subsection</span>
+			</button>
+		
+		<ul id="toc-Implementation-sublist" class="vector-toc-list">
+			<li id="toc-Compiler_and_virtual_machine"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Compiler_and_virtual_machine">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.1</span>Compiler and virtual machine</div>
+			</a>
+			
+			<ul id="toc-Compiler_and_virtual_machine-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Extensions"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Extensions">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.2</span>Extensions</div>
+			</a>
+			
+			<ul id="toc-Extensions-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Libraries"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Libraries">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.3</span>Libraries</div>
+			</a>
+			
+			<ul id="toc-Libraries-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Applications"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Applications">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.4</span>Applications</div>
+			</a>
+			
+			<ul id="toc-Applications-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Tools"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Tools">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.5</span>Tools</div>
+			</a>
+			
+			<ul id="toc-Tools-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Documentation"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Documentation">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.6</span>Documentation</div>
+			</a>
+			
+			<ul id="toc-Documentation-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+	</li>
+	<li id="toc-Reception"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Reception">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">5</span>Reception</div>
+		</a>
+		
+			<button aria-controls="toc-Reception-sublist" class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-toc-toggle">
+				<span class="vector-icon vector-icon--x-small mw-ui-icon-wikimedia-expand"></span>
+				<span>Toggle Reception subsection</span>
+			</button>
+		
+		<ul id="toc-Reception-sublist" class="vector-toc-list">
+			<li id="toc-Popularity"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Popularity">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">5.1</span>Popularity</div>
+			</a>
+			
+			<ul id="toc-Popularity-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Criticism"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Criticism">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">5.2</span>Criticism</div>
+			</a>
+			
+			<ul id="toc-Criticism-sublist" class="vector-toc-list">
+				<li id="toc-The_list_index_starts_from_1_instead_of_0"
+			class="vector-toc-list-item vector-toc-level-3">
+			<a class="vector-toc-link" href="#The_list_index_starts_from_1_instead_of_0">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">5.2.1</span>The list index starts from 1 instead of 0</div>
+			</a>
+			
+			<ul id="toc-The_list_index_starts_from_1_instead_of_0-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Implicit_type_conversions"
+			class="vector-toc-list-item vector-toc-level-3">
+			<a class="vector-toc-link" href="#Implicit_type_conversions">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">5.2.2</span>Implicit type conversions</div>
+			</a>
+			
+			<ul id="toc-Implicit_type_conversions-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+		</li>
+	</ul>
+	</li>
+	<li id="toc-See_also"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#See_also">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">6</span>See also</div>
+		</a>
+		
+		<ul id="toc-See_also-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-References"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#References">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">7</span>References</div>
+		</a>
+		
+		<ul id="toc-References-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Further_reading"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Further_reading">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">8</span>Further reading</div>
+		</a>
+		
+		<ul id="toc-Further_reading-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-External_links"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#External_links">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">9</span>External links</div>
+		</a>
+		
+		<ul id="toc-External_links-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+</ul>
+</div>
+
+					</div>
+		</nav>
+			</div>
+		</div>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body" role="main">
+				<header class="mw-body-header vector-page-titlebar">
+					<nav role="navigation" aria-label="Contents" class="vector-toc-landmark">
+						
+<div id="vector-page-titlebar-toc" class="vector-dropdown vector-page-titlebar-toc vector-button-flush-left"  >
+	<input type="checkbox" id="vector-page-titlebar-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-titlebar-toc" class="vector-dropdown-checkbox "  aria-label="Toggle the table of contents"  >
+	<label id="vector-page-titlebar-toc-label" for="vector-page-titlebar-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet"></span>
+
+<span class="vector-dropdown-label-text">Toggle the table of contents</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+							<div id="vector-page-titlebar-toc-unpinned-container" class="vector-unpinned-container">
+			</div>
+		
+	</div>
+</div>
+
+					</nav>
+					<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Ring (programming language)</span></h1>
+							
+<div id="p-lang-btn" class="vector-dropdown mw-portlet mw-portlet-lang"  >
+	<input type="checkbox" id="p-lang-btn-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-lang-btn" class="vector-dropdown-checkbox mw-interlanguage-selector" aria-label="Go to an article in another language. Available in 5 languages"   >
+	<label id="p-lang-btn-label" for="p-lang-btn-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive mw-portlet-lang-heading-5" aria-hidden="true"  ><span class="vector-icon mw-ui-icon-language-progressive mw-ui-icon-wikimedia-language-progressive"></span>
+
+<span class="vector-dropdown-label-text">5 languages</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+		<div class="vector-menu-content">
+			
+			<ul class="vector-menu-content-list">
+				
+				<li class="interlanguage-link interwiki-ar mw-list-item"><a href="https://ar.wikipedia.org/wiki/%D8%B1%D9%8A%D9%86%D8%AC_(%D9%84%D8%BA%D8%A9_%D8%A8%D8%B1%D9%85%D8%AC%D8%A9)" title="رينج (لغة برمجة) – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target"><span>العربية</span></a></li><li class="interlanguage-link interwiki-fa mw-list-item"><a href="https://fa.wikipedia.org/wiki/%D8%B1%DB%8C%D9%86%DA%AF_(%D8%B2%D8%A8%D8%A7%D9%86_%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C)" title="رینگ (زبان برنامه‌نویسی) – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target"><span>فارسی</span></a></li><li class="interlanguage-link interwiki-fr mw-list-item"><a href="https://fr.wikipedia.org/wiki/Ring_(langage_de_programmation)" title="Ring (langage de programmation) – French" lang="fr" hreflang="fr" class="interlanguage-link-target"><span>Français</span></a></li><li class="interlanguage-link interwiki-ml mw-list-item"><a href="https://ml.wikipedia.org/wiki/%E0%B4%B1%E0%B4%BF%E0%B4%82%E0%B4%97%E0%B5%8D_(%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B5%8B%E0%B4%97%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AE%E0%B4%BF%E0%B4%99%E0%B5%8D_%E0%B4%AD%E0%B4%BE%E0%B4%B7)" title="റിംഗ് (പ്രോഗ്രാമിങ് ഭാഷ) – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target"><span>മലയാളം</span></a></li><li class="interlanguage-link interwiki-ja mw-list-item"><a href="https://ja.wikipedia.org/wiki/Ring_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Ring (プログラミング言語) – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target"><span>日本語</span></a></li>
+			</ul>
+			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q25462748#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+		</div>
+
+	</div>
+</div>
+</header>
+				<div class="vector-page-toolbar">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/Ring_(programming_language)" title="View the content page [c]" accesskey="c"><span>Article</span></a></li><li id="ca-talk" class="vector-tab-noicon mw-list-item"><a href="/wiki/Talk:Ring_(programming_language)" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t"><span>Talk</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+								
+<div id="p-variants" class="vector-dropdown emptyPortlet"  >
+	<input type="checkbox" id="p-variants-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-variants" class="vector-dropdown-checkbox " aria-label="Change language variant"   >
+	<label id="p-variants-label" for="p-variants-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">English</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+					
+<div id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+								
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/Ring_(programming_language)"><span>Read</span></a></li><li id="ca-edit" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-history" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=Ring_(programming_language)&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+							</nav>
+				
+							<nav class="vector-page-tools-landmark" aria-label="Page tools">
+								
+<div id="vector-page-tools-dropdown" class="vector-dropdown vector-page-tools-dropdown"  >
+	<input type="checkbox" id="vector-page-tools-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-tools-dropdown" class="vector-dropdown-checkbox "  aria-label="Tools"  >
+	<label id="vector-page-tools-dropdown-label" for="vector-page-tools-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">Tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+									<div id="vector-page-tools-unpinned-container" class="vector-unpinned-container">
+						
+<div id="vector-page-tools" class="vector-page-tools vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-page-tools-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="page-tools-pinned"
+	data-pinnable-element-id="vector-page-tools"
+	data-pinned-container-id="vector-page-tools-pinned-container"
+	data-unpinned-container-id="vector-page-tools-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Tools</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-page-tools.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-page-tools.unpin">hide</button>
+</div>
+
+	
+<div id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-has-collapsible-items"  title="More options" >
+	<div class="vector-menu-heading">
+		Actions
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-more-view" class="selected vector-more-collapsible-item mw-list-item"><a href="/wiki/Ring_(programming_language)"><span>Read</span></a></li><li id="ca-more-edit" class="vector-more-collapsible-item mw-list-item"><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-more-history" class="vector-more-collapsible-item mw-list-item"><a href="/w/index.php?title=Ring_(programming_language)&amp;action=history"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-tb" class="vector-menu mw-portlet mw-portlet-tb"  >
+	<div class="vector-menu-heading">
+		General
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/Ring_(programming_language)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/Ring_(programming_language)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u"><span>Upload file</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=Ring_(programming_language)&amp;oldid=1202037514" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=Ring_(programming_language)&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Ring_%28programming_language%29&amp;id=1202037514&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=Special:UrlShortener&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FRing_%28programming_language%29"><span>Get shortened URL</span></a></li><li id="t-urlshortener-qrcode" class="mw-list-item"><a href="/w/index.php?title=Special:QrCode&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FRing_%28programming_language%29"><span>Download QR code</span></a></li><li id="t-wikibase" class="mw-list-item"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q25462748" title="Structured data on this page hosted by Wikidata [g]" accesskey="g"><span>Wikidata item</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-coll-print_export" class="vector-menu mw-portlet mw-portlet-coll-print_export"  >
+	<div class="vector-menu-heading">
+		Print/export
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="coll-download-as-rl" class="mw-list-item"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Ring_%28programming_language%29&amp;action=show-download-screen" title="Download this page as a PDF file"><span>Download as PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="/w/index.php?title=Ring_(programming_language)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-wikibase-otherprojects" class="vector-menu mw-portlet mw-portlet-wikibase-otherprojects"  >
+	<div class="vector-menu-heading">
+		In other projects
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li class="wb-otherproject-link wb-otherproject-commons mw-list-item"><a href="https://commons.wikimedia.org/wiki/Category:Ring_Programming_Language" hreflang="en"><span>Wikimedia Commons</span></a></li><li class="wb-otherproject-link wb-otherproject-wikibooks mw-list-item"><a href="https://en.wikibooks.org/wiki/Ring" hreflang="en"><span>Wikibooks</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+									</div>
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="vector-column-end">
+					<div class="vector-sticky-pinned-container">
+						<nav class="vector-page-tools-landmark" aria-label="Page tools">
+							<div id="vector-page-tools-pinned-container" class="vector-pinned-container">
+				
+							</div>
+		</nav>
+						<nav class="vector-client-prefs-landmark" aria-label="Appearance">
+						</nav>
+					</div>
+				</div>
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		</div>
+
+						<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+					</div>
+					<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+					
+					
+					<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Dynamically typed, general-purpose programming language</div>
+<style data-mw-deduplicate="TemplateStyles:r1129693374">.mw-parser-output .hlist dl,.mw-parser-output .hlist ol,.mw-parser-output .hlist ul{margin:0;padding:0}.mw-parser-output .hlist dd,.mw-parser-output .hlist dt,.mw-parser-output .hlist li{margin:0;display:inline}.mw-parser-output .hlist.inline,.mw-parser-output .hlist.inline dl,.mw-parser-output .hlist.inline ol,.mw-parser-output .hlist.inline ul,.mw-parser-output .hlist dl dl,.mw-parser-output .hlist dl ol,.mw-parser-output .hlist dl ul,.mw-parser-output .hlist ol dl,.mw-parser-output .hlist ol ol,.mw-parser-output .hlist ol ul,.mw-parser-output .hlist ul dl,.mw-parser-output .hlist ul ol,.mw-parser-output .hlist ul ul{display:inline}.mw-parser-output .hlist .mw-empty-li{display:none}.mw-parser-output .hlist dt::after{content:": "}.mw-parser-output .hlist dd::after,.mw-parser-output .hlist li::after{content:" · ";font-weight:bold}.mw-parser-output .hlist dd:last-child::after,.mw-parser-output .hlist dt:last-child::after,.mw-parser-output .hlist li:last-child::after{content:none}.mw-parser-output .hlist dd dd:first-child::before,.mw-parser-output .hlist dd dt:first-child::before,.mw-parser-output .hlist dd li:first-child::before,.mw-parser-output .hlist dt dd:first-child::before,.mw-parser-output .hlist dt dt:first-child::before,.mw-parser-output .hlist dt li:first-child::before,.mw-parser-output .hlist li dd:first-child::before,.mw-parser-output .hlist li dt:first-child::before,.mw-parser-output .hlist li li:first-child::before{content:" (";font-weight:normal}.mw-parser-output .hlist dd dd:last-child::after,.mw-parser-output .hlist dd dt:last-child::after,.mw-parser-output .hlist dd li:last-child::after,.mw-parser-output .hlist dt dd:last-child::after,.mw-parser-output .hlist dt dt:last-child::after,.mw-parser-output .hlist dt li:last-child::after,.mw-parser-output .hlist li dd:last-child::after,.mw-parser-output .hlist li dt:last-child::after,.mw-parser-output .hlist li li:last-child::after{content:")";font-weight:normal}.mw-parser-output .hlist ol{counter-reset:listitem}.mw-parser-output .hlist ol>li{counter-increment:listitem}.mw-parser-output .hlist ol>li::before{content:" "counter(listitem)"\a0 "}.mw-parser-output .hlist dd ol>li:first-child::before,.mw-parser-output .hlist dt ol>li:first-child::before,.mw-parser-output .hlist li ol>li:first-child::before{content:" ("counter(listitem)"\a0 "}</style><style data-mw-deduplicate="TemplateStyles:r1066479718">.mw-parser-output .infobox-subbox{padding:0;border:none;margin:-3px;width:auto;min-width:100%;font-size:100%;clear:none;float:none;background-color:transparent}.mw-parser-output .infobox-3cols-child{margin:auto}.mw-parser-output .infobox .navbar{font-size:100%}body.skin-minerva .mw-parser-output .infobox-header,body.skin-minerva .mw-parser-output .infobox-subheader,body.skin-minerva .mw-parser-output .infobox-above,body.skin-minerva .mw-parser-output .infobox-title,body.skin-minerva .mw-parser-output .infobox-image,body.skin-minerva .mw-parser-output .infobox-full-data,body.skin-minerva .mw-parser-output .infobox-below{text-align:center}</style><table class="infobox vevent"><caption class="infobox-title summary">Ring</caption><tbody><tr><td colspan="2" class="infobox-image"><span typeof="mw:File"><a href="/wiki/File:Ringlogo_transparent.png" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Ringlogo_transparent.png/121px-Ringlogo_transparent.png" decoding="async" width="121" height="71" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/f/f7/Ringlogo_transparent.png 1.5x" data-file-width="176" data-file-height="103" /></a></span></td></tr><tr><td colspan="2" class="infobox-full-data"><div style="text-align:center;"></div></td></tr><tr><th scope="row" class="infobox-label"><a href="/wiki/Programming_paradigm" title="Programming paradigm">Paradigm</a></th><td class="infobox-data"><a href="/wiki/Multi-paradigm_programming_language" class="mw-redirect" title="Multi-paradigm programming language">Multi-paradigm</a>: <a href="/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented</a>, <a href="/wiki/Imperative_programming" title="Imperative programming">imperative</a>, <a href="/wiki/Functional_programming" title="Functional programming">functional</a>, <a href="/wiki/Procedural_programming" title="Procedural programming">procedural</a>, <a href="/wiki/Reflective_programming" title="Reflective programming">reflective</a>, <a href="/wiki/Declarative_programming" title="Declarative programming">declarative</a>, <a href="/wiki/Natural_language_programming" class="mw-redirect" title="Natural language programming">natural language programming</a></td></tr><tr><th scope="row" class="infobox-label"><a href="/wiki/Software_design" title="Software design">Designed&#160;by</a></th><td class="infobox-data"><a href="/wiki/Mahmoud_Samir_Fayed" title="Mahmoud Samir Fayed">Mahmoud Samir Fayed</a><sup id="cite_ref-Springer_1-0" class="reference"><a href="#cite_note-Springer-1">&#91;1&#93;</a></sup></td></tr><tr><th scope="row" class="infobox-label"><a href="/wiki/Software_developer" class="mw-redirect" title="Software developer">Developer</a></th><td class="infobox-data organiser">The Ring Development Team</td></tr><tr><th scope="row" class="infobox-label">First&#160;appeared</th><td class="infobox-data">January&#160;25, 2016<span class="noprint">&#59;&#32;8 years ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2016-01-25</span>)</span></td></tr><tr><td colspan="2" class="infobox-full-data"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1066479718"></td></tr><tr><th scope="row" class="infobox-label" style="white-space: nowrap;"><a href="/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th><td class="infobox-data"><div style="margin:0px;">1.19<sup id="cite_ref-wikidata-cc8a294e3276e302198c85e3d41c21be73698f7b-v10_2-0" class="reference"><a href="#cite_note-wikidata-cc8a294e3276e302198c85e3d41c21be73698f7b-v10-2">&#91;2&#93;</a></sup>&#160;<span class="mw-valign-text-top" typeof="mw:File/Frameless"><a href="https://www.wikidata.org/wiki/Q25462748?uselang=en#P348" title="Edit this on Wikidata"><img alt="Edit this on Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></span>
+   / 31 December 2023<span class="noprint">&#59;&#32;42 days ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">31 December 2023</span>)</span></div></td></tr><tr style="display:none"><td colspan="2">
+</td></tr><tr><th scope="row" class="infobox-label"><a href="/wiki/Type_system" title="Type system">Typing discipline</a></th><td class="infobox-data"><a href="/wiki/Dynamic_typing" class="mw-redirect" title="Dynamic typing">Dynamic</a></td></tr><tr><th scope="row" class="infobox-label">Implementation language</th><td class="infobox-data"><a href="/wiki/C_(programming_language)" title="C (programming language)">C</a></td></tr><tr><th scope="row" class="infobox-label"><a href="/wiki/Operating_system" title="Operating system">OS</a></th><td class="infobox-data"><a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a>, <a href="/wiki/Linux" title="Linux">Linux</a> and <a href="/wiki/MacOS" title="MacOS">macOS</a></td></tr><tr><th scope="row" class="infobox-label"><a href="/wiki/Software_license" title="Software license">License</a></th><td class="infobox-data"><a href="/wiki/MIT_License" title="MIT License">MIT License</a></td></tr><tr><th scope="row" class="infobox-label"><a href="/wiki/Filename_extension" title="Filename extension">Filename extensions</a></th><td class="infobox-data">.ring, .rh, .rform</td></tr><tr><th scope="row" class="infobox-label">Website</th><td class="infobox-data"><a rel="nofollow" class="external free" href="http://ring-lang.net">http://ring-lang.net</a></td></tr><tr><th colspan="2" class="infobox-header" style="background-color: #eee;">Influenced by</th></tr><tr><td colspan="2" class="infobox-full-data"><a href="/wiki/Lua_(programming_language)" title="Lua (programming language)">Lua</a>, <a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python</a>, <a href="/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a>, <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a>, <a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>, <a href="/wiki/BASIC" title="BASIC">BASIC</a>, <a href="/wiki/QML" title="QML">QML</a>, <a href="/wiki/XBase" title="XBase">xBase</a>, Supernova</td></tr><tr><th colspan="2" class="infobox-header" style="background-color: #eee;">Influenced</th></tr><tr><td colspan="2" class="infobox-full-data">SimpleLang,<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> DragonLang <sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup></td></tr><tr><td colspan="2" class="infobox-below hlist" style="border-top: 1px solid #aaa; padding-top: 3px;">
+<ul><li><span class="noviewer" typeof="mw:File"><a href="/wiki/File:Wikibooks-logo-en-noslogan.svg" class="mw-file-description"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/16px-Wikibooks-logo-en-noslogan.svg.png" decoding="async" width="16" height="16" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/24px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/32px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></a></span> <a href="https://en.wikibooks.org/wiki/Ring" class="extiw" title="wikibooks:Ring">Ring</a> at Wikibooks</li></ul>
+</td></tr></tbody></table>
+<p><b>Ring</b> is a <a href="/wiki/Dynamic_programming_language" title="Dynamic programming language">dynamically typed</a>, <a href="/wiki/General-purpose_programming_language" title="General-purpose programming language">general-purpose programming language</a>. It can be embedded in C/C++ projects, extended using C/C++ code and/or used as a standalone language.<sup id="cite_ref-rangakrish_5-0" class="reference"><a href="#cite_note-rangakrish-5">&#91;5&#93;</a></sup> The supported <a href="/wiki/Programming_paradigm" title="Programming paradigm">programming paradigms</a> are <a href="/wiki/Imperative_programming" title="Imperative programming">imperative</a>, <a href="/wiki/Procedural_programming" title="Procedural programming">procedural</a>, <a href="/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented</a>, <a href="/wiki/Functional_programming" title="Functional programming">functional</a>, <a href="/wiki/Metaprogramming" title="Metaprogramming">meta</a>, <a href="/wiki/Declarative_programming" title="Declarative programming">declarative</a> using nested structures, and <a href="/wiki/Natural-language_programming" title="Natural-language programming">natural programming</a>.<sup id="cite_ref-BIMArabiaMagazine_6-0" class="reference"><a href="#cite_note-BIMArabiaMagazine-6">&#91;6&#93;</a></sup><sup id="cite_ref-YourWayToProgramming_7-0" class="reference"><a href="#cite_note-YourWayToProgramming-7">&#91;7&#93;</a></sup> The language is portable (<a href="/wiki/Windows" class="mw-redirect" title="Windows">Windows</a>, <a href="/wiki/Linux" title="Linux">Linux</a>, <a href="/wiki/MacOS" title="MacOS">macOS</a>, <a href="/wiki/Android_(operating_system)" title="Android (operating system)">Android</a>,<sup id="cite_ref-dotnetpro_8-0" class="reference"><a href="#cite_note-dotnetpro-8">&#91;8&#93;</a></sup> <a href="/wiki/WebAssembly" title="WebAssembly">WebAssembly</a>,<sup id="cite_ref-InfoWorld_9-0" class="reference"><a href="#cite_note-InfoWorld-9">&#91;9&#93;</a></sup> etc.)<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup> and can be used to create <a href="/wiki/Console_application" title="Console application">console</a>, <a href="/wiki/Graphical_user_interface" title="Graphical user interface">GUI</a>, <a href="/wiki/Web_application" title="Web application">web</a>, <a href="/wiki/PC_game" title="PC game">game</a> and <a href="/wiki/Mobile_app" title="Mobile app">mobile applications</a>.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup><sup id="cite_ref-Youm7_(Egyptian_daily_newspaper)_12-0" class="reference"><a href="#cite_note-Youm7_(Egyptian_daily_newspaper)-12">&#91;12&#93;</a></sup><sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup><sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup>
+</p>
+<meta property="mw:PageProp/toc" />
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=1" title="Edit section: History"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<figure typeof="mw:File/Thumb"><a href="/wiki/File:Ringlang_shot1.png" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/5/53/Ringlang_shot1.png/300px-Ringlang_shot1.png" decoding="async" width="300" height="161" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/53/Ringlang_shot1.png/450px-Ringlang_shot1.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/53/Ringlang_shot1.png/600px-Ringlang_shot1.png 2x" data-file-width="1920" data-file-height="1031" /></a><figcaption>Ring IDE (Ring Notepad - Form Designer)</figcaption></figure>
+<p>In 2009, <a href="/wiki/Mahmoud_Samir_Fayed" title="Mahmoud Samir Fayed">Mahmoud Samir Fayed</a> created a minor <a href="/wiki/Domain-specific_language" title="Domain-specific language">domain-specific language</a> called Supernova that focuses on <a href="/wiki/User_interface" title="User interface">User interface (UI)</a> creation and uses some ideas related to <a href="/wiki/Natural-language_programming" title="Natural-language programming">Natural Language Programming</a>, then he realized the need for a new language that is <a href="/wiki/General-purpose_language" title="General-purpose language">general-purpose</a> and can increase the <a href="/wiki/Productivity" title="Productivity">productivity</a> of natural language creation. Ring aims to offer a language focused on helping the developer with building natural interfaces and declarative DSLs.<sup id="cite_ref-Supernova1_15-0" class="reference"><a href="#cite_note-Supernova1-15">&#91;15&#93;</a></sup><sup id="cite_ref-Supernova2_16-0" class="reference"><a href="#cite_note-Supernova2-16">&#91;16&#93;</a></sup><sup id="cite_ref-Supernova3_17-0" class="reference"><a href="#cite_note-Supernova3-17">&#91;17&#93;</a></sup><sup id="cite_ref-Softpedia_18-0" class="reference"><a href="#cite_note-Softpedia-18">&#91;18&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Goals">Goals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=2" title="Edit section: Goals"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<figure typeof="mw:File/Thumb"><a href="/wiki/File:Ringlang_shot6.png" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/3/38/Ringlang_shot6.png/300px-Ringlang_shot6.png" decoding="async" width="300" height="171" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/38/Ringlang_shot6.png/450px-Ringlang_shot6.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/38/Ringlang_shot6.png/600px-Ringlang_shot6.png 2x" data-file-width="1090" data-file-height="620" /></a><figcaption>PWCT 2.0 (Android) - Under development using Ring</figcaption></figure>
+<p>The general goals behind Ring:<sup id="cite_ref-Medium_19-0" class="reference"><a href="#cite_note-Medium-19">&#91;19&#93;</a></sup>
+<sup id="cite_ref-Youm7_Journal_20-0" class="reference"><a href="#cite_note-Youm7_Journal-20">&#91;20&#93;</a></sup>
+</p>
+<ul><li>Applications programming language.</li>
+<li>Productivity and developing high quality solutions that can scale.</li>
+<li>Small and flexible language that can be embedded in C/C++ projects.</li>
+<li>Simple language that can be used in education and introducing Compiler/VM concepts.</li>
+<li>General-Purpose language that can be used for creating domain-specific libraries, frameworks and tools.</li>
+<li>Practical language designed for creating the next version of the <a href="/wiki/PWCT" title="PWCT">Programming Without Coding Technology</a> software.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;21&#93;</a></sup></li></ul>
+<h2><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=3" title="Edit section: Examples"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<figure typeof="mw:File/Thumb"><a href="/wiki/File:Ringlang_shot14.png" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Ringlang_shot14.png/300px-Ringlang_shot14.png" decoding="async" width="300" height="161" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Ringlang_shot14.png/450px-Ringlang_shot14.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Ringlang_shot14.png/600px-Ringlang_shot14.png 2x" data-file-width="1920" data-file-height="1031" /></a><figcaption>Different styles for writing the source code</figcaption></figure>
+<figure typeof="mw:File/Thumb"><a href="/wiki/File:Ringlang_shot5.png" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ringlang_shot5.png/300px-Ringlang_shot5.png" decoding="async" width="300" height="161" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ringlang_shot5.png/450px-Ringlang_shot5.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ringlang_shot5.png/600px-Ringlang_shot5.png 2x" data-file-width="1600" data-file-height="858" /></a><figcaption>Declarative Programming (Web Development)</figcaption></figure>
+<figure typeof="mw:File/Thumb"><a href="/wiki/File:Ringlang_shot12.png" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/5/55/Ringlang_shot12.png/300px-Ringlang_shot12.png" decoding="async" width="300" height="161" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/55/Ringlang_shot12.png/450px-Ringlang_shot12.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/55/Ringlang_shot12.png/600px-Ringlang_shot12.png 2x" data-file-width="1920" data-file-height="1032" /></a><figcaption>Natural Language Programming</figcaption></figure>
+<figure typeof="mw:File/Thumb"><a href="/wiki/File:Ringlang_shot13.png" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Ringlang_shot13.png/300px-Ringlang_shot13.png" decoding="async" width="300" height="161" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Ringlang_shot13.png/450px-Ringlang_shot13.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Ringlang_shot13.png/600px-Ringlang_shot13.png 2x" data-file-width="1600" data-file-height="858" /></a><figcaption>Testing TreeView Control Performance using RingQt</figcaption></figure>
+<h3><span class="mw-headline" id="Hello_World_program">Hello World program</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=4" title="Edit section: Hello World program"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The same program can be written using different styles. Here is an example of the standard "Hello, World!" program using four different styles.
+</p><p>The first style:
+</p>
+<pre>see "Hello, World!"
+</pre>
+<p>The second style:
+</p>
+<pre>put "Hello, World!"
+</pre>
+<p>The third style:
+</p>
+<pre>print("Hello, World!")
+</pre>
+<p>Another style: similar to <a href="/wiki/XBase" title="XBase">xBase</a> languages like <a href="/wiki/Clipper_(programming_language)" title="Clipper (programming language)">Clipper</a> and <a href="/wiki/Visual_FoxPro" title="Visual FoxPro">Visual FoxPro</a>
+</p>
+<pre>? "Hello, World!"
+</pre>
+<h3><span class="mw-headline" id="Change_the_keywords_and_operators">Change the keywords and operators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=5" title="Edit section: Change the keywords and operators"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>Ring</b> supports changing the language <a href="/wiki/Reserved_word" title="Reserved word">keywords</a> and <a href="/wiki/Operator_(computer_programming)" title="Operator (computer programming)">operators</a>.
+</p><p>This could be done many times in the same source file, and is useful for
+</p>
+<ul><li>Translating the keywords from English to other human languages (<a href="/wiki/Non-English-based_programming_languages" title="Non-English-based programming languages">Non-English-based programming languages</a>)</li>
+<li>Customizing the language for use of a favorite style</li>
+<li>Porting <a href="/wiki/Legacy_code" class="mw-redirect" title="Legacy code">Legacy code</a> written in other languages</li></ul>
+<p>Translate Ring keywords to <a href="/wiki/Japanese_language" title="Japanese language">Japanese</a>
+</p>
+<pre>ChangeRingKeyword  See 手紙を出す
+ChangeRingOperator + そして
+改行 = nl
+します。 = :します。
+
+手紙を出す "こんにちは、世界" そして 改行 します。
+
+ChangeRingKeyword 手紙を出す See // キーワードの復旧
+ChangeRingOperator そして     + // 演算子の復旧
+</pre>
+<p>Translate Ring keywords to <a href="/wiki/Arabic" title="Arabic">Arabic</a>
+</p>
+<pre>ChangeRingKeyword  See إطبع
+
+إطبع "Hello, World!"
+
+ChangeRingKeyword إطبع See
+</pre>
+<p>Use style similar to the <a href="/wiki/Pascal_(programming_language)" title="Pascal (programming language)">Pascal programming language</a>
+</p>
+<div class="mw-highlight mw-highlight-lang-pascal mw-content-ltr" dir="ltr"><pre><span></span><span class="hll"><span class="n">ChangeRingKeyword</span><span class="w"> </span><span class="n">func</span><span class="w"> </span><span class="k">function</span>
+</span><span class="hll"><span class="nf">ChangeRingKeyword</span><span class="w"> </span><span class="n">see</span><span class="w">  </span><span class="nb">write</span>
+</span><span class="k">begin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">:</span><span class="k">begin</span>
+
+<span class="k">function</span><span class="w"> </span><span class="nf">main</span>
+<span class="k">begin</span>
+<span class="nb">write</span><span class="p">(</span><span class="err">&quot;</span><span class="n">Hello</span><span class="o">,</span><span class="w"> </span><span class="n">World</span><span class="err">!&quot;</span><span class="p">)</span><span class="o">;</span>
+<span class="n">return</span><span class="w"> </span><span class="mi">0</span><span class="o">;</span>
+<span class="k">end</span>
+
+<span class="hll"><span class="n">ChangeRingKeyword</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="nf">func</span>
+</span><span class="hll"><span class="n">ChangeRingKeyword</span><span class="w"> </span><span class="nb">write</span><span class="w"> </span><span class="n">see</span>
+</span></pre></div>
+<p><sup id="cite_ref-helloworldstyles_22-0" class="reference"><a href="#cite_note-helloworldstyles-22">&#91;22&#93;</a></sup><sup id="cite_ref-Ring_Programming_Tutorial_23-0" class="reference"><a href="#cite_note-Ring_Programming_Tutorial-23">&#91;23&#93;</a></sup><sup id="cite_ref-24" class="reference"><a href="#cite_note-24">&#91;24&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Loop_command">Loop command</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=6" title="Edit section: Loop command"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The Loop command can take an integer to apply the continue semantics to enclosing outer loops<sup id="cite_ref-rangakrish2_25-0" class="reference"><a href="#cite_note-rangakrish2-25">&#91;25&#93;</a></sup>
+</p>
+<pre>changeRingKeyword loop continue
+count = 2
+for x in 1:5
+    for y = 1 to 2
+        if x = 3
+           &#160;? "About to execute 'loop', count = " + count
+            continue count
+        ok
+       &#160;? "x: " + x + ", y: " + y
+    next
+next
+</pre>
+<h3><span class="mw-headline" id="Object-oriented_orogramming">Object-oriented orogramming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=7" title="Edit section: Object-oriented orogramming"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Ring supports object-oriented programming (classes, objects, composition, inheritance, encapsulation, etc.)<sup id="cite_ref-26" class="reference"><a href="#cite_note-26">&#91;26&#93;</a></sup>
+</p>
+<pre>new point {            # Create new object from the Point class the access the object using braces
+x=10  y=20  z=30       # Set the object attributes
+print()                # Call the print() method
+}                      # end of object access using braces
+class point            # Define the class
+x y z                  # Define the attributes (x,y,z)
+func print             # Define the print() method
+? x + nl + y + nl + z  # Print the attributes values (nl means printing a new line)
+</pre>
+<p>In Ring classes can be defined at runtime using the Eval() function<sup id="cite_ref-rangakrish3_27-0" class="reference"><a href="#cite_note-rangakrish3-27">&#91;27&#93;</a></sup>
+</p>
+<pre>? "Creating a new class dynamically..."
+eval("class DynamicClass a b")
+
+? "Printing the instance..."
+? new DynamicClass {a=1 b=2}
+</pre>
+<h2><span class="mw-headline" id="Implementation">Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=8" title="Edit section: Implementation"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Compiler_and_virtual_machine">Compiler and virtual machine</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=9" title="Edit section: Compiler and virtual machine"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<figure typeof="mw:File/Thumb"><a href="/wiki/File:Ringlang_shot10.jpg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/4/43/Ringlang_shot10.jpg/300px-Ringlang_shot10.jpg" decoding="async" width="300" height="159" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/43/Ringlang_shot10.jpg/450px-Ringlang_shot10.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/43/Ringlang_shot10.jpg/600px-Ringlang_shot10.jpg 2x" data-file-width="1366" data-file-height="725" /></a><figcaption>Ring VM implementation using PWCT - Virtual Machine Instructions</figcaption></figure>
+<figure typeof="mw:File/Thumb"><a href="/wiki/File:Ringlang_shot11.jpg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Ringlang_shot11.jpg/300px-Ringlang_shot11.jpg" decoding="async" width="300" height="159" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Ringlang_shot11.jpg/450px-Ringlang_shot11.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Ringlang_shot11.jpg/600px-Ringlang_shot11.jpg 2x" data-file-width="1366" data-file-height="726" /></a><figcaption>Ring VM implementation using PWCT - List Structure</figcaption></figure>
+<p>Ring programs are not <a href="/wiki/Interpreted_language" class="mw-redirect" title="Interpreted language">interpreted</a> directly from the textual Ring file, but are <a href="/wiki/Compiler" title="Compiler">compiled</a> into <a href="/wiki/Bytecode" title="Bytecode">bytecode</a>, which is then run on the Ring <a href="/wiki/Virtual_machine" title="Virtual machine">virtual machine</a>. The compilation process is typically invisible to the user and is performed at <a href="/wiki/Run_time_(program_lifecycle_phase)" class="mw-redirect" title="Run time (program lifecycle phase)">run-time</a>, but it can be done offline in order to increase loading performance or reduce the memory footprint of the host environment by leaving out the compiler.
+</p><p>The <a href="/wiki/Compiler" title="Compiler">compiler</a> and the <a href="/wiki/Virtual_machine" title="Virtual machine">virtual machine</a> are designed using <a href="/wiki/Visual_programming_language" title="Visual programming language">visual programming</a> through the <a href="/wiki/PWCT" title="PWCT">Programming Without Coding Technology</a> software then the <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> code is generated.
+</p>
+<h3><span class="mw-headline" id="Extensions">Extensions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=10" title="Edit section: Extensions"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<figure typeof="mw:File/Thumb"><a href="/wiki/File:Ringlang_shot3.png" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/4/41/Ringlang_shot3.png/300px-Ringlang_shot3.png" decoding="async" width="300" height="205" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/41/Ringlang_shot3.png/450px-Ringlang_shot3.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/41/Ringlang_shot3.png/600px-Ringlang_shot3.png 2x" data-file-width="1060" data-file-height="725" /></a><figcaption>Online Form Designer (WebAssembly) - Using RingQt</figcaption></figure>
+<figure typeof="mw:File/Thumb"><a href="/wiki/File:Ringlang_shot8.png" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ringlang_shot8.png/300px-Ringlang_shot8.png" decoding="async" width="300" height="157" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ringlang_shot8.png/450px-Ringlang_shot8.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ringlang_shot8.png/600px-Ringlang_shot8.png 2x" data-file-width="1366" data-file-height="716" /></a><figcaption><a href="/wiki/Sokoban" title="Sokoban">Sokoban</a> Implementation using Ring Game Engine for 2D Games</figcaption></figure>
+<figure typeof="mw:File/Thumb"><a href="/wiki/File:Ringlang_shot9.png" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Ringlang_shot9.png/300px-Ringlang_shot9.png" decoding="async" width="300" height="169" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Ringlang_shot9.png/450px-Ringlang_shot9.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Ringlang_shot9.png/600px-Ringlang_shot9.png 2x" data-file-width="1920" data-file-height="1080" /></a><figcaption>Using Qt3D through RingQt</figcaption></figure>
+<p>The following are extensions that can be used immediately after the installation of the full installation version (with a file size of about 280 MB for Ring 1.12). Since these are officially provided and maintained on the Ring side, the users are not bothered by library dependencies that may cause problems in other languages, and there is a concern that they can not be used suddenly even if there are destructive language specification changes.
+</p><p>The extensions are implemented in approximately 500,000 lines of <a href="/wiki/C_Programming_Language" class="mw-redirect" title="C Programming Language">C</a> and <a href="/wiki/C%2B%2B" title="C++">C++</a> code.
+</p>
+<ul><li>RingAllegro (<a href="/wiki/Allegro_(software)" class="mw-redirect" title="Allegro (software)">Allegro Game Library</a>)</li>
+<li>RingConsoleColor (Text coloring library for <a href="/wiki/Command-line_interface" title="Command-line interface">command prompt or the terminal</a>)</li>
+<li>RingCurl (<a href="/wiki/CURL" title="CURL">CURL Library</a>)</li>
+<li>RingFreeGLUT (<a href="/wiki/FreeGLUT" title="FreeGLUT">FreeGLUT</a>)</li>
+<li>RingInternet (Internet related library)</li>
+<li>RingLibUV (<a href="/wiki/Libuv" title="Libuv">LibUV-asynchronous I / O library</a>)</li>
+<li>RingMurMurHash (<a href="/wiki/Hash_function" title="Hash function">Hash Function Library</a>)</li>
+<li>RingMySQL (<a href="/wiki/MySQL" title="MySQL">MySQL</a>)</li>
+<li>RingODBC (<a href="/wiki/Open_Database_Connectivity" title="Open Database Connectivity">Open Database Connectivity</a>)</li>
+<li>RingOpenGL (<a href="/wiki/OpenGL" title="OpenGL">OpenGL</a> 1.1-4.6)</li>
+<li>RingOpenSSL (<a href="/wiki/OpenSSL" title="OpenSSL">OpenSSL</a>)</li>
+<li>RingPostgreSQL (<a href="/wiki/PostgreSQL" title="PostgreSQL">PostgreSQL</a>)</li>
+<li>RingQt (<a href="/wiki/Qt_(software)" title="Qt (software)">Qt framework</a>)</li>
+<li>RingRayLib (<a href="/wiki/Raylib" title="Raylib">raylib</a>)</li>
+<li>RingSDL (<a href="/wiki/Simple_DirectMedia_Layer" title="Simple DirectMedia Layer">SDL-Simple DirectMedia Layer Library</a>)</li>
+<li>RingSQLite (<a href="/wiki/SQLite" title="SQLite">SQLite</a>)</li>
+<li>RingWinAPI (<a href="/wiki/Windows_API" title="Windows API">Windows API</a>)</li>
+<li>RingWinCREG (<a href="/wiki/Windows_Registry" title="Windows Registry">Windows Registry</a>)</li>
+<li>RingZIP (<a href="/wiki/Zip_(file_format)" class="mw-redirect" title="Zip (file format)">zip file processing library</a>)</li></ul>
+<p><sup id="cite_ref-Extensions3_28-0" class="reference"><a href="#cite_note-Extensions3-28">&#91;28&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Libraries">Libraries</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=11" title="Edit section: Libraries"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Ring comes with libraries written in Ring itself, such as libraries related to web and game development.
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Library Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>Standard Library
+</td>
+<td>General Classes and functions.
+</td></tr>
+<tr>
+<td>GUI Library
+</td>
+<td>Classes and functions for creating GUI applications
+</td></tr>
+<tr>
+<td>Objects Library
+</td>
+<td>Classes and functions for creating GUI applications using the MVC design pattern
+</td></tr>
+<tr>
+<td>Web Library
+</td>
+<td>Simple framework for developing web applications using the MVC design pattern
+</td></tr>
+<tr>
+<td>Game Engine
+</td>
+<td>Support developing 2D Games for Desktop and Mobile using Declarative Programming based on Allegro and LibSDL
+</td></tr>
+<tr>
+<td>Natural Library
+</td>
+<td>General-Purpose Natural Language Programming Library.
+</td></tr>
+<tr>
+<td>Trace Library
+</td>
+<td>A library for debugging applications.
+</td></tr>
+<tr>
+<td>Type Hints
+</td>
+<td>A library for adding type hints to functions.
+</td></tr>
+<tr>
+<td>Big Number Library
+</td>
+<td>Support arithmetic operations on huge numbers.
+</td></tr>
+<tr>
+<td>Fox Ring Library
+</td>
+<td>Contains functions similar to Visual FoxPro.
+</td></tr>
+<tr>
+<td>ZeroLib Library
+</td>
+<td>Contains classes where the Index starts from 0 instead of 1.
+</td></tr></tbody></table>
+<p><sup id="cite_ref-Libraries2_29-0" class="reference"><a href="#cite_note-Libraries2-29">&#91;29&#93;</a></sup><sup id="cite_ref-Libraries3_30-0" class="reference"><a href="#cite_note-Libraries3-30">&#91;30&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Applications">Applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=12" title="Edit section: Applications"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<figure typeof="mw:File/Thumb"><a href="/wiki/File:Ringlang_shot2.png" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Ringlang_shot2.png/300px-Ringlang_shot2.png" decoding="async" width="300" height="161" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Ringlang_shot2.png/450px-Ringlang_shot2.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Ringlang_shot2.png/600px-Ringlang_shot2.png 2x" data-file-width="1920" data-file-height="1030" /></a><figcaption>Gold Magic 800 Game - Using RingAllegro and RingOpenGL</figcaption></figure>
+<figure typeof="mw:File/Thumb"><a href="/wiki/File:Ringlang_shot4.png" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/0/00/Ringlang_shot4.png/300px-Ringlang_shot4.png" decoding="async" width="300" height="214" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/00/Ringlang_shot4.png/450px-Ringlang_shot4.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/00/Ringlang_shot4.png/600px-Ringlang_shot4.png 2x" data-file-width="1032" data-file-height="737" /></a><figcaption>Online Othello Game (WebAssembly) - Using RingQt</figcaption></figure>
+<p>Ring is distributed with over 60 applications written in the language.
+</p><p>Some of these applications are
+</p>
+<ul><li><a href="/wiki/Analog_watch" title="Analog watch">Analog Clock</a> application</li>
+<li><a href="/wiki/Software_calculator" title="Software calculator">Calculator application</a></li>
+<li><a href="/wiki/English_draughts" title="English draughts">The Checkers</a> Game</li>
+<li><a href="/wiki/Chess" title="Chess">The Chess</a> Game</li>
+<li><a href="/wiki/15_puzzle" class="mw-redirect" title="15 puzzle">Fifteen Puzzle</a> 3D Game</li>
+<li><a href="/wiki/2048_(video_game)" title="2048 (video game)">Game 2048</a></li>
+<li><a href="/wiki/Knight%27s_tour" title="Knight&#39;s tour">Knight Tour</a> Game</li>
+<li><a href="/wiki/Minesweeper_(video_game)" title="Minesweeper (video game)">Minesweeper</a> Game</li>
+<li><a href="/wiki/Othello_(video_game)" class="mw-redirect" title="Othello (video game)">Othello</a> Game</li>
+<li><a href="/wiki/Sokoban" title="Sokoban">Sokoban</a> Game</li>
+<li><a href="/wiki/Sudoku" title="Sudoku">Sudoku</a> Game</li>
+<li><a href="/wiki/Tic-tac-toe" title="Tic-tac-toe">Tic-tac-toe</a> 3D Game</li>
+<li><a href="/wiki/Media_player_software" title="Media player software">Video Music Player</a> application</li>
+<li><a href="/wiki/Windows_startup_process" class="mw-redirect" title="Windows startup process">Windows Startup</a> Manager application</li></ul>
+<p><sup id="cite_ref-Applications_31-0" class="reference"><a href="#cite_note-Applications-31">&#91;31&#93;</a></sup><sup id="cite_ref-Applications2_32-0" class="reference"><a href="#cite_note-Applications2-32">&#91;32&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Tools">Tools</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=13" title="Edit section: Tools"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<figure typeof="mw:File/Thumb"><a href="/wiki/File:Ringlang_shot7.png" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Ringlang_shot7.png/300px-Ringlang_shot7.png" decoding="async" width="300" height="151" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Ringlang_shot7.png/450px-Ringlang_shot7.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Ringlang_shot7.png/600px-Ringlang_shot7.png 2x" data-file-width="1345" data-file-height="679" /></a><figcaption>Running the Tetris game using the Ring Package Manager</figcaption></figure>
+<p>Ring is distributed with a Standard IDE that includes the following tools:
+</p>
+<ul><li>Ring REPL (<a href="/wiki/Read%E2%80%93eval%E2%80%93print_loop" title="Read–eval–print loop">Read–eval–print loop</a>)</li>
+<li>Ring2EXE (<a href="/wiki/Software_distribution" title="Software distribution">Distributing executable applications</a>)</li>
+<li>RingPM (The Ring <a href="/wiki/Package_manager" title="Package manager">Package manager</a>)</li>
+<li>Ring Notepad (<a href="/wiki/Source-code_editor" title="Source-code editor">Source-code editor</a>)</li>
+<li>Form Designer (<a href="/wiki/Graphical_user_interface_builder" title="Graphical user interface builder">WYSIWYG GUI designer</a>)</li></ul>
+<p>Ring is also distributed with extensions for many code editors such as <a href="/wiki/Emacs" title="Emacs">Emacs</a>, <a href="/wiki/Notepad%2B%2B" title="Notepad++">Notepad++</a>, <a href="/wiki/Geany" title="Geany">Geany</a>, <a href="/wiki/Atom_(text_editor)" title="Atom (text editor)">Atom</a>, <a href="/wiki/Sublime_Text" title="Sublime Text">Sublime Text 2</a>, and <a href="/wiki/Visual_Studio_Code" title="Visual Studio Code">Visual Studio Code</a>.
+</p>
+<h3><span class="mw-headline" id="Documentation">Documentation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=14" title="Edit section: Documentation"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Ring is distributed with documentation written using <a href="/wiki/Sphinx_(documentation_generator)" title="Sphinx (documentation generator)">Sphinx</a>. A Japanese translation of the documentation is also available.<sup id="cite_ref-33" class="reference"><a href="#cite_note-33">&#91;33&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Reception">Reception</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=15" title="Edit section: Reception"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Popularity">Popularity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=16" title="Edit section: Popularity"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Ring had a rapid rise and fall in popularity as measured by the <a href="/wiki/TIOBE_index" title="TIOBE index">TIOBE Programming Community Index</a>. In February 2018, Ring broke into the top 50 for the first time (position 45).<sup id="cite_ref-34" class="reference"><a href="#cite_note-34">&#91;34&#93;</a></sup> As of October 2020, Ring holds position 93 on the TIOBE index.<sup id="cite_ref-35" class="reference"><a href="#cite_note-35">&#91;35&#93;</a></sup> Ring is listed by GitHub in the list of programming languages that are actively developed.<sup id="cite_ref-36" class="reference"><a href="#cite_note-36">&#91;36&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Criticism">Criticism</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=17" title="Edit section: Criticism"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Ring critics pointed to some features in Ring that are not common in widely used programming languages.<sup id="cite_ref-Ciklum_37-0" class="reference"><a href="#cite_note-Ciklum-37">&#91;37&#93;</a></sup>
+</p>
+<ul><li>The list index starts from 1 instead of 0 (See: <a href="/wiki/Zero-based_numbering" title="Zero-based numbering">Zero-based numbering</a>)</li>
+<li>Implicit type conversions  (See: <a href="/wiki/Strong_and_weak_typing#Implicit_type_conversions_and_&quot;type_punning&quot;" title="Strong and weak typing">Implicit type conversions and "type punning"</a>)</li></ul>
+<h4><span class="mw-headline" id="The_list_index_starts_from_1_instead_of_0">The list index starts from 1 instead of 0</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=18" title="Edit section: The list index starts from 1 instead of 0"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>In Ring, the index of the first item in lists and the first character in strings is 1.
+</p>
+<pre>cName = "Ring"
+? cName[1]      # print R
+aList = ["One","Two","Three"]
+? aList[1]      # print One
+</pre>
+<h4><span class="mw-headline" id="Implicit_type_conversions">Implicit type conversions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=19" title="Edit section: Implicit type conversions"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The language can automatically convert between numbers and strings.<sup id="cite_ref-38" class="reference"><a href="#cite_note-38">&#91;38&#93;</a></sup>
+</p>
+<pre>/*
+** Rules:
+** &lt;NUMBER&gt; + &lt;STRING&gt; --&gt; &lt;NUMBER&gt;
+** &lt;STRING&gt; + &lt;NUMBER&gt; --&gt; &lt;STRING&gt;
+*/
+
+x    = 10                # x is a number
+y    = "20"              # y is a string
+nSum = x + y             # nSum is a number (y will be converted to a number)
+cMsg = "Sum = " + nSum   # cMsg is a string (nSum will be converted to a string)
+</pre>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=20" title="Edit section: See also"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1132942124">.mw-parser-output .portalbox{padding:0;margin:0.5em 0;display:table;box-sizing:border-box;max-width:175px;list-style:none}.mw-parser-output .portalborder{border:solid #aaa 1px;padding:0.1em;background:#f9f9f9}.mw-parser-output .portalbox-entry{display:table-row;font-size:85%;line-height:110%;height:1.9em;font-style:italic;font-weight:bold}.mw-parser-output .portalbox-image{display:table-cell;padding:0.2em;vertical-align:middle;text-align:center}.mw-parser-output .portalbox-link{display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle}@media(min-width:720px){.mw-parser-output .portalleft{clear:left;float:left;margin:0.5em 1em 0.5em 0}.mw-parser-output .portalright{clear:right;float:right;margin:0.5em 0 0.5em 1em}}</style><ul role="navigation" aria-label="Portals" class="noprint portalbox portalborder portalright">
+<li class="portalbox-entry"><span class="portalbox-image"><span class="noviewer" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/28px-Free_and_open-source_software_logo_%282009%29.svg.png" decoding="async" width="28" height="28" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span></span></span><span class="portalbox-link"><a href="/wiki/Portal:Free_and_open-source_software" title="Portal:Free and open-source software">Free and open-source software portal</a></span></li><li class="portalbox-entry"><span class="portalbox-image"><span class="noviewer" typeof="mw:File"><a href="/wiki/File:Octicons-terminal.svg" class="mw-file-description"><img alt="icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Octicons-terminal.svg/24px-Octicons-terminal.svg.png" decoding="async" width="24" height="28" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Octicons-terminal.svg/37px-Octicons-terminal.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Octicons-terminal.svg/49px-Octicons-terminal.svg.png 2x" data-file-width="896" data-file-height="1024" /></a></span></span><span class="portalbox-link"><a href="/wiki/Portal:Computer_programming" title="Portal:Computer programming">Computer programming portal</a></span></li></ul>
+<ul><li><a href="/wiki/Tcl" title="Tcl">Tcl</a></li>
+<li><a href="/wiki/Lua_(programming_language)" title="Lua (programming language)">Lua</a></li>
+<li><a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python</a></li>
+<li><a href="/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a></li>
+<li><a href="/wiki/Squirrel_(programming_language)" title="Squirrel (programming language)">Squirrel</a></li>
+<li><a href="/wiki/Gambas" title="Gambas">Gambas</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=21" title="Edit section: References"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1011085734">.mw-parser-output .reflist{font-size:90%;margin-bottom:0.5em;list-style-type:decimal}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}</style><div class="reflist">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-Springer-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-Springer_1-0">^</a></b></span> <span class="reference-text"><style data-mw-deduplicate="TemplateStyles:r1133582631">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:#d33}.mw-parser-output .cs1-visible-error{color:#d33}.mw-parser-output .cs1-maint{display:none;color:#3a3;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><cite id="CITEREFM._Ayouni2020" class="citation web cs1">M. Ayouni (29 July 2020). <a rel="nofollow" class="external text" href="https://link.springer.com/content/pdf/bbm%3A978-1-4842-5833-0%2F1.pdf">"A Dialogue with Mahmoud Fayed"</a> <span class="cs1-format">(PDF)</span>. <a href="/wiki/Springer_Nature" title="Springer Nature">Springer</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=A+Dialogue+with+Mahmoud+Fayed&amp;rft.pub=Springer&amp;rft.date=2020-07-29&amp;rft.au=M.+Ayouni&amp;rft_id=https%3A%2F%2Flink.springer.com%2Fcontent%2Fpdf%2Fbbm%253A978-1-4842-5833-0%252F1.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-wikidata-cc8a294e3276e302198c85e3d41c21be73698f7b-v10-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-wikidata-cc8a294e3276e302198c85e3d41c21be73698f7b-v10_2-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://github.com/ring-lang/ring/releases/tag/v1.19">"Release 1.19"</a>. 31 December 2023<span class="reference-accessdate">. Retrieved <span class="nowrap">2 January</span> 2024</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Release+1.19&amp;rft.date=2023-12-31&amp;rft_id=https%3A%2F%2Fgithub.com%2Fring-lang%2Fring%2Freleases%2Ftag%2Fv1.19&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFAzeez_Adewale" class="citation web cs1">Azeez Adewale. <a rel="nofollow" class="external text" href="https://simple-lang.sourceforge.io">"The Simple programming language"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Simple+programming+language&amp;rft.au=Azeez+Adewale&amp;rft_id=https%3A%2F%2Fsimple-lang.sourceforge.io&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFAavesh_Jilani" class="citation web cs1">Aavesh Jilani. <a rel="nofollow" class="external text" href="https://www.dragon-lang.org/">"The Dragon programming language"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Dragon+programming+language&amp;rft.au=Aavesh+Jilani&amp;rft_id=https%3A%2F%2Fwww.dragon-lang.org%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-rangakrish-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-rangakrish_5-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFDr._Rangarajan_Krishnamoorthy2021" class="citation web cs1">Dr. Rangarajan Krishnamoorthy (7 August 2021). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20210809074142/https://www.rangakrish.com/index.php/2021/08/07/first-encounter-with-the-ring-programming-language/">"First Encounter with the Ring Programming Language"</a>. rangakrish.com. Archived from <a rel="nofollow" class="external text" href="https://www.rangakrish.com/index.php/2021/08/07/first-encounter-with-the-ring-programming-language/">the original</a> on 2021-08-09.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=First+Encounter+with+the+Ring+Programming+Language&amp;rft.pub=rangakrish.com&amp;rft.date=2021-08-07&amp;rft.au=Dr.+Rangarajan+Krishnamoorthy&amp;rft_id=https%3A%2F%2Fwww.rangakrish.com%2Findex.php%2F2021%2F08%2F07%2Ffirst-encounter-with-the-ring-programming-language%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-BIMArabiaMagazine-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-BIMArabiaMagazine_6-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFOmar_Selim2018" class="citation web cs1">Omar Selim (January 2018). <a rel="nofollow" class="external text" href="http://bimarabia.com/download/BIMarabia_Arabic/BIMarabia27.pdf#page=8">"The Ring programming language Review"</a> <span class="cs1-format">(PDF)</span>. BIMArabia Magazine.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Ring+programming+language+Review&amp;rft.pub=BIMArabia+Magazine&amp;rft.date=2018-01&amp;rft.au=Omar+Selim&amp;rft_id=http%3A%2F%2Fbimarabia.com%2Fdownload%2FBIMarabia_Arabic%2FBIMarabia27.pdf%23page%3D8&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-YourWayToProgramming-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-YourWayToProgramming_7-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFAhmed_Tartour2020" class="citation web cs1">Ahmed Tartour (January 2020). <a rel="nofollow" class="external text" href="https://ring-lang.sourceforge.io/ref/ArabicBook_YourWayToProgramming_TalkAboutRing.pdf">"Your way to programming (Arabic Book, Pages 56-57) talk about Ring"</a> <span class="cs1-format">(PDF)</span>. <a href="https://ar.wikipedia.org/wiki/%D9%83%D8%AA%D8%A8%D9%86%D8%A7_(%D9%85%D9%88%D9%82%D8%B9_%D9%88%D9%8A%D8%A8)" class="extiw" title="ar:كتبنا (موقع ويب)">Kotobna</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Your+way+to+programming+%28Arabic+Book%2C+Pages+56-57%29+talk+about+Ring&amp;rft.pub=Kotobna&amp;rft.date=2020-01&amp;rft.au=Ahmed+Tartour&amp;rft_id=https%3A%2F%2Fring-lang.sourceforge.io%2Fref%2FArabicBook_YourWayToProgramming_TalkAboutRing.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-dotnetpro-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-dotnetpro_8-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFBernhard_Lauer2018" class="citation web cs1">Bernhard Lauer (14 August 2018). <a rel="nofollow" class="external text" href="https://www.dotnetpro.de/diverses/sprachen/ring-flexibel-einfach-schnell-1571947.html">"Ring: flexible, simple, fast"</a>. <a href="https://de.wikipedia.org/wiki/Dotnetpro" class="extiw" title="de:Dotnetpro">Dotnetpro</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Ring%3A+flexible%2C+simple%2C+fast&amp;rft.pub=Dotnetpro&amp;rft.date=2018-08-14&amp;rft.au=Bernhard+Lauer&amp;rft_id=https%3A%2F%2Fwww.dotnetpro.de%2Fdiverses%2Fsprachen%2Fring-flexibel-einfach-schnell-1571947.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-InfoWorld-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-InfoWorld_9-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFPaul_Krill2020" class="citation web cs1">Paul Krill (24 August 2020). <a rel="nofollow" class="external text" href="https://www.infoworld.com/article/3572395/ring-language-upgrade-focuses-on-webassembly.html">"Ring language upgrade focuses on WebAssembly"</a>. <a href="/wiki/InfoWorld" title="InfoWorld">InfoWorld</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Ring+language+upgrade+focuses+on+WebAssembly&amp;rft.pub=InfoWorld&amp;rft.date=2020-08-24&amp;rft.au=Paul+Krill&amp;rft_id=https%3A%2F%2Fwww.infoworld.com%2Farticle%2F3572395%2Fring-language-upgrade-focuses-on-webassembly.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFGhanem2021" class="citation book cs1">Ghanem, Mohamed (2021). <a rel="nofollow" class="external text" href="https://ring-lang.sourceforge.io/ref/GhanemBookAboutRing.pdf"><i>Developing Poet Software using Ring language</i></a> <span class="cs1-format">(PDF)</span>. MetaBook (Egypt - Mansoura). <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-977-6928-38-1" title="Special:BookSources/978-977-6928-38-1"><bdi>978-977-6928-38-1</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Developing+Poet+Software+using+Ring+language&amp;rft.pub=MetaBook+%28Egypt+-+Mansoura%29&amp;rft.date=2021&amp;rft.isbn=978-977-6928-38-1&amp;rft.aulast=Ghanem&amp;rft.aufirst=Mohamed&amp;rft_id=https%3A%2F%2Fring-lang.sourceforge.io%2Fref%2FGhanemBookAboutRing.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation book cs1"><a rel="nofollow" class="external text" href="https://www.apress.com/gp/book/9781484258323"><i>Beginning Ring Programming - From Novice to Professional | Mansour Ayouni | Apress</i></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Beginning+Ring+Programming+-+From+Novice+to+Professional+%7C+Mansour+Ayouni+%7C+Apress&amp;rft_id=https%3A%2F%2Fwww.apress.com%2Fgp%2Fbook%2F9781484258323&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Youm7_(Egyptian_daily_newspaper)-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-Youm7_(Egyptian_daily_newspaper)_12-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFHany_Salah2016" class="citation web cs1">Hany Salah (11 January 2016). <a rel="nofollow" class="external text" href="https://www.youm7.com/story/2016/1/11/%D9%81%D9%89-25-%D9%8A%D9%86%D8%A7%D9%8A%D8%B1-%D8%A7%D9%84%D9%85%D9%82%D8%A8%D9%84-%D9%84%D8%BA%D8%A9-%D8%A8%D8%B1%D9%85%D8%AC%D8%A9-%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9-%D8%A8%D9%85%D9%88%D8%A7%D8%B5%D9%81%D8%A7%D8%AA-%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%A9-%D9%85%D9%86/2532713">"Ring: A New programming language"</a>. <i>youm7.com</i>. <a href="/wiki/Youm7" title="Youm7">youm7</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=youm7.com&amp;rft.atitle=Ring%3A+A+New+programming+language&amp;rft.date=2016-01-11&amp;rft.au=Hany+Salah&amp;rft_id=https%3A%2F%2Fwww.youm7.com%2Fstory%2F2016%2F1%2F11%2F%25D9%2581%25D9%2589-25-%25D9%258A%25D9%2586%25D8%25A7%25D9%258A%25D8%25B1-%25D8%25A7%25D9%2584%25D9%2585%25D9%2582%25D8%25A8%25D9%2584-%25D9%2584%25D8%25BA%25D8%25A9-%25D8%25A8%25D8%25B1%25D9%2585%25D8%25AC%25D8%25A9-%25D8%25AC%25D8%25AF%25D9%258A%25D8%25AF%25D8%25A9-%25D8%25A8%25D9%2585%25D9%2588%25D8%25A7%25D8%25B5%25D9%2581%25D8%25A7%25D8%25AA-%25D8%25B9%25D8%25A7%25D9%2584%25D9%2585%25D9%258A%25D8%25A9-%25D9%2585%25D9%2586%2F2532713&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFAhmed_Mohammed_Hassan" class="citation web cs1">Ahmed Mohammed Hassan. <a rel="nofollow" class="external text" href="https://muslims-res.com/%D9%84%D8%BA%D8%A9-%D8%A8%D8%B1%D9%85%D8%AC%D9%8A%D8%A9-%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9-%D8%A8%D8%A3%D9%8A%D8%AF%D9%8D-%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-%D9%88%D9%84%D9%82%D8%A7%D8%A1-%D8%AD%D8%B5%D8%B1/">"Ring: A programming language developed by Arab"</a>. <i>muslims-res.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2020-09-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=muslims-res.com&amp;rft.atitle=Ring%3A+A+programming+language+developed+by+Arab&amp;rft.au=Ahmed+Mohammed+Hassan&amp;rft_id=https%3A%2F%2Fmuslims-res.com%2F%25D9%2584%25D8%25BA%25D8%25A9-%25D8%25A8%25D8%25B1%25D9%2585%25D8%25AC%25D9%258A%25D8%25A9-%25D8%25AC%25D8%25AF%25D9%258A%25D8%25AF%25D8%25A9-%25D8%25A8%25D8%25A3%25D9%258A%25D8%25AF%25D9%258D-%25D8%25B9%25D8%25B1%25D8%25A8%25D9%258A%25D8%25A9-%25D9%2588%25D9%2584%25D9%2582%25D8%25A7%25D8%25A1-%25D8%25AD%25D8%25B5%25D8%25B1%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFAbedallah_Salehani" class="citation web cs1">Abedallah Salehani. <a rel="nofollow" class="external text" href="https://muslims-res.com/%D9%84%D8%BA%D8%A9-%D8%B1%D9%8A%D9%86%D8%AC-%D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D9%8A%D8%A9-ring-programming/">"A book about the Ring programming language"</a>. <i>muslims-res.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2020-09-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=muslims-res.com&amp;rft.atitle=A+book+about+the+Ring+programming+language&amp;rft.au=Abedallah+Salehani&amp;rft_id=https%3A%2F%2Fmuslims-res.com%2F%25D9%2584%25D8%25BA%25D8%25A9-%25D8%25B1%25D9%258A%25D9%2586%25D8%25AC-%25D8%25A7%25D9%2584%25D8%25A8%25D8%25B1%25D9%2585%25D8%25AC%25D9%258A%25D8%25A9-ring-programming%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Supernova1-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-Supernova1_15-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFRing_Team2021" class="citation web cs1">Ring Team (September 2021). <a rel="nofollow" class="external text" href="https://ring-lang.github.io/doc1.16/faq.html">"Ring Language - Frequently Asked Questions (FAQ)"</a>. Ring Team.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Ring+Language+-+Frequently+Asked+Questions+%28FAQ%29&amp;rft.pub=Ring+Team&amp;rft.date=2021-09&amp;rft.au=Ring+Team&amp;rft_id=https%3A%2F%2Fring-lang.github.io%2Fdoc1.16%2Ffaq.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Supernova2-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-Supernova2_16-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFFayed2010" class="citation web cs1">Fayed (April 2010). <a rel="nofollow" class="external text" href="https://www.codeproject.com/Articles/66996/Supernova-Programming-Language">"Supernova programming language"</a>. <a href="/wiki/Code_Project" title="Code Project">Code Project</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Supernova+programming+language&amp;rft.pub=Code+Project&amp;rft.date=2010-04&amp;rft.au=Fayed&amp;rft_id=https%3A%2F%2Fwww.codeproject.com%2FArticles%2F66996%2FSupernova-Programming-Language&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Supernova3-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-Supernova3_17-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFOmnia2011" class="citation web cs1">Omnia (December 2011). <a rel="nofollow" class="external text" href="https://www.youm7.com/story/2011/12/24/%D8%B4%D8%A7%D8%A8-%D9%85%D8%B5%D8%B1%D9%89-%D9%8A%D8%A8%D8%AA%D9%83%D8%B1-%D8%B3%D9%88%D8%A8%D8%B1-%D9%86%D9%88%D9%81%D8%A7-%D9%88%D8%AA%D9%82%D9%86%D9%8A%D8%A9-%D8%A8%D8%B1%D9%85%D8%AC%D8%A9-%D8%A8%D8%AF%D9%88%D9%86-%D9%83%D9%88%D8%AF/562415">"Supernova language by Egyptian programmer"</a>. <a href="/wiki/Youm7" title="Youm7">Youm7</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Supernova+language+by+Egyptian+programmer&amp;rft.pub=Youm7&amp;rft.date=2011-12&amp;rft.au=Omnia&amp;rft_id=https%3A%2F%2Fwww.youm7.com%2Fstory%2F2011%2F12%2F24%2F%25D8%25B4%25D8%25A7%25D8%25A8-%25D9%2585%25D8%25B5%25D8%25B1%25D9%2589-%25D9%258A%25D8%25A8%25D8%25AA%25D9%2583%25D8%25B1-%25D8%25B3%25D9%2588%25D8%25A8%25D8%25B1-%25D9%2586%25D9%2588%25D9%2581%25D8%25A7-%25D9%2588%25D8%25AA%25D9%2582%25D9%2586%25D9%258A%25D8%25A9-%25D8%25A8%25D8%25B1%25D9%2585%25D8%25AC%25D8%25A9-%25D8%25A8%25D8%25AF%25D9%2588%25D9%2586-%25D9%2583%25D9%2588%25D8%25AF%2F562415&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Softpedia-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-Softpedia_18-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFSoftpedia_Team2021" class="citation web cs1">Softpedia Team (23 October 2021). <a rel="nofollow" class="external text" href="https://www.softpedia.com/get/Programming/Coding-languages-Compilers/Fayed-Ring.shtml">"Ring 1.16 review"</a>. <a href="/wiki/Softpedia" title="Softpedia">Softpedia</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Ring+1.16+review&amp;rft.pub=Softpedia&amp;rft.date=2021-10-23&amp;rft.au=Softpedia+Team&amp;rft_id=https%3A%2F%2Fwww.softpedia.com%2Fget%2FProgramming%2FCoding-languages-Compilers%2FFayed-Ring.shtml&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Medium-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-Medium_19-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFNaveen_Verma2018" class="citation web cs1">Naveen Verma (14 Aug 2018). <a rel="nofollow" class="external text" href="https://medium.com/sitesonic/ring-programming-language-what-do-you-need-to-know-23c51b315e4d">"Ring Programming Language: What Do You Need To Know?"</a>. <a href="/wiki/Medium_(website)" title="Medium (website)">Medium</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Ring+Programming+Language%3A+What+Do+You+Need+To+Know%3F&amp;rft.pub=Medium&amp;rft.date=2018-08-14&amp;rft.au=Naveen+Verma&amp;rft_id=https%3A%2F%2Fmedium.com%2Fsitesonic%2Fring-programming-language-what-do-you-need-to-know-23c51b315e4d&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Youm7_Journal-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-Youm7_Journal_20-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFMones_Hawas2018" class="citation web cs1">Mones Hawas (29 May 2018). <a rel="nofollow" class="external text" href="https://www.youm7.com/story/2018/5/29/%D9%85%D8%B5%D8%B1%D9%89-%D9%8A%D9%81%D9%88%D8%B2-%D9%81%D9%89-%D9%85%D8%B3%D8%A7%D8%A8%D9%82%D8%A9-%D8%A7%D9%84%D8%B3%D9%88%D8%B1%D8%B3-%D9%81%D9%88%D8%B1%D8%AC-%D9%84%D9%84%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9-%D9%85%D9%81%D8%AA%D9%88%D8%AD%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%AF%D8%B1/3812107">"Progress in developing PWCT 2.0 using Ring"</a>. <i>youm7.com</i>. <a href="/wiki/Youm7" title="Youm7">youm7</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=youm7.com&amp;rft.atitle=Progress+in+developing+PWCT+2.0+using+Ring&amp;rft.date=2018-05-29&amp;rft.au=Mones+Hawas&amp;rft_id=https%3A%2F%2Fwww.youm7.com%2Fstory%2F2018%2F5%2F29%2F%25D9%2585%25D8%25B5%25D8%25B1%25D9%2589-%25D9%258A%25D9%2581%25D9%2588%25D8%25B2-%25D9%2581%25D9%2589-%25D9%2585%25D8%25B3%25D8%25A7%25D8%25A8%25D9%2582%25D8%25A9-%25D8%25A7%25D9%2584%25D8%25B3%25D9%2588%25D8%25B1%25D8%25B3-%25D9%2581%25D9%2588%25D8%25B1%25D8%25AC-%25D9%2584%25D9%2584%25D9%2585%25D8%25B4%25D8%25A7%25D8%25B1%25D9%258A%25D8%25B9-%25D9%2585%25D9%2581%25D8%25AA%25D9%2588%25D8%25AD%25D8%25A9-%25D8%25A7%25D9%2584%25D9%2585%25D8%25B5%25D8%25AF%25D8%25B1%2F3812107&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFFayedAl-QurishiAlamriHossain2020" class="citation journal cs1">Fayed, Mahmoud S.; Al-Qurishi, Muhammad; Alamri, Atif; Hossain, M. Anwar; Al-Daraiseh, Ahmad A. (October 2020). "PWCT: a novel general-purpose visual programming language in support of pervasive application development". <i>CCF Transactions on Pervasive Computing and Interaction</i>. <b>2</b> (3): 164–177. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2Fs42486-020-00038-y">10.1007/s42486-020-00038-y</a>. <a href="/wiki/S2CID_(identifier)" class="mw-redirect" title="S2CID (identifier)">S2CID</a>&#160;<a rel="nofollow" class="external text" href="https://api.semanticscholar.org/CorpusID:225395711">225395711</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=CCF+Transactions+on+Pervasive+Computing+and+Interaction&amp;rft.atitle=PWCT%3A+a+novel+general-purpose+visual+programming+language+in+support+of+pervasive+application+development&amp;rft.volume=2&amp;rft.issue=3&amp;rft.pages=164-177&amp;rft.date=2020-10&amp;rft_id=info%3Adoi%2F10.1007%2Fs42486-020-00038-y&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A225395711%23id-name%3DS2CID&amp;rft.aulast=Fayed&amp;rft.aufirst=Mahmoud+S.&amp;rft.au=Al-Qurishi%2C+Muhammad&amp;rft.au=Alamri%2C+Atif&amp;rft.au=Hossain%2C+M.+Anwar&amp;rft.au=Al-Daraiseh%2C+Ahmad+A.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-helloworldstyles-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-helloworldstyles_22-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFRubin_Liu2017" class="citation web cs1">Rubin Liu (28 December 2017). <a rel="nofollow" class="external text" href="https://www.codeproject.com/Tips/1222859/Different-styles-for-writing-Hello-World-program-i">"Different styles for writing Hello World program in the Ring programming language"</a>. <i>codeproject.com</i>. <a href="/wiki/Code_Project" title="Code Project">Code Project</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=codeproject.com&amp;rft.atitle=Different+styles+for+writing+Hello+World+program+in+the+Ring+programming+language&amp;rft.date=2017-12-28&amp;rft.au=Rubin+Liu&amp;rft_id=https%3A%2F%2Fwww.codeproject.com%2FTips%2F1222859%2FDifferent-styles-for-writing-Hello-World-program-i&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Ring_Programming_Tutorial-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-Ring_Programming_Tutorial_23-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFRoshan_Ali2018" class="citation web cs1">Roshan Ali (4 June 2018). <a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=7BqoQldx0Pk&amp;list=PL8SruvH85P0uA8ggijCQUR9tXAXF4bmtu&amp;index=2">"Ring programming tutorial"</a>. <a href="/wiki/YouTube" title="YouTube">YouTube</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Ring+programming+tutorial&amp;rft.pub=YouTube&amp;rft.date=2018-06-04&amp;rft.au=Roshan+Ali&amp;rft_id=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D7BqoQldx0Pk%26list%3DPL8SruvH85P0uA8ggijCQUR9tXAXF4bmtu%26index%3D2&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://ring-lang.github.io/doc1.19/getting_started3.html">https://ring-lang.github.io/doc1.19/getting_started3.html</a></span>
+</li>
+<li id="cite_note-rangakrish2-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-rangakrish2_25-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFDr._Rangarajan_Krishnamoorthy2021" class="citation web cs1">Dr. Rangarajan Krishnamoorthy (21 August 2021). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20230323171354/https://www.rangakrish.com/index.php/2021/08/21/loop-command-in-ring-programming-language/">"<span class="cs1-kern-left"></span>"Loop" Command in Ring Programming Language"</a>. rangakrish.com. Archived from <a rel="nofollow" class="external text" href="https://www.rangakrish.com/index.php/2021/08/21/loop-command-in-ring-programming-language/">the original</a> on 2023-03-23.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=%22Loop%22+Command+in+Ring+Programming+Language&amp;rft.pub=rangakrish.com&amp;rft.date=2021-08-21&amp;rft.au=Dr.+Rangarajan+Krishnamoorthy&amp;rft_id=https%3A%2F%2Fwww.rangakrish.com%2Findex.php%2F2021%2F08%2F21%2Floop-command-in-ring-programming-language%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://ring-lang.github.io/doc1.16/oop.html">"Object Oriented Programming (OOP) — Ring 1.16 documentation"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Object+Oriented+Programming+%28OOP%29+%E2%80%94+Ring+1.16+documentation&amp;rft_id=https%3A%2F%2Fring-lang.github.io%2Fdoc1.16%2Foop.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-rangakrish3-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-rangakrish3_27-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFDr._Rangarajan_Krishnamoorthy2021" class="citation web cs1">Dr. Rangarajan Krishnamoorthy (4 September 2021). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20230529153208/https://www.rangakrish.com/index.php/2021/09/04/ring-language-dynamic-behavior-of-classes-and-objects/">"Ring Language: Dynamic Behavior of Classes and Objects"</a>. rangakrish.com. Archived from <a rel="nofollow" class="external text" href="https://www.rangakrish.com/index.php/2021/09/04/ring-language-dynamic-behavior-of-classes-and-objects/">the original</a> on 2023-05-29.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Ring+Language%3A+Dynamic+Behavior+of+Classes+and+Objects&amp;rft.pub=rangakrish.com&amp;rft.date=2021-09-04&amp;rft.au=Dr.+Rangarajan+Krishnamoorthy&amp;rft_id=https%3A%2F%2Fwww.rangakrish.com%2Findex.php%2F2021%2F09%2F04%2Fring-language-dynamic-behavior-of-classes-and-objects%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Extensions3-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-Extensions3_28-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFMajdi_Sobain2017" class="citation web cs1">Majdi Sobain (2 May 2017). <a rel="nofollow" class="external text" href="https://www.codeproject.com/Articles/1096942/Squares-Puzzle-using-RingAllegro">"Squares Puzzle using RingAllegro"</a>. <i>codeproject.com</i>. <a href="/wiki/Code_Project" title="Code Project">Code Project</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=codeproject.com&amp;rft.atitle=Squares+Puzzle+using+RingAllegro&amp;rft.date=2017-05-02&amp;rft.au=Majdi+Sobain&amp;rft_id=https%3A%2F%2Fwww.codeproject.com%2FArticles%2F1096942%2FSquares-Puzzle-using-RingAllegro&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Libraries2-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-Libraries2_29-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFFayed2017" class="citation web cs1">Fayed (11 August 2017). <a rel="nofollow" class="external text" href="https://www.codeproject.com/Articles/1200766/Using-the-Natural-Language-Programming-Library-NLP">"Using the Natural Language Programming Library (NLPL) in the Ring Programming Language"</a>. <i>codeproject.com</i>. <a href="/wiki/Code_Project" title="Code Project">Code Project</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=codeproject.com&amp;rft.atitle=Using+the+Natural+Language+Programming+Library+%28NLPL%29+in+the+Ring+Programming+Language&amp;rft.date=2017-08-11&amp;rft.au=Fayed&amp;rft_id=https%3A%2F%2Fwww.codeproject.com%2FArticles%2F1200766%2FUsing-the-Natural-Language-Programming-Library-NLP&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Libraries3-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-Libraries3_30-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFFayed2016" class="citation web cs1">Fayed (12 October 2016). <a rel="nofollow" class="external text" href="https://www.codeproject.com/Articles/1138605/Natural-Language-Programming-in-the-Ring-Programmi">"Natural Language Programming in the Ring Programming Language"</a>. <i>codeproject.com</i>. <a href="/wiki/Code_Project" title="Code Project">Code Project</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=codeproject.com&amp;rft.atitle=Natural+Language+Programming+in+the+Ring+Programming+Language&amp;rft.date=2016-10-12&amp;rft.au=Fayed&amp;rft_id=https%3A%2F%2Fwww.codeproject.com%2FArticles%2F1138605%2FNatural-Language-Programming-in-the-Ring-Programmi&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Applications-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-Applications_31-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFOpen_Source_Developers2019" class="citation web cs1">Open Source Developers (15 June 2019). <a rel="nofollow" class="external text" href="https://ring-lang.github.io/resources.html">"Applications written in Ring"</a>. Ring Team.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Applications+written+in+Ring&amp;rft.pub=Ring+Team&amp;rft.date=2019-06-15&amp;rft.au=Open+Source+Developers&amp;rft_id=https%3A%2F%2Fring-lang.github.io%2Fresources.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Applications2-32"><span class="mw-cite-backlink"><b><a href="#cite_ref-Applications2_32-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFEtqan_Company2018" class="citation web cs1">Etqan Company (25 September 2018). <a rel="nofollow" class="external text" href="https://store.steampowered.com/app/939200/Gold_Magic_800/">"Gold Magic 800 Game by Etqan Company"</a>. <a href="/wiki/Steam_(software)" class="mw-redirect" title="Steam (software)">Steam (software)</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Gold+Magic+800+Game+by+Etqan+Company&amp;rft.pub=Steam+%28software%29&amp;rft.date=2018-09-25&amp;rft.au=Etqan+Company&amp;rft_id=https%3A%2F%2Fstore.steampowered.com%2Fapp%2F939200%2FGold_Magic_800%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-33"><span class="mw-cite-backlink"><b><a href="#cite_ref-33">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://ring-lang-081.osdn.jp/docs-1.16/index.html">"ようこそ Ring 取扱説明書へ！ — プログラミング言語 Ring 1.16 取扱説明書"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=%E3%82%88%E3%81%86%E3%81%93%E3%81%9D+Ring+%E5%8F%96%E6%89%B1%E8%AA%AC%E6%98%8E%E6%9B%B8%E3%81%B8%EF%BC%81+%E2%80%94+%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E+Ring+1.16+%E5%8F%96%E6%89%B1%E8%AA%AC%E6%98%8E%E6%9B%B8&amp;rft_id=http%3A%2F%2Fring-lang-081.osdn.jp%2Fdocs-1.16%2Findex.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-34"><span class="mw-cite-backlink"><b><a href="#cite_ref-34">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20180221113115/https://www.tiobe.com/tiobe-index/">"TIOBE Index &#124; TIOBE - the Software Quality Company"</a>. <i>www.tiobe.com</i>. Archived from <a rel="nofollow" class="external text" href="https://www.tiobe.com/tiobe-index/">the original</a> on 21 February 2018<span class="reference-accessdate">. Retrieved <span class="nowrap">28 February</span> 2022</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.tiobe.com&amp;rft.atitle=TIOBE+Index+%26%23124%3B+TIOBE+-+the+Software+Quality+Company&amp;rft_id=https%3A%2F%2Fwww.tiobe.com%2Ftiobe-index%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-35"><span class="mw-cite-backlink"><b><a href="#cite_ref-35">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFEmma_White2020" class="citation web cs1">Emma White (6 October 2020). <a rel="nofollow" class="external text" href="https://www.bairesdev.com/blog/top-100-programming-languages/">"Top 100 Programming Languages"</a>. <i><a href="https://es.wikipedia.org/wiki/BairesDev" class="extiw" title="es:BairesDev">BairesDev</a></i><span class="reference-accessdate">. Retrieved <span class="nowrap">2020-10-06</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=BairesDev&amp;rft.atitle=Top+100+Programming+Languages&amp;rft.date=2020-10-06&amp;rft.au=Emma+White&amp;rft_id=https%3A%2F%2Fwww.bairesdev.com%2Fblog%2Ftop-100-programming-languages%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-36"><span class="mw-cite-backlink"><b><a href="#cite_ref-36">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://github.com/collections/programming-languages">"Build software better, together"</a>. <i><a href="/wiki/GitHub" title="GitHub">GitHub</a></i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=GitHub&amp;rft.atitle=Build+software+better%2C+together&amp;rft_id=https%3A%2F%2Fgithub.com%2Fcollections%2Fprogramming-languages&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Ciklum-37"><span class="mw-cite-backlink"><b><a href="#cite_ref-Ciklum_37-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFCiklum2017" class="citation web cs1">Ciklum (12 December 2017). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20171207084845/https://www.ciklum.com/blog/new-programming-languages-a-hype-or-reality/">"New Programming Languages – A Hype Or Reality?"</a>. <i>ciklum.com</i>. <a href="/wiki/Ciklum" title="Ciklum">Ciklum</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=ciklum.com&amp;rft.atitle=New+Programming+Languages+%E2%80%93+A+Hype+Or+Reality%3F&amp;rft.date=2017-12-12&amp;rft.au=Ciklum&amp;rft_id=https%3A%2F%2Fweb.archive.org%2Fweb%2F20171207084845%2Fhttps%3A%2F%2Fwww.ciklum.com%2Fblog%2Fnew-programming-languages-a-hype-or-reality%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+<li id="cite_note-38"><span class="mw-cite-backlink"><b><a href="#cite_ref-38">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://ring-lang.github.io/doc1.16/variables.html#implicit-conversion">"Variables — Ring 1.16 documentation"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Variables+%E2%80%94+Ring+1.16+documentation&amp;rft_id=https%3A%2F%2Fring-lang.github.io%2Fdoc1.16%2Fvariables.html%23implicit-conversion&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARing+%28programming+language%29" class="Z3988"></span></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=22" title="Edit section: Further reading"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Ghanem (2021) <i><a rel="nofollow" class="external text" href="https://ring-lang.sourceforge.io/ref/GhanemBookAboutRing.pdf">Developing Poet Software using Ring language (Arabic Book)</a></i>, MetaBook (Egypt - Mansoura)</li>
+<li>Ayouni (2020) <i><a rel="nofollow" class="external text" href="https://www.apress.com/gp/book/9781484258323">Beginning Ring Programming</a></i>, <a href="/wiki/Springer_Nature" title="Springer Nature">Apress (part of Springer Nature)</a></li>
+<li>Hassouna (2019) <i><a rel="nofollow" class="external text" href="https://ring-lang.sourceforge.io/RingBasics_ArabicBook.pdf">Ring Basics (Arabic Book)</a></i>, <a rel="nofollow" class="external text" href="https://www.hassouna-academy.com/ringcourses">Hassouna Academy</a></li>
+<li>Sobain (2017) <i><a rel="nofollow" class="external text" href="http://ring-wincreg.sf.net/docs/">RingWinCReg Extension Documentation</a></i>, <a href="/wiki/SourceForge" title="SourceForge">SourceForge</a></li>
+<li>Fayed (2016) <i><a rel="nofollow" class="external text" href="https://www.codeproject.com/Articles/1089887/The-Ring-Programming-Language">The Ring Programming Language</a></i>, <a href="/wiki/Code_Project" title="Code Project">CodeProject</a></li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ring_(programming_language)&amp;action=edit&amp;section=23" title="Edit section: External links"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1134653256">.mw-parser-output .side-box{margin:4px 0;box-sizing:border-box;border:1px solid #aaa;font-size:88%;line-height:1.25em;background-color:#f9f9f9;display:flow-root}.mw-parser-output .side-box-abovebelow,.mw-parser-output .side-box-text{padding:0.25em 0.9em}.mw-parser-output .side-box-image{padding:2px 0 2px 0.9em;text-align:center}.mw-parser-output .side-box-imageright{padding:2px 0.9em 2px 0;text-align:center}@media(min-width:500px){.mw-parser-output .side-box-flex{display:flex;align-items:center}.mw-parser-output .side-box-text{flex:1}}@media(min-width:720px){.mw-parser-output .side-box{width:238px}.mw-parser-output .side-box-right{clear:right;float:right;margin-left:1em}.mw-parser-output .side-box-left{margin-right:1em}}</style><div class="side-box side-box-right plainlinks sistersitebox"><style data-mw-deduplicate="TemplateStyles:r1126788409">.mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}</style>
+<div class="side-box-flex">
+<div class="side-box-image"><span class="noviewer" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></span></span></div>
+<div class="side-box-text plainlist">Wikibooks has a book on the topic of: <i><b><a href="https://en.wikibooks.org/wiki/Ring" class="extiw" title="wikibooks:Ring">Ring</a></b></i></div></div>
+</div>
+<ul><li><a rel="nofollow" class="external text" href="http://www.ring-lang.net/">Ring home page</a></li>
+<li><a rel="nofollow" class="external text" href="https://rosettacode.org/wiki/Category:Ring">RosettaCode samples</a></li>
+<li><a rel="nofollow" class="external text" href="http://ring-lang-081.osdn.jp/docs-1.16/index.html">Ring Documentation (Japanese)</a></li>
+<li><a rel="nofollow" class="external text" href="https://ring-lang.github.io/web/formdesigner/project.html">Online Form Designer (WebAssembly)</a></li></ul>
+<div class="navbox-styles"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1129693374"><style data-mw-deduplicate="TemplateStyles:r1061467846">.mw-parser-output .navbox{box-sizing:border-box;border:1px solid #a2a9b1;width:100%;clear:both;font-size:88%;text-align:center;padding:1px;margin:1em auto 0}.mw-parser-output .navbox .navbox{margin-top:0}.mw-parser-output .navbox+.navbox,.mw-parser-output .navbox+.navbox-styles+.navbox{margin-top:-1px}.mw-parser-output .navbox-inner,.mw-parser-output .navbox-subgroup{width:100%}.mw-parser-output .navbox-group,.mw-parser-output .navbox-title,.mw-parser-output .navbox-abovebelow{padding:0.25em 1em;line-height:1.5em;text-align:center}.mw-parser-output .navbox-group{white-space:nowrap;text-align:right}.mw-parser-output .navbox,.mw-parser-output .navbox-subgroup{background-color:#fdfdfd}.mw-parser-output .navbox-list{line-height:1.5em;border-color:#fdfdfd}.mw-parser-output .navbox-list-with-group{text-align:left;border-left-width:2px;border-left-style:solid}.mw-parser-output tr+tr>.navbox-abovebelow,.mw-parser-output tr+tr>.navbox-group,.mw-parser-output tr+tr>.navbox-image,.mw-parser-output tr+tr>.navbox-list{border-top:2px solid #fdfdfd}.mw-parser-output .navbox-title{background-color:#ccf}.mw-parser-output .navbox-abovebelow,.mw-parser-output .navbox-group,.mw-parser-output .navbox-subgroup .navbox-title{background-color:#ddf}.mw-parser-output .navbox-subgroup .navbox-group,.mw-parser-output .navbox-subgroup .navbox-abovebelow{background-color:#e6e6ff}.mw-parser-output .navbox-even{background-color:#f7f7f7}.mw-parser-output .navbox-odd{background-color:transparent}.mw-parser-output .navbox .hlist td dl,.mw-parser-output .navbox .hlist td ol,.mw-parser-output .navbox .hlist td ul,.mw-parser-output .navbox td.hlist dl,.mw-parser-output .navbox td.hlist ol,.mw-parser-output .navbox td.hlist ul{padding:0.125em 0}.mw-parser-output .navbox .navbar{display:block;font-size:100%}.mw-parser-output .navbox-title .navbar{float:left;text-align:left;margin-right:0.5em}</style></div><div role="navigation" class="navbox" aria-labelledby="Free_and_open-source_software" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1129693374"><style data-mw-deduplicate="TemplateStyles:r1063604349">.mw-parser-output .navbar{display:inline;font-size:88%;font-weight:normal}.mw-parser-output .navbar-collapse{float:left;text-align:left}.mw-parser-output .navbar-boxtext{word-spacing:0}.mw-parser-output .navbar ul{display:inline-block;white-space:nowrap;line-height:inherit}.mw-parser-output .navbar-brackets::before{margin-right:-0.125em;content:"[ "}.mw-parser-output .navbar-brackets::after{margin-left:-0.125em;content:" ]"}.mw-parser-output .navbar li{word-spacing:-0.125em}.mw-parser-output .navbar a>span,.mw-parser-output .navbar a>abbr{text-decoration:inherit}.mw-parser-output .navbar-mini abbr{font-variant:small-caps;border-bottom:none;text-decoration:none;cursor:inherit}.mw-parser-output .navbar-ct-full{font-size:114%;margin:0 7em}.mw-parser-output .navbar-ct-mini{font-size:114%;margin:0 4em}</style><div class="navbar plainlinks hlist navbar-mini"><ul><li class="nv-view"><a href="/wiki/Template:FOSS" title="Template:FOSS"><abbr title="View this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:FOSS" title="Template talk:FOSS"><abbr title="Discuss this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">t</abbr></a></li><li class="nv-edit"><a href="/wiki/Special:EditPage/Template:FOSS" title="Special:EditPage/Template:FOSS"><abbr title="Edit this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">e</abbr></a></li></ul></div><div id="Free_and_open-source_software" style="font-size:114%;margin:0 4em"><a href="/wiki/Free_and_open-source_software" title="Free and open-source software">Free and open-source software</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">General</th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Alternative_terms_for_free_software" title="Alternative terms for free software">Alternative terms for free software</a></li>
+<li><a href="/wiki/Comparison_of_open-source_and_closed-source_software" title="Comparison of open-source and closed-source software">Comparison of open-source and closed-source software</a></li>
+<li><a href="/wiki/Comparison_of_source-code-hosting_facilities" title="Comparison of source-code-hosting facilities">Comparison of source-code-hosting facilities</a></li>
+<li><a href="/wiki/Free_software" title="Free software">Free software</a></li>
+<li><a href="/wiki/List_of_free_software_project_directories" title="List of free software project directories">Free software project directories</a></li>
+<li><a href="/wiki/Gratis_versus_libre" title="Gratis versus libre">Gratis versus libre</a></li>
+<li><a href="/wiki/Long-term_support" title="Long-term support">Long-term support</a></li>
+<li><a href="/wiki/Open-source_software" title="Open-source software">Open-source software</a></li>
+<li><a href="/wiki/Open-source_software_development" title="Open-source software development">Open-source software development</a></li>
+<li><a href="/wiki/Outline_of_free_software" title="Outline of free software">Outline</a></li>
+<li><a href="/wiki/Timeline_of_free_and_open-source_software" title="Timeline of free and open-source software">Timeline</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/List_of_free_and_open-source_software_packages" title="List of free and open-source software packages">Software<br />packages</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Comparison_of_free_software_for_audio" title="Comparison of free software for audio">Audio</a></li>
+<li><a href="/wiki/List_of_open-source_bioinformatics_software" title="List of open-source bioinformatics software">Bioinformatics</a></li>
+<li><a href="/wiki/List_of_open-source_codecs" title="List of open-source codecs">Codecs</a></li>
+<li><a href="/wiki/Comparison_of_open-source_configuration_management_software" title="Comparison of open-source configuration management software">Configuration management</a></li>
+<li><a href="/wiki/Device_driver" title="Device driver">Drivers</a>
+<ul><li><a href="/wiki/Free_and_open-source_graphics_device_driver" title="Free and open-source graphics device driver">Graphics</a></li>
+<li><a href="/wiki/Comparison_of_open-source_wireless_drivers" title="Comparison of open-source wireless drivers">Wireless</a></li></ul></li>
+<li><a href="/wiki/List_of_open-source_health_software" title="List of open-source health software">Health</a></li>
+<li><a href="/wiki/List_of_open-source_software_for_mathematics" title="List of open-source software for mathematics">Mathematics</a></li>
+<li><a href="/wiki/List_of_office_suites" title="List of office suites">Office Suites</a></li>
+<li><a href="/wiki/Comparison_of_open-source_operating_systems" title="Comparison of open-source operating systems">Operating systems</a></li>
+<li><a href="/wiki/List_of_open-source_routing_platforms" title="List of open-source routing platforms">Routing</a></li>
+<li><a href="/wiki/List_of_free_television_software" title="List of free television software">Television</a></li>
+<li><a href="/wiki/List_of_open-source_video_games" title="List of open-source video games">Video games</a></li>
+<li><a href="/wiki/List_of_free_and_open-source_web_applications" title="List of free and open-source web applications">Web applications</a>
+<ul><li><a href="/wiki/Comparison_of_shopping_cart_software" title="Comparison of shopping cart software">E-commerce</a></li></ul></li>
+<li><a href="/wiki/List_of_free_and_open-source_Android_applications" title="List of free and open-source Android applications">Android apps</a></li>
+<li><a href="/wiki/List_of_free_and_open-source_iOS_applications" title="List of free and open-source iOS applications">iOS apps</a></li>
+<li><a href="/wiki/List_of_commercial_open-source_applications_and_services" title="List of commercial open-source applications and services">Commercial</a></li>
+<li><a href="/wiki/List_of_formerly_proprietary_software" title="List of formerly proprietary software">Formerly proprietary</a></li>
+<li><a href="/wiki/List_of_formerly_free_and_open-source_software" class="mw-redirect" title="List of formerly free and open-source software">Formerly open-source</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Community_of_practice" title="Community of practice">Community</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Free_software_movement" title="Free software movement">Free software movement</a></li>
+<li><a href="/wiki/History_of_free_and_open-source_software" title="History of free and open-source software">History</a></li>
+<li><a href="/wiki/Open-source-software_movement" title="Open-source-software movement">Open-source-software movement</a></li>
+<li><a href="/wiki/List_of_free-software_events" title="List of free-software events">Events</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/List_of_free_and_open-source_software_organizations" title="List of free and open-source software organizations">Organisations</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Free_Software_Movement_of_India" title="Free Software Movement of India">Free Software Movement of India</a></li>
+<li><a href="/wiki/Free_Software_Foundation" title="Free Software Foundation">Free Software Foundation</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Free-software_license" title="Free-software license">Licenses</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Academic_Free_License" title="Academic Free License">AFL</a></li>
+<li><a href="/wiki/Apache_License" title="Apache License">Apache</a></li>
+<li><a href="/wiki/Apple_Public_Source_License" title="Apple Public Source License">APSL</a></li>
+<li><a href="/wiki/Artistic_License" title="Artistic License">Artistic</a></li>
+<li><a href="/wiki/Beerware" title="Beerware">Beerware</a></li>
+<li><a href="/wiki/BSD_licenses" title="BSD licenses">BSD</a></li>
+<li><a href="/wiki/Creative_Commons_license" title="Creative Commons license">Creative Commons</a></li>
+<li><a href="/wiki/Common_Development_and_Distribution_License" title="Common Development and Distribution License">CDDL</a></li>
+<li><a href="/wiki/Eclipse_Public_License" title="Eclipse Public License">EPL</a></li>
+<li><a href="/wiki/Free_Software_Foundation" title="Free Software Foundation">Free Software Foundation</a>
+<ul><li><a href="/wiki/GNU_General_Public_License" title="GNU General Public License">GNU GPL</a></li>
+<li><a href="/wiki/GNU_Affero_General_Public_License" title="GNU Affero General Public License">GNU AGPL</a></li>
+<li><a href="/wiki/GNU_Lesser_General_Public_License" title="GNU Lesser General Public License">GNU LGPL</a></li></ul></li>
+<li><a href="/wiki/ISC_license" title="ISC license">ISC</a></li>
+<li><a href="/wiki/MIT_License" title="MIT License">MIT</a></li>
+<li><a href="/wiki/Mozilla_Public_License" title="Mozilla Public License">MPL</a></li>
+<li><a href="/wiki/Python_License" title="Python License">Python</a></li>
+<li><a href="/wiki/Python_Software_Foundation_License" title="Python Software Foundation License">Python Software Foundation License</a></li>
+<li><a href="/wiki/Shared_Source_Initiative" title="Shared Source Initiative">Shared Source Initiative</a></li>
+<li><a href="/wiki/Sleepycat_License" title="Sleepycat License">Sleepycat</a></li>
+<li><a href="/wiki/Unlicense" title="Unlicense">Unlicense</a></li>
+<li><a href="/wiki/WTFPL" title="WTFPL">WTFPL</a></li>
+<li><a href="/wiki/Zlib_License" title="Zlib License">zlib</a></li></ul>
+</div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Types_and_standards" scope="row" class="navbox-group" style="width:1%">Types and<br /> standards</th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Comparison_of_free_and_open-source_software_licenses" title="Comparison of free and open-source software licenses">Comparison of licenses</a></li>
+<li><a href="/wiki/Contributor_License_Agreement" title="Contributor License Agreement">Contributor License Agreement</a></li>
+<li><a href="/wiki/Copyleft" title="Copyleft">Copyleft</a></li>
+<li><a href="/wiki/Debian_Free_Software_Guidelines" title="Debian Free Software Guidelines">Debian Free Software Guidelines</a></li>
+<li><a href="/wiki/Definition_of_Free_Cultural_Works" title="Definition of Free Cultural Works">Definition of Free Cultural Works</a></li>
+<li><a href="/wiki/Free_license" title="Free license">Free license</a></li>
+<li><a href="/wiki/The_Free_Software_Definition" title="The Free Software Definition">The Free Software Definition</a></li>
+<li><a href="/wiki/The_Open_Source_Definition" title="The Open Source Definition">The Open Source Definition</a></li>
+<li><a href="/wiki/Open-source_license" title="Open-source license">Open-source license</a></li>
+<li><a href="/wiki/Permissive_software_license" title="Permissive software license">Permissive software license</a></li>
+<li><a href="/wiki/Public_domain" title="Public domain">Public domain</a></li>
+<li><a href="/wiki/Viral_license" title="Viral license">Viral license</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Challenges</th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Digital_rights_management" title="Digital rights management">Digital rights management</a></li>
+<li><a href="/wiki/License_proliferation" title="License proliferation">License proliferation</a></li>
+<li><a href="/wiki/Mozilla_software_rebranded_by_Debian" class="mw-redirect" title="Mozilla software rebranded by Debian">Mozilla software rebranding</a></li>
+<li><a href="/wiki/Proprietary_device_driver" class="mw-redirect" title="Proprietary device driver">Proprietary device drivers</a></li>
+<li><a href="/wiki/Proprietary_firmware" title="Proprietary firmware">Proprietary firmware</a></li>
+<li><a href="/wiki/Proprietary_software" title="Proprietary software">Proprietary software</a></li>
+<li><a href="/wiki/SCO%E2%80%93Linux_disputes" title="SCO–Linux disputes">SCO/Linux controversies</a></li>
+<li><a href="/wiki/Software_patents_and_free_software" title="Software patents and free software">Software patents</a></li>
+<li><a href="/wiki/Open-source_software_security" title="Open-source software security">Software security</a></li>
+<li><a href="/wiki/Trusted_Computing" title="Trusted Computing">Trusted Computing</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Related <br />topics</th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Fork_(software_development)" title="Fork (software development)">Forking</a></li>
+<li><i><a href="/wiki/GNU_Manifesto" title="GNU Manifesto">GNU Manifesto</a></i></li>
+<li><a href="/wiki/Microsoft_Open_Specification_Promise" title="Microsoft Open Specification Promise">Microsoft Open Specification Promise</a></li>
+<li><a href="/wiki/Open-core_model" title="Open-core model">Open-core model</a></li>
+<li><a href="/wiki/Open-source_hardware" title="Open-source hardware">Open-source hardware</a></li>
+<li><a href="/wiki/Shared_Source_Initiative" title="Shared Source Initiative">Shared Source Initiative</a></li>
+<li><a href="/wiki/Source-available_software" title="Source-available software">Source-available software</a></li>
+<li><i><a href="/wiki/The_Cathedral_and_the_Bazaar" title="The Cathedral and the Bazaar">The Cathedral and the Bazaar</a></i></li>
+<li><i><a href="/wiki/Revolution_OS" title="Revolution OS">Revolution OS</a></i></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2" style="font-weight:bold"><div>
+<ul><li><span class="noviewer" typeof="mw:File"><a href="/wiki/File:Symbol_portal_class.svg" class="mw-file-description" title="Portal"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/e/e2/Symbol_portal_class.svg/16px-Symbol_portal_class.svg.png" decoding="async" width="16" height="16" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/thumb/e/e2/Symbol_portal_class.svg/23px-Symbol_portal_class.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/e/e2/Symbol_portal_class.svg/31px-Symbol_portal_class.svg.png 2x" data-file-width="180" data-file-height="185" /></a></span> <a href="/wiki/Portal:Free_and_open-source_software" title="Portal:Free and open-source software">Portal</a></li>
+<li><span class="noviewer" typeof="mw:File"><span title="Category"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/16px-Symbol_category_class.svg.png" decoding="async" width="16" height="16" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/23px-Symbol_category_class.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/31px-Symbol_category_class.svg.png 2x" data-file-width="180" data-file-height="185" /></span></span> <a href="/wiki/Category:Free_software" title="Category:Free software">Category</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div class="navbox-styles"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1129693374"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1061467846"></div><div role="navigation" class="navbox" aria-labelledby="Programming_languages" style="padding:3px"><table class="nowraplinks hlist mw-collapsible expanded navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1129693374"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1063604349"><div class="navbar plainlinks hlist navbar-mini"><ul><li class="nv-view"><a href="/wiki/Template:Programming_languages" title="Template:Programming languages"><abbr title="View this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Programming_languages" title="Template talk:Programming languages"><abbr title="Discuss this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">t</abbr></a></li><li class="nv-edit"><a href="/wiki/Special:EditPage/Template:Programming_languages" title="Special:EditPage/Template:Programming languages"><abbr title="Edit this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">e</abbr></a></li></ul></div><div id="Programming_languages" style="font-size:114%;margin:0 4em"><a href="/wiki/Programming_language" title="Programming language">Programming languages</a></div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><a href="/wiki/Comparison_of_programming_languages" title="Comparison of programming languages">Comparison</a></li>
+<li><a href="/wiki/Timeline_of_programming_languages" title="Timeline of programming languages">Timeline</a></li>
+<li><a href="/wiki/History_of_programming_languages" title="History of programming languages">History</a></li></ul>
+</div></td></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Ada_(programming_language)" title="Ada (programming language)">Ada</a></li>
+<li><a href="/wiki/ALGOL" title="ALGOL">ALGOL</a></li>
+<li><a href="/wiki/APL_(programming_language)" title="APL (programming language)">APL</a></li>
+<li><a href="/wiki/Assembly_language" title="Assembly language">Assembly</a></li>
+<li><a href="/wiki/BASIC" title="BASIC">BASIC</a></li>
+<li><a href="/wiki/C_(programming_language)" title="C (programming language)">C</a></li>
+<li><a href="/wiki/C%2B%2B" title="C++">C++</a></li>
+<li><a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a></li>
+<li><a href="/wiki/Classic_Visual_Basic" class="mw-redirect" title="Classic Visual Basic">Classic Visual Basic</a></li>
+<li><a href="/wiki/COBOL" title="COBOL">COBOL</a></li>
+<li><a href="/wiki/Erlang_(programming_language)" title="Erlang (programming language)">Erlang</a></li>
+<li><a href="/wiki/Forth_(programming_language)" title="Forth (programming language)">Forth</a></li>
+<li><a href="/wiki/Fortran" title="Fortran">Fortran</a></li>
+<li><a href="/wiki/Go_(programming_language)" title="Go (programming language)">Go</a></li>
+<li><a href="/wiki/Haskell" title="Haskell">Haskell</a></li>
+<li><a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a></li>
+<li><a href="/wiki/JavaScript" title="JavaScript">JavaScript</a></li>
+<li><a href="/wiki/Julia_(programming_language)" title="Julia (programming language)">Julia</a></li>
+<li><a href="/wiki/Kotlin_(programming_language)" title="Kotlin (programming language)">Kotlin</a></li>
+<li><a href="/wiki/Lisp_(programming_language)" title="Lisp (programming language)">Lisp</a></li>
+<li><a href="/wiki/Lua_(programming_language)" title="Lua (programming language)">Lua</a></li>
+<li><a href="/wiki/MATLAB" title="MATLAB">MATLAB</a></li>
+<li><a href="/wiki/ML_(programming_language)" title="ML (programming language)">ML</a></li>
+<li><a href="/wiki/Object_Pascal" title="Object Pascal">Object Pascal</a></li>
+<li><a href="/wiki/Pascal_(programming_language)" title="Pascal (programming language)">Pascal</a></li>
+<li><a href="/wiki/Perl" title="Perl">Perl</a></li>
+<li><a href="/wiki/PHP" title="PHP">PHP</a></li>
+<li><a href="/wiki/Prolog" title="Prolog">Prolog</a></li>
+<li><a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python</a></li>
+<li><a href="/wiki/R_(programming_language)" title="R (programming language)">R</a></li>
+<li><a href="/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a></li>
+<li><a href="/wiki/Rust_(programming_language)" title="Rust (programming language)">Rust</a></li>
+<li><a href="/wiki/SQL" title="SQL">SQL</a></li>
+<li><a href="/wiki/Scratch_(programming_language)" title="Scratch (programming language)">Scratch</a></li>
+<li><a href="/wiki/Shell_script" title="Shell script">Shell</a></li>
+<li><a href="/wiki/Simula" title="Simula">Simula</a></li>
+<li><a href="/wiki/Smalltalk" title="Smalltalk">Smalltalk</a></li>
+<li><a href="/wiki/Swift_(programming_language)" title="Swift (programming language)">Swift</a></li>
+<li><a href="/wiki/Visual_Basic_(.NET)" title="Visual Basic (.NET)">Visual Basic</a></li>
+<li><i><a href="/wiki/List_of_programming_languages" title="List of programming languages">more...</a></i></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><span class="noviewer" typeof="mw:File"><span title="List-Class article"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/16px-Symbol_list_class.svg.png" decoding="async" width="16" height="16" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/23px-Symbol_list_class.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/31px-Symbol_list_class.svg.png 2x" data-file-width="180" data-file-height="185" /></span></span> <b>Lists:</b> <a href="/wiki/List_of_programming_languages" title="List of programming languages">Alphabetical</a></li>
+<li><a href="/wiki/List_of_programming_languages_by_type" title="List of programming languages by type">Categorical</a></li>
+<li><a href="/wiki/Generational_list_of_programming_languages" title="Generational list of programming languages">Generational</a></li>
+<li><a href="/wiki/Non-English-based_programming_languages" title="Non-English-based programming languages">Non-English-based</a></li>
+<li><span class="noviewer" typeof="mw:File"><span title="Category"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/16px-Symbol_category_class.svg.png" decoding="async" width="16" height="16" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/23px-Symbol_category_class.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/31px-Symbol_category_class.svg.png 2x" data-file-width="180" data-file-height="185" /></span></span> <a href="/wiki/Category:Programming_languages" title="Category:Programming languages">Category</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1420
+Cached time: 20240211170157
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, show‐toc]
+CPU time usage: 0.509 seconds
+Real time usage: 0.712 seconds
+Preprocessor visited node count: 2926/1000000
+Post‐expand include size: 113297/2097152 bytes
+Template argument size: 4111/2097152 bytes
+Highest expansion depth: 21/100
+Expensive parser function count: 5/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 129025/5000000 bytes
+Lua time usage: 0.316/10.000 seconds
+Lua memory usage: 8813040/52428800 bytes
+Number of Wikibase entities loaded: 1/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  579.007      1 -total
+ 34.80%  201.516      2 Template:Infobox
+ 32.22%  186.546      1 Template:Infobox_programming_language
+ 26.26%  152.070      1 Template:Reflist
+ 20.36%  117.914      1 Template:Infobox_software/simple
+ 18.89%  109.387     33 Template:Cite_web
+ 16.95%   98.128      2 Template:Wikidata
+ 12.18%   70.517      1 Template:Short_description
+  8.69%   50.343      3 Template:Navbox
+  8.35%   48.334      1 Template:FOSS
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:64207904-0!canonical and timestamp 20240211170156 and revision id 1202037514. Rendering was triggered because: page-view
+ -->
+</div><!--esi <esi:include src="/esitest-fa8a495983347898/content" /> --><noscript><img src="https://login.wikimedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" width="1" height="1" style="border: none; position: absolute;"></noscript>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Ring_(programming_language)&amp;oldid=1202037514">https://en.wikipedia.org/w/index.php?title=Ring_(programming_language)&amp;oldid=1202037514</a>"</div></div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Programming_languages" title="Category:Programming languages">Programming languages</a></li><li><a href="/wiki/Category:Cross-platform_free_software" title="Category:Cross-platform free software">Cross-platform free software</a></li><li><a href="/wiki/Category:Programming_languages_created_in_2016" title="Category:Programming languages created in 2016">Programming languages created in 2016</a></li><li><a href="/wiki/Category:High-level_programming_languages" title="Category:High-level programming languages">High-level programming languages</a></li><li><a href="/wiki/Category:2016_software" title="Category:2016 software">2016 software</a></li><li><a href="/wiki/Category:Dynamically_typed_programming_languages" title="Category:Dynamically typed programming languages">Dynamically typed programming languages</a></li><li><a href="/wiki/Category:Egyptian_inventions" title="Category:Egyptian inventions">Egyptian inventions</a></li><li><a href="/wiki/Category:Free_software_projects" title="Category:Free software projects">Free software projects</a></li><li><a href="/wiki/Category:Software_using_the_MIT_license" title="Category:Software using the MIT license">Software using the MIT license</a></li><li><a href="/wiki/Category:Free_software_programmed_in_C" title="Category:Free software programmed in C">Free software programmed in C</a></li><li><a href="/wiki/Category:Multi-paradigm_programming_languages" title="Category:Multi-paradigm programming languages">Multi-paradigm programming languages</a></li><li><a href="/wiki/Category:Extensible_syntax_programming_languages" title="Category:Extensible syntax programming languages">Extensible syntax programming languages</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_matches_Wikidata" title="Category:Short description matches Wikidata">Short description matches Wikidata</a></li></ul></div></div>
+				</div>
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 1 February 2024, at 22:30<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License">Creative Commons Attribution-ShareAlike License 4.0</a><a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/Wikipedia:General_disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-wm-codeofconduct"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct">Code of Conduct</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement">Cookie statement</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Ring_(programming_language)&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"></a></li>
+</ul>
+
+</footer>
+
+		</div>
+	</div> 
+</div> 
+<div class="vector-settings" id="p-dock-bottom">
+	<ul>
+		<li>
+		<button class="cdx-button cdx-button--icon-only vector-limited-width-toggle" id=""><span class="vector-icon mw-ui-icon-fullScreen mw-ui-icon-wikimedia-fullScreen"></span>
+
+<span>Toggle limited content width</span>
+</button>
+</li>
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw-web.codfw.main-894d4d6c9-wlmch","wgBackendResponseTime":161,"wgPageParseReport":{"limitreport":{"cputime":"0.509","walltime":"0.712","ppvisitednodes":{"value":2926,"limit":1000000},"postexpandincludesize":{"value":113297,"limit":2097152},"templateargumentsize":{"value":4111,"limit":2097152},"expansiondepth":{"value":21,"limit":100},"expensivefunctioncount":{"value":5,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":129025,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  579.007      1 -total"," 34.80%  201.516      2 Template:Infobox"," 32.22%  186.546      1 Template:Infobox_programming_language"," 26.26%  152.070      1 Template:Reflist"," 20.36%  117.914      1 Template:Infobox_software/simple"," 18.89%  109.387     33 Template:Cite_web"," 16.95%   98.128      2 Template:Wikidata"," 12.18%   70.517      1 Template:Short_description","  8.69%   50.343      3 Template:Navbox","  8.35%   48.334      1 Template:FOSS"]},"scribunto":{"limitreport-timeusage":{"value":"0.316","limit":"10.000"},"limitreport-memusage":{"value":8813040,"limit":52428800}},"cachereport":{"origin":"mw1420","timestamp":"20240211170157","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Ring (programming language)","url":"https:\/\/en.wikipedia.org\/wiki\/Ring_(programming_language)","sameAs":"http:\/\/www.wikidata.org\/entity\/Q25462748","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q25462748","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2020-06-08T01:59:18Z","dateModified":"2024-02-01T22:30:43Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/f\/f7\/Ringlogo_transparent.png","headline":"dynamically typed, general-purpose programming language"}</script>
+</body>
+</html>

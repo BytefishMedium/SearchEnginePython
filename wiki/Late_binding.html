@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-0 vector-feature-client-preferences-disabled vector-feature-client-prefs-pinned-disabled vector-feature-night-mode-disabled skin-night-mode-clientpref-0 vector-toc-available" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Late binding - Wikipedia</title>
+<script>(function(){var className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-0 vector-feature-client-preferences-disabled vector-feature-client-prefs-pinned-disabled vector-feature-night-mode-disabled skin-night-mode-clientpref-0 vector-toc-available";var cookie=document.cookie.match(/(?:^|; )enwikimwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],
+"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"940aa7f4-e1ca-4d3c-b3d1-f85ebeae49f0","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Late_binding","wgTitle":"Late binding","wgCurRevisionId":1190566489,"wgRevisionId":1190566489,"wgArticleId":916502,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with short description","Short description is different from Wikidata","Articles needing additional references from January 2011","All articles needing additional references","Articles that may contain original research from July 2019","All articles that may contain original research","Method (computer programming)","Programming language concepts"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en",
+"wgPageContentModel":"wikitext","wgRelevantPageName":"Late_binding","wgRelevantArticleId":916502,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgNoticeProject":"wikipedia","wgFlaggedRevsParams":{"tags":{"status":{"levels":1}}},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsFlags":6,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":false,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":10000,"wgULSCurrentAutonym":"English","wgCentralAuthMobileDomain":false,"wgEditSubmitButtonLabelPublish":true,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":false,"wgVector2022LanguageInHeader":true,"wgULSisLanguageSelectorEmpty":false,"wgWikibaseItemId":"Q6495369","wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands",
+"fullVersionList","mobile","model","platform","platformVersion"],"GEHomepageSuggestedEditsEnableTopics":true,"wgGETopicsMatchModeEnabled":false,"wgGEStructuredTaskRejectionReasonTextInputEnabled":false,"wgGELevelingUpEnabledForUser":false};RLSTATE={"skins.vector.user.styles":"ready","ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","skins.vector.user":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","codex-search-styles":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","mediawiki.toggleAllCollapsibles","site","mediawiki.page.ready","mediawiki.toc","skins.vector.js","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.gadget.ReferenceTooltips","ext.gadget.switcher"
+,"ext.urlShortener.toolbar","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.echo.centralauth","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.cx.uls.quick.actions","wikibase.client.vector-2022","ext.checkUser.clientHints","ext.growthExperiments.SuggestedEditSession"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=codex-search-styles%7Cext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.vector.icons%2Cstyles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector-2022">
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022">
+<meta name="generator" content="MediaWiki 1.42.0-wmf.17">
+<meta name="referrer" content="origin">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1000">
+<meta property="og:title" content="Late binding - Wikipedia">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="//upload.wikimedia.org">
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Late_binding">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Late_binding&amp;action=edit">
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png">
+<link rel="icon" href="/static/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd">
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Late_binding">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="//login.wikimedia.org">
+</head>
+<body class="skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Late_binding rootpage-Late_binding skin-vector-2022 action-view"><a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+<div class="vector-header-container">
+	<header class="vector-header mw-header">
+		<div class="vector-header-start">
+			<nav class="vector-main-menu-landmark" aria-label="Site" role="navigation">
+				
+<div id="vector-main-menu-dropdown" class="vector-dropdown vector-main-menu-dropdown vector-button-flush-left vector-button-flush-right"  >
+	<input type="checkbox" id="vector-main-menu-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-main-menu-dropdown" class="vector-dropdown-checkbox "  aria-label="Main menu"  >
+	<label id="vector-main-menu-dropdown-label" for="vector-main-menu-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu"></span>
+
+<span class="vector-dropdown-label-text">Main menu</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+				<div id="vector-main-menu-unpinned-container" class="vector-unpinned-container">
+		
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-main-menu-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="main-menu-pinned"
+	data-pinnable-element-id="vector-main-menu"
+	data-pinned-container-id="vector-main-menu-pinned-container"
+	data-unpinned-container-id="vector-main-menu-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Main menu</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-main-menu.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-main-menu.unpin">hide</button>
+</div>
+
+	
+<div id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation"  >
+	<div class="vector-menu-heading">
+		Navigation
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-contents" class="mw-list-item"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia"><span>Contents</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="/wiki/Portal:Current_events" title="Articles related to current events"><span>Current events</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x"><span>Random article</span></a></li><li id="n-aboutsite" class="mw-list-item"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works"><span>About Wikipedia</span></a></li><li id="n-contactpage" class="mw-list-item"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia"><span>Contact us</span></a></li><li id="n-sitesupport" class="mw-list-item"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation"><span>Donate</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	
+<div id="p-interaction" class="vector-menu mw-portlet mw-portlet-interaction"  >
+	<div class="vector-menu-heading">
+		Contribute
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-help" class="mw-list-item"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia"><span>Help</span></a></li><li id="n-introduction" class="mw-list-item"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia"><span>Learn to edit</span></a></li><li id="n-portal" class="mw-list-item"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors"><span>Community portal</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_upload_wizard" title="Add images or other media for use on Wikipedia"><span>Upload file</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div class="vector-main-menu-action vector-main-menu-action-lang-alert">
+	<div class="vector-main-menu-action-item">
+		<div class="vector-main-menu-action-heading vector-menu-heading">Languages</div>
+		<div class="vector-main-menu-action-content vector-menu-content">
+			<div class="mw-message-box cdx-message cdx-message--block mw-message-box-notice cdx-message--notice vector-language-sidebar-alert"><span class="cdx-message__icon"></span><div class="cdx-message__content">Language links are at the top of the page.</div></div>
+		</div>
+	</div>
+</div>
+
+</div>
+
+				</div>
+
+	</div>
+</div>
+
+		</nav>
+			
+<a href="/wiki/Main_Page" class="mw-logo">
+	<img class="mw-logo-icon" src="/static/images/icons/wikipedia.png" alt="" aria-hidden="true" height="50" width="50">
+	<span class="mw-logo-container">
+		<img class="mw-logo-wordmark" alt="Wikipedia" src="/static/images/mobile/copyright/wikipedia-wordmark-en.svg" style="width: 7.5em; height: 1.125em;">
+		<img class="mw-logo-tagline" alt="The Free Encyclopedia" src="/static/images/mobile/copyright/wikipedia-tagline-en.svg" width="117" height="13" style="width: 7.3125em; height: 0.8125em;">
+	</span>
+</a>
+
+		</div>
+		<div class="vector-header-end">
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<a href="/wiki/Special:Search" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only search-toggle" id="" title="Search Wikipedia [f]" accesskey="f"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search"></span>
+
+<span>Search</span>
+	</a>
+	<div class="vector-typeahead-search-container">
+		<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail cdx-typeahead-search--auto-expand-width">
+			<form action="/w/index.php" id="searchform" class="cdx-search-input cdx-search-input--has-end-button">
+				<div id="simpleSearch" class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+					<div class="cdx-text-input cdx-text-input--has-start-icon">
+						<input
+							class="cdx-text-input__input"
+							 type="search" name="search" placeholder="Search Wikipedia" aria-label="Search Wikipedia" autocapitalize="sentences" title="Search Wikipedia [f]" accesskey="f" id="searchInput"
+							>
+						<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+					</div>
+					<input type="hidden" name="title" value="Special:Search">
+				</div>
+				<button class="cdx-button cdx-search-input__end-button">Search</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+			<nav class="vector-user-links vector-user-links-wide" aria-label="Personal tools" role="navigation" >
+	<div class="vector-user-links-main">
+	
+<div id="p-vector-user-menu-preferences" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-userpage" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	<nav class="vector-client-prefs-landmark" aria-label="Appearance">
+		
+		
+	</nav>
+	
+<div id="p-vector-user-menu-notifications" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-createaccount-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="/w/index.php?title=Special:CreateAccount&amp;returnto=Late+binding" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span>Create account</span></a>
+</li>
+<li id="pt-login-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="/w/index.php?title=Special:UserLogin&amp;returnto=Late+binding" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o" class=""><span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	</div>
+	
+<div id="vector-user-links-dropdown" class="vector-dropdown vector-user-menu vector-button-flush-right vector-user-menu-logged-out"  title="Log in and more options" >
+	<input type="checkbox" id="vector-user-links-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-user-links-dropdown" class="vector-dropdown-checkbox "  aria-label="Personal tools"  >
+	<label id="vector-user-links-dropdown-label" for="vector-user-links-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-ellipsis mw-ui-icon-wikimedia-ellipsis"></span>
+
+<span class="vector-dropdown-label-text">Personal tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal user-links-collapsible-item"  title="User menu" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="user-links-collapsible-item mw-list-item"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Late+binding" title="You are encouraged to create an account and log in; however, it is not mandatory"><span class="vector-icon mw-ui-icon-userAdd mw-ui-icon-wikimedia-userAdd"></span> <span>Create account</span></a></li><li id="pt-login" class="user-links-collapsible-item mw-list-item"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Late+binding" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o"><span class="vector-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn"></span> <span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-user-menu-anon-editor" class="vector-menu mw-portlet mw-portlet-user-menu-anon-editor"  >
+	<div class="vector-menu-heading">
+		Pages for logged out editors <a href="/wiki/Help:Introduction" aria-label="Learn more about editing"><span>learn more</span></a>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-anoncontribs" class="mw-list-item"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y"><span>Contributions</span></a></li><li id="pt-anontalk" class="mw-list-item"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n"><span>Talk</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+
+</nav>
+
+		</div>
+	</header>
+</div>
+<div class="mw-page-container">
+	<div class="mw-page-container-inner">
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><!-- CentralNotice --></div>
+		</div>
+		<div class="vector-column-start">
+			<div class="vector-main-menu-container">
+		<div id="mw-navigation">
+			<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site" role="navigation">
+				<div id="vector-main-menu-pinned-container" class="vector-pinned-container">
+				
+				</div>
+		</nav>
+		</div>
+	</div>
+	<div class="vector-sticky-pinned-container">
+				<nav id="mw-panel-toc" role="navigation" aria-label="Contents" data-event-name="ui.sidebar-toc" class="mw-table-of-contents-container vector-toc-landmark">
+					<div id="vector-toc-pinned-container" class="vector-pinned-container">
+					<div id="vector-toc" class="vector-toc vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="toc-pinned"
+	data-pinnable-element-id="vector-toc"
+	
+	
+>
+	<h2 class="vector-pinnable-header-label">Contents</h2>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-toc.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-toc.unpin">hide</button>
+</div>
+
+
+	<ul class="vector-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="vector-toc-list-item vector-toc-level-1">
+			<a href="#" class="vector-toc-link">
+				<div class="vector-toc-text">(Top)</div>
+			</a>
+		</li>
+		<li id="toc-History"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#History">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">1</span>History</div>
+		</a>
+		
+		<ul id="toc-History-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Late_binding_implementations"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Late_binding_implementations">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">2</span>Late binding implementations</div>
+		</a>
+		
+			<button aria-controls="toc-Late_binding_implementations-sublist" class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-toc-toggle">
+				<span class="vector-icon vector-icon--x-small mw-ui-icon-wikimedia-expand"></span>
+				<span>Toggle Late binding implementations subsection</span>
+			</button>
+		
+		<ul id="toc-Late_binding_implementations-sublist" class="vector-toc-list">
+			<li id="toc-Late_binding_in_dynamically-typed_object-oriented_languages"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Late_binding_in_dynamically-typed_object-oriented_languages">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">2.1</span>Late binding in dynamically-typed object-oriented languages</div>
+			</a>
+			
+			<ul id="toc-Late_binding_in_dynamically-typed_object-oriented_languages-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Late_binding_in_Lisp"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Late_binding_in_Lisp">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">2.2</span>Late binding in Lisp</div>
+			</a>
+			
+			<ul id="toc-Late_binding_in_Lisp-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Late_binding_in_C++"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Late_binding_in_C++">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">2.3</span>Late binding in C++</div>
+			</a>
+			
+			<ul id="toc-Late_binding_in_C++-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Late_binding_in_COM_languages"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Late_binding_in_COM_languages">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">2.4</span>Late binding in COM languages</div>
+			</a>
+			
+			<ul id="toc-Late_binding_in_COM_languages-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Late_binding_in_.NET"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Late_binding_in_.NET">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">2.5</span>Late binding in .NET</div>
+			</a>
+			
+			<ul id="toc-Late_binding_in_.NET-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Late_binding_in_Java"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Late_binding_in_Java">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">2.6</span>Late binding in Java</div>
+			</a>
+			
+			<ul id="toc-Late_binding_in_Java-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Early_vs._late_binding_in_PL/SQL_and_Ada"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Early_vs._late_binding_in_PL/SQL_and_Ada">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">2.7</span>Early vs. late binding in PL/SQL and Ada</div>
+			</a>
+			
+			<ul id="toc-Early_vs._late_binding_in_PL/SQL_and_Ada-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+	</li>
+	<li id="toc-Criticism"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Criticism">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">3</span>Criticism</div>
+		</a>
+		
+		<ul id="toc-Criticism-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-See_also"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#See_also">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">4</span>See also</div>
+		</a>
+		
+		<ul id="toc-See_also-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-References"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#References">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">5</span>References</div>
+		</a>
+		
+		<ul id="toc-References-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+</ul>
+</div>
+
+					</div>
+		</nav>
+			</div>
+		</div>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body" role="main">
+				<header class="mw-body-header vector-page-titlebar">
+					<nav role="navigation" aria-label="Contents" class="vector-toc-landmark">
+						
+<div id="vector-page-titlebar-toc" class="vector-dropdown vector-page-titlebar-toc vector-button-flush-left"  >
+	<input type="checkbox" id="vector-page-titlebar-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-titlebar-toc" class="vector-dropdown-checkbox "  aria-label="Toggle the table of contents"  >
+	<label id="vector-page-titlebar-toc-label" for="vector-page-titlebar-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet"></span>
+
+<span class="vector-dropdown-label-text">Toggle the table of contents</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+							<div id="vector-page-titlebar-toc-unpinned-container" class="vector-unpinned-container">
+			</div>
+		
+	</div>
+</div>
+
+					</nav>
+					<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Late binding</span></h1>
+							
+<div id="p-lang-btn" class="vector-dropdown mw-portlet mw-portlet-lang"  >
+	<input type="checkbox" id="p-lang-btn-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-lang-btn" class="vector-dropdown-checkbox mw-interlanguage-selector" aria-label="Go to an article in another language. Available in 3 languages"   >
+	<label id="p-lang-btn-label" for="p-lang-btn-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive mw-portlet-lang-heading-3" aria-hidden="true"  ><span class="vector-icon mw-ui-icon-language-progressive mw-ui-icon-wikimedia-language-progressive"></span>
+
+<span class="vector-dropdown-label-text">3 languages</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+		<div class="vector-menu-content">
+			
+			<ul class="vector-menu-content-list">
+				
+				<li class="interlanguage-link interwiki-ca mw-list-item"><a href="https://ca.wikipedia.org/wiki/Enlla%C3%A7_tard%C3%A0" title="Enllaç tardà – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target"><span>Català</span></a></li><li class="interlanguage-link interwiki-hu mw-list-item"><a href="https://hu.wikipedia.org/wiki/K%C3%A9s%C5%91i_k%C3%B6t%C3%A9s" title="Késői kötés – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target"><span>Magyar</span></a></li><li class="interlanguage-link interwiki-ja mw-list-item"><a href="https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%8A%E3%83%9F%E3%83%83%E3%82%AF%E3%83%90%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="ダイナミックバインディング – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target"><span>日本語</span></a></li>
+			</ul>
+			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q6495369#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+		</div>
+
+	</div>
+</div>
+</header>
+				<div class="vector-page-toolbar">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/Late_binding" title="View the content page [c]" accesskey="c"><span>Article</span></a></li><li id="ca-talk" class="vector-tab-noicon mw-list-item"><a href="/wiki/Talk:Late_binding" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t"><span>Talk</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+								
+<div id="p-variants" class="vector-dropdown emptyPortlet"  >
+	<input type="checkbox" id="p-variants-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-variants" class="vector-dropdown-checkbox " aria-label="Change language variant"   >
+	<label id="p-variants-label" for="p-variants-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">English</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+					
+<div id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+								
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/Late_binding"><span>Read</span></a></li><li id="ca-edit" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=Late_binding&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-history" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=Late_binding&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+							</nav>
+				
+							<nav class="vector-page-tools-landmark" aria-label="Page tools">
+								
+<div id="vector-page-tools-dropdown" class="vector-dropdown vector-page-tools-dropdown"  >
+	<input type="checkbox" id="vector-page-tools-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-tools-dropdown" class="vector-dropdown-checkbox "  aria-label="Tools"  >
+	<label id="vector-page-tools-dropdown-label" for="vector-page-tools-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">Tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+									<div id="vector-page-tools-unpinned-container" class="vector-unpinned-container">
+						
+<div id="vector-page-tools" class="vector-page-tools vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-page-tools-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="page-tools-pinned"
+	data-pinnable-element-id="vector-page-tools"
+	data-pinned-container-id="vector-page-tools-pinned-container"
+	data-unpinned-container-id="vector-page-tools-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Tools</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-page-tools.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-page-tools.unpin">hide</button>
+</div>
+
+	
+<div id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-has-collapsible-items"  title="More options" >
+	<div class="vector-menu-heading">
+		Actions
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-more-view" class="selected vector-more-collapsible-item mw-list-item"><a href="/wiki/Late_binding"><span>Read</span></a></li><li id="ca-more-edit" class="vector-more-collapsible-item mw-list-item"><a href="/w/index.php?title=Late_binding&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-more-history" class="vector-more-collapsible-item mw-list-item"><a href="/w/index.php?title=Late_binding&amp;action=history"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-tb" class="vector-menu mw-portlet mw-portlet-tb"  >
+	<div class="vector-menu-heading">
+		General
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/Late_binding" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/Late_binding" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u"><span>Upload file</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=Late_binding&amp;oldid=1190566489" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=Late_binding&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Late_binding&amp;id=1190566489&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=Special:UrlShortener&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FLate_binding"><span>Get shortened URL</span></a></li><li id="t-urlshortener-qrcode" class="mw-list-item"><a href="/w/index.php?title=Special:QrCode&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FLate_binding"><span>Download QR code</span></a></li><li id="t-wikibase" class="mw-list-item"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q6495369" title="Structured data on this page hosted by Wikidata [g]" accesskey="g"><span>Wikidata item</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-coll-print_export" class="vector-menu mw-portlet mw-portlet-coll-print_export"  >
+	<div class="vector-menu-heading">
+		Print/export
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="coll-download-as-rl" class="mw-list-item"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Late_binding&amp;action=show-download-screen" title="Download this page as a PDF file"><span>Download as PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="/w/index.php?title=Late_binding&amp;printable=yes" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+									</div>
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="vector-column-end">
+					<div class="vector-sticky-pinned-container">
+						<nav class="vector-page-tools-landmark" aria-label="Page tools">
+							<div id="vector-page-tools-pinned-container" class="vector-pinned-container">
+				
+							</div>
+		</nav>
+						<nav class="vector-client-prefs-landmark" aria-label="Appearance">
+						</nav>
+					</div>
+				</div>
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		</div>
+
+						<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+					</div>
+					<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+					
+					
+					<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">When called functions or methods are looked up by name at runtime</div>
+<style data-mw-deduplicate="TemplateStyles:r1033289096">.mw-parser-output .hatnote{font-style:italic}.mw-parser-output div.hatnote{padding-left:1.6em;margin-bottom:0.5em}.mw-parser-output .hatnote i{font-style:normal}.mw-parser-output .hatnote+link+.hatnote{margin-top:-0.5em}</style><div role="note" class="hatnote navigation-not-searchable">This article is about associating a name with an operation. For the selection of an implementation of a polymorphic operation, see <a href="/wiki/Dynamic_dispatch" title="Dynamic dispatch">Dynamic dispatch</a>.</div>
+<style data-mw-deduplicate="TemplateStyles:r1097763485">.mw-parser-output .ambox{border:1px solid #a2a9b1;border-left:10px solid #36c;background-color:#fbfbfb;box-sizing:border-box}.mw-parser-output .ambox+link+.ambox,.mw-parser-output .ambox+link+style+.ambox,.mw-parser-output .ambox+link+link+.ambox,.mw-parser-output .ambox+.mw-empty-elt+link+.ambox,.mw-parser-output .ambox+.mw-empty-elt+link+style+.ambox,.mw-parser-output .ambox+.mw-empty-elt+link+link+.ambox{margin-top:-1px}html body.mediawiki .mw-parser-output .ambox.mbox-small-left{margin:4px 1em 4px 0;overflow:hidden;width:238px;border-collapse:collapse;font-size:88%;line-height:1.25em}.mw-parser-output .ambox-speedy{border-left:10px solid #b32424;background-color:#fee7e6}.mw-parser-output .ambox-delete{border-left:10px solid #b32424}.mw-parser-output .ambox-content{border-left:10px solid #f28500}.mw-parser-output .ambox-style{border-left:10px solid #fc3}.mw-parser-output .ambox-move{border-left:10px solid #9932cc}.mw-parser-output .ambox-protection{border-left:10px solid #a2a9b1}.mw-parser-output .ambox .mbox-text{border:none;padding:0.25em 0.5em;width:100%}.mw-parser-output .ambox .mbox-image{border:none;padding:2px 0 2px 0.5em;text-align:center}.mw-parser-output .ambox .mbox-imageright{border:none;padding:2px 0.5em 2px 0;text-align:center}.mw-parser-output .ambox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .ambox .mbox-image-div{width:52px}html.client-js body.skin-minerva .mw-parser-output .mbox-text-span{margin-left:23px!important}@media(min-width:720px){.mw-parser-output .ambox{margin:0 10%}}</style><table class="box-More_citations_needed plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation"><tbody><tr><td class="mbox-image"><div class="mbox-image-div"><span typeof="mw:File"><a href="/wiki/File:Question_book-new.svg" class="mw-file-description"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" decoding="async" width="50" height="39" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></span></div></td><td class="mbox-text"><div class="mbox-text-span">This article <b>needs additional citations for <a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>.<span class="hide-when-compact"> Please help <a href="/wiki/Special:EditPage/Late_binding" title="Special:EditPage/Late binding">improve this article</a> by <a href="/wiki/Help:Referencing_for_beginners" title="Help:Referencing for beginners">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.<br /><small><span class="plainlinks"><i>Find sources:</i>&#160;<a rel="nofollow" class="external text" href="https://www.google.com/search?as_eq=wikipedia&amp;q=%22Late+binding%22">"Late binding"</a>&#160;–&#160;<a rel="nofollow" class="external text" href="https://www.google.com/search?tbm=nws&amp;q=%22Late+binding%22+-wikipedia&amp;tbs=ar:1">news</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="https://www.google.com/search?&amp;q=%22Late+binding%22&amp;tbs=bkt:s&amp;tbm=bks">newspapers</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="https://www.google.com/search?tbs=bks:1&amp;q=%22Late+binding%22+-wikipedia">books</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="https://scholar.google.com/scholar?q=%22Late+binding%22">scholar</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="https://www.jstor.org/action/doBasicSearch?Query=%22Late+binding%22&amp;acc=on&amp;wc=on">JSTOR</a></span></small></span>  <span class="date-container"><i>(<span class="date">January 2011</span>)</i></span><span class="hide-when-compact"><i> (<small><a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a></small>)</i></span></div></td></tr></tbody></table>
+<p>In <a href="/wiki/Computing" title="Computing">computing</a>, <b>late binding</b> or <b>dynamic linkage</b><sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup>—though not an identical process to <a href="/wiki/Dynamic_linker" title="Dynamic linker">dynamically linking</a> imported code <a href="/wiki/Library_(computing)" title="Library (computing)">libraries</a>—is a <a href="/wiki/Computer_programming" title="Computer programming">computer programming</a> mechanism in which the <a href="/wiki/Method_(computer_programming)" title="Method (computer programming)">method</a> being called upon an <a href="/wiki/Object_(computer_science)" title="Object (computer science)">object</a>, or the <a href="/wiki/Subroutine" class="mw-redirect" title="Subroutine">function</a> being called with arguments, is looked up by name at <a href="/wiki/Run_time_(program_lifecycle_phase)" class="mw-redirect" title="Run time (program lifecycle phase)">runtime</a>. In other words, a name is associated with a particular operation or object at runtime, rather than during <a href="/wiki/Compiler" title="Compiler">compilation</a>. The name <b>dynamic binding</b> is sometimes used,<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> but is more commonly used to refer to <a href="/wiki/Dynamic_scope" class="mw-redirect" title="Dynamic scope">dynamic scope</a>.
+</p><p>With <a href="/wiki/Early_binding" class="mw-redirect" title="Early binding">early binding</a>, or <a href="/wiki/Static_binding" class="mw-redirect" title="Static binding">static binding</a>, in an <a href="/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented language</a>, the compilation phase fixes all <a href="/wiki/Data_type" title="Data type">types</a> of <a href="/wiki/Variable_(computer_science)" title="Variable (computer science)">variables</a> and <a href="/wiki/Expression_(computer_science)" title="Expression (computer science)">expressions</a>. This is usually stored in the compiled program as an offset in a <a href="/wiki/Virtual_method_table" title="Virtual method table">virtual method table</a> ("v-table").<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> In contrast, with late binding, the compiler does not read enough information to verify the method exists or bind its slot on the v-table. Instead, the method is looked up by name at runtime.
+</p><p>The primary advantage of using late binding in <a href="/wiki/Component_Object_Model" title="Component Object Model">Component Object Model</a> (COM) programming is that it does not require the compiler to reference the libraries that contain the object at <a href="/wiki/Compile_time" title="Compile time">compile time</a>. This makes the compilation process more resistant to version conflicts, in which the class's v-table may be accidentally modified. (This is not a concern in <a href="/wiki/Just-in-time_compilation" title="Just-in-time compilation">just-in-time compiled</a> platforms such as <a href="/wiki/.NET" title=".NET">.NET</a> or <a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a>, because the v-table is created at runtime by the <a href="/wiki/Virtual_machine" title="Virtual machine">virtual machine</a> against the libraries as they are being loaded into the running application.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>)
+</p>
+<meta property="mw:PageProp/toc" />
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Late_binding&amp;action=edit&amp;section=1" title="Edit section: History"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The term "late binding" dates back to at least the 1960s, where it can be found in <i><a href="/wiki/Communications_of_the_ACM" title="Communications of the ACM">Communications of the ACM</a></i>. The term was widely used to describe calling conventions in languages like Lisp, though usually with negative connotations about performance.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p><p>In the 1980s <a href="/wiki/Smalltalk" title="Smalltalk">Smalltalk</a> popularized <a href="/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented programming</a> (OOP) and with it late binding. <a href="/wiki/Alan_Kay" title="Alan Kay">Alan Kay</a> once said, "OOP to me means only messaging, local retention, and protection and hiding of state-process, and extreme late-binding of all things. It can be done in Smalltalk and in LISP. There are possibly other systems in which this is possible, but I'm not aware of them."<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>
+</p><p>In the early to mid-1990s, Microsoft heavily promoted its COM standard as a binary interface between different OOP programming languages. COM programming equally promoted early and late binding, with many languages supporting both at the syntax level.
+</p><p>In 2000, <a href="/wiki/Alex_Martelli" title="Alex Martelli">Alex Martelli</a> coined the term "<a href="/wiki/Duck_typing" title="Duck typing">duck typing</a>" to refer to a similar concept, but with a different emphasis. While late binding generally focuses on implementation details, duck typing focuses on the ability to ignore types and concentrate on the methods an object currently has.
+</p>
+<h2><span class="mw-headline" id="Late_binding_implementations">Late binding implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Late_binding&amp;action=edit&amp;section=2" title="Edit section: Late binding implementations"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Late_binding_in_dynamically-typed_object-oriented_languages">Late binding in dynamically-typed object-oriented languages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Late_binding&amp;action=edit&amp;section=3" title="Edit section: Late binding in dynamically-typed object-oriented languages"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In most <a href="/wiki/Type_system#Dynamic_type_checking_and_runtime_type_information" title="Type system">dynamically-typed</a> languages, the list of methods on an object can be altered at runtime. This requires late binding.
+</p>
+<h3><span class="mw-headline" id="Late_binding_in_Lisp">Late binding in Lisp</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Late_binding&amp;action=edit&amp;section=4" title="Edit section: Late binding in Lisp"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In <a href="/wiki/Lisp_(programming_language)" title="Lisp (programming language)">Lisp</a>, late bound global function calls are efficiently looked up at runtime via a <a href="/wiki/Symbol_(programming)" title="Symbol (programming)">symbol</a>'s function cell. These function bindings are mutable.
+</p><p>Example using an interactive <a href="/wiki/Clozure_CL" title="Clozure CL">Clozure Common Lisp</a> session:
+</p>
+<div class="mw-highlight mw-highlight-lang-lisp mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">?</span><span class="w"> </span><span class="p">(</span><span class="nb">defun</span><span class="w"> </span><span class="nv">foo</span><span class="w"> </span><span class="p">()</span>
+<span class="w">    </span><span class="p">(</span><span class="nv">bar</span><span class="w"> </span><span class="nv">pi</span><span class="p">))</span><span class="w">   </span><span class="c1">; a still undefined function BAR gets called</span>
+<span class="c1">;Compiler warnings&#160;:</span>
+<span class="c1">;   In FOO: Undefined function BAR</span>
+<span class="nv">FOO</span>
+
+<span class="nv">?</span><span class="w"> </span><span class="p">(</span><span class="nb">defun</span><span class="w"> </span><span class="nv">bar</span><span class="w"> </span><span class="p">(</span><span class="nv">x</span><span class="p">)</span><span class="w">   </span><span class="c1">; now we define it</span>
+<span class="w">    </span><span class="p">(</span><span class="nb">*</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span>
+<span class="nv">BAR</span>
+
+<span class="nv">?</span><span class="w"> </span><span class="p">(</span><span class="nv">foo</span><span class="p">)</span><span class="w">    </span><span class="c1">; calling foo and it uses the recent definition of BAR</span>
+<span class="mf">6.283185307179586D0</span>
+
+<span class="nv">?</span><span class="w"> </span><span class="p">(</span><span class="nb">defun</span><span class="w"> </span><span class="nv">bar</span><span class="w"> </span><span class="p">(</span><span class="nv">x</span><span class="p">)</span><span class="w">   </span><span class="c1">; now we redefine BAR</span>
+<span class="w">    </span><span class="p">(</span><span class="nb">*</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="mi">1000</span><span class="p">))</span>
+<span class="nv">BAR</span>
+
+<span class="nv">?</span><span class="w"> </span><span class="p">(</span><span class="nv">foo</span><span class="p">)</span><span class="w">    </span><span class="c1">;  FOO now calls the new function, there is no need to recompile/link/load FOO</span>
+<span class="mf">3141.592653589793D0</span>
+
+<span class="nv">?</span><span class="w"> </span><span class="p">(</span><span class="nb">type-of</span><span class="w"> </span><span class="ss">&#39;bar</span><span class="p">)</span><span class="w">   </span><span class="c1">;  BAR is a symbol</span>
+<span class="nv">SYMBOL</span>
+
+<span class="nv">?</span><span class="w"> </span><span class="p">(</span><span class="nb">symbol-function</span><span class="w"> </span><span class="ss">&#39;bar</span><span class="p">)</span><span class="w">  </span><span class="c1">; the symbol BAR has a function binding</span>
+<span class="err">#</span><span class="nv">&lt;Compiled-function</span><span class="w"> </span><span class="nv">BAR</span><span class="w"> </span><span class="mh">#x302000D1B21F</span><span class="nb">&gt;</span>
+</pre></div>
+<h3><span id="Late_binding_in_C.2B.2B"></span><span class="mw-headline" id="Late_binding_in_C++">Late binding in C++</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Late_binding&amp;action=edit&amp;section=5" title="Edit section: Late binding in C++"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In C++, late binding (also called "dynamic binding") refers to what normally happens when the <code>virtual</code> keyword is used in a method's declaration. C++ then creates a so-called <a href="/wiki/Virtual_method_table" title="Virtual method table">virtual table</a>, which is a look-up table for such functions that will always be consulted when they are called.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup>  Usually, the "late binding" term is used in favor of "<a href="/wiki/Dynamic_dispatch" title="Dynamic dispatch">dynamic dispatch</a>".
+</p>
+<h3><span class="mw-headline" id="Late_binding_in_COM_languages">Late binding in COM languages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Late_binding&amp;action=edit&amp;section=6" title="Edit section: Late binding in COM languages"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In COM programming a late-bound method call is performed using the <a href="/wiki/IDispatch" title="IDispatch">IDispatch</a> interface. Some COM-based languages such as Visual Basic 6 have syntactical support for calling this interface.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> This is done by defining the variable's type as Object. Others such as C++ require that you explicitly call GetIDsOfNames to look up a method and Invoke to call it.
+</p>
+<h3><span class="mw-headline" id="Late_binding_in_.NET">Late binding in .NET</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Late_binding&amp;action=edit&amp;section=7" title="Edit section: Late binding in .NET"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In .NET, late binding refers to <a href="/wiki/Method_overriding" title="Method overriding">overriding</a> a <code>virtual</code> method like C++ or implementing an interface. The compiler builds virtual tables for every virtual or interface method call which is used at run-time to determine the implementation to execute.
+</p><p>Also like COM and Java, the Common Language Runtime provides reflection APIs that can make late binding calls. The use of these calls varies by language.
+</p><p>With C# 4, the language also added the "dynamic" pseudo-type. This would be used in place of the Object type to indicate that late binding is desired. The specific late binding mechanism needed is determined at runtime using the Dynamic Language Runtime as a starting point.
+</p><p>Visual Basic uses them whenever the variable is of type Object and the compiler directive "Option Strict Off" is in force. This is the default setting for a new VB project. Prior to version 9, only .NET and COM objects could be late bound. With VB 10, this has been extended to DLR-based objects.
+</p>
+<h3><span class="mw-headline" id="Late_binding_in_Java">Late binding in Java</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Late_binding&amp;action=edit&amp;section=8" title="Edit section: Late binding in Java"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>There are three definitions for late binding in Java.
+</p><p>Early documents on Java discussed how classes were not linked together at compile time. While types are statically checked at compile time, different implementations for classes could be swapped out just prior to runtime simply by overwriting the class file. As long as the new class definition had the same class and method names, the code would still work. In this sense it is similar to the traditional definition of late binding.
+</p><p>Currently, it is popular to use the term late binding in Java programming as a synonym for <a href="/wiki/Dynamic_dispatch" title="Dynamic dispatch">dynamic dispatch</a>. Specifically, this refers to Java's <a href="/wiki/Dynamic_dispatch#Single_and_multiple_dispatch" title="Dynamic dispatch">single dispatch</a> mechanism used with virtual methods.
+</p><p>Finally, Java can use late binding using its reflection APIs and <a href="/wiki/Type_introspection" title="Type introspection">type introspection</a> much in the same way it is done in COM and .NET programming. Generally speaking those who only program in Java do not call this late binding. Likewise the use of "duck typing" techniques is frowned upon in Java programming, with abstract interfaces used instead.
+</p><p>Oracle, the current owner of Java, has been known to use the term late binding in the "duck typing" sense when discussing both Java and other languages in the same documentation.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>
+</p>
+<h3><span id="Early_vs._late_binding_in_PL.2FSQL_and_Ada"></span><span class="mw-headline" id="Early_vs._late_binding_in_PL/SQL_and_Ada">Early vs. late binding in PL/SQL and Ada</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Late_binding&amp;action=edit&amp;section=9" title="Edit section: Early vs. late binding in PL/SQL and Ada"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>When using early binding between Ada and a database-stored procedure, a timestamp is checked to verify that the <a href="/wiki/Stored_procedure" title="Stored procedure">stored procedure</a> has not changed since the code was compiled. This allows for faster executions and prevents the application from running against the wrong version of a stored procedure.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>
+</p><p>When using late binding the timestamp check is not performed, and the stored procedure is executed via an anonymous PL/SQL block. While this can be slower, it removes the need to recompile all of the client applications when a stored procedure changes.
+</p><p>This distinction appears to be unique to PL/SQL and Ada. Other languages that can call PL/SQL procedures, as well as other database engines, only use late binding.
+</p>
+<h2><span class="mw-headline" id="Criticism">Criticism</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Late_binding&amp;action=edit&amp;section=10" title="Edit section: Criticism"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1097763485"><table class="box-Original_research plainlinks metadata ambox ambox-content ambox-Original_research" role="presentation"><tbody><tr><td class="mbox-image"><div class="mbox-image-div"><span typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></span></span></div></td><td class="mbox-text"><div class="mbox-text-span">This section <b>possibly contains <a href="/wiki/Wikipedia:No_original_research" title="Wikipedia:No original research">original research</a></b>.<span class="hide-when-compact"> Please <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Late_binding&amp;action=edit">improve it</a> by <a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verifying</a> the claims made and adding <a href="/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a>. Statements consisting only of original research should be removed.</span>  <span class="date-container"><i>(<span class="date">July 2019</span>)</i></span><span class="hide-when-compact"><i> (<small><a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a></small>)</i></span></div></td></tr></tbody></table>
+<p>Late binding has poorer performance than an early bound method call. Under most implementations, the correct method address must be looked up by name with each call, requiring relatively expensive dictionary search and possibly overload resolution logic. In most applications, the extra compute and time required is negligible on modern computers.
+</p><p>For some compilers, late binding may prevent the use of static type checking. When making a late bound call, the compiler has to assume that the method exists. This means a simple spelling error can cause a run-time error to be thrown. Modern compilers avoid this by ensuring that every possible call must have an implementation during compilation.
+</p><p>Late binding may prevent forms of <a href="/wiki/Static_analysis" title="Static analysis">static analysis</a> needed by an <a href="/wiki/Integrated_development_environment" title="Integrated development environment">integrated development environment</a> (IDE). For example, an IDE's "go to definition" feature may not function on a late-bound call, if the IDE has no way to know which class the call may refer to. A modern IDE easily solves this especially for object-oriented languages since a late-bound method always specifies an interface or base class, which is where "go to definition" leads, and "find all references" can be used to find all implementations or overrides.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Late_binding&amp;action=edit&amp;section=11" title="Edit section: See also"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1132942124">.mw-parser-output .portalbox{padding:0;margin:0.5em 0;display:table;box-sizing:border-box;max-width:175px;list-style:none}.mw-parser-output .portalborder{border:solid #aaa 1px;padding:0.1em;background:#f9f9f9}.mw-parser-output .portalbox-entry{display:table-row;font-size:85%;line-height:110%;height:1.9em;font-style:italic;font-weight:bold}.mw-parser-output .portalbox-image{display:table-cell;padding:0.2em;vertical-align:middle;text-align:center}.mw-parser-output .portalbox-link{display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle}@media(min-width:720px){.mw-parser-output .portalleft{clear:left;float:left;margin:0.5em 1em 0.5em 0}.mw-parser-output .portalright{clear:right;float:right;margin:0.5em 0 0.5em 1em}}</style><ul role="navigation" aria-label="Portals" class="noprint portalbox portalborder portalright">
+<li class="portalbox-entry"><span class="portalbox-image"><span class="noviewer" typeof="mw:File"><a href="/wiki/File:Octicons-terminal.svg" class="mw-file-description"><img alt="icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Octicons-terminal.svg/24px-Octicons-terminal.svg.png" decoding="async" width="24" height="28" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Octicons-terminal.svg/37px-Octicons-terminal.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Octicons-terminal.svg/49px-Octicons-terminal.svg.png 2x" data-file-width="896" data-file-height="1024" /></a></span></span><span class="portalbox-link"><a href="/wiki/Portal:Computer_programming" title="Portal:Computer programming">Computer programming portal</a></span></li></ul>
+<ul><li><a href="/wiki/Late_linking" class="mw-redirect" title="Late linking">Late linking</a></li>
+<li><a href="/wiki/Dynamic_linker" title="Dynamic linker">Dynamic linker</a></li>
+<li><a href="/wiki/Dynamic_dispatch" title="Dynamic dispatch">Dynamic dispatch</a></li>
+<li><a href="/wiki/Name_binding" title="Name binding">Name binding</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Late_binding&amp;action=edit&amp;section=12" title="Edit section: References"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1011085734">.mw-parser-output .reflist{font-size:90%;margin-bottom:0.5em;list-style-type:decimal}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}</style><div class="reflist reflist-columns references-column-width" style="column-width: 30em;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><style data-mw-deduplicate="TemplateStyles:r1133582631">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:#d33}.mw-parser-output .cs1-visible-error{color:#d33}.mw-parser-output .cs1-maint{display:none;color:#3a3;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><cite id="CITEREFSchreiner1994" class="citation book cs1">Schreiner, Axel-Tobias (1994). <a rel="nofollow" class="external text" href="https://www.cs.rit.edu/~ats/books/ooc.pdf"><i>Object-Oriented Programming With ANSI-C</i></a> <span class="cs1-format">(PDF)</span>. Munich: Hanser. p.&#160;15. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/3-446-17426-5" title="Special:BookSources/3-446-17426-5"><bdi>3-446-17426-5</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Object-Oriented+Programming+With+ANSI-C&amp;rft.place=Munich&amp;rft.pages=15&amp;rft.pub=Hanser&amp;rft.date=1994&amp;rft.isbn=3-446-17426-5&amp;rft.aulast=Schreiner&amp;rft.aufirst=Axel-Tobias&amp;rft_id=https%3A%2F%2Fwww.cs.rit.edu%2F~ats%2Fbooks%2Fooc.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALate+binding" class="Z3988"></span></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">Booch, Grady. Object-oriented Analysis and Design. Addison-Wesley, 1994. p71</span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20140627041338/http://support.microsoft.com/default.aspx?scid=kb;EN-US;245115">"Using early binding and late binding in Automation"</a>. <a href="/wiki/Microsoft" title="Microsoft">Microsoft</a>. 2003-09-06. Archived from <a rel="nofollow" class="external text" href="http://support.microsoft.com/default.aspx?scid=kb;EN-US;245115">the original</a> on 2014-06-27<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-06-27</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Using+early+binding+and+late+binding+in+Automation&amp;rft.pub=Microsoft&amp;rft.date=2003-09-06&amp;rft_id=http%3A%2F%2Fsupport.microsoft.com%2Fdefault.aspx%3Fscid%3Dkb%3BEN-US%3B245115&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALate+binding" class="Z3988"></span></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/specs/jvms/se7/html/jvms-2.html#jvms-2.6.3">"The Structure of the Java Virtual Machine: Dynamic Linking"</a>. <a href="/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a>. 1999. sec. 3.6.3<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-09-21</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Structure+of+the+Java+Virtual+Machine%3A+Dynamic+Linking&amp;rft.pages=sec.+3.6.3&amp;rft.pub=Sun+Microsystems&amp;rft.date=1999&amp;rft_id=http%3A%2F%2Fdocs.oracle.com%2Fjavase%2Fspecs%2Fjvms%2Fse7%2Fhtml%2Fjvms-2.html%23jvms-2.6.3&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALate+binding" class="Z3988"></span></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text">Software engineering techniques, J. N. Buxton, <a href="/wiki/Brian_Randell" title="Brian Randell">Brian Randell</a>, NATO Science Committee, NATO Science Committee, 1970</span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.purl.org/stefan_ram/pub/doc_kay_oop_en">"Dr. Alan Kay on the Meaning of "Object-Oriented Programming"<span class="cs1-kern-right"></span>"</a>. Purl.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-08-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Dr.+Alan+Kay+on+the+Meaning+of+%22Object-Oriented+Programming%22&amp;rft.pub=Purl.org&amp;rft_id=http%3A%2F%2Fwww.purl.org%2Fstefan_ram%2Fpub%2Fdoc_kay_oop_en&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALate+binding" class="Z3988"></span></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.learncpp.com/cpp-tutorial/125-the-virtual-table/">"12.5 — The virtual table «&#160;Learn C"</a>. Learncpp.com. 2008-02-08<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-08-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=12.5+%E2%80%94+The+virtual+table+%C2%AB+Learn+C&amp;rft.pub=Learncpp.com&amp;rft.date=2008-02-08&amp;rft_id=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F125-the-virtual-table%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALate+binding" class="Z3988"></span></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://support.microsoft.com/kb/245115">"Using early binding and late binding in Automation"</a>. Support.microsoft.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-01-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Using+early+binding+and+late+binding+in+Automation&amp;rft.pub=Support.microsoft.com&amp;rft_id=http%3A%2F%2Fsupport.microsoft.com%2Fkb%2F245115&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALate+binding" class="Z3988"></span></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://download.oracle.com/docs/cd/E12840_01/wls/docs103/jcom/comtowls.html">"Calling into WebLogic Server from a COM Client Application"</a>. Download.oracle.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-08-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Calling+into+WebLogic+Server+from+a+COM+Client+Application&amp;rft.pub=Download.oracle.com&amp;rft_id=http%3A%2F%2Fdownload.oracle.com%2Fdocs%2Fcd%2FE12840_01%2Fwls%2Fdocs103%2Fjcom%2Fcomtowls.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALate+binding" class="Z3988"></span></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://download.oracle.com/docs/cd/B19306_01/appdev.102/a58231/ch3.htm#i1007434">"Early and Late Binding, Oracle SQL *Module for Ada Programmer's Guide"</a>. Download.oracle.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-01-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Early+and+Late+Binding%2C+Oracle+SQL+%2AModule+for+Ada+Programmer%27s+Guide&amp;rft.pub=Download.oracle.com&amp;rft_id=http%3A%2F%2Fdownload.oracle.com%2Fdocs%2Fcd%2FB19306_01%2Fappdev.102%2Fa58231%2Fch3.htm%23i1007434&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALate+binding" class="Z3988"></span></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFKathleenDollard" class="citation web cs1">KathleenDollard. <a rel="nofollow" class="external text" href="https://learn.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/early-late-binding/">"Early and Late Binding - Visual Basic"</a>. <i>learn.microsoft.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2023-04-12</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=learn.microsoft.com&amp;rft.atitle=Early+and+Late+Binding+-+Visual+Basic&amp;rft.au=KathleenDollard&amp;rft_id=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fvisual-basic%2Fprogramming-guide%2Flanguage-features%2Fearly-late-binding%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALate+binding" class="Z3988"></span></span>
+</li>
+</ol></div>
+<!-- 
+NewPP limit report
+Parsed by mw‐web.codfw.main‐665847f9f9‐rclpw
+Cached time: 20240208200828
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, show‐toc]
+CPU time usage: 0.215 seconds
+Real time usage: 0.319 seconds
+Preprocessor visited node count: 826/1000000
+Post‐expand include size: 29703/2097152 bytes
+Template argument size: 796/2097152 bytes
+Highest expansion depth: 9/100
+Expensive parser function count: 5/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 33272/5000000 bytes
+Lua time usage: 0.135/10.000 seconds
+Lua memory usage: 5400312/52428800 bytes
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  288.296      1 -total
+ 48.32%  139.301      1 Template:Reflist
+ 33.76%   97.319      1 Template:Cite_book
+ 18.72%   53.960      1 Template:Short_description
+ 18.16%   52.341      1 Template:More_citations_needed
+ 17.50%   50.456      2 Template:Ambox
+ 11.57%   33.349      2 Template:Pagetype
+  8.66%   24.959      8 Template:Cite_web
+  6.55%   18.881      1 Template:About
+  4.81%   13.872      1 Template:Portal
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:916502-0!canonical and timestamp 20240208200828 and revision id 1190566489. Rendering was triggered because: page-view
+ -->
+</div><!--esi <esi:include src="/esitest-fa8a495983347898/content" /> --><noscript><img src="https://login.wikimedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" width="1" height="1" style="border: none; position: absolute;"></noscript>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Late_binding&amp;oldid=1190566489">https://en.wikipedia.org/w/index.php?title=Late_binding&amp;oldid=1190566489</a>"</div></div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Method_(computer_programming)" title="Category:Method (computer programming)">Method (computer programming)</a></li><li><a href="/wiki/Category:Programming_language_concepts" title="Category:Programming language concepts">Programming language concepts</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_is_different_from_Wikidata" title="Category:Short description is different from Wikidata">Short description is different from Wikidata</a></li><li><a href="/wiki/Category:Articles_needing_additional_references_from_January_2011" title="Category:Articles needing additional references from January 2011">Articles needing additional references from January 2011</a></li><li><a href="/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="/wiki/Category:Articles_that_may_contain_original_research_from_July_2019" title="Category:Articles that may contain original research from July 2019">Articles that may contain original research from July 2019</a></li><li><a href="/wiki/Category:All_articles_that_may_contain_original_research" title="Category:All articles that may contain original research">All articles that may contain original research</a></li></ul></div></div>
+				</div>
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 18 December 2023, at 16:39<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License">Creative Commons Attribution-ShareAlike License 4.0</a><a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/Wikipedia:General_disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-wm-codeofconduct"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct">Code of Conduct</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement">Cookie statement</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Late_binding&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"></a></li>
+</ul>
+
+</footer>
+
+		</div>
+	</div> 
+</div> 
+<div class="vector-settings" id="p-dock-bottom">
+	<ul>
+		<li>
+		<button class="cdx-button cdx-button--icon-only vector-limited-width-toggle" id=""><span class="vector-icon mw-ui-icon-fullScreen mw-ui-icon-wikimedia-fullScreen"></span>
+
+<span>Toggle limited content width</span>
+</button>
+</li>
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw-web.codfw.main-894d4d6c9-nnvv5","wgBackendResponseTime":152,"wgPageParseReport":{"limitreport":{"cputime":"0.215","walltime":"0.319","ppvisitednodes":{"value":826,"limit":1000000},"postexpandincludesize":{"value":29703,"limit":2097152},"templateargumentsize":{"value":796,"limit":2097152},"expansiondepth":{"value":9,"limit":100},"expensivefunctioncount":{"value":5,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":33272,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  288.296      1 -total"," 48.32%  139.301      1 Template:Reflist"," 33.76%   97.319      1 Template:Cite_book"," 18.72%   53.960      1 Template:Short_description"," 18.16%   52.341      1 Template:More_citations_needed"," 17.50%   50.456      2 Template:Ambox"," 11.57%   33.349      2 Template:Pagetype","  8.66%   24.959      8 Template:Cite_web","  6.55%   18.881      1 Template:About","  4.81%   13.872      1 Template:Portal"]},"scribunto":{"limitreport-timeusage":{"value":"0.135","limit":"10.000"},"limitreport-memusage":{"value":5400312,"limit":52428800}},"cachereport":{"origin":"mw-web.codfw.main-665847f9f9-rclpw","timestamp":"20240208200828","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Late binding","url":"https:\/\/en.wikipedia.org\/wiki\/Late_binding","sameAs":"http:\/\/www.wikidata.org\/entity\/Q6495369","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q6495369","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-08-21T02:59:02Z","dateModified":"2023-12-18T16:39:13Z","headline":"name binding which is resolved at run-time rather than in pre-execution time"}</script>
+</body>
+</html>

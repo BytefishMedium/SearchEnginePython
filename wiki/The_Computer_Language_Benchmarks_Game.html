@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-0 vector-feature-client-preferences-disabled vector-feature-client-prefs-pinned-disabled vector-feature-night-mode-disabled skin-night-mode-clientpref-0 vector-toc-available" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>The Computer Language Benchmarks Game - Wikipedia</title>
+<script>(function(){var className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-0 vector-feature-client-preferences-disabled vector-feature-client-prefs-pinned-disabled vector-feature-night-mode-disabled skin-night-mode-clientpref-0 vector-toc-available";var cookie=document.cookie.match(/(?:^|; )enwikimwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],
+"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"ee5df836-4b61-4997-8922-cfe14d4e0f79","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"The_Computer_Language_Benchmarks_Game","wgTitle":"The Computer Language Benchmarks Game","wgCurRevisionId":1149399570,"wgRevisionId":1149399570,"wgArticleId":53596516,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 errors: missing periodical","CS1: long volume value","Articles with short description","Short description matches Wikidata","Citation overkill","Articles tagged with the inline citation overkill template from April 2023","Programming language comparisons","Benchmarks (computing)"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext",
+"wgRelevantPageName":"The_Computer_Language_Benchmarks_Game","wgRelevantArticleId":53596516,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgNoticeProject":"wikipedia","wgFlaggedRevsParams":{"tags":{"status":{"levels":1}}},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsFlags":6,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":false,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":10000,"wgULSCurrentAutonym":"English","wgCentralAuthMobileDomain":false,"wgEditSubmitButtonLabelPublish":true,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":false,"wgVector2022LanguageInHeader":true,"wgULSisLanguageSelectorEmpty":false,"wgWikibaseItemId":"Q30596044","wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList",
+"mobile","model","platform","platformVersion"],"GEHomepageSuggestedEditsEnableTopics":true,"wgGETopicsMatchModeEnabled":false,"wgGEStructuredTaskRejectionReasonTextInputEnabled":false,"wgGELevelingUpEnabledForUser":false};RLSTATE={"skins.vector.user.styles":"ready","ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","skins.vector.user":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","codex-search-styles":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","jquery.makeCollapsible.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","mediawiki.toggleAllCollapsibles","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.js","ext.centralNotice.geoIP","ext.centralNotice.startUp",
+"ext.gadget.ReferenceTooltips","ext.gadget.switcher","ext.urlShortener.toolbar","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.echo.centralauth","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.cx.uls.quick.actions","wikibase.client.vector-2022","ext.checkUser.clientHints","ext.growthExperiments.SuggestedEditSession"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=codex-search-styles%7Cext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cskins.vector.icons%2Cstyles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector-2022">
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022">
+<meta name="generator" content="MediaWiki 1.42.0-wmf.17">
+<meta name="referrer" content="origin">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1000">
+<meta property="og:title" content="The Computer Language Benchmarks Game - Wikipedia">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="//upload.wikimedia.org">
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/The_Computer_Language_Benchmarks_Game">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;action=edit">
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png">
+<link rel="icon" href="/static/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd">
+<link rel="canonical" href="https://en.wikipedia.org/wiki/The_Computer_Language_Benchmarks_Game">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="//login.wikimedia.org">
+</head>
+<body class="skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-The_Computer_Language_Benchmarks_Game rootpage-The_Computer_Language_Benchmarks_Game skin-vector-2022 action-view"><a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+<div class="vector-header-container">
+	<header class="vector-header mw-header">
+		<div class="vector-header-start">
+			<nav class="vector-main-menu-landmark" aria-label="Site" role="navigation">
+				
+<div id="vector-main-menu-dropdown" class="vector-dropdown vector-main-menu-dropdown vector-button-flush-left vector-button-flush-right"  >
+	<input type="checkbox" id="vector-main-menu-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-main-menu-dropdown" class="vector-dropdown-checkbox "  aria-label="Main menu"  >
+	<label id="vector-main-menu-dropdown-label" for="vector-main-menu-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu"></span>
+
+<span class="vector-dropdown-label-text">Main menu</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+				<div id="vector-main-menu-unpinned-container" class="vector-unpinned-container">
+		
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-main-menu-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="main-menu-pinned"
+	data-pinnable-element-id="vector-main-menu"
+	data-pinned-container-id="vector-main-menu-pinned-container"
+	data-unpinned-container-id="vector-main-menu-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Main menu</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-main-menu.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-main-menu.unpin">hide</button>
+</div>
+
+	
+<div id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation"  >
+	<div class="vector-menu-heading">
+		Navigation
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-contents" class="mw-list-item"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia"><span>Contents</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="/wiki/Portal:Current_events" title="Articles related to current events"><span>Current events</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x"><span>Random article</span></a></li><li id="n-aboutsite" class="mw-list-item"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works"><span>About Wikipedia</span></a></li><li id="n-contactpage" class="mw-list-item"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia"><span>Contact us</span></a></li><li id="n-sitesupport" class="mw-list-item"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation"><span>Donate</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	
+<div id="p-interaction" class="vector-menu mw-portlet mw-portlet-interaction"  >
+	<div class="vector-menu-heading">
+		Contribute
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-help" class="mw-list-item"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia"><span>Help</span></a></li><li id="n-introduction" class="mw-list-item"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia"><span>Learn to edit</span></a></li><li id="n-portal" class="mw-list-item"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors"><span>Community portal</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_upload_wizard" title="Add images or other media for use on Wikipedia"><span>Upload file</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div class="vector-main-menu-action vector-main-menu-action-lang-alert vector-main-menu-action-lang-alert-empty">
+	<div class="vector-main-menu-action-item">
+		<div class="vector-main-menu-action-heading vector-menu-heading">Languages</div>
+		<div class="vector-main-menu-action-content vector-menu-content">
+			<div class="mw-message-box cdx-message cdx-message--block mw-message-box-notice cdx-message--notice vector-language-sidebar-alert"><span class="cdx-message__icon"></span><div class="cdx-message__content">Language links are at the top of the page.</div></div>
+		</div>
+	</div>
+</div>
+
+</div>
+
+				</div>
+
+	</div>
+</div>
+
+		</nav>
+			
+<a href="/wiki/Main_Page" class="mw-logo">
+	<img class="mw-logo-icon" src="/static/images/icons/wikipedia.png" alt="" aria-hidden="true" height="50" width="50">
+	<span class="mw-logo-container">
+		<img class="mw-logo-wordmark" alt="Wikipedia" src="/static/images/mobile/copyright/wikipedia-wordmark-en.svg" style="width: 7.5em; height: 1.125em;">
+		<img class="mw-logo-tagline" alt="The Free Encyclopedia" src="/static/images/mobile/copyright/wikipedia-tagline-en.svg" width="117" height="13" style="width: 7.3125em; height: 0.8125em;">
+	</span>
+</a>
+
+		</div>
+		<div class="vector-header-end">
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<a href="/wiki/Special:Search" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only search-toggle" id="" title="Search Wikipedia [f]" accesskey="f"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search"></span>
+
+<span>Search</span>
+	</a>
+	<div class="vector-typeahead-search-container">
+		<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail cdx-typeahead-search--auto-expand-width">
+			<form action="/w/index.php" id="searchform" class="cdx-search-input cdx-search-input--has-end-button">
+				<div id="simpleSearch" class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+					<div class="cdx-text-input cdx-text-input--has-start-icon">
+						<input
+							class="cdx-text-input__input"
+							 type="search" name="search" placeholder="Search Wikipedia" aria-label="Search Wikipedia" autocapitalize="sentences" title="Search Wikipedia [f]" accesskey="f" id="searchInput"
+							>
+						<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+					</div>
+					<input type="hidden" name="title" value="Special:Search">
+				</div>
+				<button class="cdx-button cdx-search-input__end-button">Search</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+			<nav class="vector-user-links vector-user-links-wide" aria-label="Personal tools" role="navigation" >
+	<div class="vector-user-links-main">
+	
+<div id="p-vector-user-menu-preferences" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-userpage" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	<nav class="vector-client-prefs-landmark" aria-label="Appearance">
+		
+		
+	</nav>
+	
+<div id="p-vector-user-menu-notifications" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-createaccount-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="/w/index.php?title=Special:CreateAccount&amp;returnto=The+Computer+Language+Benchmarks+Game" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span>Create account</span></a>
+</li>
+<li id="pt-login-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="/w/index.php?title=Special:UserLogin&amp;returnto=The+Computer+Language+Benchmarks+Game" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o" class=""><span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	</div>
+	
+<div id="vector-user-links-dropdown" class="vector-dropdown vector-user-menu vector-button-flush-right vector-user-menu-logged-out"  title="Log in and more options" >
+	<input type="checkbox" id="vector-user-links-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-user-links-dropdown" class="vector-dropdown-checkbox "  aria-label="Personal tools"  >
+	<label id="vector-user-links-dropdown-label" for="vector-user-links-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-ellipsis mw-ui-icon-wikimedia-ellipsis"></span>
+
+<span class="vector-dropdown-label-text">Personal tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal user-links-collapsible-item"  title="User menu" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="user-links-collapsible-item mw-list-item"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=The+Computer+Language+Benchmarks+Game" title="You are encouraged to create an account and log in; however, it is not mandatory"><span class="vector-icon mw-ui-icon-userAdd mw-ui-icon-wikimedia-userAdd"></span> <span>Create account</span></a></li><li id="pt-login" class="user-links-collapsible-item mw-list-item"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=The+Computer+Language+Benchmarks+Game" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o"><span class="vector-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn"></span> <span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-user-menu-anon-editor" class="vector-menu mw-portlet mw-portlet-user-menu-anon-editor"  >
+	<div class="vector-menu-heading">
+		Pages for logged out editors <a href="/wiki/Help:Introduction" aria-label="Learn more about editing"><span>learn more</span></a>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-anoncontribs" class="mw-list-item"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y"><span>Contributions</span></a></li><li id="pt-anontalk" class="mw-list-item"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n"><span>Talk</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+
+</nav>
+
+		</div>
+	</header>
+</div>
+<div class="mw-page-container">
+	<div class="mw-page-container-inner">
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><!-- CentralNotice --></div>
+		</div>
+		<div class="vector-column-start">
+			<div class="vector-main-menu-container">
+		<div id="mw-navigation">
+			<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site" role="navigation">
+				<div id="vector-main-menu-pinned-container" class="vector-pinned-container">
+				
+				</div>
+		</nav>
+		</div>
+	</div>
+	<div class="vector-sticky-pinned-container">
+				<nav id="mw-panel-toc" role="navigation" aria-label="Contents" data-event-name="ui.sidebar-toc" class="mw-table-of-contents-container vector-toc-landmark">
+					<div id="vector-toc-pinned-container" class="vector-pinned-container">
+					<div id="vector-toc" class="vector-toc vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="toc-pinned"
+	data-pinnable-element-id="vector-toc"
+	
+	
+>
+	<h2 class="vector-pinnable-header-label">Contents</h2>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-toc.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-toc.unpin">hide</button>
+</div>
+
+
+	<ul class="vector-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="vector-toc-list-item vector-toc-level-1">
+			<a href="#" class="vector-toc-link">
+				<div class="vector-toc-text">(Top)</div>
+			</a>
+		</li>
+		<li id="toc-Supported_languages"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Supported_languages">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">1</span>Supported languages</div>
+		</a>
+		
+		<ul id="toc-Supported_languages-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Metrics"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Metrics">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">2</span>Metrics</div>
+		</a>
+		
+		<ul id="toc-Metrics-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Benchmark_programs"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Benchmark_programs">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">3</span>Benchmark programs</div>
+		</a>
+		
+		<ul id="toc-Benchmark_programs-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-History"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#History">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">4</span>History</div>
+		</a>
+		
+		<ul id="toc-History-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Caveats"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Caveats">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">5</span>Caveats</div>
+		</a>
+		
+		<ul id="toc-Caveats-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Impact"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Impact">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">6</span>Impact</div>
+		</a>
+		
+		<ul id="toc-Impact-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-See_also"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#See_also">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">7</span>See also</div>
+		</a>
+		
+		<ul id="toc-See_also-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-References"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#References">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">8</span>References</div>
+		</a>
+		
+		<ul id="toc-References-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-External_links"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#External_links">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">9</span>External links</div>
+		</a>
+		
+		<ul id="toc-External_links-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+</ul>
+</div>
+
+					</div>
+		</nav>
+			</div>
+		</div>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body" role="main">
+				<header class="mw-body-header vector-page-titlebar">
+					<nav role="navigation" aria-label="Contents" class="vector-toc-landmark">
+						
+<div id="vector-page-titlebar-toc" class="vector-dropdown vector-page-titlebar-toc vector-button-flush-left"  >
+	<input type="checkbox" id="vector-page-titlebar-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-titlebar-toc" class="vector-dropdown-checkbox "  aria-label="Toggle the table of contents"  >
+	<label id="vector-page-titlebar-toc-label" for="vector-page-titlebar-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet"></span>
+
+<span class="vector-dropdown-label-text">Toggle the table of contents</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+							<div id="vector-page-titlebar-toc-unpinned-container" class="vector-unpinned-container">
+			</div>
+		
+	</div>
+</div>
+
+					</nav>
+					<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">The Computer Language Benchmarks Game</span></h1>
+							
+<div id="p-lang-btn" class="vector-dropdown mw-portlet mw-portlet-lang"  >
+	<input type="checkbox" id="p-lang-btn-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-lang-btn" class="vector-dropdown-checkbox mw-interlanguage-selector" aria-label="This article exist only in this language. Add the article for other languages"   >
+	<label id="p-lang-btn-label" for="p-lang-btn-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive mw-portlet-lang-heading-0" aria-hidden="true"  ><span class="vector-icon mw-ui-icon-language-progressive mw-ui-icon-wikimedia-language-progressive"></span>
+
+<span class="vector-dropdown-label-text">Add languages</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+		<div class="vector-menu-content">
+			
+			<ul class="vector-menu-content-list">
+				
+				
+			</ul>
+			<div class="after-portlet after-portlet-lang"><span class="uls-after-portlet-link"></span><span class="wb-langlinks-add wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q30596044#sitelinks-wikipedia" title="Add interlanguage links" class="wbc-editpage">Add links</a></span></div>
+		</div>
+
+	</div>
+</div>
+</header>
+				<div class="vector-page-toolbar">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/The_Computer_Language_Benchmarks_Game" title="View the content page [c]" accesskey="c"><span>Article</span></a></li><li id="ca-talk" class="vector-tab-noicon mw-list-item"><a href="/wiki/Talk:The_Computer_Language_Benchmarks_Game" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t"><span>Talk</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+								
+<div id="p-variants" class="vector-dropdown emptyPortlet"  >
+	<input type="checkbox" id="p-variants-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-variants" class="vector-dropdown-checkbox " aria-label="Change language variant"   >
+	<label id="p-variants-label" for="p-variants-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">English</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+					
+<div id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+								
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/The_Computer_Language_Benchmarks_Game"><span>Read</span></a></li><li id="ca-edit" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-history" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+							</nav>
+				
+							<nav class="vector-page-tools-landmark" aria-label="Page tools">
+								
+<div id="vector-page-tools-dropdown" class="vector-dropdown vector-page-tools-dropdown"  >
+	<input type="checkbox" id="vector-page-tools-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-tools-dropdown" class="vector-dropdown-checkbox "  aria-label="Tools"  >
+	<label id="vector-page-tools-dropdown-label" for="vector-page-tools-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">Tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+									<div id="vector-page-tools-unpinned-container" class="vector-unpinned-container">
+						
+<div id="vector-page-tools" class="vector-page-tools vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-page-tools-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="page-tools-pinned"
+	data-pinnable-element-id="vector-page-tools"
+	data-pinned-container-id="vector-page-tools-pinned-container"
+	data-unpinned-container-id="vector-page-tools-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Tools</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-page-tools.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-page-tools.unpin">hide</button>
+</div>
+
+	
+<div id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-has-collapsible-items"  title="More options" >
+	<div class="vector-menu-heading">
+		Actions
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-more-view" class="selected vector-more-collapsible-item mw-list-item"><a href="/wiki/The_Computer_Language_Benchmarks_Game"><span>Read</span></a></li><li id="ca-more-edit" class="vector-more-collapsible-item mw-list-item"><a href="/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-more-history" class="vector-more-collapsible-item mw-list-item"><a href="/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;action=history"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-tb" class="vector-menu mw-portlet mw-portlet-tb"  >
+	<div class="vector-menu-heading">
+		General
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/The_Computer_Language_Benchmarks_Game" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/The_Computer_Language_Benchmarks_Game" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u"><span>Upload file</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;oldid=1149399570" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=The_Computer_Language_Benchmarks_Game&amp;id=1149399570&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=Special:UrlShortener&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FThe_Computer_Language_Benchmarks_Game"><span>Get shortened URL</span></a></li><li id="t-urlshortener-qrcode" class="mw-list-item"><a href="/w/index.php?title=Special:QrCode&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FThe_Computer_Language_Benchmarks_Game"><span>Download QR code</span></a></li><li id="t-wikibase" class="mw-list-item"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q30596044" title="Structured data on this page hosted by Wikidata [g]" accesskey="g"><span>Wikidata item</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-coll-print_export" class="vector-menu mw-portlet mw-portlet-coll-print_export"  >
+	<div class="vector-menu-heading">
+		Print/export
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="coll-download-as-rl" class="mw-list-item"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=The_Computer_Language_Benchmarks_Game&amp;action=show-download-screen" title="Download this page as a PDF file"><span>Download as PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;printable=yes" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+									</div>
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="vector-column-end">
+					<div class="vector-sticky-pinned-container">
+						<nav class="vector-page-tools-landmark" aria-label="Page tools">
+							<div id="vector-page-tools-pinned-container" class="vector-pinned-container">
+				
+							</div>
+		</nav>
+						<nav class="vector-client-prefs-landmark" aria-label="Appearance">
+						</nav>
+					</div>
+				</div>
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		</div>
+
+						<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+					</div>
+					<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+					
+					
+					<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Free software project</div>
+<p><b>The Computer Language Benchmarks Game</b> (formerly called <b>The Great Computer Language Shootout</b>) is a <a href="/wiki/Free_software" title="Free software">free software</a> project for comparing how a given subset of simple <a href="/wiki/Algorithms" class="mw-redirect" title="Algorithms">algorithms</a> can be implemented in various popular <a href="/wiki/Programming_languages" class="mw-redirect" title="Programming languages">programming languages</a>.
+</p><p>The project consists of:
+</p>
+<ul><li>A set of very simple algorithmic problems</li>
+<li>Various implementations to the above problems in various programming languages</li>
+<li>A set of unit tests to verify that the submitted implementations solve the problem statement</li>
+<li>A framework for running and timing the implementations</li>
+<li>A website to facilitate the interactive comparison of the results</li></ul>
+<meta property="mw:PageProp/toc" />
+<h2><span class="mw-headline" id="Supported_languages">Supported languages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;action=edit&amp;section=1" title="Edit section: Supported languages"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Due to resource constraints, only a small subset of common programming languages are supported, up to the discretion of the game's operator.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup>
+</p>
+<div class="collapsible-list mw-collapsible mw-collapsed" style="text-align: left;">
+<div style="line-height: 1.6em; font-weight: bold;"><div>List of supported languages</div></div>
+<ul class="mw-collapsible-content" style="margin-top: 0; margin-bottom: 0; line-height: inherit; list-style: none; margin-left: 0;"><li style="line-height: inherit; margin: 0">Ada</li><li style="line-height: inherit; margin: 0">C</li><li style="line-height: inherit; margin: 0">Chapel
+</li><li style="line-height: inherit; margin: 0">C#</li><li style="line-height: inherit; margin: 0">C++</li><li style="line-height: inherit; margin: 0">Dart</li><li style="line-height: inherit; margin: 0">Erlang</li><li style="line-height: inherit; margin: 0">F#</li><li style="line-height: inherit; margin: 0">Fortran</li><li style="line-height: inherit; margin: 0">Go</li><li style="line-height: inherit; margin: 0">Haskell</li><li style="line-height: inherit; margin: 0">Java</li><li style="line-height: inherit; margin: 0">JavaScript</li><li style="line-height: inherit; margin: 0">Julia</li><li style="line-height: inherit; margin: 0">Lisp</li><li style="line-height: inherit; margin: 0">Lua</li><li style="line-height: inherit; margin: 0">OCaml</li><li style="line-height: inherit; margin: 0">Pascal</li><li style="line-height: inherit; margin: 0">Perl</li><li style="line-height: inherit; margin: 0">PHP</li><li style="line-height: inherit; margin: 0">Python</li><li style="line-height: inherit; margin: 0">Racket</li><li style="line-height: inherit; margin: 0">Ruby</li><li style="line-height: inherit; margin: 0">Rust</li><li style="line-height: inherit; margin: 0">Smalltalk</li><li style="line-height: inherit; margin: 0">Swift</li></ul>
+</div>
+<h2><span class="mw-headline" id="Metrics">Metrics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;action=edit&amp;section=2" title="Edit section: Metrics"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following aspects of each given implementation are measured:<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>
+</p>
+<ul><li>overall user <a href="/wiki/Run_time_(program_lifecycle_phase)" class="mw-redirect" title="Run time (program lifecycle phase)">runtime</a></li>
+<li>peak <a href="/wiki/Memory_allocation" class="mw-redirect" title="Memory allocation">memory allocation</a></li>
+<li><a href="/wiki/Gzip" title="Gzip">gzip</a>'ped size of the solution's source code</li>
+<li>sum of total CPU time over all <a href="/wiki/Thread_(computing)" title="Thread (computing)">threads</a></li>
+<li>individual CPU <a href="/wiki/Load_(computing)" title="Load (computing)">utilization</a></li></ul>
+<p>It is common to see multiple solutions in the same programming language for the same problem. This highlights that within the constraints of a given language, a solution can be given which is either of high abstraction, is memory efficient, is fast, or can be parallelized better.
+</p>
+<h2><span class="mw-headline" id="Benchmark_programs">Benchmark programs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;action=edit&amp;section=3" title="Edit section: Benchmark programs"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>It was a design choice from the start to only include very simple toy problems, each providing a different kind of programming challenge.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+This provides users of the Benchmark Game the opportunity to scrutinize the various implementations.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>
+</p>
+<ul><li><a href="/wiki/Memory_management#Manual_memory_management" title="Memory management">binary-trees</a></li>
+<li><a href="/wiki/Synchronization_(computer_science)#Thread_or_process_synchronization" title="Synchronization (computer science)">chameneos-redux</a></li>
+<li><a href="/wiki/Permutation" title="Permutation">fannkuch-redux</a></li>
+<li><a href="/wiki/FASTA#Search_method" title="FASTA">fasta</a></li>
+<li><a href="/wiki/Sequence_analysis" title="Sequence analysis">k-nucleotide</a></li>
+<li><a href="/wiki/Mandelbrot_set" title="Mandelbrot set">mandelbrot</a></li>
+<li><a href="/wiki/Packing_problems" title="Packing problems">meteor-contest</a></li>
+<li><a href="/wiki/N-body_simulation" title="N-body simulation">n-body</a></li>
+<li><a href="/wiki/Arbitrary-precision_arithmetic" title="Arbitrary-precision arithmetic">pidigits</a></li>
+<li><a href="/wiki/Regular_expression" title="Regular expression">regex-redux</a></li>
+<li><a href="/wiki/Complementarity_(molecular_biology)#DNA_and_RNA_base_pair_complementarity" title="Complementarity (molecular biology)">reverse-complement</a></li>
+<li><a href="/wiki/Power_iteration" title="Power iteration">spectral-norm</a></li>
+<li><a href="/wiki/Context_switch#Multitasking" title="Context switch">thread-ring</a></li></ul>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;action=edit&amp;section=4" title="Edit section: History"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The project was known as <i>The Great Computer Language Shootout</i> until 2007.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p><p>A port for Windows was maintained separately between 2002 and 2003.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>
+</p><p>The sources have been archived on GitLab.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup>
+</p><p>There are also older forks on GitHub.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup>
+</p><p>The project is continuously evolving. The list of supported programming languages is updated approximately once per year, following market trends. Users can also submit improved solutions to any of the problems or suggest testing methodology refinement.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Caveats">Caveats</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;action=edit&amp;section=5" title="Edit section: Caveats"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The developers themselves highlight the fact that those doing research should exercise caution when using such microbenchmarks:
+</p>
+<style data-mw-deduplicate="TemplateStyles:r996844942">.mw-parser-output .templatequote{overflow:hidden;margin:1em 0;padding:0 40px}.mw-parser-output .templatequote .templatequotecite{line-height:1.5em;text-align:left;padding-left:1.6em;margin-top:0}</style><blockquote class="templatequote"><p>[...] the JavaScript benchmarks are fleetingly small, and behave in ways that are significantly different than the real applications. We have documented numerous differences in behavior, and we conclude from these measured differences that results based on the benchmarks may mislead JavaScript engine implementers. Furthermore, we observe interesting behaviors in real JavaScript applications that the benchmarks fail to exhibit, suggesting that previously unexplored optimization strategies may be productive in practice.</p></blockquote>
+<h2><span class="mw-headline" id="Impact">Impact</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;action=edit&amp;section=6" title="Edit section: Impact"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The benchmark results have uncovered various compiler issues. Sometimes a given compiler failed to process unusual, but otherwise grammatically valid constructs. At other times, runtime performance was shown to be below expectations, which prompted compiler developers to revise their optimization capabilities.
+</p><p>Various research articles have been based on the benchmarks, its results and its methodology.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>
+<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup>
+<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup>
+<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup>
+<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup>
+<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup>
+<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup>
+<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup>
+<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup>
+<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;19&#93;</a></sup>
+<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;20&#93;</a></sup>
+<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;21&#93;</a></sup>
+<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">&#91;22&#93;</a></sup><sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citing_sources#Bundling_citations" title="Wikipedia:Citing sources"><span title="This claim has too many footnotes for reading to be smooth. (April 2023)">excessive citations</span></a></i>&#93;</sup>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;action=edit&amp;section=7" title="Edit section: See also"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Benchmark_(computing)" title="Benchmark (computing)">Benchmark (computing)</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages" title="Comparison of programming languages">Comparison of programming languages</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;action=edit&amp;section=8" title="Edit section: References"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1011085734">.mw-parser-output .reflist{font-size:90%;margin-bottom:0.5em;list-style-type:decimal}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}</style><div class="reflist">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><style data-mw-deduplicate="TemplateStyles:r1133582631">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:#d33}.mw-parser-output .cs1-visible-error{color:#d33}.mw-parser-output .cs1-maint{display:none;color:#3a3;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/">"The Computer Language Benchmarks Game"</a>. <i>benchmarksgame-team.pages.debian.net/benchmarksgame</i><span class="reference-accessdate">. Retrieved <span class="nowrap">29 May</span> 2018</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=benchmarksgame-team.pages.debian.net%2Fbenchmarksgame&amp;rft.atitle=The+Computer+Language+Benchmarks+Game&amp;rft_id=https%3A%2F%2Fbenchmarksgame-team.pages.debian.net%2Fbenchmarksgame%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/how-programs-are-measured.html">"How programs are measured – The Computer Language Benchmarks Game"</a>. <i>benchmarksgame-team.pages.debian.net/benchmarksgame/</i><span class="reference-accessdate">. Retrieved <span class="nowrap">29 May</span> 2018</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=benchmarksgame-team.pages.debian.net%2Fbenchmarksgame%2F&amp;rft.atitle=How+programs+are+measured+%E2%80%93+The+Computer+Language+Benchmarks+Game&amp;rft_id=https%3A%2F%2Fbenchmarksgame-team.pages.debian.net%2Fbenchmarksgame%2Fhow-programs-are-measured.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/why-measure-toy-benchmark-programs.html">"Why toy programs? – The Computer Language Benchmarks Game"</a>. <i>benchmarksgame-team.pages.debian.net/benchmarksgame</i><span class="reference-accessdate">. Retrieved <span class="nowrap">29 May</span> 2018</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=benchmarksgame-team.pages.debian.net%2Fbenchmarksgame&amp;rft.atitle=Why+toy+programs%3F+%E2%80%93+The+Computer+Language+Benchmarks+Game&amp;rft_id=https%3A%2F%2Fbenchmarksgame-team.pages.debian.net%2Fbenchmarksgame%2Fwhy-measure-toy-benchmark-programs.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/description/nbody.html#nbody">"n-body description (64-bit Ubuntu quad core) – Computer Language Benchmarks Game"</a>. <i>benchmarksgame-team.pages.debian.net/benchmarksgame</i><span class="reference-accessdate">. Retrieved <span class="nowrap">29 May</span> 2018</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=benchmarksgame-team.pages.debian.net%2Fbenchmarksgame&amp;rft.atitle=n-body+description+%2864-bit+Ubuntu+quad+core%29+%E2%80%93+Computer+Language+Benchmarks+Game&amp;rft_id=https%3A%2F%2Fbenchmarksgame-team.pages.debian.net%2Fbenchmarksgame%2Fdescription%2Fnbody.html%23nbody&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/sometimes-people-just-make-up-stuff.html#history">"Trust, and verify – Computer Language Benchmarks Game"</a>. <i>benchmarksgame-team.pages.debian.net/benchmarksgame</i><span class="reference-accessdate">. Retrieved <span class="nowrap">29 May</span> 2018</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=benchmarksgame-team.pages.debian.net%2Fbenchmarksgame&amp;rft.atitle=Trust%2C+and+verify+%E2%80%93+Computer+Language+Benchmarks+Game&amp;rft_id=https%3A%2F%2Fbenchmarksgame-team.pages.debian.net%2Fbenchmarksgame%2Fsometimes-people-just-make-up-stuff.html%23history&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://dada.perl.it/shootout/">"The Great Win32 Computer Language Shootout"</a>. <i>Dada.perl.it</i><span class="reference-accessdate">. Retrieved <span class="nowrap">13 December</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Dada.perl.it&amp;rft.atitle=The+Great+Win32+Computer+Language+Shootout&amp;rft_id=http%3A%2F%2Fdada.perl.it%2Fshootout%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://salsa.debian.org/benchmarksgame-team/archive-alioth-benchmarksgame">"archive-alioth-benchmarksgame"</a>. <i>salsa.debian.org/benchmarksgame-team</i><span class="reference-accessdate">. Retrieved <span class="nowrap">29 May</span> 2018</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=salsa.debian.org%2Fbenchmarksgame-team&amp;rft.atitle=archive-alioth-benchmarksgame&amp;rft_id=https%3A%2F%2Fsalsa.debian.org%2Fbenchmarksgame-team%2Farchive-alioth-benchmarksgame&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFThiel2017" class="citation web cs1">Thiel, Sebastian (24 October 2017). <a rel="nofollow" class="external text" href="https://github.com/Byron/benchmarksgame-cvs-mirror">"benchmarksgame-cvs-mirror: A git mirror of the benchmarksgame cvs repository"</a>. <a href="/wiki/GitHub" title="GitHub">GitHub</a><span class="reference-accessdate">. Retrieved <span class="nowrap">13 December</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=benchmarksgame-cvs-mirror%3A+A+git+mirror+of+the+benchmarksgame+cvs+repository&amp;rft.pub=GitHub&amp;rft.date=2017-10-24&amp;rft.aulast=Thiel&amp;rft.aufirst=Sebastian&amp;rft_id=https%3A%2F%2Fgithub.com%2FByron%2Fbenchmarksgame-cvs-mirror&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/play.html">"Contribute your own program – Computer Language Benchmarks Game"</a>. <i>benchmarksgame-team.pages.debian.net/benchmarksgame</i><span class="reference-accessdate">. Retrieved <span class="nowrap">29 May</span> 2018</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=benchmarksgame-team.pages.debian.net%2Fbenchmarksgame&amp;rft.atitle=Contribute+your+own+program+%E2%80%93+Computer+Language+Benchmarks+Game&amp;rft_id=https%3A%2F%2Fbenchmarksgame-team.pages.debian.net%2Fbenchmarksgame%2Fplay.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text">
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFKevin_WilliamsJason_McCandlessDavid_Gregg2009" class="citation journal cs1">Kevin Williams; Jason McCandless; David Gregg (2009). <a rel="nofollow" class="external text" href="https://www.scss.tcd.ie/publications/tech-reports/reports.09/TCD-CS-2009-37.pdf">"Dynamic Interpretation for Dynamic Scripting Languages"</a> <span class="cs1-format">(PDF)</span><span class="reference-accessdate">. Retrieved <span class="nowrap">25 March</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Dynamic+Interpretation+for+Dynamic+Scripting+Languages&amp;rft.date=2009&amp;rft.au=Kevin+Williams&amp;rft.au=Jason+McCandless&amp;rft.au=David+Gregg&amp;rft_id=https%3A%2F%2Fwww.scss.tcd.ie%2Fpublications%2Ftech-reports%2Freports.09%2FTCD-CS-2009-37.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span> <span class="cs1-visible-error citation-comment"><code class="cs1-code">{{<a href="/wiki/Template:Cite_journal" title="Template:Cite journal">cite journal</a>}}</code>: </span><span class="cs1-visible-error citation-comment">Cite journal requires <code class="cs1-code">&#124;journal=</code> (<a href="/wiki/Help:CS1_errors#missing_periodical" title="Help:CS1 errors">help</a>)</span></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFTobias_WrigstadFrancesco_Zappa_NardelliSylvain_Lebresne_JohanOstlund_Jan_Vitek2009" class="citation conference cs1">Tobias Wrigstad; Francesco Zappa Nardelli; Sylvain Lebresne Johan; Ostlund Jan Vitek (January 17–23, 2009). <a rel="nofollow" class="external text" href="https://www.di.ens.fr/~zappa/projects/liketypes/paper.pdf"><i>Integrating Typed and Untyped Code in a Scripting Language</i></a> <span class="cs1-format">(PDF)</span>. POPL’10. Madrid, Spain<span class="reference-accessdate">. Retrieved <span class="nowrap">25 March</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=Integrating+Typed+and+Untyped+Code+in+a+Scripting+Language&amp;rft.place=Madrid%2C+Spain&amp;rft.date=2009-01-17%2F2009-01-23&amp;rft.au=Tobias+Wrigstad&amp;rft.au=Francesco+Zappa+Nardelli&amp;rft.au=Sylvain+Lebresne+Johan&amp;rft.au=Ostlund+Jan+Vitek&amp;rft_id=https%3A%2F%2Fwww.di.ens.fr%2F~zappa%2Fprojects%2Fliketypes%2Fpaper.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFLerche2009" class="citation conference cs1">Lerche, Carl (April 17–18, 2009). <a rel="nofollow" class="external text" href="http://2009.gogaruco.com/downloads/Wrap2009.pdf"><i>Write Fast Ruby: It's All About the Science</i></a> <span class="cs1-format">(PDF)</span>. Golden Gate Ruby Conference. San Francisco, California<span class="reference-accessdate">. Retrieved <span class="nowrap">25 March</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=Write+Fast+Ruby%3A+It%27s+All+About+the+Science&amp;rft.place=San+Francisco%2C+California&amp;rft.date=2009-04-17%2F2009-04-18&amp;rft.aulast=Lerche&amp;rft.aufirst=Carl&amp;rft_id=http%3A%2F%2F2009.gogaruco.com%2Fdownloads%2FWrap2009.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFJ._ShirakoD._M._PeixottoV._SarkarW._N._Scherer_III2009" class="citation conference cs1">J. Shirako; D. M. Peixotto; V. Sarkar; W. N. Scherer III (2009). <a rel="nofollow" class="external text" href="http://www.cs.rice.edu/~vs3/PDF/ipdps09-accumulators-final-submission.pdf"><i>Phaser Accumulators: a New Reduction Construct for Dynamic Parallelism</i></a> <span class="cs1-format">(PDF)</span>. IEEE International Symposium on Parallel &amp; Distributed Processing<span class="reference-accessdate">. Retrieved <span class="nowrap">25 March</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=Phaser+Accumulators%3A+a+New+Reduction+Construct+for+Dynamic+Parallelism&amp;rft.date=2009&amp;rft.au=J.+Shirako&amp;rft.au=D.+M.+Peixotto&amp;rft.au=V.+Sarkar&amp;rft.au=W.+N.+Scherer+III&amp;rft_id=http%3A%2F%2Fwww.cs.rice.edu%2F~vs3%2FPDF%2Fipdps09-accumulators-final-submission.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFRajesh_Karmani_and_Amin_Shali_and_Gul_Agha2009" class="citation journal cs1">Rajesh Karmani and Amin Shali and Gul Agha (2009). <a rel="nofollow" class="external text" href="http://osl.cs.illinois.edu/docs/pppj09/paper.pdf">"Actor frameworks for the JVM platform: A Comparative Analysis"</a> <span class="cs1-format">(PDF)</span>. <i>In Proceedings of the 7th International Conference on the Principles and Practice of Programming in Java</i><span class="reference-accessdate">. Retrieved <span class="nowrap">26 March</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=In+Proceedings+of+the+7th+International+Conference+on+the+Principles+and+Practice+of+Programming+in+Java&amp;rft.atitle=Actor+frameworks+for+the+JVM+platform%3A+A+Comparative+Analysis&amp;rft.date=2009&amp;rft.au=Rajesh+Karmani+and+Amin+Shali+and+Gul+Agha&amp;rft_id=http%3A%2F%2Fosl.cs.illinois.edu%2Fdocs%2Fpppj09%2Fpaper.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFBrunthaler_Stefan2010" class="citation conference cs1 cs1-prop-long-vol">Brunthaler Stefan (2010). <i>Inline Caching Meets Quickening</i>. European Conference on Object-Oriented Programming (ECOOP). Vol.&#160;Object-Oriented Programming. pp.&#160;429–451. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2F978-3-642-14107-2_21">10.1007/978-3-642-14107-2_21</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=Inline+Caching+Meets+Quickening&amp;rft.pages=429-451&amp;rft.date=2010&amp;rft_id=info%3Adoi%2F10.1007%2F978-3-642-14107-2_21&amp;rft.au=Brunthaler+Stefan&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFProdromos_GerakiosNikolaos_PapaspyrouKonstantinos_Sagonas2010" class="citation conference cs1">Prodromos Gerakios; Nikolaos Papaspyrou; Konstantinos Sagonas (January 23, 2010). <a rel="nofollow" class="external text" href="http://www.softlab.ntua.gr/research/techrep/CSD-SW-TR-8-09.pdf"><i>Race-free and Memory-safe Multithreading: Design and Implementation in Cyclone</i></a> <span class="cs1-format">(PDF)</span>. Proceedings of the 5th ACM SIGPLAN workshop on Types in language design and implementation. Madrid, Spain. pp.&#160;15–26<span class="reference-accessdate">. Retrieved <span class="nowrap">25 March</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=Race-free+and+Memory-safe+Multithreading%3A+Design+and+Implementation+in+Cyclone&amp;rft.place=Madrid%2C+Spain&amp;rft.pages=15-26&amp;rft.date=2010-01-23&amp;rft.au=Prodromos+Gerakios&amp;rft.au=Nikolaos+Papaspyrou&amp;rft.au=Konstantinos+Sagonas&amp;rft_id=http%3A%2F%2Fwww.softlab.ntua.gr%2Fresearch%2Ftechrep%2FCSD-SW-TR-8-09.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFSlava_PestovDaniel_EhrenbergJoe_Groff2010" class="citation conference cs1">Slava Pestov; Daniel Ehrenberg; Joe Groff (October 18, 2010). <a rel="nofollow" class="external text" href="http://factorcode.org/littledan/dls.pdf"><i>Factor: A Dynamic Stack-based Programming Language</i></a> <span class="cs1-format">(PDF)</span>. DLS 2010. Reno/Tahoe, Nevada, USA<span class="reference-accessdate">. Retrieved <span class="nowrap">25 March</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=Factor%3A+A+Dynamic+Stack-based+Programming+Language&amp;rft.place=Reno%2FTahoe%2C+Nevada%2C+USA&amp;rft.date=2010-10-18&amp;rft.au=Slava+Pestov&amp;rft.au=Daniel+Ehrenberg&amp;rft.au=Joe+Groff&amp;rft_id=http%3A%2F%2Ffactorcode.org%2Flittledan%2Fdls.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFAndrei_HomescuAlex_Suhan2011" class="citation conference cs1">Andrei Homescu; Alex Suhan (October 24, 2011). <a rel="nofollow" class="external text" href="https://www.ics.uci.edu/~ahomescu/happyjit_paper.pdf"><i>HappyJIT: A Tracing JIT Compiler for PHP</i></a> <span class="cs1-format">(PDF)</span>. DLS’11. Portland, Oregon, USA<span class="reference-accessdate">. Retrieved <span class="nowrap">25 March</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=HappyJIT%3A+A+Tracing+JIT+Compiler+for+PHP&amp;rft.place=Portland%2C+Oregon%2C+USA&amp;rft.date=2011-10-24&amp;rft.au=Andrei+Homescu&amp;rft.au=Alex+Suhan&amp;rft_id=https%3A%2F%2Fwww.ics.uci.edu%2F~ahomescu%2Fhappyjit_paper.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFVincent_St-AmourSam_Tobin-HochstadtMatthias_Felleisen2012" class="citation conference cs1">Vincent St-Amour; Sam Tobin-Hochstadt; Matthias Felleisen (October 19–26, 2012). <a rel="nofollow" class="external text" href="http://www.ccs.neu.edu/racket/pubs/oopsla12-stf.pdf"><i>Optimization Coaching – Optimizers Learn to Communicate with Programmers</i></a> <span class="cs1-format">(PDF)</span>. OOPSLA’12. Tucson, Arizona, USA<span class="reference-accessdate">. Retrieved <span class="nowrap">25 March</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=Optimization+Coaching+%E2%80%93+Optimizers+Learn+to+Communicate+with+Programmers&amp;rft.place=Tucson%2C+Arizona%2C+USA&amp;rft.date=2012-10-19%2F2012-10-26&amp;rft.au=Vincent+St-Amour&amp;rft.au=Sam+Tobin-Hochstadt&amp;rft.au=Matthias+Felleisen&amp;rft_id=http%3A%2F%2Fwww.ccs.neu.edu%2Fracket%2Fpubs%2Foopsla12-stf.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFWing_Hang_LiDavid_R._WhiteJeremy_Singer2013" class="citation conference cs1">Wing Hang Li; David R. White; Jeremy Singer (September 11–13, 2013). <a rel="nofollow" class="external text" href="http://www.dcs.gla.ac.uk/~wingli/jvm_language_study/jvmlanguages.pdf"><i>JVM-Hosted Languages: They Talk the Talk, but do they Walk the Walk?</i></a> <span class="cs1-format">(PDF)</span>. Proceedings of the 2013 International Conference on Principles and Practices of Programming on the Java Platform: Virtual Machines, Languages, and Tools. Stuttgart, Germany. pp.&#160;101–112<span class="reference-accessdate">. Retrieved <span class="nowrap">25 March</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=JVM-Hosted+Languages%3A+They+Talk+the+Talk%2C+but+do+they+Walk+the+Walk%3F&amp;rft.place=Stuttgart%2C+Germany&amp;rft.pages=101-112&amp;rft.date=2013-09-11%2F2013-09-13&amp;rft.au=Wing+Hang+Li&amp;rft.au=David+R.+White&amp;rft.au=Jeremy+Singer&amp;rft_id=http%3A%2F%2Fwww.dcs.gla.ac.uk%2F~wingli%2Fjvm_language_study%2Fjvmlanguages.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFAibek_SarimbekovAndrej_PodzimekLubomir_BulejYudi_Zheng2013" class="citation conference cs1">Aibek Sarimbekov; Andrej Podzimek; Lubomir Bulej; Yudi Zheng; Nathan Ricci; Walter Binder (October 28, 2013). <a rel="nofollow" class="external text" href="http://d3s.mff.cuni.cz/publications/download/Sarimbekov-vmil13.pdf"><i>Characteristics of Dynamic JVM Languages</i></a> <span class="cs1-format">(PDF)</span>. VMIL ’13. Indianapolis, Indiana, USA<span class="reference-accessdate">. Retrieved <span class="nowrap">25 March</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=Characteristics+of+Dynamic+JVM+Languages&amp;rft.place=Indianapolis%2C+Indiana%2C+USA&amp;rft.date=2013-10-28&amp;rft.au=Aibek+Sarimbekov&amp;rft.au=Andrej+Podzimek&amp;rft.au=Lubomir+Bulej&amp;rft.au=Yudi+Zheng&amp;rft.au=Nathan+Ricci&amp;rft.au=Walter+Binder&amp;rft_id=http%3A%2F%2Fd3s.mff.cuni.cz%2Fpublications%2Fdownload%2FSarimbekov-vmil13.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1133582631"><cite id="CITEREFBradford_L._ChamberlainBen_AlbrechtLydia_DuncanBen_Harshbarger2017" class="citation conference cs1">Bradford L. Chamberlain; Ben Albrecht; Lydia Duncan; Ben Harshbarger (2017). <a rel="nofollow" class="external text" href="http://chapel.cray.com/CHIUW/2017/chamberlain-abstract.pdf"><i>Entering the Fray: Chapel's Computer Language Benchmark Game Entry</i></a> <span class="cs1-format">(PDF)</span><span class="reference-accessdate">. Retrieved <span class="nowrap">25 March</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=Entering+the+Fray%3A+Chapel%27s+Computer+Language+Benchmark+Game+Entry&amp;rft.date=2017&amp;rft.au=Bradford+L.+Chamberlain&amp;rft.au=Ben+Albrecht&amp;rft.au=Lydia+Duncan&amp;rft.au=Ben+Harshbarger&amp;rft_id=http%3A%2F%2Fchapel.cray.com%2FCHIUW%2F2017%2Fchamberlain-abstract.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThe+Computer+Language+Benchmarks+Game" class="Z3988"></span></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;action=edit&amp;section=9" title="Edit section: External links"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/">Official website</a></span></span> <span class="mw-valign-text-top" typeof="mw:File/Frameless"><a href="https://www.wikidata.org/wiki/Q30596044#P856" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></span></li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw‐api‐int.codfw.main‐9965f74b4‐h68x5
+Cached time: 20240209021142
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, show‐toc]
+CPU time usage: 0.367 seconds
+Real time usage: 0.435 seconds
+Preprocessor visited node count: 1459/1000000
+Post‐expand include size: 49762/2097152 bytes
+Template argument size: 1735/2097152 bytes
+Highest expansion depth: 12/100
+Expensive parser function count: 1/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 64327/5000000 bytes
+Lua time usage: 0.227/10.000 seconds
+Lua memory usage: 7028339/52428800 bytes
+Number of Wikibase entities loaded: 1/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  404.056      1 -total
+ 58.00%  234.351      1 Template:Reflist
+ 30.83%  124.580      9 Template:Cite_web
+ 19.39%   78.341      1 Template:Short_description
+ 16.41%   66.290     11 Template:Cite_conference
+ 11.99%   48.457      2 Template:Pagetype
+ 10.30%   41.622      1 Template:Excessive_citations_inline
+  8.87%   35.860      1 Template:Fix
+  6.01%   24.274      2 Template:Category_handler
+  3.92%   15.823      5 Template:Main_other
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:53596516-0!canonical and timestamp 20240209021142 and revision id 1149399570. Rendering was triggered because: api-parse
+ -->
+</div><!--esi <esi:include src="/esitest-fa8a495983347898/content" /> --><noscript><img src="https://login.wikimedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" width="1" height="1" style="border: none; position: absolute;"></noscript>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;oldid=1149399570">https://en.wikipedia.org/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;oldid=1149399570</a>"</div></div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Programming_language_comparisons" title="Category:Programming language comparisons">Programming language comparisons</a></li><li><a href="/wiki/Category:Benchmarks_(computing)" title="Category:Benchmarks (computing)">Benchmarks (computing)</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_errors:_missing_periodical" title="Category:CS1 errors: missing periodical">CS1 errors: missing periodical</a></li><li><a href="/wiki/Category:CS1:_long_volume_value" title="Category:CS1: long volume value">CS1: long volume value</a></li><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_matches_Wikidata" title="Category:Short description matches Wikidata">Short description matches Wikidata</a></li><li><a href="/wiki/Category:Citation_overkill" title="Category:Citation overkill">Citation overkill</a></li><li><a href="/wiki/Category:Articles_tagged_with_the_inline_citation_overkill_template_from_April_2023" title="Category:Articles tagged with the inline citation overkill template from April 2023">Articles tagged with the inline citation overkill template from April 2023</a></li></ul></div></div>
+				</div>
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 12 April 2023, at 00:24<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License">Creative Commons Attribution-ShareAlike License 4.0</a><a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/Wikipedia:General_disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-wm-codeofconduct"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct">Code of Conduct</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement">Cookie statement</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=The_Computer_Language_Benchmarks_Game&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"></a></li>
+</ul>
+
+</footer>
+
+		</div>
+	</div> 
+</div> 
+<div class="vector-settings" id="p-dock-bottom">
+	<ul>
+		<li>
+		<button class="cdx-button cdx-button--icon-only vector-limited-width-toggle" id=""><span class="vector-icon mw-ui-icon-fullScreen mw-ui-icon-wikimedia-fullScreen"></span>
+
+<span>Toggle limited content width</span>
+</button>
+</li>
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw-web.codfw.main-894d4d6c9-87hzx","wgBackendResponseTime":156,"wgPageParseReport":{"limitreport":{"cputime":"0.367","walltime":"0.435","ppvisitednodes":{"value":1459,"limit":1000000},"postexpandincludesize":{"value":49762,"limit":2097152},"templateargumentsize":{"value":1735,"limit":2097152},"expansiondepth":{"value":12,"limit":100},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":64327,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  404.056      1 -total"," 58.00%  234.351      1 Template:Reflist"," 30.83%  124.580      9 Template:Cite_web"," 19.39%   78.341      1 Template:Short_description"," 16.41%   66.290     11 Template:Cite_conference"," 11.99%   48.457      2 Template:Pagetype"," 10.30%   41.622      1 Template:Excessive_citations_inline","  8.87%   35.860      1 Template:Fix","  6.01%   24.274      2 Template:Category_handler","  3.92%   15.823      5 Template:Main_other"]},"scribunto":{"limitreport-timeusage":{"value":"0.227","limit":"10.000"},"limitreport-memusage":{"value":7028339,"limit":52428800}},"cachereport":{"origin":"mw-api-int.codfw.main-9965f74b4-h68x5","timestamp":"20240209021142","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"The Computer Language Benchmarks Game","url":"https:\/\/en.wikipedia.org\/wiki\/The_Computer_Language_Benchmarks_Game","sameAs":"http:\/\/www.wikidata.org\/entity\/Q30596044","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q30596044","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2017-03-25T22:43:21Z","dateModified":"2023-04-12T00:24:00Z","headline":"free software project"}</script>
+</body>
+</html>
