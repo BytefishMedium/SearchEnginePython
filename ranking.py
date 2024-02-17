@@ -24,12 +24,10 @@ for filename in os.listdir(folder_path):
     file_path = os.path.join(folder_path, filename)
     current_url = f"https://en.wikipedia.org/wiki/{filename.split('.')[0]}"
     with open(file_path, 'r', encoding='utf-8') as file:
-        html = file.read()
-        soup = BeautifulSoup(html, 'html.parser')
-        content = soup.get_text()
+        content = file.read()
         documents[current_url] = content
 
-# 计算document的平均长度
+# Calculate the average length of document
 average_document_length = sum(len(d) for d in documents.values()) / len(documents)
 
 
