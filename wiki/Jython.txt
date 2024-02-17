@@ -1,0 +1,629 @@
+
+
+
+
+Jython - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Overview
+
+
+
+
+
+
+
+2History
+
+
+
+
+
+
+
+3Status and roadmap
+
+
+
+
+
+
+
+4License terms
+
+
+
+
+
+
+
+5Usage
+
+
+
+
+
+
+
+6See also
+
+
+
+
+
+
+
+7References
+
+
+
+
+
+
+
+8External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Jython
+
+
+
+26 languages
+
+
+
+
+العربيةAzərbaycancaCatalàČeštinaDeutschEspañolفارسیFrançais한국어Bahasa IndonesiaItalianoമലയാളംBahasa Melayuမြန်မာဘာသာ日本語Norsk bokmålPolskiPortuguêsRomânăРусскийСрпски / srpskiไทยТоҷикӣTürkçeУкраїнська中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Java implementation of Python
+
+
+JythonInitial releaseJanuary 17, 2001; 23 years ago (2001-01-17)[1]Stable release2.7.3[2] 
+   / 10 September 2022; 17 months ago (10 September 2022)
+Repositorygithub.com/jython/jython/ 
+Written inPython and JavaOperating systemCross-platformPlatformJava virtual machineTypePython InterpreterLicensePython Software Foundation License (for older releases see License terms)Websitewww.jython.org 
+Jython is an implementation of the Python programming language designed to run on the Java platform. The implementation was formerly known as JPython until 1999.[3]
+
+
+Overview[edit]
+Jython programs can import and use any Java class. Except for some standard modules, Jython programs use Java classes instead of Python modules. Jython includes almost all of the modules in the standard Python programming language distribution, lacking only some of the modules implemented originally in C. For example, a user interface in Jython could be written with Swing, AWT or SWT. Jython compiles Python source code to Java bytecode (an intermediate language) either on demand or statically.
+
+History[edit]
+Jython was initially created in late 1997 to replace C with Java for performance-intensive code accessed by Python programs, moving to SourceForge in October 2000. The Python Software Foundation awarded a grant in January 2005.  Jython 2.5 was released in June 2009.[4]
+
+Status and roadmap[edit]
+The most recent release is Jython 2.7.3. It was released on September 10, 2022 and is compatible with Python 2.7.[5]
+Python 3 compatible changes are planned in Jython 3 Roadmap.[6]
+Although Jython implements the Python language specification, it has some differences and incompatibilities with CPython, which is the reference implementation of Python.[7][8]
+
+License terms[edit]
+From version 2.2 on, Jython (including the standard library) is released under the Python Software Foundation License (v2). Older versions are covered by the Jython 2.0, 2.1 license and the JPython 1.1.x Software License.[9]
+The command-line interpreter is available under the Apache Software License.
+
+Usage[edit]
+JBoss Application Server's command line interface scripting using Jython
+Oracle Weblogic Server Scripting Tool uses Jython
+IBM Rational development tools allow Jython scripting
+IBM WebSphere Application Server tool scripting with wsadmin allows using Jython and Jacl
+ZK – a Java Ajax framework that allows glue logic written in Jython
+Ignition - A software development platform focused on HMI and SCADA[10]
+Ghidra - a reverse engineering tool developed by the NSA allows plugins to be written in Java or Jython
+openHAB - home automation software
+See also[edit]
+
+Computer programming portalFree and open-source software portal
+List of JVM languages
+IronPython – an implementation of Python for .NET and Mono
+PyPy – a self-hosting interpreter for the Python programming language.
+JRuby – similar project for the Ruby programming language.
+GraalVM - a polyglot runtime written in Java, has a Python 3 implementation
+References[edit]
+
+
+^ Wierzbicki, Frank (March 22, 2015). "jython: 3d8067c56a1d NEWS". Retrieved March 28, 2015.
+
+^ "Release v2.7.3".
+
+^ 
+"JythonFaq/GeneralInfo - JythonWiki". April 3, 2014. Retrieved March 28, 2015.
+
+^ Wierzbicki, Frank (June 16, 2009). "Jython 2.5.0 Final is out!". Retrieved July 2, 2009.
+
+^ "News". Jython. Retrieved April 19, 2020.
+
+^ "Jython 3 Roadmap". Jython. Retrieved October 14, 2022.
+
+^ "JythonFaq". Jython's project. Retrieved July 5, 2009.
+
+^ "Differences between CPython and Jython". Jython's project. Retrieved July 5, 2009.
+
+^ "The Jython License". Jython's project. Archived from the original on October 9, 2018. Retrieved February 9, 2008.
+
+^ "Introducing Ignition - Ignition User Manual 7.9 - Ignition Documentation". docs.inductiveautomation.com. Retrieved April 24, 2019.
+
+
+External links[edit]
+Official website 
+vtePythonImplementations
+CircuitPython
+CLPython
+CPython
+Cython
+MicroPython
+Numba
+IronPython
+Jython
+Psyco
+PyPy
+Python for S60
+Shed Skin
+Stackless Python
+Unladen Swallow
+more...
+IDE
+Boa
+Eric Python IDE
+IDLE
+PyCharm
+PyDev
+Ninja-IDE
+more...
+Topics
+WSGI
+ASGI
+
+software (list)
+Python Software Foundation
+PyCon
+
+vteJava (software platform)Platforms
+Java language
+JVM
+Java ME (Micro)
+Java SE (Standard)
+Jakarta EE (Enterprise)
+Java Card
+Android SDK
+Oracle technologies
+Squawk
+Java Development Kit
+OpenJDK
+Java virtual machine
+JavaFX
+Maxine VM
+Platform technologies
+Applets
+Servlets
+MIDlets
+JSP
+JSF
+Web Start (JNLP)
+Pack200
+Modules
+Major third-party technologies
+Blackdown
+Eclipse
+GNU Classpath
+GWT
+Harmony
+Hibernate
+IcedTea
+Jazelle
+Spring
+Struts
+TopLink
+WildFly
+History
+Java version history
+Java Community Process
+Sun Microsystems
+Free Java implementations
+JVM languages
+BeanShell
+Clojure
+Groovy
+JRuby
+Jython
+Kotlin
+Processing
+Rhino
+Scala
+Oxygene
+CommunityConferences
+JavaOne
+Devoxx
+Organizations
+Apache Software Foundation
+Eclipse Foundation
+Java Community Process
+Oracle Corporation
+Sun Microsystems, Sun Microsystems Laboratories
+People
+James Gosling
+Arthur van Hoff
+Urs Hölzle
+Patrick Naughton
+ Category  
+ Computer programming portal
+Authority control databases: National 
+Israel
+United States
+Czech Republic
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Jython&oldid=1206314481"
+Categories: JVM programming languagesObject-oriented programming languagesPython (programming language) implementationsScripting languagesSoftware using the PSF licenseHidden categories: Articles with short descriptionShort description is different from WikidataUse mdy dates from July 2023Articles with J9U identifiersArticles with LCCN identifiersArticles with NKC identifiers
+
+
+
+
+
+
+ This page was last edited on 11 February 2024, at 20:35 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

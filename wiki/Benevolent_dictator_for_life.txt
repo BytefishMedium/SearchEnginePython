@@ -1,0 +1,1013 @@
+
+
+
+
+Benevolent dictator for life - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1History
+
+
+
+
+
+
+
+2Usage
+
+
+
+
+
+
+
+3Referent candidates
+
+
+
+Toggle Referent candidates subsection
+
+
+
+
+
+3.1Organizational positions
+
+
+
+
+
+
+
+
+
+4See also
+
+
+
+
+
+
+
+5References
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Benevolent dictator for life
+
+
+
+18 languages
+
+
+
+
+العربيةবাংলাDeutschEspañolEsperantoفارسیFrançais한국어Bahasa IndonesiaItalianoമലയാളംNederlands日本語Norsk bokmålPolskiPortuguêsРусский中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Title given to a small number of open-source software development leaders
+For the political term, see Benevolent dictatorship.
+Benevolent dictator for life (BDFL) is a title given to a small number of open-source software development leaders, typically project founders who retain the final say in disputes or arguments within the community. The phrase originated in 1995 with reference to Guido van Rossum, creator of the Python programming language.[1][2]
+
+
+History[edit]
+Shortly after Van Rossum joined the Corporation for National Research Initiatives, the term appeared in a follow-up mail by Ken Manheimer to a meeting trying to create a semi-formal group that would oversee Python development and workshops; this initial use included an additional joke of naming Van Rossum the "First Interim BDFL".[1]
+In July 2018, Van Rossum announced that he would be stepping down as BDFL of Python without appointing a successor, effectively eliminating the title within the Python community structure.[3]
+
+Usage[edit]
+BDFL should not be confused with the more common term for open-source leaders, "benevolent dictator", which was popularized by Eric S. Raymond's essay "Homesteading the Noosphere" (1999).[4]
+Among other topics related to hacker culture, Raymond elaborates on how the nature of open source forces the "dictatorship" to keep itself benevolent, since a strong disagreement can lead to the forking of the project under the rule of new leaders.[citation needed]
+
+Referent candidates[edit]
+
+Key
+
+
+†
+
+Deceased
+
+
+
+Name
+
+Project
+
+Type
+
+Reference
+
+
+Sylvain Benner
+
+Spacemacs
+
+Community-driven Emacs distribution
+
+[5]
+
+
+Vitalik Buterin
+
+Ethereum
+
+Blockchain-based cryptocurrency
+
+[6][better source needed]
+
+
+Dries Buytaert
+
+Drupal
+
+Content management framework
+
+[7]
+
+
+François Chollet
+
+Keras
+
+Deep learning framework
+
+[8]
+
+
+Evan Czaplicki
+
+Elm
+
+Front-end web programming language
+
+[9][10]
+
+
+Laurent Destailleur
+
+Dolibarr ERP CRM
+
+Software suite for Enterprise Resource Planning and Customer Relationship Management
+
+[11]
+
+
+Juan Carlos Franco
+
+Calcite Components
+
+TypeScript design system built using Web Components.
+
+[12][13]
+
+
+David Heinemeier Hansson
+
+Ruby on Rails
+
+Web framework
+
+[14]
+
+
+Rich Hickey
+
+Clojure
+
+Programming language
+
+[15]
+
+
+Adrian Holovaty and Jacob Kaplan-Moss
+
+Django
+
+Web framework
+
+[16]
+
+
+Andrew Kelley
+
+Zig
+
+Programming language
+
+[17][18]
+
+
+Xavier Leroy
+
+OCaml
+
+Programming language
+
+[19][20]
+
+
+Haoyuan Li
+
+Alluxio
+
+Data Orchestration System
+
+[21]
+
+
+Miles Lubin
+
+JuMP
+
+Mathematical optimization modeling language in Julia
+
+[22]
+
+
+Yukihiro Matsumoto (Matz)
+
+Ruby
+
+Programming language
+
+[23]
+
+
+Wes McKinney
+
+Pandas
+
+Python data analysis library
+
+[24]
+
+
+Gavin Mendel-Gleason[a]
+
+TerminusDB
+
+Open-source graph database for knowledge graph representation
+
+[25][26]
+
+
+Bram Moolenaar†
+
+Vim
+
+Text editor
+
+[27]
+
+
+Matt Mullenweg[b]
+
+WordPress
+
+Content management framework
+
+[28]
+
+
+Martin Odersky
+
+Scala
+
+Programming language
+
+[29]
+
+
+Taylor Otwell
+
+Laravel
+
+Web framework
+
+[30][31]
+
+
+Theo de Raadt
+
+OpenBSD
+
+A Unix-like operating system
+
+[citation needed]
+
+
+Arnold Robbins
+
+Awk, Gawk
+
+Programming language
+
+[32]
+
+
+Eugen Rochko
+
+Mastodon
+
+Open source, decentralized social network
+
+[33]
+
+
+Ton Roosendaal[c]
+
+Blender
+
+3D computer graphics software
+
+[34]
+
+
+Sébastien Ros
+
+Orchard Project
+
+Content management system
+
+[35]
+
+
+Mark Shuttleworth[d]
+
+Ubuntu
+
+Linux distribution
+
+[36]
+
+
+Jeremy Soller
+
+Redox
+
+Operating system
+
+[37]
+
+
+Don Syme[e]
+
+F#
+
+Programming language
+
+[38]
+
+
+Linus Torvalds[f]
+
+Linux
+
+Operating system kernel
+
+[14][39]
+
+
+José Valim
+
+Elixir
+
+Programming language
+
+[40]
+
+
+Pauli Virtanen
+
+SciPy
+
+Python library used for scientific and technical computing
+
+[41][42]
+
+
+Patrick Volkerding
+
+Slackware
+
+GNU/Linux distribution
+
+[43]
+
+
+Nathan Voxland
+
+Liquibase
+
+Database schema management
+
+[44]
+
+
+Jimmy Wales
+
+Wikimedia Foundation
+
+Collaborative knowledge project
+
+[45][i]
+
+
+Jeremy Walker
+
+Exercism
+
+Open-source programming education platform
+
+[46]
+
+
+Shaun Walker
+
+DotNetNuke
+
+Web application framework
+
+[47]
+
+
+Larry Wall
+
+Perl
+
+Programming language
+
+[48]
+
+
+Evan You
+
+Vue.js
+
+JavaScript MVVM framework for building user interfaces and single-page applications.
+
+[citation needed]
+
+
+Soumith Chintala
+
+PyTorch
+
+Deep learning framework
+
+[49]
+
+
+Martin Traverso, Dain Sundstrom, David Phillips
+
+Trino
+
+SQL query engine
+
+[50]
+
+
+Kohsuke Kawaguchi
+
+Jenkins
+
+Automation server
+
+[51]
+
+
+Gabor de Mooij
+
+RedBeanPHP
+
+Database object relational mapper
+
+[52]
+
+
+Bram Cohen
+
+BitTorrent
+
+Peer-to-peer file sharing protocol
+
+[53]
+
+
+Walter Bright
+
+D (programming language)
+
+Programming language
+
+[citation needed]
+
+Organizational positions[edit]
+
+
+^ CTO of TerminusDB
+
+^ Lead Developer at the WordPress Foundation
+
+^ Chairman of the Blender Foundation
+
+^ Until December 2009, CEO of Canonical Ltd
+
+^ Technical Advisor at the F# Software Foundation
+
+^ Sponsee of the Linux Foundation. Also holds the trademark for Linux
+
+
+See also[edit]
+Design by dictator
+References[edit]
+
+
+^ Disputed by Wales; "I am not the benevolent dictator of anything"
+
+
+
+
+^ a b Guido van Rossum (2008-07-31). "Origin of BDFL". Artima.com. Archived from the original on 2012-07-21. Retrieved 2008-08-01.
+
+^ "Python Creator Scripts Inside Google". eWeek. 2006-03-06. Archived from the original on 2018-08-09. Retrieved 2008-05-13.
+
+^ Van Rossum, Guido (July 12, 2018). "Transfer of power". mail.python.org. Archived from the original on July 12, 2018. Retrieved August 9, 2018.
+
+^ Raymond, Eric S. (2000). "Homesteading the Noosphere § Project Structures and Ownership". Eric S. Raymond's Home Page. Archived from the original on 2012-07-01. Retrieved 2008-08-01.
+
+^ "Spacemacs COMMUNITY.org". GitHub. Retrieved 2017-08-24.
+
+^ Pearson, Jordan (24 April 2017). "Ethereum's Boy King Is Thinking About Giving Up the Mantle". Vice. Retrieved 5 September 2023. One participant called him a benevolent dictator.
+
+^ Fay, Randy. "How Do Open Source Communities Govern Themselves? | RandyFay.comties Govern Themselves?". randyfay.com. Retrieved 27 November 2020.
+
+^ "Keras API Special Interest Group, Leadership". GitHub. December 21, 2021.
+
+^ "56: Ember vs. Elm: The Showdown with Philip Poots | The Frontside Podcast". The Frontside Podcast. Archived from the original on November 16, 2018. Retrieved 2017-08-14.
+
+^ elm-conf (2016-09-19), "Code is the Easy Part" by Evan Czaplicki, retrieved 2017-08-14
+
+^ "Dolibarr project organization, different roles of actors".
+
+^ "Calcite Components". GitHub. Retrieved 2023-01-19.
+
+^ "Use the source Luke, and Calcite Components". The Bounding Box Podcast. Retrieved 2023-01-19.
+
+^ a b Constine, Josh (December 7, 2012). "Dropbox Hires Away Google's Guido Van Rossum, The Father Of Python". TechCrunch. Retrieved June 1, 2015.
+
+^ "Clojure JIRA Workflow". Archived from the original on November 13, 2015. Retrieved 3 October 2015.
+
+^ "Adrian and Jacob retiring as Django BDFLs". Adrian Holovaty. January 12, 2014. Retrieved June 14, 2015.
+
+^ "Proposal: Create a standard process for proposals". GitHub.
+
+^ "I think the Zig community/BDFL might appreciate adding an APE target "os"". Hacker News.
+
+^ "A History of OCaml | OCaml.org". Retrieved 2015-09-18.
+
+^ "OCaml Infrastructure mailing list". Retrieved 2015-09-18.
+
+^ Introducing Alluxio Open Source Project Governance "[1]"
+
+^ "Governance Structure: JuMP". Retrieved 2023-09-13.
+
+^ "A Ruby Design Process". Retrieved 2016-04-17.
+
+^ "pandas 0.20.3 documentation: Tutorials". Retrieved 2017-07-24. "Wes McKinney's (pandas BDFL) blog"
+
+^ "TerminusDB, Twitter". May 6, 2020. Retrieved May 6, 2020.
+
+^ "TerminusDB — what's in a name?". TerminusDB. August 21, 2019. Retrieved May 8, 2020.
+
+^ "Why Neovim is Better than Vim". January 15, 2015. Retrieved 30 September 2015.
+
+^ "Thesis, Automattic, and WordPress | Post Status". July 24, 2015. Retrieved 2015-07-24.
+
+^ "Programming in Scala Leaps onto the World Stage!". Retrieved 2015-11-25.
+
+^ "Taylor Otwell, Twitter". Taylor Otwell. October 9, 2014. Retrieved October 9, 2014.
+
+^ "Taylor Otwell, Creator of the Laravel PHP Framework". Facebook. August 5, 2014. Retrieved August 5, 2014.
+
+^ Robbins, Arnold (March 2014). "The GNU Project and Me: 27 Years with GNU AWK" (PDF). skeeve.com. Archived (PDF) from the original on October 6, 2014. Retrieved August 11, 2023.
+
+^ "Mastodon is crumbling—and many blame its creator". The Daily Dot. January 18, 2019.
+
+^ "Developer Intro/Overview". Retrieved 20 July 2018.
+
+^ "Orchard Project Steering Committee". Archived from the original on August 12, 2015.
+
+^ "Ubuntu carves niche in Linux landscape". CNET. Archived from the original on 6 November 2015.
+
+^ "CONTRIBUTING.md · master · redox-os / redox". July 8, 2023.
+
+^ "Contributing to the F# Language and Compiler". Retrieved 29 September 2015.
+
+^ Dee-Ann LeBlanc (31 July 2006). Linux For Dummies (7th ed.). John Wiley & Sons. p. 15. ISBN 978-0-470-04793-4.
+
+^ "Elixir Companies". GitHub. Retrieved 2017-11-01.
+
+^ "SciPy 1.0.0". GitHub. Retrieved 2017-10-27.
+
+^ "SciPy project governance". GitHub. Retrieved 2017-10-27.
+
+^ "Stories of Linux: A Look at Slackware Linux". linux.com. Archived from the original on October 30, 2014. Retrieved September 21, 2014.
+
+^ "User and Developer Community | Post Status". Retrieved 2015-08-13.
+
+^ Chozick, Amy (June 27, 2013). "Jimmy Wales is Not an Internet Billionaire". The New York Times.
+
+^ "Jeremy Walker on Being the BDFL of Exercism by Humans of Open Source • A podcast on Anchor". Anchor. Retrieved 2021-03-26.
+
+^ Book: Building Websites with DotNetNuke 5, Michael Washington and Ian Lackey, Packt Publishing. Page 14 "The core team comprises individuals invited to join the team by Shaun Walker, whom they affectionately call the "Benevolent Dictator".
+
+^ "The Art of Ballistic Programming". Archived from the original on June 17, 2013.
+
+^ "PyTorch Governance | Maintainers — PyTorch 2.0 documentation". pytorch.org. Retrieved 2023-03-21.
+
+^ Trino and the BDFL model https://trino.io/blog/2023/04/06/trino-bdfl-focus.html
+
+^ Jenkins Enhancement Proposal #1: BDFL https://github.com/jenkinsci/jep/blob/master/jep/1/README.adoc#bdfl
+
+^ RedBeanPHP index page https://redbeanphp.com/index.php?p=/welcome#sponsor
+
+^ BitTorrent Enhancement Proposal #1: The BEP Process https://www.bittorrent.org/beps/bep_0001.html
+
+
+
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Benevolent_dictator_for_life&oldid=1187914890"
+Categories: Free software culture and documentsComputer programming folkloreSoftware engineering folkloreHidden categories: Articles with short descriptionShort description matches WikidataAll articles with unsourced statementsArticles with unsourced statements from October 2023All articles lacking reliable referencesArticles lacking reliable references from September 2023Articles with unsourced statements from October 2020Articles with unsourced statements from December 2021Articles with unsourced statements from May 2023
+
+
+
+
+
+
+ This page was last edited on 2 December 2023, at 06:37 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

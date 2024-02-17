@@ -1,0 +1,598 @@
+
+
+
+
+Filename extension - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Operating system and file system support
+
+
+
+
+
+
+
+2Content type
+
+
+
+Toggle Content type subsection
+
+
+
+
+
+2.1Compared to MIME type
+
+
+
+
+
+
+
+
+
+3Executable programs
+
+
+
+
+
+
+
+4Security issues
+
+
+
+
+
+
+
+5See also
+
+
+
+
+
+
+
+6References
+
+
+
+
+
+
+
+7External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Filename extension
+
+
+
+48 languages
+
+
+
+
+العربيةAsturianuБеларускаяБългарскиCatalàČeštinaDanskDeutschEestiEspañolEsperantoEuskaraفارسیFrançaisGalego한국어HrvatskiÍslenskaItalianoעבריתҚазақшаLietuviųMagyarമലയാളംBahasa MelayuNederlands日本語Norsk bokmålОлык марийPolskiPortuguêsRomânăРусскийSimple EnglishسنڌيSlovenčinaСрпски / srpskiSuomiSvenskaதமிழ்ไทยTürkçeУкраїнськаVènetoTiếng Việt吴语粵語中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+		In other projects
+	
+
+
+Wikimedia Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Filename suffix that indicates the file's type
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed.Find sources: "Filename extension" – news · newspapers · books · scholar · JSTOR (November 2015) (Learn how and when to remove this template message)
+A filename extension, file name extension or file extension is a suffix to the name of a computer file (for example, .txt, .docx, .md). The extension indicates a characteristic of the file contents or its intended use. A filename extension is typically delimited from the rest of the filename with a full stop (period), but in some systems[1] it is separated with spaces.
+Some file systems implement filename extensions as a feature of the file system itself and may limit the length and format of the extension, while others treat filename extensions as part of the filename without special distinction.
+
+
+Operating system and file system support[edit]
+The Multics file system stores the file name as a single string, not split into base name and extension components, allowing the "." to be just another character allowed in file names. It allows for variable-length filenames, permitting more than one dot, and hence multiple suffixes, as well as no dot, and hence no suffix. Some components of Multics, and applications running on it, use suffixes to indicate file types, but not all files are required to have a suffix — for example, executables and ordinary text files usually have no suffixes in their names.
+File systems for UNIX-like operating systems also store the file name as a single string, with "." as just another character in the file name. A file with more than one suffix is sometimes said to have more than one extension, although terminology varies in this regard, and most authors define extension in a way that does not allow more than one in the same file name.[citation needed] More than one extension usually represents nested transformations, such as files.tar.gz (the .tar indicates that the file is a tar archive of one or more files, and the .gz indicates that the tar archive file is compressed with gzip). Programs transforming or creating files may add the appropriate extension to names inferred from input file names (unless explicitly given an output file name), but programs reading files usually ignore the information; it is mostly intended for the human user. 
+It is more common, especially in binary files, for the file to contain internal or external metadata describing its contents.
+This model generally requires the full filename to be provided in commands, whereas the metadata approach often allows the extension to be omitted.
+In DOS and 16-bit Windows, file names have a maximum of 8 characters, a period, and an extension of up to three letters. The FAT file system for DOS and Windows stores file names as an 8-character name and a three-character extension. The period character is not stored.
+The High Performance File System (HPFS), used in Microsoft and IBM's OS/2 stores the file name as a single string, with the "." character as just another character in the file name. The convention of using suffixes continued, even though HPFS supports extended attributes for files, allowing a file's type to be stored in the file as an extended attribute.
+Microsoft's Windows NT's native file system, NTFS, and the later ReFS, also store the file name as a single string; again, the convention of using suffixes to simulate extensions continued, for compatibility with existing versions of Windows. In Windows NT 3.5, a variant of the FAT file system, called VFAT appeared; it supports longer file names, with the file name being treated as a single string.
+Windows 95, with VFAT, introduced support for long file names, and removed the 8.3 name/extension split in file names from non-NT Windows.
+The classic Mac OS disposed of filename-based extension metadata entirely; it used, instead, a distinct file type code to identify the file format. Additionally, a creator code was specified to determine which application would be launched when the file's icon was double-clicked.[2] macOS, however, uses filename suffixes as a consequence of being derived from the UNIX-like NeXTSTEP operating system, in addition to using type and creator codes.
+In Commodore systems, files can only have four extensions: PRG, SEQ, USR, REL. However, these are used to separate data types used by a program and are irrelevant for identifying their contents.
+With the advent of graphical user interfaces, the issue of file management and interface behavior arose. Microsoft Windows allowed multiple applications to be associated with a given extension, and different actions were available for selecting the required application, such as a context menu offering a choice between viewing, editing or printing the file. The assumption was still that any extension represented a single file type; there was an unambiguous mapping between extension and icon.
+When the Internet age first arrived, those using Windows systems that were still restricted to 8.3 filename formats had to create web pages with names ending in .HTM, while those using Macintosh or UNIX computers could use the recommended .html filename extension. This also became a problem for programmers experimenting with the Java programming language, since it requires the four-letter suffix .java for source code files and the five-letter suffix .class for Java compiler object code output files.[3]
+
+Content type[edit]
+Filename extensions may be considered a type of metadata.[4] They are commonly used to imply information about the way data might be stored in the file. The exact definition, giving the criteria for deciding what part of the file name is its extension, belongs to the rules of the specific file system used; usually the extension is the substring which follows the last occurrence, if any, of the dot character (example: txt is the extension of the filename readme.txt, and html the extension of mysite.index.html).
+On file systems of some mainframe systems such as CMS in VM, VMS, and of PC systems such as CP/M and derivative systems such as MS-DOS, the extension is a separate namespace from the filename. Under Microsoft's DOS and Windows, extensions such as EXE, COM or BAT indicate that a file is a program executable. In OS/360 and successors, the part of the dataset name following the last period, called the low level qualifier, is treated as an extension by some software, e.g., TSO EDIT, but it has no special significance to the operating system itself; the same applies to Unix files in MVS.
+The filename extension was originally used to determine the file's generic type.[citation needed] The need to condense a file's type into three characters frequently led to abbreviated extensions. Examples include using .GFX for graphics files, .TXT for plain text, and .MUS for music. However, because many different software programs have been made that all handle these data types (and others) in a variety of ways, filename extensions started to become closely associated with certain products—even specific product versions. For example, early WordStar files used .WS or .WSn, where n was the program's version number. Also, conflicting uses of some filename extensions developed. One example is .rpm, used for both RPM Package Manager packages and RealPlayer Media files;.[5] Others are .qif, shared by DESQview fonts, Quicken financial ledgers, and QuickTime pictures;[6] .gba, shared by GrabIt scripts and Game Boy Advance ROM images;[7] .sb, used for SmallBasic and Scratch; and .dts, being used for Dynamix Three Space and DTS.
+
+Compared to MIME type[edit]
+In many Internet protocols, such as HTTP and MIME email, the type of a bitstream is stated as the media type, or MIME type, of the stream, rather than a filename extension. This is given in a line of text preceding the stream, such as Content-type: text/plain.
+There is no standard mapping between filename extensions and media types, resulting in possible mismatches in interpretation between authors, web servers, and client software when transferring files over the Internet. For instance, a content author may specify the extension svgz for a compressed Scalable Vector Graphics file, but a web server that does not recognize this extension may not send the proper content type application/svg+xml and its required compression header, leaving web browsers unable to correctly interpret and display the image.
+BeOS, whose BFS file system supports extended attributes, would tag a file with its media type as an extended attribute. Some desktop environments, such as KDE and GNOME, associate a media type with a file by examining both the filename suffix and the contents of the file, in the fashion of the file command, as a heuristic. They choose the application to launch when a file is opened based on that media type, reducing the dependency on filename extensions. macOS uses both filename extensions and media types, as well as file type codes, to select a Uniform Type Identifier by which to identify the file type internally.
+
+Executable programs[edit]
+This section may require cleanup to meet Wikipedia's quality standards. The specific problem is: intractable construction. Please help improve this section if you can. (November 2015) (Learn how and when to remove this template message)
+The use of a filename extension in a command name appears occasionally, usually as a side effect of the command having been implemented as a script, e.g., for the Bourne shell or for Python, and the interpreter name being suffixed to the command name, a practice common on systems that rely on associations between filename extension and interpreter, but sharply deprecated[8] in Unix-like systems, such as Linux, Oracle Solaris, BSD-based systems, and Apple's macOS, where the interpreter is normally specified as a header in the script ("shebang").
+On association-based systems, the filename extension is generally mapped to a single, system-wide selection of interpreter for that extension (such as ".py" meaning to use Python), and the command itself is runnable from the command line even if the extension is omitted (assuming appropriate setup is done). If the implementation language is changed, the command name extension is changed as well, and the OS provides a consistent API by allowing the same extensionless version of the command to be used in both cases. This method suffers somewhat from the essentially global nature of the association mapping, as well as from developers' incomplete avoidance of extensions when calling programs, and that developers can not force that avoidance. Windows is the only remaining widespread employer of this mechanism.
+On systems with interpreter directives, including virtually all versions of Unix, command name extensions have no special significance, and are by standard practice not used, since the primary method to set interpreters for scripts is to start them with a single line specifying the interpreter to use (which could be viewed as a degenerate resource fork). In these environments, including the extension in a command name unnecessarily exposes an implementation detail which puts all references to the commands from other programs at future risk if the implementation changes. For example, it would be perfectly normal for a shell script to be reimplemented in Python or Ruby, and later in C or C++, all of which would change the name of the command were extensions used. Without extensions, a program always has the same extension-less name, with only the interpreter directive and/or magic number changing, and references to the program from other programs remain valid.
+
+Security issues[edit]
+The default behavior of File Explorer, the file browser provided with Microsoft Windows, is for filename extensions to not be displayed. Malicious users have tried to spread computer viruses and computer worms by using file names formed like LOVE-LETTER-FOR-YOU.TXT.vbs. The hope is that this will appear as LOVE-LETTER-FOR-YOU.TXT, a harmless text file, without alerting the user to the fact that it is a harmful computer program, in this case, written in VBScript. Default behavior for ReactOS is to display filename extensions in ReactOS Explorer.
+Later Windows versions (starting with Windows XP Service Pack 2 and Windows Server 2003) included customizable lists of filename extensions that should be considered "dangerous" in certain "zones" of operation, such as when downloaded from the web or received as an e-mail attachment. Modern antivirus software systems also help to defend users against such attempted attacks where possible.
+Some viruses take advantage of the similarity between the ".com" top-level domain and the ".COM" filename extension by emailing malicious, executable command-file attachments under names superficially similar to URLs (e.g., "myparty.yahoo.com"), with the effect that unaware users click on email-embedded links that they think lead to websites but actually download and execute the malicious attachments.
+There have been instances of malware crafted to exploit vulnerabilities in some Windows applications which could cause a stack-based buffer overflow when opening a file with an overly long, unhandled filename extension.
+The filename extension is just a marker and the content of the file does not have to match it.[9] This can be used to disguise malicious content. When trying to identify a file for security reasons, it is therefore considered dangerous to rely on the extension alone and a proper analysis of the content of the file is preferred. For example, on UNIX-like systems, it is not uncommon to find files with no extensions at all, as commands such as file are meant to be used instead, and will read the file's header to determine its content.
+
+See also[edit]
+file (command)
+List of file formats
+List of filename extensions
+Metadata
+.properties
+References[edit]
+
+
+^ "What Is a File?" (PDF). z/VM - Version 7 Release 1 - CMS Primer (PDF). IBM. 2018-09-11. p. 7. SC24-6265-00. One thing you need to know about creating files with z/VM is that each file needs its own three-part identifier. The first part of the identifier is the file name. The second part is the file type. And the third part is the file mode. These three file identifiers are often abbreviated fn ft fm.
+
+^ "Mac Creator and File Type codes". livecode.byu.edu. Retrieved 2022-09-02.
+
+^ "javac – Java programming language compiler". Sun Microsystems, Inc. 2004. Retrieved 2009-05-31. Source code file names must have .java suffixes, class file names must have .class suffixes, and both source and class files must have root names that identify the class.
+
+^ Stauffer, Todd; McElhearn, Kirk (2006). Mastering Mac OS X. John Wiley & Sons. pp. 95–96. ISBN 9780782151282. Retrieved 2 October 2017.
+
+^ File Extension .RPM Details from filext.com
+
+^ File Extension .QIF Details from filext.com
+
+^ File Extension .GBA Details from filext.com
+
+^ Commandname Extensions Considered Harmful
+
+^ "What Is a File Extension?".
+
+
+External links[edit]
+ Media related to Filename extensions at Wikimedia Commons
+Data Formats Filename extension at Curlie
+Database of filename extensions at FileInfo.com
+vteComputer filesTypes
+Binary file / text file
+File format
+List of file formats
+File signatures
+Magic number
+Metafile
+Sidecar file
+Sparse file
+Swap file
+System file
+Temporary file
+Zero-byte file
+Properties
+Filename
+8.3 filename
+Long filename
+Filename mangling
+Filename extension
+List of filename extensions
+File attribute
+Extended file attributes
+File size
+Hidden file / Hidden directory
+Organisation
+Directory/folder
+NTFS links
+Temporary folder
+Directory structure
+File system
+Filesystem Hierarchy Standard
+Path
+Operations
+Open
+Close
+Read
+Write
+Linking
+File descriptor
+Hard link
+Shortcut
+Alias
+Shadow
+Symbolic link
+Management
+File comparison
+Data compression
+File manager
+Comparison of file managers
+File-system permissions
+File transfer
+File sharing
+File synchronization
+File verification
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Filename_extension&oldid=1204204446"
+Categories: Computer file formatsMetadataComputer filesNamesFilename extensionsHidden categories: Articles with short descriptionShort description is different from WikidataArticles needing additional references from November 2015All articles needing additional referencesAll articles with unsourced statementsArticles with unsourced statements from November 2023Articles with unsourced statements from November 2015Articles needing cleanup from November 2015All pages needing cleanupCleanup tagged articles with a reason field from November 2015Wikipedia pages needing cleanup from November 2015Commons category link is on WikidataArticles with Curlie links
+
+
+
+
+
+
+ This page was last edited on 6 February 2024, at 17:02 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

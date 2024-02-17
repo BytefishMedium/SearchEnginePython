@@ -1,0 +1,538 @@
+
+
+
+
+CircuitPython - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Usage
+
+
+
+
+
+
+
+2Community
+
+
+
+
+
+
+
+3Hardware support
+
+
+
+
+
+
+
+4References
+
+
+
+
+
+
+
+5External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+CircuitPython
+
+
+
+3 languages
+
+
+
+
+العربيةമലയാളം日本語
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Programming language
+CircuitPythonLogo of the Blinka library, a compatibility layer for CircuitPythonOriginal author(s)Adafruit IndustriesInitial releaseJuly 19, 2017; 6 years ago (2017-07-19)[1]Stable release8.2.9[2] 
+   / 6 December 2023; 2 months ago (6 December 2023)
+Repositoryhttps://github.com/adafruit/circuitpythonWritten inC[3]Platformmicrocontroller and single-board computers using the Atmel SAMD21, Atmel SAMD51, Nordic nRF52840, STMicro STM32, and ESP32, ARMmicrocontrollers, from Adafruit, SparkFun, Arduino, Particle, Raspberry Pi and othersTypePython implementationLicenseMIT license[4]Websitecircuitpython.org
+CircuitPython[5] is an open-source derivative of the MicroPython programming language targeted toward students and beginners. Development of CircuitPython is supported by Adafruit Industries. It is a software implementation of the Python 3 programming language, written in C.[3] It has been ported to run on several modern microcontrollers.
+CircuitPython consists of a Python compiler to bytecode and a runtime interpreter of that bytecode that runs on the microcontroller hardware. The user is presented with an interactive prompt (the REPL) to execute supported commands immediately. Included are a selection of core Python libraries. CircuitPython includes modules which give the programmer access to the low-level hardware of supported products as well as higher-level libraries for beginners.[6]
+CircuitPython is a fork of MicroPython, originally created by Damien George.[7] The MicroPython community continues to discuss[8] forks of MicroPython into variants such as CircuitPython.
+CircuitPython is targeted to be compliant with CPython, the reference implementation of the Python programming language.[9] Programs written for CircuitPython-compatible boards may not run unmodified on other platforms such as the Raspberry Pi.[10]
+
+
+Usage[edit]
+CircuitPython is being used as an emerging alternative solution for microcontroller programming, which is usually done in C, C++, or assembly. The language has also seen uptake in making small, handheld video game devices.[11][better source needed] Developer Chris Young has ported his infrared transmit-and-receive software to CircuitPython to provide interactivity and to aid those with accessibility issues.[12]
+
+Community[edit]
+The user community support includes a Discord chat room and product support forums.[13] A Twitter account dedicated to CircuitPython news was established in 2018.[14] A newsletter, Python on Hardware, is published weekly since 15 November, 2016 by Adafruit to provide news and information on CircuitPython, MicroPython, and Python on single board computers.[15] A Reddit subreddit, r/CircuitPython, provides news on CircuitPython and related news and projects and has about 3,000 members.[16]
+
+Hardware support[edit]
+The version 6.2.0 supports Atmel SAMD21 and SAMD51 microcontrollers from Microchip Technology,[17] nRF52833 and nRF52840 from Nordic Semiconductor, CXD5602 (Spresense) from Sony, and STM32 F4-series from STMicroelectronics.[18] Previous versions supported the ESP8266 microcontroller, but its support was dropped in version 4.[19] It also supports single-board computers like Raspberry Pi.
+
+References[edit]
+
+
+^ Shawcroft, Scott (19 July 2017). "CircuitPython 1.0.0!". Adafruit Blog. Adafruit Industries. Retrieved 1 May 2018.
+
+^ "Release 8.2.9". 6 December 2023. Retrieved 19 December 2023.
+
+^ a b "adafruit/circuitpython". GitHub. Adafruit Industries. Retrieved 2 May 2018.
+
+^ George, Damien P. (4 May 2014). "circuitpython/LICENSE". GitHub. Retrieved 1 May 2018.
+
+^ "CircuitPython is an education friendly open-source derivative of MicroPython". GitHub. Retrieved 30 April 2018.
+
+^ "CircuitPython". Read the Docs. Adafruit Industries. Retrieved 1 May 2018.
+
+^ George, Damien (20 May 2016). "Damien P. George". Damien P. George. Retrieved 1 May 2018.
+
+^ "Adafruit CircuitPython". MicroPython Forum. MicroPython.org. Retrieved 2 May 2018.
+
+^ Lewis, James (14 February 2018). "Circuit Python adds Python to Microcontrollers". The Bald Engineer. Retrieved 2 May 2018.
+
+^ Ganne, Simon. "Can I use circuitPython code on my raspberry?". Element 14 Community. Element 14.
+
+^ Dopieralski, Radomir. "CircuitPython LAMEBOY". BitBucket. BitBucket. Retrieved 2 May 2018.
+
+^ Young, Chris (6 June 2018). "Announcing IRLibCP — a Circuit Python Module for Infrared Transmitting and Receiving". CY's Tech Talk. Chris Young. Retrieved 2 May 2018.
+
+^ "Adafruit CircuitPython and MicroPython". Adafruit Support Forums. Adafruit Industries. Retrieved 1 May 2018.
+
+^ "CircuitPython". Twitter. Adfafruit Industries. Retrieved 1 May 2018.
+
+^ "The Python on Hardware Newsletter". Adafruit Daily. Adafruit Industries. Retrieved 24 March 2022.
+
+^ "r/CircuitPython". Reddit.com. Adafruit Industries. Retrieved 24 March 2022.
+
+^ Kraft, Caleb (11 August 2017). "CircuitPython Snakes its Way onto Adafruit Hardware". Makezine. Maker Media, Inc. Retrieved 2 May 2018.
+
+^ Halbert, Dan (5 April 2021). "CircuitPython 6.2.0 released!". Adafruit Blog. Adafruit Industries. Retrieved 20 April 2021.
+
+^ "Why are we dropping support for ESP8266?". Adafruit.com. Adafruit Industries. Retrieved 15 April 2019.
+
+
+External links[edit]
+CircuitPython on GitHub
+MicroPython playlist on YouTube • Tutorials by Tony DiCola / Adafruit
+vtePythonImplementations
+CircuitPython
+CLPython
+CPython
+Cython
+MicroPython
+Numba
+IronPython
+Jython
+Psyco
+PyPy
+Python for S60
+Shed Skin
+Stackless Python
+Unladen Swallow
+more...
+IDE
+Boa
+Eric Python IDE
+IDLE
+PyCharm
+PyDev
+Ninja-IDE
+more...
+Topics
+WSGI
+ASGI
+
+software (list)
+Python Software Foundation
+PyCon
+
+
+
+This programming-language-related article is a stub. You can help Wikipedia by expanding it.vte
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=CircuitPython&oldid=1191969632"
+Categories: Microcontroller softwarePython (programming language)Free software programmed in CSoftware using the MIT licenseProgramming language topic stubsHidden categories: Articles with short descriptionShort description is different from WikidataAll articles lacking reliable referencesArticles lacking reliable references from August 2019All stub articles
+
+
+
+
+
+
+ This page was last edited on 26 December 2023, at 21:58 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

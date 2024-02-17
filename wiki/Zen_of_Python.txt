@@ -1,0 +1,553 @@
+
+
+
+
+Zen of Python - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Principles
+
+
+
+
+
+
+
+2Being Pythonic
+
+
+
+
+
+
+
+3In practice
+
+
+
+
+
+
+
+4See also
+
+
+
+
+
+
+
+5Notes
+
+
+
+
+
+
+
+6References
+
+
+
+
+
+
+
+7External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Zen of Python
+
+
+
+12 languages
+
+
+
+
+العربيةČeštinaEspañolفارسیFrançaisעבריתPortuguêsРусскийУкраїнськаاردوTiếng Việt中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Programming language design principles
+The Zen of Python output in a terminal
+The Zen of Python is a collection of 19 "guiding principles" for writing computer programs that influence the design of the Python programming language.[1] Python code that aligns with these principles is often referred to as "Pythonic".[2]
+Software engineer Tim Peters wrote this set of principles and posted it on the Python mailing list in 1999.[3] Peters's list left open a 20th principle "for Guido to fill in", referring to Guido van Rossum, the original author of the Python language. The vacancy for a 20th principle has not been filled.
+Peters' Zen of Python was included as entry number 20 in the language's official Python Enhancement Proposals and was released into the public domain.[4] It is also included as an Easter egg in the Python interpreter, where it can be displayed by entering import this.[1][4][a]
+In May 2020, Barry Warsaw (developer of GNU Mailman) wrote the lyrics to music.[5][6]
+
+
+Principles[edit]
+The Zen of Python illustrated
+The principles are listed as follows:[b]
+
+
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.[c]
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than right now.[d]
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea – let's do more of those!
+
+
+Being Pythonic[edit]
+One of the principles, "There should be one-- and preferably only one --obvious way to do it", can be referenced as the "Pythonic" way.[8] The official definition of "Pythonic" is:[2]An idea or piece of code which closely follows the most common idioms of the Python language, rather than implementing code using concepts common to other languages.  For example, a common idiom in Python is to loop over all elements of an iterable using a for statement. Many other languages don’t have this type of construct, so people unfamiliar with Python sometimes use a numerical counter instead:
+for i in range(len(food)):
+    print(food[i])
+
+As opposed to the cleaner, Pythonic method:
+
+for piece in food:
+    print(piece)
+
+
+In practice[edit]
+Since the release of the Zen of Python, there has been research done on its effectiveness and actual use among developers. Despite the difference in interpretation between beginners and experienced Python programmers, interviews among 13 Python programmers of varying skill show that the Zen of Python "positively influences the way developers write and talk about code".[8] Researchers extended this case study to explore the use of Python idioms on GitHub repositories, and found that the usage of "pythonic idioms"[e] increased over time.[9] Writing Python code that aligns with the Zen of Python may save memory and run time of Python programs.[10] The desire to write in pythonic code has led to refactoring tools to help programmers achieve this goal.[11][12]
+
+See also[edit]
+Convention over configuration
+There's more than one way to do it
+Notes[edit]
+
+
+^ The source code for the Zen of Python can be found on Github.
+
+^ Wikipedia links below are added for further reference and understanding, and were not explicitly linked in the Zen of Python
+
+^ The formatting of the dashes in this line and the final is purposely inconsistent, in reference to the varying formatting conventions.[7]
+
+^ In the interpreter easter egg, this is written as "Although never is often better than *right* now." This follows a longstanding convention of plain-text communication — in which common formatting features are often impossible — where emphasis is represented with asterisks.
+
+^ A list of their pythonic idioms can be found here https://slimshadyiam.github.io/ZenYourPython/
+
+
+References[edit]
+
+
+^ a b Reitz, Kenneth (2011–2019). "Code Style". The Hitchhiker’s Guide to Python. § Zen of Python. Retrieved March 26, 2019.
+
+^ a b "Glossary". Python Documentation. Retrieved 2024-02-07.
+
+^ Peters, Tim (June 4, 1999). "The Python Way". Python Software Foundation. Retrieved March 26, 2019.
+
+^ a b Peters, Tim (August 19, 2004). "PEP 20—The Zen of Python". Python Software Foundation. Retrieved March 26, 2019.
+
+^ Warsaw, Barry (10 May 2020). "The Zen of Python". We Fear Change. Archived from the original on 2020-06-03.
+
+^ Warsaw, Barry (23 May 2020). The Zen of Python. YouTube. The Zbwedicon. Archived from the original on 2021-12-11. Archived 2020-06-03 at the Wayback Machine
+
+^ "Issue 3364: An ortographical typo in Zen of Python text - Python tracker". Retrieved 2021-02-10.
+
+^ a b Alexandru, Carol V.; Merchante, José J.; Panichella, Sebastiano; Proksch, Sebastian; Gall, Harald C.; Robles, Gregorio (2018-10-24). "On the usage of pythonic idioms". Proceedings of the 2018 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software. Onward! 2018. New York, NY, USA: Association for Computing Machinery: 1–11. doi:10.1145/3276954.3276960. ISBN 978-1-4503-6031-9. OCLC 1362712424. Archived from the original on 2018-10-03 – via Association for Computing Machinery.
+
+^ Farooq, Aamir; Zaytsev, Vadim (2021-11-22). "There is more than one way to zen your Python". Proceedings of the 14th ACM SIGPLAN International Conference on Software Language Engineering. SLE 2021. New York, NY, USA: Association for Computing Machinery: 68–82. doi:10.1145/3486608.3486909. ISBN 978-1-4503-9111-5.
+
+^ Leelaprute, Pattara; Chinthanet, Bodin; Wattanakriengkrai, Supatsara; Kula, Raula Gaikovina; Jaisri, Pongchai; Ishio, Takashi (2022-10-20). "Does coding in Pythonic zen peak performance? preliminary experiments of nine Pythonic idioms at scale". Proceedings of the 30th IEEE/ACM International Conference on Program Comprehension. ICPC '22. New York, NY, USA: Association for Computing Machinery: 575–579. doi:10.1145/3524610.3527879. ISBN 978-1-4503-9298-3.
+
+^ Zhang, Zejun; Xing, Zhenchang; Xia, Xin; Xu, Xiwei; Zhu, Liming (2022-07-12), Making Python Code Idiomatic by Automatic Refactoring Non-Idiomatic Python Code with Pythonic Idioms, doi:10.48550/arXiv.2207.05613, retrieved 2024-02-07
+
+^ Phan-udom, Purit; Wattanakul, Naruedon; Sakulniwat, Tattiya; Ragkhitwetsagul, Chaiyong; Sunetnanta, Thanwadee; Choetkiertikul, Morakot; Kula, Raula Gaikovina (2020-09-05), Teddy: Automatic Recommendation of Pythonic Idiom Usage For Pull-Based Software Projects, doi:10.48550/arXiv.2009.03302, retrieved 2024-02-07
+
+
+External links[edit]
+PEP20 on Python website
+PEP 20 ~ The Zen of Python by Tim Peters
+This article about an essay or essay collection is a stub. You can help Wikipedia by expanding it.vte
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Zen_of_Python&oldid=1208434624"
+Categories: 2004 essaysEssays about computingProgramming principlesPython (programming language)Essay stubsHidden categories: Webarchive template wayback linksArticles with short descriptionShort description is different from WikidataAll stub articles
+
+
+
+
+
+
+ This page was last edited on 17 February 2024, at 13:55 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

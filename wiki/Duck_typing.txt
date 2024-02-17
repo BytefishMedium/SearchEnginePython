@@ -1,0 +1,554 @@
+
+
+
+
+Duck typing - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Example
+
+
+
+
+
+
+
+2In statically typed languages
+
+
+
+
+
+
+
+3Comparison with other type systems
+
+
+
+Toggle Comparison with other type systems subsection
+
+
+
+
+
+3.1Structural type systems
+
+
+
+
+
+
+
+3.2Protocols and interfaces
+
+
+
+
+
+
+
+3.3Templates or generic types
+
+
+
+
+
+
+
+
+
+4See also
+
+
+
+
+
+
+
+5References
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Duck typing
+
+
+
+23 languages
+
+
+
+
+العربيةČeštinaDeutschEspañolفارسیFrançaisGalego한국어ItalianoമലയാളംBahasa MelayuNederlands日本語PolskiPortuguêsРусскийSimple EnglishSuomiSvenskaไทยTürkçeУкраїнська中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Style of dynamic typing in object-oriented programming
+Type systems
+General concepts
+Type safety
+Strong vs. weak typing
+
+Major categories
+Static vs. dynamic
+Manifest vs. inferred
+Nominal vs. structural
+Duck typing
+
+Minor categories
+Abstract
+Dependent
+Flow-sensitive
+Gradual
+Intersection
+Latent
+Refinement
+Substructural
+Unique
+Session
+vte
+In computer programming, duck typing is an application of the duck test—"If it walks like a duck and it quacks like a duck, then it must be a duck"—to determine whether an object can be used for a particular purpose. With nominative typing, an object is of a given type if it is declared as such (or if a type's association with the object is inferred through mechanisms such as object inheritance). With duck typing, an object is of a given type if it has all methods and properties required by that type.[1][2] Duck typing may be viewed as a usage-based structural equivalence between a given object and the requirements of a type.
+
+
+Example[edit]
+This simple example in Python 3 demonstrates how any object may be used in any context until it is used in a way that it does not support.
+
+class Duck:
+    def swim(self):
+        print("Duck swimming")
+
+    def fly(self):
+        print("Duck flying")
+
+class Whale:
+    def swim(self):
+        print("Whale swimming")
+
+for animal in [Duck(), Whale()]:
+    animal.swim()
+    animal.fly()
+
+Output:
+
+Duck swimming
+Duck flying
+Whale swimming
+AttributeError: 'Whale' object has no attribute 'fly'
+
+If it can be assumed that anything that can swim is a duck because ducks can swim, a whale could be considered a duck; however, if it is also assumed that a duck must be capable of flying, the whale will not be considered a duck.
+
+In statically typed languages[edit]
+In some statically-typed languages such as Boo[3] and D,[4][5] class type checking can be specified to occur at runtime rather than at compile time.
+
+Comparison with other type systems[edit]
+Structural type systems[edit]
+Duck typing is similar to, but distinct from, structural typing. Structural typing is a static typing system that determines type compatibility and equivalence by a type's structure, whereas duck typing is dynamic and determines type compatibility by only that part of a type's structure that is accessed during runtime.
+The TypeScript,[6] Elm[7] and Python[8] languages support structural typing to varying degrees.
+
+Protocols and interfaces[edit]
+Protocols and interfaces provide a way to explicitly declare that some methods, operators or behaviors must be defined. If a third-party library implements a class that cannot be modified, a client cannot use an instance of it with an interface unknown to that library even if the class satisfies the interface requirements. A common solution to this problem is the adapter pattern. In contrast, with duck typing, the object would be accepted directly without the need for an adapter.
+
+Templates or generic types[edit]
+Template (also called generic) functions or methods apply the duck test in a static typing context; this brings all of the advantages and disadvantages of static versus dynamic type checking. Duck typing can also be more flexible in that only the methods actually called at runtime must be implemented, while templates require implementations of all methods that cannot be proven unreachable at compile time.
+In languages such as Java, Scala and Objective-C, reflection may be employed to inspect whether objects implement methods or add necessary methods at runtime. For example, Java's MethodHandle API can be used in this manner.[9]
+
+See also[edit]
+Extension method
+UFCS
+Loose coupling
+Monkey patch
+Dynamic programming language
+References[edit]
+
+
+^ "Glossary — Python 3.7.1 documentation". docs.python.org. Retrieved 2018-11-08.
+
+^ "Python Duck Typing - Example". Techie Hours. 2020-06-28. Archived from the original on 2022-03-31. Retrieved 2020-07-26.
+
+^ Boo: Duck TypingArchived October 6, 2008, at the Wayback Machine
+
+^ "Dynamic classes and duck typing".
+
+^ "Metaprogramming - duck typing in D".
+
+^ "SE Radio Episode 384: Boris Cherny on TypeScript". se-radio.net. Retrieved 2019-10-25.
+
+^ Czaplicki, Evan. "Core Language · An Introduction to Elm". Retrieved 30 January 2017.
+
+^ "PEP 544 – Protocols: Structural subtyping (static duck typing)".
+
+^ "StackOverflow: Implement duck typing using java MethodHandles". Retrieved 13 June 2020.
+
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Duck_typing&oldid=1207784910"
+Categories: Object-oriented programmingType theoryHidden categories: Webarchive template wayback linksArticles with short descriptionShort description is different from WikidataArticles with example pseudocodeArticles with example Python (programming language) code
+
+
+
+
+
+
+ This page was last edited on 15 February 2024, at 18:29 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

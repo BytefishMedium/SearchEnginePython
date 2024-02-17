@@ -1,0 +1,713 @@
+
+
+
+
+Mojo (programming language) - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Origin, design and development
+
+
+
+
+
+
+
+2Features
+
+
+
+
+
+
+
+3Programming examples
+
+
+
+
+
+
+
+4Usage
+
+
+
+
+
+
+
+5See also
+
+
+
+
+
+
+
+6References
+
+
+
+
+
+
+
+7External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Mojo (programming language)
+
+
+
+9 languages
+
+
+
+
+EspañolفارسیFrançais한국어日本語РусскийСаха тылаУкраїнська中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Programming language optimized for artificial intelligence
+This article has multiple issues. Please help improve it or discuss these issues on the talk page. (Learn how and when to remove these template messages)
+
+Some of this article's listed sources may not be reliable. Please help improve this article by looking for better, more reliable sources. Unreliable citations may be challenged and removed. (September 2023) (Learn how and when to remove this template message)
+This article's tone or style may not reflect the encyclopedic tone used on Wikipedia. See Wikipedia's guide to writing better articles for suggestions. (October 2023) (Learn how and when to remove this template message)
+
+ (Learn how and when to remove this template message)
+MojoParadigmMulti-paradigm:imperative (primary)functionalgenericFamilyPythonDesigned byChris LattnerDeveloperModular Inc.First appeared2023; 1 year ago (2023)Preview release0.6.0[1]
+
+Typing disciplineAffineinferrednominalduckstaticdynamicstrongOSCross-platformLicenseProprietaryFilename extensions.🔥 (the fire emoji / the U+1F525 Unicode character), alternatively .mojoWebsitewww.modular.com/mojoInfluenced byPython, Cython[citation needed], C, C++, Rust, Swift, Zig
+Mojo is a proprietary programming language that is currrently under development.[2][3][4] It is available both in browsers via Jupyter notebooks,[4][5] and locally on both Linux and macOS.[6][7]
+
+
+Origin, design and development[edit]
+In 2022, the Modular company was founded by Chris Lattner, the original architect of the Swift programming language, and Tim Davis, a former Google employee.[8]
+In September 2022, an initial build of Mojo was released internally by Modular Inc.[9]
+Features[edit]
+Mojo uses LLVM and MLIR as its compilation backend.[4][10][11]
+Mojo uses inferred static typing.[12]
+Mojo was created for easy transition from Python. The language has syntax similar to Python's, and allows users to import Python modules.[13]
+Mojo is not open source, but it is planned to become open source in the future.[14]
+Mojo plans to add a borrow checker, an influence from Rust.
+Mojo plans to add a foreign function interface to call C/C++ and Python code.
+Mojo is not source-compatible with Python 3, only providing a subset of its syntax, e.g. missing the global keyword, list and dictionary comprehensions, and support for classes. Further, Mojo also adds features that enable performant low-level programming: fn for creating typed, compiled functions and "struct" for memory-optimized alternatives to classes. Mojo structs support methods, fields, operator overloading, and decorators.[5]
+Mojo files use the .mojo or .🔥 file extension.[2]
+
+Programming examples[edit]
+In Mojo, functions can be declared using both fn (for performant functions) or def (for Python compatibility).[13]
+Basic arithmetic operations in Mojo:
+
+fn add(x: Int, y: Int) -> Int:
+    return x + y
+
+The manner in which Mojo employs var and let for mutable and immutable variable declarations respectively mirrors the syntax found in Swift. In Swift, var is used for mutable variables, while let is designated for constants or immutable variables.[13]
+Variable declaration and usage in Mojo:
+
+fn main():
+    let x = 1
+    
+    let y: Int
+    y = 1
+
+    var z = 0
+    z += 1
+
+Usage[edit]
+The Mojo SDK allows Mojo programmers to compile and execute Mojo source files locally from the command line and currently supports Ubuntu and macOS.[15] Additionally, there is a Mojo extension for Visual Studio Code which provides code completion and tooltips.
+
+See also[edit]
+List of programming languages for artificial intelligence
+References[edit]
+
+
+^ "New Mojo update!". github.com. Modular. 2023-09-21. Retrieved 2023-09-26. We just released a new version of Mojo 🔥 (v0.3.0)
+
+^ a b "Mojo🔥 programming manual". docs.modular.com. Modular. 2023. Retrieved 2023-09-26. Mojo is a programming language that is as easy to use as Python but with the performance of C++ and Rust. Furthermore, Mojo provides the ability to leverage the entire Python library ecosystem.
+
+^ "Why Mojo🔥 - A language for next-generation compiler technology". docs.modular.com. Modular. 2023. Retrieved 2023-09-26. While many other projects now use MLIR, Mojo is the first major language designed expressly for MLIR, which makes Mojo uniquely powerful when writing systems-level code for AI workloads.
+
+^ a b c Krill, Paul (4 May 2023). "Mojo language marries Python and MLIR for AI development". InfoWorld.
+
+^ a b Yegulalp, Serdar (7 June 2023). "A first look at the Mojo language". InfoWorld.
+
+^ Deutscher, Maria (7 September 2023). "Modular makes its AI-optimized Mojo programming language generally available". Silicon Angle. Retrieved 2023-09-11.
+
+^ "Mojo for Mac OS". Modular. Retrieved 2023-10-19.
+
+^ Claburn, Thomas (2023-05-05). "Modular finds its Mojo, a Python superset with C-level speed". The Register. Retrieved 2023-08-08.
+
+^ "Mojo🔥 changelog".
+
+^ Lattner, Chris; Pienaar, Jacques (2019). MLIR Primer: A Compiler Infrastructure for the End of Moore's Law (Technical report). Retrieved 2022-09-30.
+
+^ Lattner, Chris; Amini, Mehdi; Bondhugula, Uday; Cohen, Albert; Davis, Andy; Pienaar, Jacques; Riddle, River; Shpeisman, Tatiana; Vasilache, Nicolas; Zinenko, Oleksandr (2020-02-29). "MLIR: A Compiler Infrastructure for the End of Moore's Law". arXiv:2002.11054 [cs.PL].
+
+^ "Modular Docs - Mojo🔥 programming manual". docs.modular.com. Retrieved 2023-10-19.
+
+^ a b c "Modular Docs - Mojo🔥 programming manual". docs.modular.com. Retrieved 2023-10-31.
+
+^ Welcome to Mojo 🔥, Modular, 2023-10-31, retrieved 2023-10-31
+
+^ "Modular Docs - Mojo🔥 roadmap & sharp edges". docs.modular.com. Retrieved 2023-10-31.
+
+
+External links[edit]
+Official website
+Mojo manual
+mojo on GitHub
+All about mojo programming language
+Introduction to Mojo programming language
+Mojo may be the biggest programming language advance in decades
+Mojo: The Future of AI Programming
+vteProgramming languages
+Comparison
+Timeline
+History
+
+Ada
+ALGOL
+APL
+ArkTS
+Assembly
+BASIC
+C
+C++
+C#
+Classic Visual Basic
+COBOL
+Erlang
+Forth
+Fortran
+Go
+Haskell
+Java
+JavaScript
+Julia
+Kotlin
+Lisp
+Lua
+MATLAB
+ML
+Object Pascal
+Pascal
+Perl
+PHP
+Prolog
+Python
+R
+Ruby
+Rust
+SQL
+Scratch
+Shell
+Simula
+Smalltalk
+Swift
+Visual Basic
+more...
+
+ Lists: Alphabetical
+Categorical
+Generational
+Non-English-based
+ Category
+
+vteStatistical softwarePublic domain
+Dataplot
+Epi Info
+CSPro
+X-12-ARIMA
+Open-source
+ADMB
+DAP
+gretl
+JASP
+JAGS
+JMulTi
+Julia
+Jupyter (Julia, Python, R)
+GNU Octave
+OpenBUGS
+Orange
+PSPP
+Python (statsmodels, PyMC3, IPython, IDLE)
+R (RStudio)
+SageMath
+SimFiT
+SOFA Statistics
+Stan
+XLispStat
+Freeware
+BV4.1
+CumFreq
+SegReg
+XploRe
+WinBUGS
+CommercialCross-platform
+Data Desk
+GAUSS
+GraphPad InStat
+GraphPad Prism
+IBM SPSS Statistics
+IBM SPSS Modeler
+JMP
+Maple
+Mathcad
+Mathematica
+MATLAB
+OxMetrics
+RATS
+Revolution Analytics
+SAS
+SmartPLS
+Stata
+StatView
+SUDAAN
+S-PLUS
+TSP
+World Programming System (WPS)
+Windows only
+BMDP
+EViews
+GenStat
+LIMDEP
+LISREL
+MedCalc
+Microfit
+Minitab
+MLwiN
+NCSS
+SHAZAM
+SigmaStat
+Statistica
+StatsDirect
+StatXact
+SYSTAT
+The Unscrambler
+UNISTAT
+Excel add-ons
+Analyse-it
+UNISTAT for Excel
+XLfit
+RExcel
+
+Category
+Comparison
+
+vteNumerical-analysis softwareFree
+Advanced Simulation Library
+ADMB
+Chapel
+Euler
+FreeFem++
+FreeMat
+Genius
+Gmsh
+GNU Octave
+gretl
+Julia
+Jupyter (Julia, Python, R; IPython)
+MFEM
+OpenFOAM
+Python
+R
+SageMath
+Salome
+ScicosLab
+Scilab
+X10
+Weka
+Discontinued
+Fortress
+
+Proprietary
+DADiSP
+FEATool Multiphysics
+GAUSS
+LabVIEW
+Maple
+Mathcad
+Mathematica
+MATLAB
+Speakeasy
+VisSim
+
+Comparison
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Mojo_(programming_language)&oldid=1208303657"
+Categories: AI softwareCross-platform softwareHigh-level programming languagesMulti-paradigm programming languagesNotebook interfaceProgramming languagesProgramming languages created in 2023Python (programming language)Text-oriented programming languagesHidden categories: Articles with short descriptionShort description is different from WikidataArticles lacking reliable references from September 2023All articles lacking reliable referencesWikipedia articles with style issues from October 2023All articles with style issuesArticles with multiple maintenance issuesAll articles with unsourced statementsArticles with unsourced statements from October 2023Articles with example Python (programming language) code
+
+
+
+
+
+
+ This page was last edited on 17 February 2024, at 00:59 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

@@ -1,0 +1,855 @@
+
+
+
+
+Metaprogramming - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Approaches
+
+
+
+
+
+
+
+2Usages
+
+
+
+Toggle Usages subsection
+
+
+
+
+
+2.1Code generation
+
+
+
+
+
+
+
+2.2Code instrumentation
+
+
+
+
+
+
+
+
+
+3Challenges
+
+
+
+
+
+
+
+4Uses in programming languages
+
+
+
+Toggle Uses in programming languages subsection
+
+
+
+
+
+4.1Macro systems
+
+
+
+
+
+
+
+4.2Macro assemblers
+
+
+
+
+
+
+
+4.3Metaclasses
+
+
+
+
+
+
+
+4.4Template metaprogramming
+
+
+
+
+
+
+
+4.5Staged metaprogramming
+
+
+
+
+
+
+
+4.6Dependent types
+
+
+
+
+
+
+
+
+
+5Implementations
+
+
+
+
+
+
+
+6See also
+
+
+
+
+
+
+
+7References
+
+
+
+
+
+
+
+8External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Metaprogramming
+
+
+
+28 languages
+
+
+
+
+العربيةবাংলাБългарскиČeštinaDeutschEestiΕλληνικάEspañolEsperantoفارسیFrançais한국어ՀայերենMagyarNederlands日本語Norsk bokmålNorsk nynorskPolskiPortuguêsRomânăРусскийСрпски / srpskiไทยУкраїнськаTiếng Việt粵語中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Programming paradigm
+This article is about the computer programming technique. For the management technique, see Charles Simonyi.
+This article has multiple issues. Please help improve it or discuss these issues on the talk page. (Learn how and when to remove these template messages)
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed.Find sources: "Metaprogramming" – news · newspapers · books · scholar · JSTOR (August 2011) (Learn how and when to remove this template message)
+This article's tone or style may not reflect the encyclopedic tone used on Wikipedia. See Wikipedia's guide to writing better articles for suggestions. (February 2017) (Learn how and when to remove this template message)
+
+ (Learn how and when to remove this template message)
+Metaprogramming is a programming technique in which computer programs have the ability to treat other programs as their data. It means that a program can be designed to read, generate, analyse or transform other programs, and even modify itself while running.[1][2] In some cases, this allows programmers to minimize the number of lines of code to express a solution, in turn reducing development time.[3] It also allows programs a greater flexibility to efficiently handle new situations without recompilation.
+Metaprogramming can be used to move computations from run-time to compile-time, to generate code using compile time computations, and to enable self-modifying code. The ability of a programming language to be its own metalanguage is called reflection.[4] Reflection is a valuable language feature to facilitate metaprogramming.
+Metaprogramming was popular in the 1970s and 1980s using list processing languages such as LISP. LISP hardware machines were popular in the 1980s and enabled applications that could process code. They were frequently used for artificial intelligence applications.
+
+
+Approaches[edit]
+Metaprogramming enables developers to write programs and develop code that falls under the generic programming paradigm. Having the programming language itself as a first-class data type (as in Lisp, Prolog, SNOBOL, or Rebol) is also very useful; this is known as homoiconicity. Generic programming invokes a metaprogramming facility within a language by allowing one to write code without the concern of specifying data types since they can be supplied as parameters when used.
+Metaprogramming usually works in one of three ways.[5]
+
+The first approach is to expose the internals of the run-time engine to the programming code through application programming interfaces (APIs) like that for the .NET IL emitter.
+The second approach is dynamic execution of expressions that contain programming commands, often composed from strings, but can also be from other methods using arguments or context, like JavaScript.[6] Thus, "programs can write programs." Although both approaches can be used in the same language, most languages tend to lean toward one or the other.
+The third approach is to step outside the language entirely. General purpose program transformation systems such as compilers, which accept language descriptions and carry out arbitrary transformations on those languages, are direct implementations of general metaprogramming. This allows metaprogramming to be applied to virtually any target language without regard to whether that target language has any metaprogramming abilities of its own. One can see this at work with Scheme and how it allows tackling some limitations faced in C by using constructs that were part of the Scheme language itself to extend C.[7]
+Lisp is probably the quintessential language with metaprogramming facilities, both because of its historical precedence and because of the simplicity and power of its metaprogramming. In Lisp metaprogramming, the unquote operator (typically a comma) introduces code that is evaluated at program definition time rather than at run time; see Self-evaluating forms and quoting in Lisp. The metaprogramming language is thus identical to the host programming language, and existing Lisp routines can be directly reused for metaprogramming, if desired. This approach has been implemented in other languages by incorporating an interpreter in the program, which works directly with the program's data. There are implementations of this kind for some common high-level languages, such as RemObjects’ Pascal Script for Object Pascal.
+
+Usages[edit]
+Code generation[edit]
+A simple example of a metaprogram is this POSIX Shell script, which is an example of generative programming:
+
+#!/bin/sh
+# metaprogram
+echo '#!/bin/sh' > program
+for i in $(seq 992)
+do
+    echo "echo $i" >> program
+done
+chmod +x program
+
+This script (or program) generates a new 993-line program that prints out the numbers 1–992. This is only an illustration of how to use code to write more code; it is not the most efficient way to print out a list of numbers. Nonetheless, a programmer can write and execute this metaprogram in less than a minute, and will have generated over 1000 lines of code in that amount of time.
+A quine is a special kind of metaprogram that produces its own source code as its output. Quines are generally of recreational or theoretical interest only.
+Not all metaprogramming involves generative programming. If programs are modifiable at runtime or if incremental compilation is available (such as in C#, Forth, Frink, Groovy, JavaScript, Lisp, Elixir, Lua, Nim, Perl, PHP, Python, REBOL, Ruby, Rust, SAS, Smalltalk, and Tcl), then techniques can be used to perform metaprogramming without actually generating source code.
+One style of generative approach is to employ domain-specific languages (DSLs). A fairly common example of using DSLs involves generative metaprogramming: lex and yacc, two tools used to generate lexical analysers and parsers, let the user describe the language using regular expressions and context-free grammars, and embed the complex algorithms required to efficiently parse the language.
+
+Code instrumentation[edit]
+One usage of metaprogramming is to instrument programs in order to do dynamic program analysis.
+
+Challenges[edit]
+Some argue that there is a sharp learning curve to make complete use of metaprogramming features.[8] Since metaprogramming gives more flexibility and configurability at runtime, misuse or incorrect use of the metaprogramming can result in unwarranted and unexpected errors that can be extremely difficult to debug to an average developer. It can introduce risks in the system and make it more vulnerable if not used with care. Some of the common problems which can occur due to wrong use of metaprogramming are inability of the compiler to identify missing configuration parameters, invalid or incorrect data can result in unknown exception or different results.[9] Due to this, some believe[8] that only high-skilled developers should work on developing features which exercise metaprogramming in a language or platform and average developers must learn how to use these features as part of convention.
+
+Uses in programming languages[edit]
+Macro systems[edit]
+Main article: Macro (computer science)
+Common Lisp and most Lisp dialects.
+Scheme hygienic macros
+MacroML
+Racket (programming language)
+Template Haskell
+Scala macros
+Clojure macros
+Nim
+Rust
+Haxe
+Julia
+Elixir
+Macro assemblers[edit]
+Main article: Macro assembler
+The IBM/360 and derivatives had powerful macro assembler facilities that were often used to generate complete assembly language programs[citation needed] or sections of programs (for different operating systems for instance). Macros provided with CICS transaction processing system had assembler macros that generated COBOL statements as a pre-processing step.
+Other assemblers, such as MASM, also support macros.
+
+Metaclasses[edit]
+Main article: Metaclass
+Metaclasses are provided by the following programming languages:
+
+Common Lisp[10]
+Python
+Nil
+Groovy
+Ruby
+Smalltalk
+Lua
+Template metaprogramming[edit]
+Main article: Template metaprogramming
+C "X Macros"
+C++ Templates[11]
+D
+Common Lisp, Scheme and most Lisp dialects by using the quasiquote ("backquote") operator.[12]
+Nim
+Staged metaprogramming[edit]
+Main article: Multi-stage programming
+MetaML
+MetaOCaml
+Scala natively or using the Lightweight Modular Staging Framework[13][14]
+Terra
+Dependent types[edit]
+Main article: Dependent type
+Usage of dependent types allows proving that generated code is never invalid.[15] However, this approach is bleeding-edge and is rarely found outside of research programming languages.
+
+Implementations[edit]
+The list of notable metaprogramming systems is maintained at List of Program Transformation Systems.
+
+See also[edit]
+
+Aspect weaver
+Comparison of code generation tools
+Compile-time function execution
+Compile-time reflection
+Genetic programming
+Homoiconicity
+Inferential programming
+Instruction set simulator
+Intentional Programming
+Interpreted language
+Machine learning
+Metacompiler
+Metaobject
+Partial evaluation
+Reflection (computer programming)
+Self-interpreter
+Self-modifying code
+Source code generation
+Transcompiler (also known as transpilation)
+Very Large Scale Integration
+Halting Problem
+
+References[edit]
+
+
+^ Harald Sondergaard. "Course on Program Analysis and Transformation". Retrieved 18 September 2014.
+
+^ Czarnecki, Krzysztof; Eisenecker, Ulrich W. (2000). Generative Programming. ISBN 0-201-30977-7.
+
+^ Walker, Max. "The Art of Metaprogrmming in Java". New Circle. Retrieved 28 January 2014.
+
+^ Krauss, Aaron. "Programming Concepts: Type Introspection and Reflection". The Societa. Retrieved 14 September 2014.
+
+^ Joshi, Prateek (5 April 2014). "What Is Metaprogramming? – Part 2/2". Perpetual Enigma. Retrieved 14 August 2014.
+
+^ for example, instance_eval in Ruby takes a string or an anonymous function. "Rdoc for Class: BasicObject (Ruby 1.9.3) - instance_eval". Retrieved 30 December 2011.
+
+^ "Art of Metaprogramming". IBM.
+
+^ a b Bicking, Ian. "The challenge of metaprogramming". IanBicking.org. Retrieved 21 September 2016.
+
+^ Terry, Matt (21 August 2013). "Beware of Metaprogramming". Medium.com. Medium Corporation. Retrieved 21 August 2014.
+
+^ Through Common Lisp Object System's "Meta Object Protocol"
+
+^ "C++ Template Metaprogramming". aszt.inf.elte.hu. Retrieved 2022-07-23.
+
+^ Lisp (programming language) "Self-evaluating forms and quoting", quasi-quote operator.
+
+^ "LMS: Program Generation and Embedded Compilers in Scala". scala-lms.github.io. Retrieved 2017-12-06.
+
+^ Rompf, Tiark; Odersky, Martin (June 2012). "Lightweight Modular Staging: A Pragmatic Approach to Runtime Code Generation and Compiled DSLs". Commun. ACM. 55 (6): 121–130. doi:10.1145/2184319.2184345. ISSN 0001-0782. S2CID 52898203.
+
+^ Chlipala, Adam (June 2010). "Ur: statically-typed metaprogramming with type-level record computation" (PDF). ACM SIGPLAN Notices. PLDI '10. 45 (6): 122–133. doi:10.1145/1809028.1806612. Retrieved 29 August 2012.
+
+
+External links[edit]
+c2.com Wiki: Metaprogramming article
+Meta Programming on the Program Transformation Wiki
+Code generation Vs Metaprogramming
+"Solenoid": The first metaprogramming framework for eXist-db
+vteProgramming paradigms (Comparison by language)ImperativeStructured
+Jackson structures
+Block-structured
+Modular
+Non-structured
+Procedural
+Programming in the large and in the small
+Design by contract
+Invariant-based
+Nested function
+Object-oriented(Comparison, List)
+Agent
+Class-based
+Prototype-based
+Object-based
+Immutable object
+Persistent
+Uniform Function Call Syntax
+DeclarativeFunctional(Comparison)
+Recursive
+Anonymous function (Partial application)
+Higher-order
+Purely functional
+Total
+Strict
+GADTs
+Dependent types
+Functional logic
+Point-free style
+Expression-oriented
+Applicative / Concatenative
+Function-level / Value-level
+Dataflow
+Flow-based
+Reactive (Functional reactive)
+Signals
+Streams
+Synchronous
+Logic
+Abductive logic
+Answer set
+Constraint (Constraint logic)
+Inductive logic
+Nondeterministic
+Ontology
+Probabilistic logic
+Query
+DSL
+Algebraic modeling
+Array
+Automata-based (Action)
+Command (Spacecraft)
+Differentiable
+End-user
+Grammar-oriented
+Interface description
+Language-oriented
+List comprehension
+Low-code
+Modeling
+Natural language
+Non-English-based
+Page description
+Pipes and filters
+Probabilistic
+Quantum
+Scientific
+Scripting
+Set-theoretic
+Simulation
+Stack-based
+System
+Tactile
+Templating
+Transformation (Graph rewriting, Production, Pattern)
+Visual
+Concurrent/Distributed/Parallel
+Actor-based
+Automatic mutual exclusion
+Choreographic programming
+Concurrent logic (Concurrent constraint logic)
+Concurrent OO
+Macroprogramming
+Multitier programming
+Organic computing
+Parallel programming models
+Partitioned global address space
+Process-oriented
+Relativistic programming
+Service-oriented
+Structured concurrency
+Metaprogramming
+Attribute-oriented
+Automatic (Inductive)
+Dynamic
+Extensible
+Generic
+Homoiconicity
+Interactive
+Macro (Hygienic)
+Metalinguistic abstraction
+Multi-stage
+Program synthesis (Bayesian, Inferential, by demonstration, by example)
+Reflective
+Self-modifying code
+Symbolic
+Template
+Separation of concerns
+Aspects
+Components
+Data-driven
+Data-oriented
+Event-driven
+Features
+Intentional
+Literate
+Roles
+Subjects
+
+vteTypes of programming languagesParadigm
+Actor-based
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Dataflow
+Declarative
+Differentiable
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Stack-oriented
+Synchronous
+Tactile
+Template
+Level
+Machine
+Assembly
+Compiled
+Interpreted
+Low-level
+High-level
+Very high-level
+Generation
+First
+Second
+Third
+Fourth
+Fifth
+Related
+Non-English-based
+Visual
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Metaprogramming&oldid=1202031916"
+Categories: MetaprogrammingProgramming paradigmsHidden categories: Articles with short descriptionShort description matches WikidataArticles needing additional references from August 2011All articles needing additional referencesWikipedia articles with style issues from February 2017All articles with style issuesArticles with multiple maintenance issuesAll articles with unsourced statementsArticles with unsourced statements from August 2011
+
+
+
+
+
+
+ This page was last edited on 1 February 2024, at 22:15 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

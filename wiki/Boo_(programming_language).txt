@@ -1,0 +1,529 @@
+
+
+
+
+Boo (programming language) - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Syntax
+
+
+
+
+
+
+
+2See also
+
+
+
+
+
+
+
+3References
+
+
+
+
+
+
+
+4External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Boo (programming language)
+
+
+
+21 languages
+
+
+
+
+العربيةБългарскиČeštinaDeutschEspañolفارسیFrançaisGalego한국어ՀայերենItalianoעבריתമലയാളം日本語PolskiPortuguêsРусскийSvenskaУкраїнська粵語中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed.Find sources: "Boo" programming language – news · newspapers · books · scholar · JSTOR (July 2011) (Learn how and when to remove this template message)
+BooParadigmObject orientedDesigned byRodrigo B. De OliveiraDeveloperMason WheelerFirst appeared2003; 21 years ago (2003)Stable release0.9.7
+   /    25 March 2013; 10 years ago (2013-03-25)
+Typing disciplinestatic, strong, inferred, duckImplementation languageC#PlatformCommon Language Infrastructure (.NET Framework & Mono)/LicenseBSD 3-Clause[1]Websitegithub.com/boo-langInfluenced byC#, PythonInfluencedGenie, Vala
+Boo is an object-oriented, statically typed, general-purpose programming language that seeks to make use of the Common Language Infrastructure's support for Unicode, internationalization, and web applications, while using a Python-inspired syntax[2] and a special focus on language and compiler extensibility. Some features of note include type inference, generators, multimethods, optional duck typing, macros, true closures, currying, and first-class functions.
+Boo was one of the three scripting languages for the Unity game engine (Unity Technologies employed De Oliveira, its designer), until official support was dropped in 2014 due to the small userbase.[3] The Boo Compiler was removed from the engine in 2017.[4] Boo has since been abandoned by De Oliveira, with development being taken over by Mason Wheeler.[5]
+Boo is free software released under the BSD 3-Clause license. It is compatible with the Microsoft .NET and Mono frameworks.
+
+
+Syntax[edit]
+This section may need to be rewritten to comply with Wikipedia's quality standards. You can help. The talk page may contain suggestions. (May 2023)
+print ("Hello World")
+
+def fib():
+    a, b = 0L, 1L   h
+    # The 'L's make the numbers double word length (typically 64 bits)
+    while true:
+        yield b
+        a, b = b, a + b
+
+# Print the first 5 numbers in the series:
+for index as int, element in zip(range(5), fib()):
+    print("${index+1}: ${element}")
+
+See also[edit]
+
+Free and open-source software portal
+Fantom
+Apache Groovy
+IronPython
+IronRuby
+Nemerle
+REBOL
+StaDyn
+References[edit]
+
+
+^ "license.txt". github.com. Retrieved August 5, 2015.
+
+^ Rodrigo Barreto de Oliveira (2005). "The boo Programming Language" (PDF). Archived from the original (PDF) on February 6, 2009. Retrieved February 22, 2009.
+
+^ aleksandr (September 3, 2014). "Documentation, Unity scripting languages and you". Unity Blogs.
+
+^ Richard Fine (August 11, 2017). "UnityScript's long ride off into the sunset". Unity Blogs.
+
+^ "State of Boo · Issue #201 · boo-lang/boo". GitHub. October 2, 2019. Retrieved January 19, 2023.
+
+
+External links[edit]
+Official website
+How To Think Like a Computer Scientist: Learning to Program with Boo
+Boo Succinctly Revealed
+Bootorial
+vteCommon Language InfrastructureArchitecture
+Application domain
+Code Access Security
+Common Intermediate Language
+instructions
+Common Type System
+Platform Invocation Services
+Virtual Execution System
+Components
+Assembly
+Delegate
+Global Assembly Cache
+Manifest
+Metadata
+Standard Libraries
+ImplementationsMicrosoft
+.NET
+.NET Framework
+.NET Compact Framework
+.NET Micro Framework
+Other
+Mono
+DotGNU
+LanguagesMajor languages
+C#
+Visual Basic
+F#
+PowerShell
+Other
+Axum
+A#
+Boo
+Cobra
+C++/CLI
+IronScheme
+IronPython
+IronRuby
+JScript .NET
+J#
+Nemerle
+Oxygene
+Phalanger
+Q#
+Scala
+Small Basic
+X#
+Comparison
+C# and Java
+C# and Visual Basic .NET
+Java and .NET platforms
+Visual Basic and Visual Basic .NET
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Boo_(programming_language)&oldid=1153530218"
+Categories: Programming languages.NET programming languagesBrazilian inventionsClass-based programming languagesFree compilers and interpretersObject-oriented programming languagesProcedural programming languagesProgramming languages created in 2003Software using the BSD licenseStatically typed programming languages2003 softwareHidden categories: Articles with short descriptionShort description is different from WikidataArticles needing additional references from July 2011All articles needing additional referencesWikipedia articles needing rewrite from May 2023All articles needing rewrite
+
+
+
+
+
+
+ This page was last edited on 6 May 2023, at 23:47 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

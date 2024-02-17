@@ -1,0 +1,541 @@
+
+
+
+
+Name resolution (programming languages) - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Overview
+
+
+
+
+
+
+
+2Static versus dynamic
+
+
+
+
+
+
+
+3Name masking
+
+
+
+
+
+
+
+4Alpha renaming to make name resolution trivial
+
+
+
+
+
+
+
+5See also
+
+
+
+
+
+
+
+6References
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Name resolution (programming languages)
+
+
+
+2 languages
+
+
+
+
+فارسی中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Matching of lexical tokens to the components of a computer program
+See also: Name resolution (computer systems)
+In programming languages, name resolution is the resolution of the tokens within program expressions to the intended program components.
+
+
+Overview[edit]
+Expressions in computer programs reference variables, data types, functions, classes, objects, libraries, packages and other entities by name. In that context, name resolution refers to the association of those not-necessarily-unique names with the intended program entities. The algorithms that determine what those identifiers refer to in specific contexts are part of the language definition.
+The complexity of these algorithms is influenced by the sophistication of the language. For example, name resolution in assembly language usually involves only a single simple table lookup, while name resolution in C++ is extremely complicated as it involves:
+
+namespaces, which make it possible for an identifier to have different meanings depending on its associated namespace;
+scopes, which make it possible for an identifier to have different meanings at different scope levels, and which involves various scope overriding and hiding rules. At the most basic level name resolution usually attempts to find the binding in the smallest enclosing scope, so that for example local variables supersede global variables; this is called shadowing.
+visibility rules, which determine whether identifiers from specific namespaces or scopes are visible from the current context;
+overloading, which makes it possible for an identifier to have different meanings depending on how it is used, even in a single namespace or scope;
+accessibility, which determines whether identifiers from an otherwise visible scope are actually accessible and participate in the name resolution process.
+Static versus dynamic[edit]
+In programming languages, name resolution can be performed either at compile time or at runtime. The former is called static name resolution, the latter is called dynamic name resolution.
+A somewhat common misconception is that dynamic typing implies dynamic name resolution. For example, Erlang is dynamically typed but has static name resolution. However, static typing does imply static name resolution.
+Static name resolution catches, at compile time, use of variables that are not in scope; preventing programmer errors. Languages with dynamic scope resolution sacrifice this safety for more flexibility; they can typically set and get variables in the same scope at runtime.
+For example, in the Python interactive REPL:
+
+>>> number = 99
+>>> first_noun = "problems"
+>>> second_noun = "hound"
+>>> # Which variables to use are decided at runtime
+>>> print(f"I got {number} {first_noun} but a {second_noun} ain't one.")
+I got 99 problems but a hound ain't one.
+
+However, relying on dynamic name resolution in code is discouraged by the Python community.[1][2] The feature also may be removed in a later version of Python.[3]
+Examples of languages that use static name resolution include C, C++, E, Erlang, Haskell, Java, Pascal, Scheme, and Smalltalk. Examples of languages that use dynamic name resolution include some Lisp dialects, Perl, PHP, Python, REBOL, and Tcl.
+
+Name masking[edit]
+Masking occurs when the same identifier is used for different entities in overlapping lexical scopes. At the level of variables (rather than names), this is known as variable shadowing. An identifier I' (for variable X') masks an identifier I (for variable X) when two conditions are met
+
+I' has the same name as I
+I' is defined in a scope which is a subset of the scope of I
+The outer variable X is said to be shadowed by the inner variable X'.
+For example, the parameter "foo" shadows the local variable "foo" in this common pattern:
+
+private int foo;  // Name "foo" is declared in the outer scope
+
+public void setFoo(int foo) {  // Name "foo" is declared in the inner scope, and is function-local.
+    this.foo = foo;  // Since "foo" will be first found (and resolved) in the ''innermost'' scope,
+                     // in order to successfully overwrite the stored value of the attribute "foo"
+                     // with the new value of the incoming parameter "foo", a distinction is made
+                     // between "this.foo" (the object attribute) and "foo" (the function parameter). 
+}
+
+public int getFoo() {
+    return foo;
+}
+
+Name masking can cause complications in function overloading, due to overloading not happening across scopes in some languages, notably C++, thus requiring all overloaded functions to be redeclared or explicitly imported into a given namespace.
+
+Alpha renaming to make name resolution trivial[edit]
+In programming languages with lexical scoping that do not reflect over variable names, α-conversion (or α-renaming) can be used to make name resolution easy by finding a substitution that makes sure that no variable name masks another name in a containing scope.
+Alpha-renaming can make static code analysis easier since only the alpha renamer needs to understand the language's scoping rules.
+For example, in this code:
+
+class Point {
+private:
+  double x, y;
+
+public:
+  Point(double x, double y) {  // x and y declared here mask the privates
+    setX(x);
+    setY(y);
+  }
+
+  void setX(double newx) { x = newx; }
+  void setY(double newy) { y = newy; }
+}
+
+within the Point constructor, the instance variables x and y are shadowed by local variables of the same name.  This might be alpha-renamed to:
+
+class Point {
+private:
+  double x, y;
+
+public:
+  Point(double a, double b) {
+    setX(a);
+    setY(b);
+  }
+
+  void setX(double newx) { x = newx; }
+  void setY(double newy) { y = newy; }
+}
+
+In the new version, there is no masking, so it is immediately obvious which uses correspond to which declarations.
+
+See also[edit]
+Namespace (programming)
+Scope (programming)
+Naming collision
+References[edit]
+
+
+^ "[Python-Ideas] str.format utility function". 9 May 2009. Retrieved 2011-01-23.
+
+^ "8.6. Dictionary-based string formatting". diveintopython.org. Mark Pilgrim. Retrieved 2011-01-23.
+
+^ "9. Classes - Python documentation". Retrieved 2019-07-24. It is important to realize that scopes are determined textually: the global scope of a function defined in a module is that module's namespace, no matter from where or by what alias the function is called. On the other hand, the actual search for names is done dynamically, at run time — however, the language definition is evolving towards static name resolution, at "compile" time, so don't rely on dynamic name resolution! (In fact, local variables are already determined statically.)
+
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Name_resolution_(programming_languages)&oldid=1167923392"
+Categories: Computer librariesCompiler constructionHidden categories: Articles with short descriptionShort description is different from Wikidata
+
+
+
+
+
+
+ This page was last edited on 30 July 2023, at 17:47 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

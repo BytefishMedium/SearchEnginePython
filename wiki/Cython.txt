@@ -1,0 +1,692 @@
+
+
+
+
+Cython - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Design
+
+
+
+
+
+
+
+2History
+
+
+
+
+
+
+
+3Example
+
+
+
+
+
+
+
+4Using in IPython/Jupyter notebook
+
+
+
+
+
+
+
+5Uses
+
+
+
+
+
+
+
+6See also
+
+
+
+
+
+
+
+7References
+
+
+
+
+
+
+
+8External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Cython
+
+
+
+16 languages
+
+
+
+
+العربيةCatalàČeštinaDeutschEspañolفارسیFrançais한국어עבריתമലയാളം日本語РусскийСрпски / srpskiУкраїнська粵語中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Not to be confused with CPython.
+
+
+Programming language
+CythonDeveloperRobert Bradshaw, Stefan Behnel, et al.First appeared28 July 2007; 16 years ago (2007-07-28)[1]Stable release3.0.8[2]  (10 January 2024; 38 days ago (10 January 2024)) [±]Preview release3.0.0 beta 2 (27 March 2023; 10 months ago (2023-03-27)[3]) [±]
+Implementation languagePythonOSWindows, macOS, LinuxLicenseApache License 2.0Filename extensions.pyx, .pxd, .pxi [4]Websitecython.org Influenced byC, Python
+Cython (/ˈsaɪθɒn/) is a superset of the programming language Python, which allows developers to write Python code (with optional, C-inspired syntax extensions) that yields performance comparable to that of C.[5][6]
+Cython is a compiled language that is typically used to generate CPython extension modules. Annotated Python-like code is compiled to C (also usable from e.g. C++) and then automatically wrapped in interface code, producing extension modules that can be loaded and used by regular Python code using the import statement, but with significantly less computational overhead at run time. Cython also facilitates wrapping independent C or C++ code into python-importable modules.
+Cython is written in Python and C and works on Windows, macOS, and Linux, producing C source files compatible with CPython 2.6, 2.7, and 3.3 and later versions. The Cython source code that Cython compiles (to C) can use both Python 2 and Python 3 syntax, defaulting to Python 2 syntax in Cython 0.x (and Python 3 syntax in Cython 3.x). The default can be overridden (e.g. in source code comment) to Python 3 (or 2) syntax. Since Python 3 syntax has changed in recent versions, Cython may not be up to date with latest addition. Cython has "native support for most of the C++ language" and "compiles almost all existing Python code".[7]
+Cython 3.0.0 was released on 17 July 2023.[8]
+
+
+Design[edit]
+Cython works by producing a standard Python module. However, the behavior differs from standard Python in that the module code, originally written in Python, is translated into C. While the resulting code is fast, it makes many calls into the CPython interpreter and CPython standard libraries to perform actual work. Choosing this arrangement saved considerably on Cython's development time, but modules have a dependency on the Python interpreter and standard library.
+Although most of the code is C-based, a small stub loader written in interpreted Python is usually required (unless the goal is to create a loader written entirely in C, which may involve work with the undocumented internals of CPython). However, this is not a major problem due to the presence of the Python interpreter.[9]
+Cython has a foreign function interface for invoking C/C++ routines and the ability to declare the static type of subroutine parameters and results, local variables, and class attributes.
+A Cython program that implements the same algorithm as a corresponding Python program may consume fewer computing resources such as core memory and processing cycles due to differences between the CPython and Cython execution models. A basic Python program is loaded and executed by the CPython virtual machine, so both the runtime and the program itself consume computing resources. A Cython program is compiled to C code, which is further compiled to machine code, so the virtual machine is used only briefly when the program is loaded.[10][11][12][13]
+Cython employs:
+
+Optimistic optimizations
+Type inference (optional)
+Low overhead in control structures
+Low function call overhead[14][15]
+Performance depends both on what C code is generated by Cython and how that code is compiled by the C compiler.[16]
+
+History[edit]
+Cython is a derivative of the Pyrex language, and supports more features and optimizations than Pyrex.[17][18] Cython was forked from Pyrex in 2007 by developers of the Sage computer algebra package, because they were unhappy with Pyrex's limitations and could not get patches accepted by Pyrex's maintainer Greg Ewing, who envisioned a much smaller scope for his tool than the Sage developers had in mind. They then forked Pyrex as SageX. When they found people were downloading Sage just to get SageX, and developers of other packages (including Stefan Behnel, who maintains the XML library LXML) were also maintaining forks of Pyrex, SageX was split off the Sage project and merged with cython-lxml to become Cython.[19]
+Cython files have a .pyx extension. At its most basic, Cython code looks exactly like Python code. However, whereas standard Python is dynamically typed, in Cython, types can optionally be provided, allowing for improved performance, allowing loops to be converted into C loops where possible. For example:
+
+# The argument will be converted to int or raise a TypeError.
+def primes(int kmax): 
+
+    # These variables are declared with C types.
+    cdef int n, k, i 
+
+    # Another C type 
+    cdef int p[1000]
+ 
+    # A Python type
+    result = [] 
+
+    if kmax > 1000:
+        kmax = 1000
+
+    k = 0
+    n = 2
+
+    while k < kmax:
+        i = 0
+
+        while i < k and n % p[i] != 0:
+            i = i + 1
+
+        if i == k:
+            p[k] = n
+            k = k + 1
+            result.append(n)
+
+        n = n + 1
+
+    return result
+
+Example[edit]
+Hello World in Cython
+A sample hello world program for Cython is more complex than in most languages because it interfaces with the Python C API and setuptools or other PEP517-compliant extension building facilities. At least three files are required for a basic project:
+
+A setup.py file to invoke the setuptools build process that generates the extension module
+A main python program to load the extension module
+Cython source file(s)
+The following code listings demonstrate the build and launch process:
+
+# hello.pyx - Python module, this code will be translated to C by Cython.
+def say_hello():
+    print("Hello World!")
+
+# launch.py - Python stub loader, loads the module that was made by Cython.
+
+# This code is always interpreted, like normal Python.
+# It is not compiled to C.
+
+import hello
+hello.say_hello()
+
+# setup.py - unnecessary if not redistributing the code, see below
+from setuptools import setup
+from Cython.Build import cythonize
+
+setup(name = "Hello world app",
+      ext_modules = cythonize("*.pyx"))
+
+These commands build and launch the program:
+
+$ python setup.py build_ext --inplace
+$ python launch.py
+
+Using in IPython/Jupyter notebook[edit]
+A more straightforward way to start with Cython is through command-line IPython (or through in-browser python console called Jupyter notebook):
+
+In [1]: %load_ext Cython
+
+In [2]: %%cython
+   ...: def f(n):
+   ...:     a = 0
+   ...:     for i in range(n):
+   ...:         a += i
+   ...:     return a
+   ...: 
+   ...: cpdef g(int n):
+   ...:     cdef long a = 0
+   ...:     cdef int i
+   ...:     for i in range(n):
+   ...:         a += i
+   ...:     return a
+   ...: 
+
+In [3]: %timeit f(1000000)
+10 loops, best of 3: 26.5 ms per loop
+
+In [4]: %timeit g(1000000)
+1000 loops, best of 3: 279 µs per loop
+
+which gives a 95 times improvement over the pure-python version. More details on the subject in the official quickstart page.[20]
+
+Uses[edit]
+Cython is particularly popular among scientific users of Python,[12][21][22] where it has "the perfect audience" according to Python creator Guido van Rossum.[23] Of particular note:
+
+The free software SageMath computer algebra system depends on Cython, both for performance and to interface with other libraries.[24]
+Significant parts of the scientific computing libraries SciPy, pandas and scikit-learn are written in Cython.[25][26]
+Some high-traffic websites such as Quora use Cython.[better source needed][27]
+Cython's domain is not limited to just numerical computing. For example, the lxml XML toolkit is written mostly in Cython, and like its predecessor Pyrex, Cython is used to provide Python bindings for many C and C++ libraries such as the messaging library ZeroMQ.[28] Cython can also be used to develop parallel programs for multi-core processor machines; this feature makes use of the OpenMP library.
+
+See also[edit]
+PyPy
+Numba
+References[edit]
+
+
+^ Behnel, Stefan (2008). "The Cython Compiler for C-Extensions in Python". EuroPython (28 July 2007: official Cython launch). Vilnius/Lietuva.
+
+^ "Release 3.0.8". 10 January 2024. Retrieved 19 January 2024.
+
+^ Cython Changelog, cython, 15 May 2023, retrieved 19 May 2023
+
+^ "Language Basics — Cython 3.0.0a9 documentation". cython.readthedocs.io. Retrieved 9 September 2021.
+
+^ "Cython - an overview — Cython 0.19.1 documentation". Docs.cython.org. Retrieved 21 July 2013.
+
+^ Smith, Kurt (2015). Cython: A Guide for Python Programmers. O'Reilly Media. ISBN 978-1-4919-0155-7.
+
+^ "FAQ · cython/cython Wiki". GitHub. Retrieved 11 January 2023.
+
+^ "Cython Changelog". cython.org. Retrieved 21 July 2023.
+
+^ "Basic Tutorial — Cython 3.0a6 documentation". cython.readthedocs.io. Retrieved 11 December 2020.
+
+^ Oliphant, Travis (20 June 2011). "Technical Discovery: Speeding up Python (NumPy, Cython, and Weave)". Technicaldiscovery.blogspot.com. Retrieved 21 July 2013.
+
+^ Behnel, Stefan; Bradshaw, Robert; Citro, Craig; Dalcin, Lisandro; Seljebotn, Dag Sverre; Smith, Kurt (2011). "Cython: The Best of Both Worlds". Computing in Science and Engineering. 13 (2): 31–39. Bibcode:2011CSE....13b..31B. doi:10.1109/MCSE.2010.118. hdl:11336/13103. S2CID 14292107.
+
+^ a b Seljebot, Dag Sverre (2009). "Fast numerical computations with Cython". Proceedings of the 8th Python in Science Conference (SciPy 2009): 15–22.
+
+^ Wilbers, I.; Langtangen, H. P.; Ødegård, Å. (2009). Skallerud, B.; Andersson, H. I. (eds.). "Using Cython to Speed up Numerical Python Programs". Proceedings of MekIT'09: 495–512. Archived from the original (PDF) on 4 January 2017. Retrieved 14 June 2011.
+
+^ "wrapper benchmarks for several Python wrapper generators (except Cython)". Archived from the original on 4 April 2015. Retrieved 28 May 2010.
+
+^ "wrapper benchmarks for Cython, Boost.Python and PyBindGen". Archived from the original on 3 March 2016. Retrieved 28 May 2010.
+
+^ "Cython: C-Extensions for Python". Retrieved 22 November 2015.
+
+^ "Differences between Cython and Pyrex". GitHub.
+
+^ Ewing, Greg (21 March 2011). "Re: VM and Language summit info for those not at Pycon (and those that are!)" (Message to the electronic mailing-list python-dev). Retrieved 5 May 2011.
+
+^ Says Sage and Cython developer Robert Bradshaw at the Sage Days 29 conference (22 March 2011). "Cython: Past, Present and Future". Archived from the original on 21 December 2021. Retrieved 5 May 2011 – via YouTube.{{cite web}}:  CS1 maint: numeric names: authors list (link)
+
+^ "Building Cython code". cython.readthedocs.io. Retrieved 24 April 2017.
+
+^ "inSCIght: The Scientific Computing Podcast" (Episode 6). Archived from the original on 10 October 2014. Retrieved 29 May 2011.
+
+^ Millman, Jarrod; Aivazis, Michael (2011). "Python for Scientists and Engineers". Computing in Science and Engineering. 13 (2): 9–12. Bibcode:2011CSE....13b...9M. doi:10.1109/MCSE.2011.36.
+
+^ Guido Van Rossum (21 March 2011). "Re: VM and Language summit info for those not at Pycon (and those that are!)" (Message to the electronic mailing-list python-dev). Retrieved 5 May 2011.
+
+^ Erocal, Burcin; Stein, William (2010). "The Sage Project: Unifying Free Mathematical Software to Create a Viable Alternative to Magma, Maple, Mathematica and MATLAB". Mathematical Software – ICMS 2010 (PDF). Lecture Notes in Computer Science. Vol. 6327. Springer Berlin / Heidelberg. pp. 12–27. CiteSeerX 10.1.1.172.624. doi:10.1007/978-3-642-15582-6_4. ISBN 978-3-642-15581-9. {{cite book}}: |journal= ignored (help)
+
+^ "SciPy 0.7.2 release notes". Archived from the original on 4 March 2016. Retrieved 29 May 2011.
+
+^ Pedregosa, Fabian; Varoquaux, Gaël; Gramfort, Alexandre; Michel, Vincent; Thirion, Bertrand; Grisel, Olivier; Blondel, Mathieu; Prettenhofer, Peter; Weiss, Ron; Dubourg, Vincent; Vanderplas, Jake; Passos, Alexandre; Cournapeau, David (2011). "Scikit-learn: Machine Learning in Python". Journal of Machine Learning Research. 12: 2825–2830. arXiv:1201.0490.
+
+^ "Is Quora still running on PyPy?".
+
+^ "ØMQ: Python binding".
+
+
+External links[edit]
+Official website 
+Cython on GitHub
+vtePythonImplementations
+CircuitPython
+CLPython
+CPython
+Cython
+MicroPython
+Numba
+IronPython
+Jython
+Psyco
+PyPy
+Python for S60
+Shed Skin
+Stackless Python
+Unladen Swallow
+more...
+IDE
+Boa
+Eric Python IDE
+IDLE
+PyCharm
+PyDev
+Ninja-IDE
+more...
+Topics
+WSGI
+ASGI
+
+software (list)
+Python Software Foundation
+PyCon
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Cython&oldid=1208393890"
+Categories: Python (programming language)Python (programming language) implementationsSoftware using the Apache licenseSource-to-source compilersHidden categories: CS1 maint: numeric names: authors listCS1 errors: periodical ignoredUse dmy dates from February 2014Articles with short descriptionShort description is different from WikidataAll articles lacking reliable referencesArticles lacking reliable references from October 2018Articles with example Python (programming language) code
+
+
+
+
+
+
+ This page was last edited on 17 February 2024, at 09:31 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

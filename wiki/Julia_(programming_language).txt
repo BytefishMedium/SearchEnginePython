@@ -1,0 +1,1664 @@
+
+
+
+
+Julia (programming language) - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1History
+
+
+
+Toggle History subsection
+
+
+
+
+
+1.1JuliaCon
+
+
+
+
+
+
+
+1.2Sponsors
+
+
+
+
+
+
+
+1.3The Julia company
+
+
+
+
+
+
+
+
+
+2Language features
+
+
+
+Toggle Language features subsection
+
+
+
+
+
+2.1Interoperability
+
+
+
+
+
+
+
+2.2Separately-compiled executables option
+
+
+
+
+
+
+
+
+
+3Interaction
+
+
+
+Toggle Interaction subsection
+
+
+
+
+
+3.1Use with other languages
+
+
+
+
+
+
+
+
+
+4Package system
+
+
+
+
+
+
+
+5Implementation
+
+
+
+Toggle Implementation subsection
+
+
+
+
+
+5.1Current and future platforms
+
+
+
+
+
+
+
+
+
+6Adoption
+
+
+
+Toggle Adoption subsection
+
+
+
+
+
+6.1Scientific computing and engineering
+
+
+
+
+
+6.1.1Pharmaceuticals and drug development
+
+
+
+
+
+
+
+
+
+6.2Economics, finance, and political science
+
+
+
+
+
+
+
+
+
+7See also
+
+
+
+
+
+
+
+8References
+
+
+
+
+
+
+
+9Further reading
+
+
+
+
+
+
+
+10External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Julia (programming language)
+
+
+
+30 languages
+
+
+
+
+العربيةবাংলাCatalàČeštinaDeutschEspañolEsperantoEuskaraفارسیFrançaisGalego한국어ÍslenskaItalianoעבריתമലയാളംNederlands日本語PolskiPortuguêsРусскийSimple EnglishСрпски / srpskiSuomiSvenskaதமிழ்TürkçeУкраїнська粵語中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+		In other projects
+	
+
+
+Wikimedia Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Dynamic programming language
+
+
+JuliaParadigmMulti-paradigm: multiple dispatch (primary paradigm), object-oriented,[1] functional, array, procedural (imperative), structured, reflective, meta, multistaged[2]Designed byJeff Bezanson, Alan Edelman, Stefan Karpinski, Viral B. ShahDeveloperJeff Bezanson, Stefan Karpinski, Viral B. Shah, and other contributors[3][4]First appeared2012; 12 years ago (2012)[5]Stable release1.10.1[6] 
+   /    14 February 2024; 2 days ago (14 February 2024) and  1.6.7 LTS[7][8] / 19 July 2022; 18 months ago (2022-07-19)Preview release1.12.0-DEV with daily updates
+   
+Typing disciplineDynamic,[9] inferred, optional, nominative, parametric, strong[9]Implementation languageJulia, C, C++, LLVM,[10] Scheme (mostly parser; in older versions)PlatformTier 1: x86-64, IA-32, Apple silicon 64-bit Arm Macs; CUDA 10.1[11] to 12/Nvidia GPUs (for Linux and Windows) Tier 2: FreeBSD, 64-bit Arm on Linux Tier 3: 32-bit Arm, PowerPC, AMD (ROCm) GPUs and oneAPI/Intel's GPUs.OSLinux, macOS, Windows and  FreeBSDLicenseMITFilename extensions.jlWebsiteJuliaLang.org
+Julia is a high-level, general-purpose[12] dynamic programming language, most commonly used for numerical analysis and computational science.[13][14][15] Distinctive aspects of Julia's design include a type system with parametric polymorphism and the use of multiple dispatch as a core programming paradigm, efficient garbage collection,[16] and a just-in-time (JIT) compiler[12][17] (with support for ahead-of-time compilation[18][19][20]).
+Julia can be run similar to (interpreted) scripting languages (i.e. Julia has a REPL), and does[clarification needed] by default using its runtime (when preinstalled),[18] but Julia programs/source code can also optionally be sent to users in one ready-to-install/run file, which can be made quickly, not needing anything preinstalled.[citation needed] Julia programs can also be (separately) compiled to binary executables, even allowing no-source-code distribution. Such compilation is not needed for speed, since Julia is also compiled when running interactively, but it can help with hiding source code. Features of the language can be separately compiled, so Julia can be used, for example, with its runtime or without it (which allows for smaller executables and libraries but is limited in capabilities). Julia can be called from other languages, e.g. Python and R, and several Julia packages have been made easily available from those languages, in the form of libraries for them.
+Julia's Visual Studio Code extension provides a fully-featured integrated development environment with support for debugging, linting, and profiling.[21][22][23][24]
+
+
+History[edit]
+Work on Julia began in 2009, when Jeff Bezanson, Stefan Karpinski, Viral B. Shah, and Alan Edelman set out to create a free language that was both high-level and fast. On 14 February 2012, the team launched a website with a blog post explaining the language's mission.[25] In an interview with InfoWorld in April 2012, Karpinski said of the name "Julia": "There's no good reason, really. It just seemed like a pretty name."[14] Bezanson said he chose the name on the recommendation of a friend,[26] then years later wrote:
+
+Maybe julia stands for "Jeff's uncommon lisp is automated"?[27]
+Julia's syntax is now considered stable, since version 1.0 in 2018, and Julia has a backward compatibility guarantee for 1.x and also a stability promise for the documented (stable) API, while in the years before in the early development prior to 0.7 the syntax (and semantics) was changed in new versions. All of the (registered package) ecosystem uses the new and improved syntax, and in most cases relies on new APIs that have been added regularly, and in some cases minor additional syntax added in a forward compatible way e.g. in Julia 1.7.
+In the 10 years since the 2012 launch of pre-1.0 Julia, the community has grown. The Julia package ecosystem has over 11.8 million lines of code (including docs and tests).[28] The JuliaCon academic conference for Julia users and developers has been held annually since 2014 with JuliaCon2020[29] welcoming over 28,900 unique viewers,[30] and then JuliaCon2021 breaking all previous records (with more than 300 JuliaCon2021 presentations available for free on YouTube, up from 162 the year before), and 43,000 unique viewers during the conference.[31]
+Three of the Julia co-creators are the recipients of the 2019 James H. Wilkinson Prize for Numerical Software (awarded every four years) "for the creation of Julia, an innovative environment for the creation of high-performance tools that enable the analysis and solution of computational science problems."[32] Also, Alan Edelman, professor of applied mathematics at MIT, has been selected to receive the 2019 IEEE Computer Society Sidney Fernbach Award "for outstanding breakthroughs in high-performance computing, linear algebra, and computational science and for contributions to the Julia programming language."[33]
+Both Julia 0.7[34] and version 1.0 were released on 8 August 2018. Work on Julia 0.7 was a "huge undertaking" (e.g., because of an "entirely new optimizer"), and some changes were made to semantics, e.g. the iteration interface was simplified.[35] Julia 1.1 was released in January 2019 with a new "exception stack" feature. Julia 1.2 was released in August 2019 with some built-in support for web browsers.[36] Julia 1.3 added composable multi-threaded parallelism and a binary artifacts system for Julia packages.[37] Julia 1.4 added syntax for generic array indexing to handle e.g. 0-based arrays.[38] The memory model was also changed.[39] Julia 1.5 released in August 2020 added record and replay debugging support,[40] for Mozilla's rr tool.  The release changed the behavior in the REPL (soft scope) to the one used in Jupyter, but fully compatible with non-REPL code. Most of the thread API was marked as stable, and with this release "arbitrary immutable objects—regardless of whether they have fields that reference mutable objects or not—can now be stack allocated",[41] reducing heap allocations, e.g. views are no longer allocating.  Julia 1.5 targeted so-called "time-to-first-plot" (TTFP, also called TTFX, for first X, the more general problem) performance, in general, the speed of compilation itself (as opposed to performance of the generated code), and added tools for developers to improve package loading.[42] Julia 1.6 was the largest release since 1.0, faster on many fronts, e.g. introduced parallel precompilation and faster loading of packages, in some cases "50x speedup in load times for large trees of binary artifacts".[43] As of version 1.7 Julia development is back to time-based releases.[44] Julia 1.7.0 was released in November 2021 with many changes, e.g. a new faster random-number generator. Julia 1.7.3 was released on 25 May 2022, fixing some issues, including at least one security update,[45] and 1.7.x is no longer supported. Julia 1.8 was released in 2022 (and versions up to 1.8.5 as a followup in January 2023,[46] both fixing bugs (backporting) and "invalidations", thus compiling faster), with improvements for distributing Julia programs without source code,  and compiler speedup, in some cases by 25%,[47]  and more controllable inlining (i.e. now also allowing applying @inline at the call site, not just on the function itself). Julia 1.9.0 was released on 7 May 2023 (and later 1.9.4, the latest stable version). It has many improvements, such as solving the TTFX/TTFP problem; older releases have precompilation for packages, but they were not precompiled fully to native code until 1.9, leading to slower first use. Precompiled packages, since version 1.9, can be up to hundreds of times faster on first use (e.g. for CSV.jl and DataFrames.jl), and to improve precompilation of packages a new package PrecompileTools.jl has been introduced.
+Julia 1.10.0 was released on 25 December 2023 (and Julia 1.10.1 update on 14 February 2024) with many new features, e.g. improved package load times and a new parser with better error messages and improved stacktrace rendering.[citation needed]
+
+JuliaCon[edit]
+Since 2014,[48] the Julia Community has hosted an annual Julia Conference focused on developers and users. The first JuliaCon took place in Chicago and kickstarted the annual occurrence of the conference. Since 2014, the conference has taken place across a number of locations including MIT[49] and the University of Maryland, Baltimore.[50] The event audience has grown from a few dozen people to over 28,900 unique attendees[51] during JuliaCon 2020, which took place virtually. JuliaCon 2021 also took place virtually[52] with keynote addresses from professors William Kahan, the primary architect of the IEEE 754 floating-point standard (which virtually all CPUs and languages, including Julia, use),[53] Jan Vitek,[54] Xiaoye Sherry Li, and Soumith Chintala, a co-creator of PyTorch.[55] JuliaCon grew to 43,000 unique attendees and more than 300 presentations (still freely accessible, plus for older years). JuliaCon 2022 will also be virtual held between July 27 and July 29, 2022, for the first time in several languages, not just in English.
+
+Sponsors[edit]
+The Julia language became a NumFOCUS fiscally sponsored project in 2014 in an effort to ensure the project's long-term sustainability.[56] Jeremy Kepner at MIT Lincoln Laboratory was the founding sponsor of the Julia project in its early days. In addition, funds from the Gordon and Betty Moore Foundation, the Alfred P. Sloan Foundation, Intel, and agencies such as NSF, DARPA, NIH, NASA, and FAA have been essential to the development of Julia.[57] Mozilla, the maker of Firefox web browser, with its research grants for H1 2019, sponsored "a member of the official Julia team" for the project "Bringing Julia to the Browser",[58] meaning to Firefox  and other web browsers.[59][60][61][62] The Julia language is also supported by individual donors on GitHub.[63]
+
+The Julia company[edit]
+JuliaHub, Inc. was founded in 2015 as Julia Computing, Inc. by Viral B. Shah, Deepak Vinchhi, Alan Edelman, Jeff Bezanson, Stefan Karpinski and Keno Fischer.[64][65]
+In June 2017, Julia Computing raised US$4.6 million in seed funding from General Catalyst and Founder Collective,[66] the same month was "granted $910,000 by the Alfred P. Sloan Foundation to support open-source Julia development, including $160,000 to promote diversity in the Julia community",[67] and in December 2019 the company got $1.1 million funding from the US government to "develop a neural component machine learning tool to reduce the total energy consumption of heating, ventilation, and air conditioning (HVAC) systems in buildings".[68] In July 2021, Julia Computing announced they raised a $24 million Series A round led by Dorilton Ventures,[69] which also owns Formula 1 team Williams Racing, that partnered with Julia Computing. Williams' Commercial Director said: "Investing in companies building best-in-class cloud technology is a strategic focus for Dorilton and Julia's versatile platform, with revolutionary capabilities in simulation and modelling, is hugely relevant to our business. We look forward to embedding Julia Computing in the world's most technologically advanced sport".[70] In June 2023, JuliaHub received (again, now under its new name) a $13 million strategic new investment led by AE Industrial Partners HorizonX ("AEI HorizonX"). AEI HorizonX is a venture capital investment platform formed in partnership with The Boeing Company, which uses Julia.[71] Tim Holy's work (at Washington University in St. Louis's Holy Lab) on Julia 1.9 (improving responsiveness) was funded by the Chan Zuckerberg Initiative.
+
+Language features[edit]
+
+
+
+Wikibooks has a book on the topic of: Introducing Julia
+
+Julia is a general-purpose programming language,[72] while also originally designed for numerical/technical computing. It is also useful for low-level systems programming,[73] as a specification language,[74] high-level synthesis (HLS) tool (for hardware, e.g. FPGAs),[75] and for web programming[76] at both server[77][78] and client[79][80] side.
+The main features of the language are:
+
+Multiple dispatch: providing ability to define function behavior across combinations of argument types
+Dynamic type system: types for documentation, optimization, and dispatch
+Performance approaching that of statically-typed languages like C
+A built-in package manager
+Lisp-like macros and other metaprogramming facilities
+Designed for parallel and distributed computing
+Coroutines: lightweight green threading
+Automatic generation of code for different argument types
+Extensible conversions and promotions for numeric and other types
+Multiple dispatch (also termed multimethods in Lisp) is a generalization of single dispatch –  the polymorphic mechanism used in common object-oriented programming (OOP) languages, such as Python, C++, Java, JavaScript, and Smalltalk –  that uses inheritance. In Julia, all concrete types are subtypes of abstract types, directly or indirectly subtypes of the Any type, which is the top of the type hierarchy. Concrete types can not themselves be subtyped the way they can in other languages; composition is used instead (see also inheritance vs subtyping).
+By default, the Julia runtime must be pre-installed as user-provided source code is run. Alternatively, Julia (GUI) apps can be quickly bundled up into a single file with AppBundler.jl[81] for "building Julia GUI applications in modern desktop application installer formats. It uses Snap for Linux, MSIX for Windows, and DMG for MacOS as targets. It bundles full Julia within the app".[82] PackageCompiler.jl can build standalone executables that need no Julia source code to run.[18]
+In Julia, everything is an object, much like object-oriented languages; however, unlike most object-oriented languages, all functions use multiple dispatch to select methods, rather than single dispatch. 
+Most programming paradigms can be implemented using Julia's homoiconic macros and packages. Julia's syntactic macros (used for metaprogramming), like Lisp macros, are more powerful than text-substitution macros used in the preprocessor of some other languages such as C, because they work at the level of abstract syntax trees (ASTs). Julia's macro system is hygienic, but also supports deliberate capture when desired (like for anaphoric macros) using the esc construct.
+Julia draws inspiration from various dialects of Lisp, including Scheme and Common Lisp, and it shares many features with Dylan, also a multiple-dispatch-oriented dynamic language (which features an ALGOL-like free-form infix syntax rather than a Lisp-like prefix syntax, while in Julia "everything"[83] is an expression), and with Fortress, another numerical programming language (which features multiple dispatch and a sophisticated parametric type system). While Common Lisp Object System (CLOS) adds multiple dispatch to Common Lisp, not all functions are generic functions.
+In Julia, Dylan, and Fortress, extensibility is the default, and the system's built-in functions are all generic and extensible. In Dylan, multiple dispatch is as fundamental as it is in Julia: all user-defined functions and even basic built-in operations like + are generic. Dylan's type system, however, does not fully support parametric types, which are more typical of the ML lineage of languages. By default, CLOS does not allow for dispatch on Common Lisp's parametric types; such extended dispatch semantics can only be added as an extension through the CLOS Metaobject Protocol. By convergent design, Fortress also features multiple dispatch on parametric types; unlike Julia, however, Fortress is statically rather than dynamically typed, with separate compiling and executing phases. The language features are summarized in the following table:
+
+
+
+Language
+Type system
+Generic functions
+Parametric types
+
+
+Julia
+Dynamic
+Default
+Yes
+
+
+Common Lisp
+Dynamic
+Opt-in
+Yes (but no dispatch)
+
+
+Dylan
+Dynamic
+Default
+Partial (no dispatch)
+
+
+Fortress
+Static
+Default
+Yes
+
+An example of the extensibility of Julia, the Unitful.jl package adds support for physical units of measurement to the language.
+
+Interoperability[edit]
+Julia has built-in support for calling C or Fortran language libraries using the @ccall macro. Additional libraries allow users to work with Python,[84] R,[85] C++,[86] Java,[87] and SQL.[88][89][90][91]
+
+Separately-compiled executables option[edit]
+Julia can be compiled to binary executables with PackageCompiler.jl.[18] Smaller executables can also be written using a static subset of the language provided by StaticCompiler.jl that does not support runtime dispatch (nor garbage collection, since excludes the runtime that provides it).[92]
+
+Interaction[edit]
+The Julia official distribution includes an interactive command-line read–eval–print loop (REPL),[93] with a searchable history, tab completion, and dedicated help and shell modes,[94] which can be used to experiment and test code quickly.[95] The following fragment represents a sample session example where strings are concatenated automatically by println:[96]
+
+julia> p(x) = 2x^2 + 1; f(x, y) = 1 + 2p(x)y
+julia> println("Hello world!", " I'm on cloud ", f(0, 4), " as Julia supports recognizable syntax!")
+Hello world! I'm on cloud 9 as Julia supports recognizable syntax!
+
+The REPL gives user access to the system shell and to help mode, by pressing ; or ? after the prompt (preceding each command), respectively. It also keeps the history of commands, including between sessions.[97] Code can be tested inside Julia's interactive session or saved into a file with a .jl extension and run from the command line by typing:[83]
+
+ $ julia <filename>
+
+Julia uses UTF-8 and LaTeX codes, allowing it to support common math symbols for many operators, such as ∈ for the in operator, typable with \in then pressing Tab ↹ (i.e. uses LaTeX codes, or also possible by simply copy-pasting, e.g. √ and ∛ possible for sqrt and cbrt functions). Julia has support for the latest major release Unicode 15.0 (Julia 1.11-DEV supports latest 15.1 point release[98])[99] for the languages of the world, even for source code, e.g. variable names (while it's recommened to use English for public code, and e.g. package names).
+Julia is supported by Jupyter, an online interactive "notebooks" environment,[100] and Pluto.jl, a "reactive notebook" (where notebooks are saved as pure Julia files), a possible replacement for the former kind.[101] In addition Posit's (formerly RStudio Inc's) Quarto publishing system supports Julia, Python, R and Observable JavaScript (those languages have official support by the company, and can even be weaved together in the same notebook document, more languages are unofficially supported).[102][103]
+The REPL can be extended with additional modes, and has been with packages, e.g. with an SQL mode,[104] for database access, and RCall.jl adds an R mode, to work with the R language.[105]
+
+Use with other languages[edit]
+Julia is in practice interoperable with other languages (e.g. majority of top 10–20 languages in popular use).  is used to call shared library functions individually (such as for written in C or Fortran), and packages are available to allow calling other languages (which do not provide C-exported functions directly) e.g. Python (with PythonCall.jl), R, MATLAB, C# (and other .NET languages with DotNET.jl, from them with JdotNET), JavaScript, Java (and other JVM languages, such as Scala with JavaCall.jl). And packages for other languages allow to call to Julia, e.g. from Python, R, Rust, Ruby, or C#. Such as with juliacall (part of PythonCall.jl, pyjulia is a different option) to call from Python and a different JuliaCall package for calling from R. Julia has also been used for hardware, i.e. to compile to VHDL, as a high-level synthesis (HLS) tool (for e.g. FPGAs).[75]
+Julia has packages supporting markup languages such as HTML (and also for HTTP), XML, JSON and BSON, and for databases (such as PostgreSQL,[106] Mongo,[107] Oracle, including for TimesTen,[108] MySQL, SQLite, Microsoft SQL Server,[107] Amazon Redshift, Vertica, ODBC) and web use in general.[109][110]
+
+Package system[edit]
+Julia has a built-in package manager and includes a default registry system.[111] Packages are most often distributed as source code hosted on GitHub, though alternatives can also be used just as well. Packages can also be installed as binaries, using artifacts.[112] Julia's package manager is used to query and compile packages, as well as managing environments. Federated package registries are supported, allowing registries other than the official to be added locally.[113]
+
+Implementation[edit]
+Julia's core is implemented in Julia and C, together with C++ for the LLVM dependency. The code parsing, code-lowering, and bootstraping were implemented in FemtoLisp, a Scheme dialect, up to version 1.10.[114] Since that version the new pure-Julia package JuliaSyntax.jl, is used for the parsing (while the old one can still be chosen)[115] which improves speed and "greatly improves parser error messages in various cases".[116] The LLVM compiler infrastructure project is used as the back end for generating optimized machine code for all commonly-used platforms. With some exceptions, the standard library is implemented in Julia.
+
+Current and future platforms[edit]
+Julia has tier 1 macOS support, for 64-bit Apple Silicon Macs, natively (previously Apple M1-based Macs were only supported by running in Rosetta 2 emulation[117][118]), and also fully supports Intel-based Macs. Julia 1.6 LTS however does not fully support the Arm-based Macs (was then marked experimental), and that support got first upgraded to tier 2 with Julia 1.8, then to tier 1. Windows on ARM has no official support yet.
+Julia has four support tiers.[119] All IA-32 processors completely implementing the i686 subarchitecture are supported and all 64-bit x86-64 (aka amd64), i.e. all less than about a decade old are supported. Armv8 (AArch64) processors are supported on second tier, and ARMv7 (AArch32) on third tier.[120] Hundreds of packages are GPU-accelerated:[121] CUDA (i.e. Nvidia GPUs; implementing PTX) has tier 1 support, with the help of an external package (and older versions of the package support down to CUDA 9). There are also additionally packages supporting other accelerators, such as Google's TPUs,[122] and some Intel (integrated) GPUs, through oneAPI.jl,[123] and AMD's GPUs have support with e.g. OpenCL; and experimental support for the AMD ROCm stack.[124]
+On some platforms, Julia may need to be compiled from source code (e.g., the original Raspberry Pi), with specific build options, which has been done and unofficial pre-built binaries (and build instructions) are available.[125][126] Julia has been built 
+for several ARM platforms, from small Raspberry Pis to (recent) top-1 supercomputer Fugaku's ARM-based A64FX.[127] PowerPC (64-bit) has tier 3 support, meaning it "may or may not build".
+Julia is now supported in Raspbian[128] while support is better for newer Pis, e.g., those with Armv7 or newer; the Julia support is promoted by the Raspberry Pi Foundation.[129]
+While Julia requires an operating system by default, and has no official support to run without or on embedded system platforms such as Arduino, Julia code has still been run on it, with some limitations, i.e. on a baremetal 16 MHz 8-bit (ATmega328P) AVR-microcontroller Arduino with 2 KB RAM (plus 32 KB of flash memory).[130][131]
+
+Adoption[edit]
+Julia has been adopted at many universities including MIT, Stanford, UC Berkeley and the University of Cape Town. Large private firms across many sectors have adopted the language including Amazon, IBM, JP Morgan AI Research,[132] and ASML. Julia has also been used by government agencies including NASA and the FAA, as well as every US national energy laboratory.[133][134]
+
+Scientific computing and engineering[edit]
+Amazon, for quantum computing[135] and machine learning through Amazon SageMaker[136]
+ASML, for hard real-time programming with their machines[137]
+The Climate Modeling Alliance[138] for climate change modeling[139]
+CERN, to analyze data from the Large Hadron Collider (LHCb experiment)[140][141][142][143][144][145]
+NASA and the Jet Propulsion Laboratory use Julia to model spacecraft separation dynamics,[146][147][148] analyze TRAPPIST exoplanet datasets,[149][150] and analyze cosmic microwave background data from the Big Bang[151]
+The Brazilian INPE, for space missions and satellite simulations[152]
+Embedded hardware to plan and execute flight of autonomous U.S. Air Force Research Laboratory VTOL drones[153]
+Pharmaceuticals and drug development[edit]
+Julia is widely used for drug development in the pharmaceutical industry, having been adopted by Moderna, Pfizer, AstraZeneca, Procter & Gamble, and United Therapeutics.[154][155]
+
+Economics, finance, and political science[edit]
+The Federal Reserve Bank of New York, for macroeconomic modeling in Julia since 2015, including estimates of COVID-19 shocks in 2021[156]
+Also the Bank of Canada, central bank, for macroeconomic modeling[157]
+BlackRock, the world's largest asset manager, for financial time-series analysis[158]
+Aviva, the UK's largest general insurer, for actuarial calculations[158]
+Mitre Corporation, for verification of published election results[159]
+Nobel laureate Thomas J. Sargent, for macroeconometric modeling[160]
+See also[edit]
+Comparison of numerical-analysis software
+Comparison of statistical packages
+Differentiable programming
+JuMP – an algebraic modeling language for mathematical optimization embedded in Julia
+References[edit]
+
+
+^ "2. Object-Oriented Programming - Beginning Julia Programming: For Engineers and Scientists [Book]". www.oreilly.com. Retrieved 26 January 2023.
+
+^ "Smoothing data with Julia's @generated functions". 5 November 2015. Retrieved 9 December 2015. Julia's generated functions are closely related to the multistaged programming (MSP) paradigm popularized by Taha and Sheard, which generalizes the compile time/run time stages of program execution by allowing for multiple stages of delayed code execution.
+
+^ "LICENSE.md". GitHub. September 2017.
+
+^ "Contributors to JuliaLang/julia". GitHub.
+
+^ "Why We Created Julia". Julia website. February 2012. Retrieved 7 February 2013.
+
+^ Error: Unable to display the reference properly. See the documentation for details.
+
+^ "GitHub - JuliaLang/julia at release-1.6". GitHub. Retrieved 19 July 2022.
+
+^ "release-1.6: Backports for 1.6.7 by KristofferC · Pull Request #45319 · JuliaLang/julia". GitHub. Retrieved 16 May 2022.
+
+^ a b Engheim, Erik (17 November 2017). "Dynamically Typed Languages Are Not What You Think". Medium. Retrieved 27 January 2021.
+
+^ "Building Julia (Detailed)". GitHub. September 2017. Retrieved 16 May 2022.
+
+^ "NVIDIA CUDA ⋅ JuliaGPU". juliagpu.org. Retrieved 17 January 2022. we have shown the performance to approach and even sometimes exceed that of CUDA C on a selection of applications from the Rodinia benchmark suite
+
+^ a b Fischer, Keno; Nash, Jameson. "Growing a Compiler - Getting to Machine Learning from a General Purpose Compiler - JuliaHub". juliahub.com. Retrieved 16 November 2022.
+
+^ Bryant, Avi (15 October 2012). "Matlab, R, and Julia: Languages for data analysis". O'Reilly Strata. Archived from the original on 26 April 2014.
+
+^ a b Krill, Paul (18 April 2012). "New Julia language seeks to be the C for scientists". InfoWorld.
+
+^ Finley, Klint (3 February 2014). "Out in the Open: Man Creates One Programming Language to Rule Them All". Wired.
+
+^ "Suspending Garbage Collection for Performance...good idea or bad idea?". Groups.google.com. Retrieved 31 May 2017.
+
+^ "Sysimages · PackageCompiler". julialang.github.io. Retrieved 10 April 2023.
+
+^ a b c d "GitHub - JuliaLang/PackageCompiler.jl: Compile your Julia Package". The Julia Language. 14 February 2019. Retrieved 15 February 2019.
+
+^ "julia/doc/src/devdocs/aot.md at master · JuliaLang/julia". GitHub. Retrieved 3 October 2023.
+
+^ "System Image Building · The Julia Language". docs.julialang.org. Retrieved 3 October 2023.
+
+^ Holy, Tim (13 September 2019). "GitHub - timholy/ProfileView.jl: Visualization of Julia profiling data". GitHub. Retrieved 22 September 2019.
+
+^ Gregg, Brendan (20 September 2019). "GitHub - brendangregg/FlameGraph: Stack trace visualizer". GitHub. Retrieved 22 September 2019.
+
+^ "A Julia interpreter and debugger". julialang.org. Retrieved 10 April 2019.
+
+^ "Home · Rebugger.jl". timholy.github.io. Retrieved 10 April 2019.
+
+^ Jeff Bezanson; Stefan Karpinski; Viral Shah; Alan Edelman. "Why We Created Julia". JuliaLang.org. Retrieved 5 June 2017.
+
+^ Torre, Charles. "Stefan Karpinski and Jeff Bezanson on Julia". Channel 9. MSDN. Retrieved 4 December 2018.
+
+^ Bezanson, Jeff (2 April 2021). "CAS Benchmarks". discourse.julialang.org. Retrieved 2 April 2021.
+
+^ "Newsletter August 2021 - Julia Computing Completes $24 Million Series A Fundraise and Former Snowflake CEO Bob Muglia Joins Julia Computing Board of Directors - JuliaHub". juliahub.com. Retrieved 16 November 2022.
+
+^ "JuliaCon 2020". JuliaCon 2020. Retrieved 6 October 2023.
+
+^ "JuliaCon 2020 Wrap-up". julialang.org. 11 August 2020. Retrieved 20 December 2020.
+
+^ "JuliaCon 2021 Highlights". julialang.org. Retrieved 6 September 2021.
+
+^ "Julia language co-creators win James H. Wilkinson Prize for Numerical Software". MIT News. 26 December 2018. Retrieved 22 January 2019.
+
+^ "Alan Edelman of MIT Recognized with Prestigious 2019 IEEE Computer Society Sidney Fernbach Award | IEEE Computer Society" (Press release). 1 October 2019. Retrieved 9 October 2019.
+
+^ "What is Julia 0.7? How does it relate to 1.0?". JuliaLang. 26 March 2018. Retrieved 17 October 2018.
+
+^ Davies, Eric. "Writing Iterators in Julia 0.7". julialang.org. Retrieved 5 August 2018.
+
+^ "Sys.isjsvm([os])". The Julia Language. 20 August 2019. Retrieved 20 August 2019. Predicate for testing if Julia is running in a JavaScript VM (JSVM), including e.g. a WebAssembly JavaScript embedding in a web browser.
+
+^ Bezanson, Jeff; Karpinski, Stefan; Shah, Viral; Edelman, Alan. "The Julia Language". julialang.org. Retrieved 13 December 2019.
+
+^ "support a[begin] for a[firstindex(a)] by stevengj · Pull Request #33946 · JuliaLang/julia". GitHub. Retrieved 7 April 2020.
+
+^ quinnj. "For structs with all isbits or isbitsunion fields, allow them to be stored inline in arrays  · Pull Request #32448 · JuliaLang/julia". GitHub. Retrieved 7 April 2020. I still keep running into problems that this causes internally because it was a breaking change that changes assumptions made by some users and inference/codegen.
+
+^ Fischer, Keno (2 May 2020). "Coming in Julia 1.5: Time Traveling (Linux) Bug Reporting". julialang.org. Retrieved 5 May 2020. Overhead for recording of single threaded processes is generally below 2x, most often between 2% and 50% (lower for purely numerical calculations, higher for workloads that interact with the OS). Recording multiple threads or processes that share memory (as opposed to using kernel-based message passing) is harder. [..] As expected, the threads test is the worst offender with about 600% overhead.
+
+^ Jeff Bezanson; Stefan Karpinski; Viral Shah; Alan Edelman; et al. "The Julia Language". julialang.org. Retrieved 14 August 2020. There are some size-based limits to which structs can be stack allocated, but they are unlikely to be exceeded in practice.
+
+^ Jeff Bezanson; Stefan Karpinski; Viral Shah; Alan Edelman; et al. "The Julia Language". julialang.org. Retrieved 16 September 2020.
+
+^ Jeff Bezanson; Stefan Karpinski; Viral Shah; Alan Edelman; et al. "Julia 1.6 Highlights". julialang.org. Retrieved 26 March 2021.
+
+^ "Upgrade to OpenBLAS 0.3.13 · Pull Request #39216 · JuliaLang/julia". GitHub. Retrieved 26 April 2021. Given that 1.7 is not too far away (timed releases going forward)
+
+^ "[Zlib_jll] Update to v1.2.12+3 by giordano · Pull Request #44810 · JuliaLang/julia". GitHub. Retrieved 25 May 2022.
+
+^ "Backports for Julia 1.8.5 by KristofferC · Pull Request #48011 · JuliaLang/julia". GitHub. Retrieved 8 January 2023.
+
+^ "compiler: speed up bootstrapping time by 25% by aviatesk · Pull Request #41794 · JuliaLang/julia". GitHub. Retrieved 3 March 2022. the bootstrapping took about 80 seconds previously, but on this PR the time is reduced to about 60 seconds.
+
+^ "JuliaCon 2014". juliacon.org. Retrieved 20 June 2021.
+
+^ "JuliaCon 2016 at MIT". mit.edu. 18 July 2016. Retrieved 20 June 2021.
+
+^ "JuliaCon 2019 at UMB". technical.ly. 23 July 2019. Retrieved 20 June 2021.
+
+^ "JuliaCon 2020 wrap up". julialang.org. Retrieved 20 June 2021.
+
+^ "JuliaCon 2021". Juliacon.org. Retrieved 20 June 2021.
+
+^ "JuliaCon 2021 Highlights". julialang.org. Retrieved 3 March 2022. This year's JuliaCon was the biggest and best ever, with more than 300 presentations available for free on YouTube, more than 20,000 registrations, and more than 43,000 unique YouTube viewers during the conference, up from 162 presentations, 10,000 registrations, and 28,900 unique YouTube viewers during last year's conference.
+
+^ "Jan Vitek Homepage". janvitek.org. Retrieved 20 June 2021.
+
+^ "Soumith Chintala Homepage". soumith.ch. Retrieved 20 June 2021.
+
+^ "Julia: NumFOCUS Sponsored Project since 2014". numfocus.org. Retrieved 29 September 2020.
+
+^ "The Julia Language". julialang.org. Retrieved 22 September 2019.
+
+^ Cimpanu, Catalin. "Mozilla is funding a way to support Julia in Firefox". ZDNet. Retrieved 22 September 2019.
+
+^ "Julia in Iodide". alpha.iodide.io. Retrieved 22 September 2019.
+
+^ "Language plugins - Iodide Documentation". iodide-project.github.io. Retrieved 22 September 2019.
+
+^ "Mozilla Research Grants 2019H1". Mozilla. Archived from the original on 9 October 2019. Retrieved 22 September 2019. running language interpreters in WebAssembly. To further increase access to leading data science tools, we're looking for someone to port R or Julia to WebAssembly and to attempt to provide a level 3 language plugin for Iodide: automatic conversion of data basic types between R/Julia and Javascript, and the ability to share class instances between R/Julia and Javascript.
+
+^ "Literate scientific computing and communication for the web: iodide-project/iodide". iodide. 20 September 2019. Retrieved 22 September 2019. We envision a future workflow that allows you to do your data munging in Python, fit a quick model in R or JAGS, solve some differential equations in Julia, and then display your results with a live interactive d3+JavaScript visualization ... and all that within a single, portable, sharable, and hackable file.
+
+^ "Sponsor the Julia Language". github.com. Retrieved 5 June 2021.
+
+^ "About Us – Julia Computing". juliacomputing.com. Retrieved 12 September 2017.
+
+^ "About Us - JuliaHub". juliahub.com. Retrieved 16 November 2022.
+
+^ "Julia Computing Raises $4.6M in Seed Funding" (Press release). Archived from the original on 10 May 2019.
+
+^ "Julia Computing Awarded $910,000 Grant by Alfred P. Sloan Foundation, Including $160,000 for STEM Diversity". juliacomputing.com. 26 June 2017. Archived from the original on 3 August 2020. Retrieved 28 July 2020.
+
+^ "DIFFERENTIATE—Design Intelligence Fostering Formidable Energy Reduction (and) Enabling Novel Totally Impactful Advanced Technology Enhancements" (PDF).
+
+^ "Julia Computing raises $24 mln in funding round led by Dorilton Ventures". Reuters. 19 July 2021.
+
+^ "Williams welcomes Julia Computing as Dorilton Ventures partner". www.williamsf1.com (Press release). Retrieved 2 September 2021.
+
+^ "JuliaHub Receives $13 Million Strategic Investment from AE Industrial Partners HorizonX". info.juliahub.com (Press release). 27 June 2023. Retrieved 30 June 2023.
+
+^ "The Julia Language" (official website). General Purpose [..] Julia lets you write UIs, statically compile your code, or even deploy it on a webserver.
+
+^ Green, Todd (10 August 2018). "Low-Level Systems Programming in High-Level Julia". Archived from the original on 5 November 2018. Retrieved 5 November 2018.
+
+^ Moss, Robert (26 June 2015). "Using Julia as a Specification Language for the Next-Generation Airborne Collision Avoidance System" (PDF). Archived from the original on 1 July 2015. Retrieved 29 June 2015. Airborne collision avoidance system
+
+^ a b Biggs, Benjamin; McInerney, Ian; Kerrigan, Eric C.; Constantinides, George A. (2022). "High-level Synthesis using the Julia Language". arXiv:2201.11522 [cs.SE]. We present a prototype Julia HLS tool, written in Julia, that transforms Julia code to VHDL.
+
+^ "Announcing Dash for Julia". plotly (Press release). 26 October 2020. Retrieved 2 September 2021.
+
+^ Anaya, Richard (28 April 2019). "How to create a multi-threaded HTTP server in Julia". Medium. Retrieved 25 July 2019. In summary, even though Julia lacks a multi-threaded server solution currently out of box, we can easily take advantage of its process distribution features and a highly popular load balancing tech to get full CPU utilization for HTTP handling.
+
+^ Anthoff, David (1 June 2019). "Node.js installation for julia". GitHub. Retrieved 25 July 2019.
+
+^ "Translate Julia to JavaScript". JuliaGizmos. 7 July 2019. Retrieved 25 July 2019.
+
+^ Fischer, Keno (22 July 2019). "Running julia on wasm". GitHub. Retrieved 25 July 2019.
+
+^ AppBundler.jl, PeaceFounder, 13 December 2023, retrieved 18 December 2023
+
+^ "[ANN] AppBundler.jl - Bundle Your Julia GUI Application". Julia Programming Language. 30 November 2023. Retrieved 18 December 2023.
+
+^ a b "Learn Julia in Y Minutes". Learnxinyminutes.com. Retrieved 31 May 2017.
+
+^ PythonCall & JuliaCall, JuliaPy, 29 October 2023, retrieved 30 October 2023
+
+^ RCall.jl, JuliaInterop, 16 October 2023, retrieved 30 October 2023
+
+^ CxxWrap, JuliaInterop, 28 October 2023, retrieved 30 October 2023
+
+^ "Julia and Spark, Better Together". juliacomputing.com. 2 June 2020. Archived from the original on 14 July 2020.
+
+^ Foster, Claire (23 October 2023), SQLREPL.jl, retrieved 31 October 2023
+
+^ Noh, WooKyoung (18 October 2023), Octo.jl, retrieved 31 October 2023
+
+^ "Usage Guide · FunSQL.jl". mechanicalrabbit.github.io. Retrieved 31 October 2023.
+
+^ "Using Julia with Oracle Databases". 21 October 2022.
+
+^ Short, Tom (30 October 2023), StaticCompiler, retrieved 30 October 2023
+
+^ "The Julia REPL · The Julia Language". docs.julialang.org. Retrieved 22 September 2019.
+
+^ "Introducing Julia/The REPL - Wikibooks, open books for an open world". en.wikibooks.org. Retrieved 22 September 2019. you can install the Julia package OhMyREPL.jl [..] which lets you customize the REPL's appearance and behaviour
+
+^ "Getting Started · The Julia Language". docs.julialang.org. Retrieved 15 August 2018.
+
+^ See also: docs.julialang.org/en/v1/manual/strings/ for string interpolation and the string(greet, ", ", whom, ".\n") example for preferred ways to concatenate strings.  Julia has the println and print functions, but also a @printf macro (i.e., not in function form) to eliminate run-time overhead of formatting (unlike the same function in C).
+
+^ "Julia Documentation". JuliaLang.org. Retrieved 18 November 2014.
+
+^ "Unicode 15.1 support by stevengj · Pull Request #253 · JuliaStrings/utf8proc". GitHub. Retrieved 22 January 2024.
+
+^ "support Unicode 15 via utf8proc 2.8 by stevengj · Pull Request #47392 · JuliaLang/julia". GitHub. Retrieved 3 November 2022.
+
+^ "Project Jupyter".
+
+^ Boudreau, Emmett (16 October 2020). "Could Pluto Be A Real Jupyter Replacement?". Medium. Retrieved 8 December 2020.
+
+^ Machlis, Sharon (27 July 2022). "RStudio changes name to Posit, expands focus to include Python and VS Code". InfoWorld. Retrieved 18 January 2023.
+
+^ "Heads up! Quarto is here to stay. Immediately combine R & Python in your next document: An extension on a recent post". ds-econ. 20 July 2022. Retrieved 18 January 2023.
+
+^ Foster, Chris (4 April 2022). "SQLREPL.jl". GitHub. Retrieved 27 September 2022.
+
+^ "Getting Started · RCall.jl". juliainterop.github.io. Retrieved 27 September 2022.
+
+^ "Home · LibPQ.jl". invenia.github.io. Retrieved 8 November 2022.
+
+^ a b "Home · FunSQL.jl". docs.juliahub.com. Retrieved 8 November 2022.
+
+^ Hood, Doug (21 October 2022). "Using Julia with Oracle Databases".
+
+^ "Genie Builder - Visual Studio Marketplace". marketplace.visualstudio.com. Retrieved 8 November 2022.
+
+^ "How to Build Your First Web App in Julia with Genie.jl 🧞‍♂️". freeCodeCamp.org. 1 February 2022. Retrieved 8 November 2022.
+
+^ "JuliaRegistries / General". GitHub. Retrieved 30 April 2020.
+
+^ "Pkg.jl - Artifacts". Retrieved 4 June 2020.
+
+^ "Pkg.jl - Registries". Retrieved 30 April 2020.
+
+^ Bezanson, Jeff (6 June 2019). "JeffBezanson/femtolisp". GitHub. Retrieved 16 June 2019.
+
+^ "JuliaSyntax". The Julia Programming Language. 28 August 2022. Retrieved 28 August 2022.
+
+^ "Enable JuliaSyntax.jl as an alternative Julia parser by c42f · Pull Request #46372 · JuliaLang/julia". GitHub. Retrieved 28 August 2022.
+
+^ "Julia v1.7.3 has been released". JuliaLang. 25 May 2022. Retrieved 26 May 2022.
+
+^ "Darwin/ARM64 tracking issue · Issue #36617 · JuliaLang/julia". GitHub. Retrieved 8 December 2020.
+
+^ "Julia Downloads". julialang.org. Retrieved 17 May 2019.
+
+^ "julia/arm.md". The Julia Language. 7 October 2021. Retrieved 15 May 2022. A list of known issues for ARM is available.
+
+^ "JuliaGPU". juliagpu.org. Retrieved 16 November 2022. Almost 300 packages rely directly or indirectly on Julia's GPU capabilities.
+
+^ "Julia on TPUs". JuliaTPU. 26 November 2019. Retrieved 29 November 2019.
+
+^ "Introducing: oneAPI.jl ⋅ JuliaGPU". juliagpu.org. Retrieved 6 September 2021.
+
+^ "AMD ROCm · JuliaGPU". juliagpu.org. Retrieved 20 April 2020.
+
+^ "Build Julia for RaspberryPi Zero". Gist. Retrieved 14 August 2020.
+
+^ "JuliaBerry: Julia on the Raspberry Pi". juliaberry.github.io. Retrieved 14 August 2020.
+
+^ Giordano, Mosè (29 September 2022). "Julia on Fugaku (2022-07-23)". GitHub. Retrieved 8 November 2022.
+
+^ "Julia available in Raspbian on the Raspberry Pi". Julia works on all the Pi variants, we recommend using the Pi 3.
+
+^ "Julia language for Raspberry Pi". Raspberry Pi Foundation. 12 May 2017.
+
+^ "Running Julia baremetal on an Arduino". seelengrab.github.io. Retrieved 24 May 2022.
+
+^ Sukera (31 July 2023), AVRDevices.jl, retrieved 5 August 2023
+
+^ Chen, Jiahao. "Jiahao Chen". Jiahao Chen. Retrieved 23 February 2023.
+
+^ "'Why We Created Julia' Turns Ten Years Old - JuliaHub". juliahub.com. Retrieved 16 November 2022.
+
+^ "Newsletter January 2022 - Julia Growth Statistics - Julia Computing". juliacomputing.com. Retrieved 26 January 2022.
+
+^ "Introducing Braket.jl - Quantum Computing with Julia". Julia Community 🟣. 15 November 2022. Retrieved 23 February 2023. Almost all of the Python SDK's features are reimplemented in Julia — for those few that aren't, we are also providing a subsidiary package, PyBraket.jl, which allows you to translate Julia objects into their Python equivalents and call the Python SDK.
+
+^ "Getting started with Julia on Amazon SageMaker: Step-by-step Guide" (PDF). May 2020.
+
+^ "Towards Using Julia for Real-Time applications in ASML JuliaCon 2022". pretalx.com. Retrieved 23 February 2023.
+
+^ "Home - CliMA". CliMA – Climate Modeling Alliance. Retrieved 18 June 2023.
+
+^ "Julia Computing Brings Support for NVIDIA GPU Computing on Arm Powered Servers - JuliaHub". juliahub.com (Press release). Retrieved 16 November 2022.
+
+^ "Julia for HEP Mini-workshop". indico.cern.c h. 27 September 2021. Retrieved 23 August 2022. Julia and the first observation of Ω-_b → Ξ+_c K- π-
+
+^ Mikhasenko, Misha (29 July 2022). "ThreeBodyDecay". GitHub. Retrieved 23 August 2022.
+
+^ Mikhasenko, Misha (July 2021). "Julia for QCD spectroscopy" (PDF). indico.cern.ch. Retrieved 23 August 2022. Summary: Julia is ready to be used in physics HEP analysis.
+
+^ "JuliaHEP/UnROOT.jl". JuliaHEP. 19 August 2022. Retrieved 23 August 2022.
+
+^ "Julia · Search · GitLab". GitLab. Retrieved 23 August 2022.
+
+^ "Commits · master · sft / lcgcmake · GitLab". GitLab. Retrieved 23 August 2022. bump julia version to 1.7.3
+
+^ Modeling Spacecraft Separation Dynamics in Julia - Jonathan Diegelman, retrieved 6 September 2021
+
+^ Circuitscape/Circuitscape.jl, Circuitscape, 25 February 2020, retrieved 26 May 2020
+
+^ "Conservation through Coding: 5 Questions with Viral Shah | Science Mission Directorate". science.nasa.gov. Retrieved 26 May 2020.
+
+^ "Julia in the Wild - Julia Data Science". juliadatascience.io. Retrieved 12 September 2022.
+
+^ "Seven Rocky TRAPPIST-1 Planets May Be Made of Similar Stuff". Exoplanet Exploration: Planets Beyond our Solar System. Retrieved 6 October 2022.
+
+^ Julia in Astronomy & Astrophysics Research | Eric B. Ford | JuliaCon 2022, retrieved 6 October 2022
+
+^ JuliaSpace/SatelliteToolbox.jl, JuliaSpace, 20 May 2020, retrieved 26 May 2020
+
+^ Hobbs, Kerianne (December 2022). "Year of Autonomy in Alaskan Glaciers, Flight, Earth Orbit, Cislunar Space and Mars". Aerospace America Year in Review. p. 48. The flight test team was able to demonstrate … a vertical takeoff and landing vehicle with both electric and conventional fuel propulsion systems onboard. The [uncrewed aerial system] was able to plan and execute these missions autonomously using onboard hardware. It was the first time the Julia programming language was flown on the embedded hardware - algorithms were precompiled ahead of time.
+
+^ "Case Study - JuliaHub". juliahub.com. Retrieved 10 February 2023.
+
+^ "Pumas-AI". Pumas-AI. Retrieved 10 February 2023.
+
+^ "Release v1.3.0 · FRBNY-DSGE/DSGE.jl". GitHub. Retrieved 3 January 2022. New subspecs of Model1002 for estimating the DSGE with COVID-19 shocks
+
+^ "Finance and Economics Use Cases". Julia Programming Language. 2 May 2023. Retrieved 4 May 2023.
+
+^ a b D'Cunha, Suparna Dutt (20 September 2017). "How A New Programming Language Created By Four Scientists Now Used By The World's Biggest Companies". Forbes. Archived from the original on 1 October 2022. Retrieved 1 October 2022.
+
+^ "Julia for Election Security". Julia Forem. 23 September 2022. Retrieved 27 September 2022.
+
+^ "Nobel Laureate Thomas J. Sargent - JuliaHub". juliahub.com. Retrieved 10 February 2023.
+
+
+Further reading[edit]
+Nagar, Sandeep (2017). Beginning Julia Programming: For Engineers and Scientists. Springer. ISBN 978-1-4842-3171-5.
+Bezanson, J; Edelman, A; Karpinski, S; Shah, V. B (2017). "Julia: A fresh approach to numerical computing". SIAM Review. 59 (1): 65–98. arXiv:1411.1607. CiteSeerX 10.1.1.760.8894. doi:10.1137/141000671. S2CID 13026838.
+Joshi, Anshul (2016). Julia for Data Science － Explore the world of data science from scratch with Julia by your side. Packt. ISBN 978-1-78355-386-0.
+Tobin A Driscoll and Richard J. Braun (Aug. 2022). "Fundamentals of Numerical Computation: Julia Edition". SIAM. ISBN 978-1-611977-00-4.
+C. T. Kelley (2022). "Solving Nonlinear Equations with Iterative Methods: Solvers and Examples in Julia", SIAM. ISBN 978-1-611977-26-4.
+Kalicharan, Noel (2021). Julia - Bit by Bit. Undergraduate Topics in Computer Science. Springer. doi:10.1007/978-3-030-73936-2. ISBN 978-3-030-73936-2. S2CID 235917112.
+Clemens Heitzinger (2022): "Algorithms with Julia", Springer, ISBN 978-3-031-16559-7.
+External links[edit]
+
+
+
+Wikibooks has a book on the topic of: Introducing Julia
+
+Official website
+Julia on GitHub
+vteProgramming languages
+Comparison
+Timeline
+History
+
+Ada
+ALGOL
+APL
+ArkTS
+Assembly
+BASIC
+C
+C++
+C#
+Classic Visual Basic
+COBOL
+Erlang
+Forth
+Fortran
+Go
+Haskell
+Java
+JavaScript
+Julia
+Kotlin
+Lisp
+Lua
+MATLAB
+ML
+Object Pascal
+Pascal
+Perl
+PHP
+Prolog
+Python
+R
+Ruby
+Rust
+SQL
+Scratch
+Shell
+Simula
+Smalltalk
+Swift
+Visual Basic
+more...
+
+ Lists: Alphabetical
+Categorical
+Generational
+Non-English-based
+ Category
+
+vteFree and open-source softwareGeneral
+Alternative terms for free software
+Comparison of open-source and closed-source software
+Comparison of source-code-hosting facilities
+Free software
+Free software project directories
+Gratis versus libre
+Long-term support
+Open-source software
+Open-source software development
+Outline
+Timeline
+Softwarepackages
+Audio
+Bioinformatics
+Codecs
+Configuration management
+Drivers
+Graphics
+Wireless
+Health
+Mathematics
+Office Suites
+Operating systems
+Routing
+Television
+Video games
+Web applications
+E-commerce
+Android apps
+iOS apps
+Commercial
+Formerly proprietary
+Formerly open-source
+Community
+Free software movement
+History
+Open-source-software movement
+Events
+Organisations
+Free Software Movement of India
+Free Software Foundation
+Licenses
+AFL
+Apache
+APSL
+Artistic
+Beerware
+BSD
+Creative Commons
+CDDL
+EPL
+Free Software Foundation
+GNU GPL
+GNU AGPL
+GNU LGPL
+ISC
+MIT
+MPL
+Python
+Python Software Foundation License
+Shared Source Initiative
+Sleepycat
+Unlicense
+WTFPL
+zlib
+Types and standards
+Comparison of licenses
+Contributor License Agreement
+Copyleft
+Debian Free Software Guidelines
+Definition of Free Cultural Works
+Free license
+The Free Software Definition
+The Open Source Definition
+Open-source license
+Permissive software license
+Public domain
+Viral license
+
+Challenges
+Digital rights management
+License proliferation
+Mozilla software rebranding
+Proprietary device drivers
+Proprietary firmware
+Proprietary software
+SCO/Linux controversies
+Software patents
+Software security
+Trusted Computing
+Related topics
+Forking
+GNU Manifesto
+Microsoft Open Specification Promise
+Open-core model
+Open-source hardware
+Shared Source Initiative
+Source-available software
+The Cathedral and the Bazaar
+Revolution OS
+
+ Portal
+ Category
+
+vteNumerical-analysis softwareFree
+Advanced Simulation Library
+ADMB
+Chapel
+Euler
+FreeFem++
+FreeMat
+Genius
+Gmsh
+GNU Octave
+gretl
+Julia
+Jupyter (Julia, Python, R; IPython)
+MFEM
+OpenFOAM
+Python
+R
+SageMath
+Salome
+ScicosLab
+Scilab
+X10
+Weka
+Discontinued
+Fortress
+
+Proprietary
+DADiSP
+FEATool Multiphysics
+GAUSS
+LabVIEW
+Maple
+Mathcad
+Mathematica
+MATLAB
+Speakeasy
+VisSim
+
+Comparison
+
+vteMathematical optimization softwareData formats
+Mathematica
+MPS
+nl
+sol
+Modeling tools
+AIMMS
+AMPL
+APMonitor
+ECLiPSe-CLP
+Gekko
+GAMS
+GNU MathProg
+JuMP
+LINDO
+OPL
+Mathematica
+OptimJ
+PuLP
+Pyomo
+TOMLAB
+Xpress Mosel
+ZIMPL
+SolversLP, MILP∗
+APOPT∗
+ANTIGONE∗
+Artelys Knitro∗
+BCP∗
+CLP
+CBC∗
+CPLEX∗
+FortMP∗
+GCG∗
+GLOP∗
+GLPK/GLPSOL∗
+Gurobi Optimizer∗
+HiGHS∗
+LINDO∗
+Lp_solve
+LOQO
+Mathematica
+MINOS
+MINTO∗
+MOSEK∗
+NAG
+SCIP∗
+SoPlex
+Octeract Engine∗
+SYMPHONY∗
+Xpress Optimizer∗
+QP, MIQP∗
+APOPT∗
+ANTIGONE∗
+Artelys Knitro∗
+CBC∗
+CLP
+CPLEX∗
+FortMP∗
+HiGHS
+Gurobi Optimizer∗
+IPOPT
+LINDO∗
+Mathematica
+MINOS
+MOSEK∗
+NAG
+Octeract Engine∗
+SCIP∗
+Xpress Optimizer∗
+QCP, MIQCP∗
+APOPT∗
+ANTIGONE∗
+Artelys Knitro∗
+CPLEX∗
+Gurobi Optimizer∗
+IPOPT
+LINDO∗
+Mathematica
+MINOS
+MOSEK∗
+NAG
+SCIP∗
+Octeract Engine∗
+Xpress Optimizer∗
+Xpress NonLinear∗
+SOCP, MISOCP∗
+Artelys Knitro∗
+CPLEX∗
+Gurobi Optimizer∗
+LINDO∗
+LOQO
+Mathematica
+MOSEK∗
+NAG
+SCIP∗
+Xpress Optimizer∗
+SDP, MISDP∗
+Mathematica
+MOSEK
+NAG
+NLP, MINLP∗
+AOA∗
+APOPT∗
+ANTIGONE∗
+Artelys Knitro∗
+BARON∗
+Couenne∗
+Galahad library
+Gurobi Optimizer∗
+IPOPT
+LINDO∗
+LOQO
+MIDACO∗
+MINOS
+NAG
+NLPQLP
+NPSOL
+SCIP∗
+SNOPT∗
+Octeract Engine∗
+WORHP
+Xpress NonLinear∗
+GO
+ANTIGONE∗
+BARON
+Couenne∗
+Mathematica
+LINDO
+SCIP
+Octeract Engine
+CP
+Artelys Kalis
+Comet
+CPLEX CP Optimizer
+Gecode
+Mathematica
+JaCoP
+Xpress Kalis
+
+List of optimization software
+Comparison of optimization software
+
+vteStatistical softwarePublic domain
+Dataplot
+Epi Info
+CSPro
+X-12-ARIMA
+Open-source
+ADMB
+DAP
+gretl
+JASP
+JAGS
+JMulTi
+Julia
+Jupyter (Julia, Python, R)
+GNU Octave
+OpenBUGS
+Orange
+PSPP
+Python (statsmodels, PyMC3, IPython, IDLE)
+R (RStudio)
+SageMath
+SimFiT
+SOFA Statistics
+Stan
+XLispStat
+Freeware
+BV4.1
+CumFreq
+SegReg
+XploRe
+WinBUGS
+CommercialCross-platform
+Data Desk
+GAUSS
+GraphPad InStat
+GraphPad Prism
+IBM SPSS Statistics
+IBM SPSS Modeler
+JMP
+Maple
+Mathcad
+Mathematica
+MATLAB
+OxMetrics
+RATS
+Revolution Analytics
+SAS
+SmartPLS
+Stata
+StatView
+SUDAAN
+S-PLUS
+TSP
+World Programming System (WPS)
+Windows only
+BMDP
+EViews
+GenStat
+LIMDEP
+LISREL
+MedCalc
+Microfit
+Minitab
+MLwiN
+NCSS
+SHAZAM
+SigmaStat
+Statistica
+StatsDirect
+StatXact
+SYSTAT
+The Unscrambler
+UNISTAT
+Excel add-ons
+Analyse-it
+UNISTAT for Excel
+XLfit
+RExcel
+
+Category
+Comparison
+
+vteDifferentiable computingGeneral
+Differentiable programming
+Information geometry
+Statistical manifold
+Automatic differentiation
+Neuromorphic engineering
+Pattern recognition
+Tensor calculus
+Computational learning theory
+Inductive bias
+Concepts
+Gradient descent
+SGD
+Clustering
+Regression
+Overfitting
+Hallucination
+Adversary
+Attention
+Convolution
+Loss functions
+Backpropagation
+Batchnorm
+Activation
+Softmax
+Sigmoid
+Rectifier
+Regularization
+Datasets
+Augmentation
+Diffusion
+Autoregression
+Applications
+Machine learning
+In-context learning
+Artificial neural network
+Deep learning
+Scientific computing
+Artificial Intelligence
+Language model
+Large language model
+Hardware
+IPU
+TPU
+VPU
+Memristor
+SpiNNaker
+Software libraries
+TensorFlow
+PyTorch
+Keras
+Theano
+JAX
+Flux.jl
+MindSpore
+ImplementationsAudio–visual
+AlexNet
+WaveNet
+Human image synthesis
+HWR
+OCR
+Speech synthesis
+Speech recognition
+Facial recognition
+AlphaFold
+DALL-E
+Midjourney
+Stable Diffusion
+Whisper
+Verbal
+Word2vec
+Seq2seq
+BERT
+Gemini
+LaMDA
+Bard
+NMT
+Project Debater
+IBM Watson
+IBM Watsonx
+Granite
+GPT-1
+GPT-2
+GPT-3
+GPT-4
+ChatGPT
+GPT-J
+Chinchilla AI
+PaLM
+BLOOM
+LLaMA
+PanGu-Σ
+Decisional
+AlphaGo
+AlphaZero
+Q-learning
+SARSA
+OpenAI Five
+Self-driving car
+MuZero
+Action selection
+Auto-GPT
+Robot control
+People
+Yoshua Bengio
+Alex Graves
+Ian Goodfellow
+Stephen Grossberg
+Demis Hassabis
+Geoffrey Hinton
+Yann LeCun
+Fei-Fei Li
+Andrew Ng
+Jürgen Schmidhuber
+David Silver
+Ilya Sutskever
+Organizations
+Anthropic
+EleutherAI
+Google DeepMind
+Hugging Face
+OpenAI
+Meta AI
+Mila
+MIT CSAIL
+Huawei
+Architectures
+Neural Turing machine
+Differentiable neural computer
+Transformer
+Recurrent neural network (RNN)
+Long short-term memory (LSTM)
+Gated recurrent unit (GRU)
+Echo state network
+Multilayer perceptron (MLP)
+Convolutional neural network
+Residual neural network
+Mamba
+Autoencoder
+Variational autoencoder (VAE)
+Generative adversarial network (GAN)
+Graph neural network
+
+ Portals
+Computer programming
+Technology
+ Categories
+Artificial neural networks
+Machine learning
+
+Authority control databases International
+FAST
+National
+France
+BnF data
+Israel
+United States
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Julia_(programming_language)&oldid=1208258918"
+Categories: 2012 softwareArray programming languagesNotebook interfaceCross-platform softwareData mining and machine learning softwareData-centric programming languagesDynamically typed programming languagesFree compilers and interpretersFree computer librariesFree data analysis softwareFree data visualization softwareFree software programmed in CFree software programmed in JuliaFree software projectsFree statistical softwareFunctional languagesHigh-level programming languagesHomoiconic programming languagesLisp programming language familyMulti-paradigm programming languagesNumerical analysis software for LinuxNumerical analysis software for macOSNumerical analysis software for WindowsNumerical librariesNumerical linear algebraNumerical programming languagesObject-oriented programming languagesParallel computingProcedural programming languagesProgramming languagesProgramming languages created in 2012Software using the MIT licenseStatistical programming languagesText-oriented programming languagesProgramming languages supporting units of measureHidden categories: Module:Wd reference errorsArticles with short descriptionShort description is different from WikidataUse dmy dates from October 2015Official website different in Wikidata and WikipediaWikipedia articles needing clarification from January 2024All articles with unsourced statementsArticles with unsourced statements from January 2024Articles with FAST identifiersArticles with BNF identifiersArticles with BNFdata identifiersArticles with J9U identifiersArticles with LCCN identifiersArticles with example Julia code
+
+
+
+
+
+
+ This page was last edited on 16 February 2024, at 22:28 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

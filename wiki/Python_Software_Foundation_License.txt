@@ -1,0 +1,561 @@
+
+
+
+
+Python Software Foundation License - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1See also
+
+
+
+
+
+
+
+2References
+
+
+
+
+
+
+
+3External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Python Software Foundation License
+
+
+
+10 languages
+
+
+
+
+العربيةCatalàEspañolFrançais한국어മലയാളം日本語РусскийУкраїнська中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Permissive free software license which is compatible with the GNU General Public License
+
+
+Python Software Foundation LicenseSPDX identifierPSF-2.0Debian FSG compatibleYesFSF approvedYes[1]OSI approvedYes[2]GPL compatibleYes[1]CopyleftNo
+Guido van Rossum
+The Python Software Foundation License (PSFL) is a BSD-style, permissive software license which is compatible with the GNU General Public License (GPL).[1] Its primary use is for distribution of the Python project software and its documentation.[3] Since the license is permissive, it allows proprietization of the derivations. The PSFL is listed as approved on both FSF's approved licenses list,[1] and OSI's approved licenses list.
+This license is also known as "Python License 2.0.1".[4]
+In 2000, Python (specifically version 2.1) was briefly available under the Python License, which is incompatible with the GPL.  The reason given for this incompatibility by Free Software Foundation was that "this Python license is governed by the laws of the 'State of Virginia', in the USA", which the GPL does not permit.[5]
+Guido van Rossum, Python's creator, was awarded the 2001 Free Software Foundation Award for the Advancement of Free Software[6] for changing the license to fix this incompatibility.
+
+See also[edit]
+
+Free and open-source software portal
+Python Software Foundation
+Software using the PSF license (category)
+References[edit]
+
+
+^ a b c d Stallman, Richard. "Various Licenses and Comments about Them, new Python license". Free Software Foundation. Archived from the original on December 27, 2021. Retrieved July 7, 2007.
+
+^ "License Search". Open Source Initiative. OSI Approved Licenses.
+
+^ "Terms and conditions for accessing or otherwise using Python". Python Software Foundation. Archived from the original on December 25, 2021. Retrieved December 29, 2021.
+
+^ "Various Licenses and Comments about Them". Free Software Foundation. Retrieved April 13, 2023."Python License 2.0.1". Software Package Data Exchange. SPDX License List.
+
+^ Stallman, Richard. "Various Licenses and Comments about Them, old Python license". Free Software Foundation. Retrieved July 7, 2007.
+
+^ "2001 Free Software Awards". GNU Project - Free Software Foundation. Archived from the original on August 14, 2021. Retrieved July 7, 2007.
+
+
+External links[edit]
+The Python Software Foundation License
+vteFree and open-source softwareGeneral
+Alternative terms for free software
+Comparison of open-source and closed-source software
+Comparison of source-code-hosting facilities
+Free software
+Free software project directories
+Gratis versus libre
+Long-term support
+Open-source software
+Open-source software development
+Outline
+Timeline
+Softwarepackages
+Audio
+Bioinformatics
+Codecs
+Configuration management
+Drivers
+Graphics
+Wireless
+Health
+Mathematics
+Office Suites
+Operating systems
+Routing
+Television
+Video games
+Web applications
+E-commerce
+Android apps
+iOS apps
+Commercial
+Formerly proprietary
+Formerly open-source
+Community
+Free software movement
+History
+Open-source-software movement
+Events
+Organisations
+Free Software Movement of India
+Free Software Foundation
+Licenses
+AFL
+Apache
+APSL
+Artistic
+Beerware
+BSD
+Creative Commons
+CDDL
+EPL
+Free Software Foundation
+GNU GPL
+GNU AGPL
+GNU LGPL
+ISC
+MIT
+MPL
+Python
+Python Software Foundation License
+Shared Source Initiative
+Sleepycat
+Unlicense
+WTFPL
+zlib
+Types and standards
+Comparison of licenses
+Contributor License Agreement
+Copyleft
+Debian Free Software Guidelines
+Definition of Free Cultural Works
+Free license
+The Free Software Definition
+The Open Source Definition
+Open-source license
+Permissive software license
+Public domain
+Viral license
+
+Challenges
+Digital rights management
+License proliferation
+Mozilla software rebranding
+Proprietary device drivers
+Proprietary firmware
+Proprietary software
+SCO/Linux controversies
+Software patents
+Software security
+Trusted Computing
+Related topics
+Forking
+GNU Manifesto
+Microsoft Open Specification Promise
+Open-core model
+Open-source hardware
+Shared Source Initiative
+Source-available software
+The Cathedral and the Bazaar
+Revolution OS
+
+ Portal
+ Category
+
+This software-engineering-related article is a stub. You can help Wikipedia by expanding it.vte
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Python_Software_Foundation_License&oldid=1169962088"
+Categories: Free and open-source software licensesPython (programming language)Software engineering stubsHidden categories: Articles with short descriptionShort description is different from WikidataUse American English from March 2021All Wikipedia articles written in American EnglishUse mdy dates from March 2021All stub articles
+
+
+
+
+
+
+ This page was last edited on 12 August 2023, at 11:56 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

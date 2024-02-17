@@ -1,0 +1,1218 @@
+
+
+
+
+Ada (programming language) - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Features
+
+
+
+
+
+
+
+2History
+
+
+
+
+
+
+
+3Standardization
+
+
+
+
+
+
+
+4Language constructs
+
+
+
+Toggle Language constructs subsection
+
+
+
+
+
+4.1"Hello, world!" in Ada
+
+
+
+
+
+
+
+4.2Data types
+
+
+
+
+
+
+
+4.3Control structures
+
+
+
+
+
+
+
+4.4Packages, procedures and functions
+
+
+
+
+
+
+
+4.5Pragmas
+
+
+
+
+
+
+
+4.6Generics
+
+
+
+
+
+
+
+
+
+5See also
+
+
+
+
+
+
+
+6Notes
+
+
+
+
+
+
+
+7References
+
+
+
+Toggle References subsection
+
+
+
+
+
+7.1International standards
+
+
+
+
+
+
+
+7.2Rationale
+
+
+
+
+
+
+
+7.3Books
+
+
+
+
+
+
+
+
+
+8Further reading
+
+
+
+
+
+
+
+9External links
+
+
+
+
+
+
+
+10External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Ada (programming language)
+
+
+
+63 languages
+
+
+
+
+العربيةAragonésAzərbaycancaবাংলাБеларускаяБългарскиBosanskiCatalàЧӑвашлаČeštinaDanskDeutschEestiΕλληνικάEspañolEsperantoEuskaraفارسیFrançaisGaeilgeGalego한국어ՀայերենHrvatskiIdoBahasa IndonesiaInterlinguaItalianoעבריתქართულიҚазақшаKiswahiliКыргызчаLatinaMagyarമലയാളംBahasa MelayuNederlands日本語Norsk bokmålNorsk nynorskਪੰਜਾਬੀPolskiPortuguêsRomânăРусиньскыйРусскийSimple EnglishSlovenčinaSlovenščinaСрпски / srpskiSrpskohrvatski / српскохрватскиSuomiSvenskaதமிழ்ไทยТоҷикӣTürkçeУкраїнськаTiếng Việt吴语粵語中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+		In other projects
+	
+
+
+Wikimedia CommonsWikibooksWikiquoteWikiversity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+High-level programming language first released in 1980
+AdaParadigmMulti-paradigm: structured, imperative, object-oriented, aspect-oriented,[1] concurrent, array, distributed, generic, procedural, metaFamilyPascalDesigned by
+MIL-STD-1815, Ada 83: Jean Ichbiah
+Ada 95: Tucker Taft
+Ada 2005: Tucker Taft
+Ada 2012: Tucker Taft
+First appearedFebruary 1980; 44 years ago (1980-02)Stable releaseAda 2022
+   / May 2023
+Typing disciplinestatic, strong, safe, nominalOSMulti- or cross-platformFilename extensions.adb, .adsWebsitewww.adaic.orgMajor implementationsAdaCore GNAT,[2]Green Hills Software Optimising Ada 95 compiler,PTC ApexAda and ObjectAda,[3]MapuSoft Ada-C/C++ changer,[4] formerly known as "AdaMagic with C Intermediate",[5]DDC-I ScoreDialectsSPARK, Ravenscar profileInfluenced byALGOL 68, Pascal, Simula 67,[6] C++ (Ada 95), Smalltalk (Ada 95), Modula-2 (Ada 95) Java (Ada 2005), Eiffel (Ada 2012)InfluencedC++, Chapel,[7] Drago,[8] D, Eiffel, Griffin,[9] Java, Nim, ParaSail, PL/SQL, PL/pgSQL, Python, Ruby, Seed7, SPARforte,[10] Sparkel, SQL/PSM, VHDL
+ Ada Programming at Wikibooks
+
+Ada is a structured, statically typed, imperative, and object-oriented high-level programming language, inspired by Pascal and other languages. It has built-in language support for design by contract (DbC), extremely strong typing, explicit concurrency, tasks, synchronous message passing, protected objects, and non-determinism. Ada improves code safety and maintainability by using the compiler to find errors in favor of runtime errors. Ada is an international technical standard, jointly defined by the International Organization for Standardization (ISO), and the International Electrotechnical Commission (IEC). As of May 2023[update], the standard, called Ada 2022 informally, is ISO/IEC 8652:2023.[11]
+Ada was originally designed by a team led by French computer scientist Jean Ichbiah of Honeywell under contract to the United States Department of Defense (DoD) from 1977 to 1983 to supersede over 450 programming languages used by the DoD at that time.[12] Ada was named after Ada Lovelace (1815–1852), who has been credited as the first computer programmer.[13]
+
+
+Features[edit]
+Ada was originally designed for embedded and real-time systems. The Ada 95 revision, designed by S. Tucker Taft of Intermetrics between 1992 and 1995, improved support for systems, numerical, financial, and object-oriented programming (OOP).
+Features of Ada include: strong typing, modular programming mechanisms (packages), run-time checking, parallel processing (tasks, synchronous message passing, protected objects, and nondeterministic select statements), exception handling, and generics. Ada 95 added support for object-oriented programming, including dynamic dispatch.
+The syntax of Ada minimizes choices of ways to perform basic operations, and prefers English keywords (such as "or else" and "and then") to symbols (such as "||" and "&&"). Ada uses the basic arithmetical operators "+", "-", "*", and "/", but avoids using other symbols. Code blocks are delimited by words such as "declare", "begin", and "end", where the "end" (in most cases) is followed by the identifier of the block it closes (e.g., if ... end if, loop ... end loop). In the case of conditional blocks this avoids a dangling else that could pair with the wrong nested if-expression in other languages like C or Java.
+Ada is designed for developing very large software systems. Ada packages can be compiled separately. Ada package specifications (the package interface) can also be compiled separately without the implementation to check for consistency. This makes it possible to detect problems early during the design phase, before implementation starts.
+A large number of compile-time checks are supported to help avoid bugs that would not be detectable until run-time in some other languages or would require explicit checks to be added to the source code.  For example, the syntax requires explicitly named closing of blocks to prevent errors due to mismatched end tokens. The adherence to strong typing allows detecting many common software errors (wrong parameters, range violations, invalid references, mismatched types, etc.) either during compile-time, or otherwise during run-time. As concurrency is part of the language specification, the compiler can in some cases detect potential deadlocks.[14] Compilers also commonly check for misspelled identifiers, visibility of packages, redundant declarations, etc. and can provide warnings and useful suggestions on how to fix the error.
+Ada also supports run-time checks to protect against access to unallocated memory, buffer overflow errors, range violations, off-by-one errors, array access errors, and other detectable bugs. These checks can be disabled in the interest of runtime efficiency, but can often be compiled efficiently. It also includes facilities to help program verification. For these reasons, Ada is sometimes used in critical systems, where any anomaly might lead to very serious consequences, e.g., accidental death, injury or severe financial loss. Examples of systems where Ada is used include avionics, air traffic control, railways, banking, military and space technology.[15][16]
+Ada's dynamic memory management is high-level and type-safe. Ada has no generic or untyped pointers; nor does it implicitly declare any pointer type. Instead, all dynamic memory allocation and deallocation must occur via explicitly declared access types. Each access type has an associated storage pool that handles the low-level details of memory management; the programmer can either use the default storage pool or define new ones (this is particularly relevant for Non-Uniform Memory Access). It is even possible to declare several different access types that all designate the same type but use different storage pools. Also, the language provides for accessibility checks, both at compile time and at run time, that ensures that an access value cannot outlive the type of the object it points to.[17]
+Though the semantics of the language allow automatic garbage collection of inaccessible objects, most implementations do not support it by default, as it would cause unpredictable behaviour in real-time systems.  Ada does support a limited form of region-based memory management; also, creative use of storage pools can provide for a limited form of automatic garbage collection, since destroying a storage pool also destroys all the objects in the pool.
+A double-dash ("--"), resembling an em dash, denotes comment text.  Comments stop at end of line; there is intentionally no way to make a comment span multiple lines, to prevent unclosed comments from accidentally voiding whole sections of source code.  Disabling a whole block of code therefore requires the prefixing of each line (or column) individually with "--". While this clearly denotes disabled code by creating a column of repeated "--" down the page, it also renders the experimental dis/re-enablement of large blocks a more drawn-out process in editors without block commenting support.
+The semicolon (";") is a statement terminator, and the null or no-operation statement is null;. A single ; without a statement to terminate is not allowed.
+Unlike most ISO standards, the Ada language definition (known as the Ada Reference Manual or ARM, or sometimes the Language Reference Manual or LRM) is free content. Thus, it is a common reference for Ada programmers, not only programmers implementing Ada compilers. Apart from the reference manual, there is also an extensive rationale document which explains the language design and the use of various language constructs. This document is also widely used by programmers. When the language was revised, a new rationale document was written.
+One notable free software tool that is used by many Ada programmers to aid them in writing Ada source code is the GNAT Programming Studio, and GNAT which is part of the GNU Compiler Collection.
+
+History[edit]
+In the 1970s the US Department of Defense (DoD) became concerned by the number of different programming languages being used for its embedded computer system projects, many of which were obsolete or hardware-dependent, and none of which supported safe modular programming. In 1975, a working group, the High Order Language Working Group (HOLWG), was formed with the intent to reduce this number by finding or creating a programming language generally suitable for the department's and the UK Ministry of Defence's requirements. After many iterations beginning with an original straw-man proposal[18] the eventual programming language was named Ada. The total number of high-level programming languages in use for such projects fell from over 450 in 1983 to 37 by 1996.
+HOLWG crafted the Steelman language requirements, a series of documents stating the requirements they felt a programming language should satisfy. Many existing languages were formally reviewed, but the team concluded in 1977 that no existing language met the specifications.
+
+Watercolour painting of Ada Lovelace
+Requests for proposals for a new programming language were issued and four contractors were hired to develop their proposals under the names of Red (Intermetrics led by Benjamin Brosgol), Green (Honeywell, led by Jean Ichbiah), Blue (SofTech, led by John Goodenough)[19] and Yellow (SRI International, led by Jay Spitzen). In April 1978, after public scrutiny, the Red and Green proposals passed to the next phase. In May 1979, the Green proposal, designed by Jean Ichbiah at Honeywell, was chosen and given the name Ada—after Augusta Ada King, Countess of Lovelace, usually known as Ada Lovelace. This proposal was influenced by the language LIS that Ichbiah and his group had developed in the 1970s. The preliminary Ada reference manual was published in ACM SIGPLAN Notices in June 1979. The Military Standard reference manual was approved on December 10, 1980 (Ada Lovelace's birthday), and given the number MIL-STD-1815 in honor of Ada Lovelace's birth year. In 1981, Tony Hoare took advantage of his Turing Award speech to criticize Ada for being overly complex and hence unreliable,[20] but subsequently seemed to recant in the foreword he wrote for an Ada textbook.[21]
+Ada attracted much attention from the programming community as a whole during its early days. Its backers and others predicted that it might become a dominant language for general purpose programming and not only defense-related work.[22] Ichbiah publicly stated that within ten years, only two programming languages would remain: Ada and Lisp.[23]  Early Ada compilers struggled to implement the large, complex language, and both compile-time and run-time performance tended to be slow and tools primitive.[22]   Compiler vendors expended most of their efforts in passing the massive, language-conformance-testing, government-required Ada Compiler Validation Capability (ACVC) validation suite that was required in another novel feature of the Ada language effort.[23] The Jargon File, a dictionary of computer hacker slang originating in 1975–1983, notes in an entry on Ada that "it is precisely what one might expect given that kind of endorsement by fiat; designed by committee...difficult to use, and overall a disastrous, multi-billion-dollar boondoggle...Ada Lovelace...would almost certainly blanch at the use her name has been latterly put to; the kindest thing that has been said about it is that there is probably a good small language screaming to get out from inside its vast, elephantine bulk."[24]
+The first validated Ada implementation was the NYU Ada/Ed translator,[25] certified on April 11, 1983. NYU Ada/Ed is implemented in the high-level set language SETL.[26] Several commercial companies began offering Ada compilers and associated development tools, including Alsys, TeleSoft, DDC-I, Advanced Computer Techniques, Tartan Laboratories, Irvine Compiler, TLD Systems, and Verdix.[27] Computer manufacturers who had a significant business in the defense, aerospace, or related industries, also offered Ada compilers and tools on their platforms; these included Concurrent Computer Corporation, Cray Research, Inc., Digital Equipment Corporation, Harris Computer Systems, and Siemens Nixdorf Informationssysteme AG.[27]
+In 1991, the US Department of Defense began to require the use of Ada (the Ada mandate) for all software,[28] though exceptions to this rule were often granted.[22]  The Department of Defense Ada mandate was effectively removed in 1997, as the DoD began to embrace commercial off-the-shelf (COTS) technology.[22] Similar requirements existed in other NATO countries: Ada was required for NATO systems involving command and control and other functions, and Ada was the mandated or preferred language for defense-related applications in countries such as Sweden, Germany, and Canada.[29]
+By the late 1980s and early 1990s, Ada compilers had improved in performance, but there were still barriers to fully exploiting Ada's abilities, including a tasking model that was different from what most real-time programmers were used to.[23]
+Because of Ada's safety-critical support features, it is now used not only for military applications, but also in commercial projects where a software bug can have severe consequences, e.g., avionics and air traffic control, commercial rockets such as the Ariane 4 and 5, satellites and other space systems, railway transport and banking.[16]
+For example, the Primary Flight Control System, the fly-by-wire system software in the Boeing 777, was written in Ada, as were the fly-by-wire systems for the aerodynamically unstable Eurofighter Typhoon,[30] Saab Gripen,[31] Lockheed Martin F-22 Raptor and the DFCS replacement flight control system for the Grumman F-14 Tomcat. The Canadian Automated Air Traffic System was written in 1 million lines of Ada (SLOC count). It featured advanced distributed processing, a distributed Ada database, and object-oriented design. Ada is also used in other air traffic systems, e.g., the UK's next-generation Interim Future Area Control Tools Support (iFACTS) air traffic control system is designed and implemented using SPARK Ada.[32]
+It is also used in the French TVM in-cab signalling system on the TGV high-speed rail system, and the metro suburban trains in Paris, London, Hong Kong and New York City.[16][33]
+
+Standardization[edit]
+
+Timeline of Ada language
+
+
+Year
+
+Informal name
+
+ANSI Standard
+
+ISO/IEC Standard
+
+
+1980
+
+Ada
+
+MIL-STD 1815
+
+—
+
+
+1983
+
+Ada 83/87
+
+MIL-STD 1815A
+
+8652:1987
+
+
+1995
+
+Ada 95
+
+—
+
+8652:1995
+
+
+2007
+
+Ada 2005
+
+—
+
+8652:1995/Amd 1:2007
+
+
+2012
+
+Ada 2012
+
+—
+
+8652:2012
+
+
+2023
+
+Ada 2022
+
+—
+
+8652:2023
+
+Preliminary Ada can be found in ACM Sigplan Notices Vol 14, No 6, June 1979[34]
+Ada was first published in 1980 as an ANSI standard ANSI/MIL-STD 1815. As this very first version held many errors and inconsistencies [a], the revised edition was published in 1983 as ANSI/MIL-STD 1815A. Without any further changes, it became an ISO standard in 1987, [36]. This version of the language is commonly known as Ada 83, from the date of its adoption by ANSI, but is sometimes referred to also as Ada 87, from the date of its adoption by ISO.[37] There is also a French translation; DIN translated it into German as DIN 66268 in 1988.
+Ada 95, the joint ISO/IEC/ANSI standard ISO/IEC 8652:1995[38][39] was published in February 1995, making it the first ISO standard object-oriented programming language. To help with the standard revision and future acceptance, the US Air Force funded the development of the GNAT Compiler. Presently, the GNAT Compiler is part of the GNU Compiler Collection.
+Work has continued on improving and updating the technical content of the Ada language. A Technical Corrigendum to Ada 95 was published in October 2001,[40][41] and a major Amendment, ISO/IEC 8652:1995/Amd 1:2007 [42][43] was published on March 9, 2007, commonly known as Ada 2005 because work on the new standard was finished that year. 
+At the Ada-Europe 2012 conference in Stockholm, the Ada Resource Association (ARA) and Ada-Europe announced the completion of the design of the latest version of the Ada language and the submission of the reference manual to the ISO/IEC JTC 1/SC 22/WG 9 of the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) for approval. ISO/IEC 8652:2012[44](see Ada 2012 RM) was published in December 2012, known as Ada 2012. A technical corrigendum, ISO/IEC 8652:2012/COR 1:2016, was published [45](see RM 2012 with TC 1).
+On May 2, 2023, the Ada community saw the formal approval of publication of the Ada 2022 edition of the programming language standard.[11]
+Despite the names Ada 83, 95 etc., legally there is only one Ada standard, the one of the last ISO/IEC standard: with the acceptance of a new standard version, the previous one becomes withdrawn. The other names are just informal ones referencing a certain edition.
+Other related standards include ISO/IEC 8651-3:1988 Information processing systems—Computer graphics—Graphical Kernel System (GKS) language bindings—Part 3: Ada.
+
+Language constructs[edit]
+Ada is an ALGOL-like programming language featuring control structures with reserved words such as if, then, else, while, for, and so on. However, Ada also has many data structuring facilities and other abstractions which were not included in the original ALGOL 60, such as type definitions, records, pointers, enumerations. Such constructs were in part inherited from or inspired by Pascal.
+
+"Hello, world!" in Ada[edit]
+A common example of a language's syntax is the Hello world program:
+(hello.adb)
+
+with Ada.Text_IO;
+procedure Hello is
+begin
+   Ada.Text_IO.Put_Line ("Hello, world!");
+end Hello;
+
+This program can be compiled by using the freely available open source compiler GNAT, by executing
+
+gnatmake hello.adb
+
+Data types[edit]
+Ada's type system is not based on a set of predefined primitive types but allows users to declare their own types. This declaration in turn is not based on the internal representation of the type but on describing the goal which should be achieved. This allows the compiler to determine a suitable memory size for the type, and to check for violations of the type definition at compile time and run time (i.e., range violations, buffer overruns, type consistency, etc.). Ada supports numerical types defined by a range, modulo types, aggregate types (records and arrays), and enumeration types. Access types define a reference to an instance of a specified type; untyped pointers are not permitted.
+Special types provided by the language are task types and protected types.
+For example, a date might be represented as:
+
+type Day_type   is range    1 ..   31;
+type Month_type is range    1 ..   12;
+type Year_type  is range 1800 .. 2100;
+type Hours is mod 24;
+type Weekday is (Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday);
+
+type Date is
+   record
+     Day   : Day_type;
+     Month : Month_type;
+     Year  : Year_type;
+   end record;
+
+Important to note: Day_type, Month_type, Year_type, Hours are incompatible types, meaning that for instance the following expression is illegal:
+
+Today: Day_type := 4;
+Current_Month: Month_type := 10;
+... Today + Current_Month ...  -- illegal
+
+The predefined plus-operator can only add values of the same type, so the expression is illegal. 
+Types can be refined by declaring subtypes:
+
+subtype Working_Hours is Hours range 0 .. 12;            -- at most 12 Hours to work a day
+subtype Working_Day is Weekday range Monday .. Friday;   -- Days to work
+
+Work_Load: constant array(Working_Day) of Working_Hours  -- implicit type declaration
+   := (Friday => 6, Monday => 4, others => 10);           -- lookup table for working hours with initialization
+
+Types can have modifiers such as limited, abstract, private etc. Private types do not show their inner structure; objects of limited types cannot be copied.[46] Ada 95 adds further features for object-oriented extension of types.
+
+Control structures[edit]
+Ada is a structured programming language, meaning that the flow of control is structured into standard statements. All standard constructs and deep-level early exit are supported, so the use of the also supported "go to" commands is seldom needed.
+
+-- while a is not equal to b, loop.
+while a /= b loop
+  Ada.Text_IO.Put_Line ("Waiting");
+end loop;
+
+if a > b then
+  Ada.Text_IO.Put_Line ("Condition met");
+else
+  Ada.Text_IO.Put_Line ("Condition not met");
+end if;
+
+for i in 1 .. 10 loop
+  Ada.Text_IO.Put ("Iteration: ");
+  Ada.Text_IO.Put (i);
+  Ada.Text_IO.Put_Line;
+end loop;
+
+loop
+  a := a + 1;
+  exit when a = 10;
+end loop;
+
+case i is
+  when 0 => Ada.Text_IO.Put ("zero");
+  when 1 => Ada.Text_IO.Put ("one");
+  when 2 => Ada.Text_IO.Put ("two");
+  -- case statements have to cover all possible cases:
+  when others => Ada.Text_IO.Put ("none of the above");
+end case;
+
+for aWeekday in Weekday'Range loop               -- loop over an enumeration
+   Put_Line ( Weekday'Image(aWeekday) );         -- output string representation of an enumeration
+   if aWeekday in Working_Day then               -- check of a subtype of an enumeration
+      Put_Line ( " to work for " &
+               Working_Hours'Image (Work_Load(aWeekday)) ); -- access into a lookup table
+   end if;
+end loop;
+
+Packages, procedures and functions[edit]
+Among the parts of an Ada program are packages, procedures and functions.
+Example:
+Package specification (example.ads)
+
+package Example is
+     type Number is range 1 .. 11;
+     procedure Print_and_Increment (j: in out Number);
+end Example;
+
+Package body (example.adb)
+
+with Ada.Text_IO;
+package body Example is
+
+  i : Number := Number'First;
+
+  procedure Print_and_Increment (j: in out Number) is
+
+    function Next (k: in Number) return Number is
+    begin
+      return k + 1;
+    end Next;
+
+  begin
+    Ada.Text_IO.Put_Line ( "The total is: " & Number'Image(j) );
+    j := Next (j);
+  end Print_and_Increment;
+
+-- package initialization executed when the package is elaborated
+begin
+  while i < Number'Last loop
+    Print_and_Increment (i);
+  end loop;
+end Example;
+
+This program can be compiled, e.g., by using the freely available open-source compiler GNAT, by executing
+
+gnatmake -z example.adb
+
+Packages, procedures and functions can nest to any depth, and each can also be the logical outermost block.
+Each package, procedure or function can have its own declarations of constants, types, variables, and other procedures, functions and packages, which can be declared in any order.
+
+Pragmas[edit]
+A pragma is a compiler directive that conveys information to the compiler to allow specific manipulating of compiled output.[47]  Certain pragmas are built into the language,[48] while others are implementation-specific.
+Examples of common usage of compiler pragmas would be to disable certain features, such as run-time type checking or array subscript boundary checking, or to instruct the compiler to insert object code instead of a function call (as C/C++ does with inline functions).
+
+Generics[edit]
+This section is an excerpt from Generic programming § Generics in Ada.[edit]
+Ada has had generics since it was first designed in 1977–1980. The standard library uses generics to provide many services. Ada 2005 adds a comprehensive generic container library to the standard library, which was inspired by C++'s standard template library.
+A generic unit is a package or a subprogram that takes one or more generic formal parameters.
+A generic formal parameter is a value, a variable, a constant, a type, a subprogram, or even an instance of another, designated, generic unit. For generic formal types, the syntax distinguishes between discrete, floating-point, fixed-point, access (pointer) types, etc. Some formal parameters can have default values.
+
+To instantiate a generic unit, the programmer passes actual parameters for each formal. The generic instance then behaves just like any other unit. It is possible to instantiate generic units at run-time, for example inside a loop.
+See also[edit]
+
+Computer programming portal
+Ada compilers
+APSE – a specification for a programming environment to support software development in Ada
+Ravenscar profile – a subset of the Ada tasking features designed for safety-critical hard real-time computing
+SPARK – a programming language consisting of a highly restricted subset of Ada, annotated with meta-information describing desired component behavior and individual runtime requirements
+Notes[edit]
+
+
+^ see Summary of Ada Language Changes[35]
+
+
+
+
+^ "Ada2012 Rationale" (PDF). adacore.com. Archived (PDF) from the original on 18 April 2016. Retrieved 5 May 2018.
+
+^ "Commercial software solutions for Ada, C and C++". AdaCore. Retrieved Apr 4, 2023.
+
+^ "PTC ObjectAda". PTC.com. Retrieved 2014-01-27.
+
+^ "MapuSoft Ada-C/C++ changer". 16 April 2019.
+
+^ "Ada 95 Certified Processors List - Details". ada-auth.org. Retrieved Apr 4, 2023.
+
+^ Ada Rationale, 1986, pp. 23, 70, 110–114, 137, 165, 236
+
+^ "Chapel spec (Acknowledgements)" (PDF). Cray Inc. 2015-10-01. Archived (PDF) from the original on 2022-10-09. Retrieved 2016-01-14.
+
+^ "Drago". Archived from the original on 2020-09-14. Retrieved 2018-08-06.
+
+^ "The Griffin Project". cs.nyu.edu. Retrieved Apr 4, 2023.
+
+^ "SparForte Programming Language". www.sparforte.com. Retrieved Apr 4, 2023.
+
+^ a b Pinho, Luis Miguel (June 2023). "From the Editor's Desk". Ada Letters. Association for Computing Machinery. XLIII (1): 3. doi:10.1145/3631483 (inactive 31 January 2024).{{cite journal}}:  CS1 maint: DOI inactive as of January 2024 (link)
+
+^ "The Ada Programming Language". University of Mich. Archived from the original on 2016-05-22. Retrieved 27 May 2016.
+
+^ Fuegi, J; Francis, J (2003). "Lovelace & Babbage and the creation of the 1843 'notes'". IEEE Annals of the History of Computing. 25 (4): 16–26. doi:10.1109/MAHC.2003.1253887. S2CID 40077111.
+
+^ "Concurrency - Chapter 6 - Ada 95 QUALITY AND STYLE Guide". adaic.org. Retrieved November 5, 2021.
+
+^ Taft, S. Tucker; Olsen, Florence (1999-06-30). "Ada helps churn out less-buggy code". Government Computer News. pp. 2–3. Archived from the original on 2015-08-31. Retrieved 2010-09-14.
+
+^ a b c Feldman, Michael. "Who's Using Ada? Real-World Projects Powered by the Ada Programming Language November 2014". SIGAda Education Working Group.
+
+^ no safe dynamic memory management in ADA, in: Writing Linux Kernel Modules in Safe Rust - Geoffrey Thomas & Alex Gaynor
+, The Linux Foundation, 2019-10-02
+
+^ "DoD - Strawman Requirements - April 1975". iment.com. Retrieved Apr 4, 2023.
+
+^ "John Goodenough | SEI Staff Profile". Sei.cmu.edu. Retrieved 2014-01-27.
+
+^ C.A.R., Hoare (1981). "The Emperor's Old Clothes" (PDF). Communications of the ACM. Association for Computing Machinery. 24 (2): 75–83. doi:10.1145/358549.358561. S2CID 97895. Archived (PDF) from the original on 2016-03-04.
+
+^ Watt, D.A.; Wichmann, B.A.; Findlay, W. (1987). Ada: Language and Methodology. Prentice-Hall.
+
+^ a b c d Sward, Ricky E. (November 2010). "The rise, fall and persistence of Ada". SIGAda '10: Proceedings of the ACM SIGAda annual international conference on SIGAda. pp. 71–74. doi:10.1145/1879063.1879081.
+
+^ a b c Rosen, J-P. (August 2009). "The Ada Paradox(es)". Ada Letters. ACM SIGAda. 24 (2): 28–35. doi:10.1145/1620593.1620597. S2CID 608405.
+
+^ "THIS IS THE JARGON FILE, VERSION 2.6.2" (TXT). 1991-02-14. Retrieved 2023-01-31.
+
+^ SofTech Inc. (1983-04-11). "Ada Compiler Validation Summary Report: NYU Ada/ED, Version 19.7 V-001". Waltham, MA. Archived from the original on 2012-03-12. Retrieved 2010-12-16.
+
+^ Dewar, Robert B. K.; Fisher, Gerald A. Jr.; Schonberg, Edmond; Froelich, Robert; Bryant, Stephen; Goss, Clinton F.; Burke, Michael (November 1980). "The NYU Ada translator and interpreter". Proceeding of the ACM-SIGPLAN symposium on Ada programming language - SIGPLAN '80. Vol. 15. pp. 194–201. doi:10.1145/948632.948659. ISBN 0-89791-030-3. S2CID 10586359.
+
+^ a b "Ada Validated Compilers List". Ada Information Clearinghouse. July 1, 1992. pp. 1–36.
+
+^ Ada Information Clearinghouse (1983-04-11). "The Congressional Ada Mandate". Archived from the original on 2016-03-04. Retrieved 2015-06-07.
+
+^ Babiak, Nicholas J. (1989). Ada, the New DoD Weapon System Computer Language – Panacea or Calamity (PDF). Air University (United States Air Force). pp. 39–40. Archived (PDF) from the original on December 15, 2019.
+
+^ "Agile thinking". FlightGlobal. 16 June 1999. Archived from the original on 15 April 2021. Retrieved 13 Feb 2024.
+
+^ Frisberg, Bo. "Usage of Ada in the Gripen Flight Control System" (PDF). The Special Interest Group on Ada. Archived (PDF) from the original on 15 Jan 2024. Retrieved 13 Feb 2024.
+
+^ AdaCore. "GNAT Pro Chosen for UK's Next Generation ATC System". Archived from the original on 2010-12-24. Retrieved 2011-03-01.
+
+^ AdaCore. "Look Who's Using Ada". Archived from the original on 2010-12-24. Retrieved 2011-03-01.
+
+^ Ichbiah, J. D. (June 1979). "ACM Sigplan Notices". pp. 1–145. doi:10.1145/956650.956651.
+
+^ Summary of Ada Language Changes
+
+^ "ISO 8652:1987". ISO. 2013-02-21. Retrieved 2024-01-19.
+
+^ "Ada 83 LRM, Front Page". archive.adaic.com. Retrieved 2024-01-19.
+
+^ "ISO/IEC 8652:1995". ISO. Retrieved 2024-01-19.
+
+^  "Ada 95 Language Reference Manual (original) - Ada Resource Association". www.adaic.org. Retrieved 2024-01-19.
+
+^  ISO/IEC 8652:1995/Corr 1:2001
+
+^  Ada 95 RM with TC 1
+
+^ "ISO/IEC 8652:1995/Amd 1:2007". ISO. Retrieved 2024-01-19. 
+
+^  "Ada Reference Manual, ISO/IEC 8652:2007(E) Ed. 3". www.adaic.org. Retrieved 2024-01-19.
+
+^  "ISO/IEC 8652:2012". ISO. 2013-03-28. Retrieved 2024-01-19. 
+
+^ "ISO/IEC 8652:2012/Cor 1:2016". ISO. Retrieved 2024-01-19. 
+
+^ "Ada Syntax Card" (PDF). Archived from the original (PDF) on 6 July 2011. Retrieved 28 February 2011.
+
+^ "Ada 83 LRM, Sec 2.8: Pragmas". Archive.adaic.com. Retrieved 2014-01-27.
+
+^ "Ada 83 LRM, Appendix/Annex B: Predefined Language Pragmas". Archive.adaic.com. Archived from the original on 2012-02-06. Retrieved 2014-01-27.
+
+
+References[edit]
+International standards[edit]
+ISO/IEC 8652: Information technology—Programming languages—Ada
+ISO/IEC 15291: Information technology—Programming languages—Ada Semantic Interface Specification (ASIS)
+ISO/IEC 18009: Information technology—Programming languages—Ada: Conformity assessment of a language processor (ACATS)
+IEEE Standard 1003.5b-1996, the POSIX Ada binding
+Ada Language Mapping Specification, the CORBA interface description language (IDL) to Ada mapping
+Rationale[edit]
+These documents have been published in various forms, including print.
+
+Ichbiah, Jean D.; Barnes, John G. P.; Firth, Robert J.; Woodger, Mike (1986), Rationale for the Design of the Ada Programming Language, archived from the original on 2007-02-02 Also available apps.dtic.mil, pdf
+Barnes, John G. P. (1995), Ada 95 rationale: the language: the standard libraries
+Barnes, John (2006) [2005], Rationale for Ada 2005
+Books[edit]
+
+Booch, Grady (1987). Software Engineering with Ada. California: The Benjamin/Cummings Publishing Company. ISBN 0-8053-0604-8.
+Skansholm, Jan (1996). Ada 95 From the Beginning. Addison-Wesley. ISBN 0-201-40376-5.
+Gilpin, Geoff (1985). Ada: A Guided Tour and Tutorial. Prentice hall. ISBN 978-0-13-004045-9.
+Beidler, John (1997). Data Structures and Algorithms: An Object-Oriented Approach Using Ada 95. Springer-Verlag. ISBN 0-387-94834-1.
+Gonzalez, Dean W. (1991). Ada Programmer's Handbook. Benjamin-Cummings Publishing Company. ISBN 0-8053-2529-8.
+Ben-Ari, M. (1998). Ada for Software Engineers. John Wiley & Sons. ISBN 0-471-97912-0.
+Cohen, Norman (1996). Ada as a Second Language. McGraw-Hill Science/Engineering/Math. ISBN 0-07-011607-5.
+Burns, Alan; Wellings, Andy (2001). Real-Time Systems and Programming Languages. Ada 95, Real-Time Java and Real-Time POSIX. Addison-Wesley. ISBN 0-201-72988-1.
+Burns, Alan; Wellings, Andy (1995). Concurrency in Ada. Cambridge University Press. ISBN 0-521-62911-X.
+Atkinson, Colin (1991). Object-Oriented Reuse, Concurrency and Distribution: An Ada-Based Approach. Addison-Wesley. ISBN 0-201-56527-7.
+Booch, Grady; Bryan, Doug (1994). Software Engineering with Ada. Addison-Wesley. ISBN 0-8053-0608-0.
+Jones, Do-While (1989). Ada in Action: With Practical Programming Examples. John Wiley & Sons. ISBN 0-471-60708-8.
+Stubbs, Daniel; Webre, Neil W. (1993). Data Structures with Abstract Data Types and Ada. Brooks Cole. ISBN 0-534-14448-9.
+Ledru, Pascal (December 1998). Distributed Programming in Ada with Protected Objects. Dissertation.com. ISBN 1-58112-034-6.
+Culwin, Fintan (1997). Ada, a Developmental Approach. Prentice Hall. ISBN 0-13-264680-3.
+English, John; Culwin, Fintan (January 1997). Ada 95 the Craft of Object-Oriented Programming. Prentice Hall. ISBN 0-13-230350-7.
+Musser, David R.; Stepanov, Alexander (24 October 1989). The Ada Generic Library: Linear List Processing Packages. Springer-Verlag. ISBN 0-387-97133-5.
+Feldman, Michael B. (1997). Software Construction and Data Structures with Ada 95. Addison-Wesley. ISBN 0-201-88795-9.
+Johnston, Simon (1997). Ada 95 for C and C++ Programmers. Addison-Wesley. ISBN 0-201-40363-3.
+Feldman, Michael B.; Koffman, Elliot B. (1992–1993). Ada: Problem Solving and Program Design. Addison-Wesley. ISBN 0-201-52279-9. 795 pages.
+Feldman, Michael B.; Koffman, Elliot B. (1999). Ada 95. Addison-Wesley. ISBN 0-201-36123-X.
+Dale, Nell B.; Weems, Chip; McCormick, John (August 1996). Programming and Problem Solving with Ada 95. Jones & Bartlett Publishers. ISBN 0-7637-0293-5.
+Dale, Nell B.; McCormick, John (2007). Ada Plus Data Structures: An Object-Oriented Approach, 2nd edition. Jones & Bartlett Publishers. ISBN 978-0-7637-3794-8.
+Krell, Bruce C. (1992). Developing With Ada: Life-Cycle Methods. Bantam Dell Pub Group. ISBN 0-553-09102-6.
+Bishop, Judy (10 May 1990). Distributed Ada: Developments and Experiences. Cambridge University Press. ISBN 0-521-39251-9.
+Sanden, Bo (1994). Software Systems Construction With Examples in Ada. Prentice Hall. ISBN 0-13-030834-X.
+Hillam, Bruce (1994). Introduction to Abstract Data Types Using Ada. Prentice Hall. ISBN 0-13-045949-6.
+Rudd, David (1994). Introduction to Software Design and Development With Ada. Brooks Cole. ISBN 0-314-02829-3.
+Pyle, Ian C. (1991). Developing Safety Systems: A Guide Using Ada. Prentice Hall. ISBN 0-13-204298-3.
+Baker, Louis (1989). Artificial Intelligence With Ada. McGraw-Hill. ISBN 0-07-003350-1.
+Burns, Alan; Wellings, Andy (1995). HRT-HOOD: A Structured Design Method for Hard Real-Time Ada Systems. North-Holland. ISBN 0-444-82164-3.
+Savitch, Walter; Peterson, Charles (1992). Ada: An Introduction to the Art and Science of Programming. Benjamin-Cummings Publishing Company. ISBN 0-8053-7070-6.
+Weiss, Mark Allen (1993). Data Structures and Algorithm Analysis in Ada. Benjamin-Cummings Publishing Company. ISBN 0-8053-9055-3.
+Ledgard, Henry (1983). Ada: An Introduction (second ed.). Springer-Verlag. ISBN 0-387-90814-5.
+Bjørner, Dines; Oest, Ole N., eds. (1980). Towards a Formal Description of Ada. London: Springer-Verlag. ISBN 3-540-10283-3.
+
+Further reading[edit]
+Barnes, John (2006). Programming in Ada 2005. Addison-Wesley. ISBN 0-321-34078-7.
+Barnes, John (1991). Programming in Ada plus Language Reference Manual. Addison-Wesley. ISBN 0-201-56539-0.
+Barnes, John (1998). Programming in Ada 95. Addison-Wesley. ISBN 0-201-34293-6.
+Barnes, John (1997). High Integrity Ada: The SPARK Approach. Addison-Wesley. ISBN 0-201-17517-7.
+Barnes, John (2003). High Integrity Software: The SPARK Approach to Safety and Security. Addison-Wesley. ISBN 0-321-13616-0.
+External links[edit]
+Ada Programming Language Materials, 1981–1990. Charles Babbage Institute, University of Minnesota.
+External links[edit]
+
+
+
+Wikimedia Commons has media related to Ada (programming language).
+
+
+
+
+Wikibooks has a book on the topic of: Ada Programming
+
+
+
+
+Wikisource has several original texts related to
+Ada.
+
+
+
+
+Wikiversity has learning resources about Ada
+
+Ada Resource Association
+DOD Ada programming language (ANSI/MIL STD 1815A-1983) specification
+JTC1/SC22/WG9 ISO home of Ada Standards
+Ada (programming language) at Curlie
+vtePascal programming language familyDialects
+Pascal
+Object Pascal
+Pascal Script
+Oxygene
+Clascal
+Concurrent Pascal
+Joyce
+SuperPascal
+CompilersCurrent
+Delphi (history)
+Oxygene
+VSI Pascal
+IP Pascal
+Free Pascal (Lazarus)
+PascalABC.NET
+GNU Pascal
+Turbo51
+Pic Micro Pascal
+ACK
+Discontinued
+Virtual Pascal
+Apple Pascal
+Borland Kylix
+Turbo Pascal
+Microsoft Pascal
+UCSD Pascal
+JRT Pascal
+Pascal/MT+
+API
+CLX
+FCL
+FireMonkey
+LCL
+Object Windows Library
+OpenWire
+RTL
+Turbo Vision
+Visual Component Library
+Microcomputer
+Pascal MicroEngine
+
+Comparison of Pascal and C
+Comparison of Pascal and Delphi
+Related to
+ALGOL (1958)
+Modula-2 (1977)
+Ada (1983)
+Oberon (1986)
+Modula-3 (1988)
+Oberon-2 (1991)
+Component Pascal (1991)
+
+vteProgramming languages
+Comparison
+Timeline
+History
+
+Ada
+ALGOL
+APL
+ArkTS
+Assembly
+BASIC
+C
+C++
+C#
+Classic Visual Basic
+COBOL
+Erlang
+Forth
+Fortran
+Go
+Haskell
+Java
+JavaScript
+Julia
+Kotlin
+Lisp
+Lua
+MATLAB
+ML
+Object Pascal
+Pascal
+Perl
+PHP
+Prolog
+Python
+R
+Ruby
+Rust
+SQL
+Scratch
+Shell
+Simula
+Smalltalk
+Swift
+Visual Basic
+more...
+
+ Lists: Alphabetical
+Categorical
+Generational
+Non-English-based
+ Category
+
+vteEmbedded systemsGeneral terms
+ASIC
+Board support package
+Bootloader
+Consumer electronics
+Cross compiler
+Embedded database
+Embedded hypervisor
+Embedded OS
+Embedded software
+FPGA
+IoT
+Memory footprint
+Microcontroller
+Single-board computer
+Raspberry Pi
+SoC
+Firmware and controls
+Firmware
+Custom firmware
+Proprietary firmware
+Closed platform
+Crippleware
+Defective by Design
+Hacking of consumer electronics
+Homebrew (video games)
+iOS jailbreaking
+PlayStation 3 Jailbreak
+Rooting (Android)
+UEFI
+Vendor lock-in
+Boot loaders
+U-Boot
+Barebox
+Software libraries
+uClibc
+dietlibc
+Embedded GLIBC
+lwIP
+musl
+Programming tools
+Almquist shell
+BitBake
+Buildroot
+BusyBox
+OpenEmbedded
+Stand-alone shell
+Toybox
+Yocto Project
+Operating systems
+Linux on embedded systems
+Linux for mobile devices
+Light-weight Linux distribution
+Real-time operating system
+Windows IoT
+Win CE
+Programming languages
+Ada
+Assembly language
+CAPL
+Embedded C
+Embedded C++
+Embedded Java
+MISRA C
+MicroPython
+
+Lightweight browsers
+List of open-source hardware
+Open-source robotics
+
+Authority control databases: National 
+Spain
+2
+Germany
+Israel
+United States
+Latvia
+Czech Republic
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Ada_(programming_language)&oldid=1207029467"
+Categories: Ada (programming language)Programming languages.NET programming languagesAvionics programming languagesHigh Integrity Programming LanguageMulti-paradigm programming languagesProgramming language standardsProgramming languages created in 1980Programming languages with an ISO standardStatically typed programming languagesSystems programming languages1980 softwareHigh-level programming languagesAda LovelaceHidden categories: CS1 maint: DOI inactive as of January 2024Articles with short descriptionShort description is different from WikidataArticles containing potentially dated statements from May 2023All articles containing potentially dated statementsArticles with excerptsCommons category link is on WikidataArticles with Curlie linksArticles with BNE identifiersArticles with GND identifiersArticles with J9U identifiersArticles with LCCN identifiersArticles with LNB identifiersArticles with NKC identifiers
+
+
+
+
+
+
+ This page was last edited on 13 February 2024, at 19:54 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

@@ -1,0 +1,905 @@
+
+
+
+
+CPython - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Design
+
+
+
+
+
+
+
+2History
+
+
+
+Toggle History subsection
+
+
+
+
+
+2.1Unladen Swallow
+
+
+
+
+
+2.1.1Unladen Swallow release history
+
+
+
+
+
+
+
+
+
+
+
+3Distribution
+
+
+
+Toggle Distribution subsection
+
+
+
+
+
+3.1Enterprise Linux
+
+
+
+
+
+
+
+
+
+4Alternatives
+
+
+
+
+
+
+
+5References
+
+
+
+
+
+
+
+6Further reading
+
+
+
+
+
+
+
+7External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+CPython
+
+
+
+21 languages
+
+
+
+
+العربيةবাংলাCatalàČeštinaDeutschEspañolفارسیFrançais한국어ՀայերենMagyarമലയാളംBahasa Melayu日本語PolskiPortuguêsРусскийСрпски / srpskiTürkçeУкраїнська中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Python reference implementation
+Not to be confused with Cython.
+This article has multiple issues. Please help improve it or discuss these issues on the talk page. (Learn how and when to remove these template messages)
+
+This article may need to be rewritten to comply with Wikipedia's quality standards. You can help. The talk page may contain suggestions. (January 2020)
+This article relies excessively on references to primary sources. Please improve this article by adding secondary or tertiary sources. Find sources: "CPython" – news · newspapers · books · scholar · JSTOR (November 2010) (Learn how and when to remove this template message)
+This article uses bare URLs, which are uninformative and vulnerable to link rot. Please consider converting them to full citations to ensure the article remains verifiable and maintains a consistent citation style. Several templates and tools are available to assist in formatting, such as reFill (documentation) and Citation bot (documentation). (September 2022) (Learn how and when to remove this template message)
+
+ (Learn how and when to remove this template message)
+CPythonOriginal author(s)Guido van RossumDeveloper(s)Python core developers and the Python community, supported by the Python Software FoundationInitial release26 January 1994; 30 years ago (1994-01-26)Stable release3.12.0[1] 
+   / 2 October 2023; 4 months ago (2 October 2023)
+Repositoryhttps://github.com/python/cpythonWritten inC, PythonPlatform42 platforms; see § DistributionAvailable inEnglishTypePython Programming Language InterpreterLicensePython Software Foundation LicenseWebsitewww.python.org
+CPython is the reference implementation of the Python programming language. Written in C and Python, CPython is the default and most widely used implementation of the Python language.
+CPython can be defined as both an interpreter and a compiler as it compiles Python code into bytecode before interpreting it. It has a foreign function interface with several languages, including C, in which one must explicitly write bindings in a language other than Python.
+
+
+Design[edit]
+A particular feature of CPython is that it makes use of a global interpreter lock (GIL) on each CPython interpreter process, which means that within a single process, only one thread may be processing Python bytecode at any one time.[2] This does not mean that there is no point in multithreading; the most common multithreading scenario is where threads are mostly waiting on external processes to complete.
+This can happen when multiple threads are servicing separate clients. One thread may be waiting for a client to reply, and another may be waiting for a database query to execute, while the third thread is actually processing Python code.
+However, the GIL does mean that CPython is not suitable for processes that implement CPU-intensive algorithms in Python code that could potentially be distributed across multiple cores.
+In real-world applications, situations where the GIL is a significant bottleneck are quite rare. This is because Python is an inherently slow language and is generally not used for CPU-intensive or time-sensitive operations. Python is typically used at the top level and calls functions in libraries to perform specialized tasks. These libraries are generally not written in Python, and Python code in another thread can be executed while a call to one of these underlying processes takes place. The non-Python library being called to perform the CPU-intensive task is not subject to the GIL and may concurrently execute many threads on multiple processors without restriction.
+Concurrency of Python code can only be achieved with separate CPython interpreter processes managed by a multitasking operating system. This complicates communication between concurrent Python processes, though the multiprocessing module mitigates this somewhat; it means that applications that really can benefit from concurrent Python-code execution can be implemented with limited overhead.
+The presence of the GIL simplifies the implementation of CPython, and makes it easier to implement multi-threaded applications that do not benefit from concurrent Python code execution. However, without a GIL, multiprocessing apps must make sure all common code is thread safe.
+Although many proposals have been made to eliminate the GIL, the general consensus has been that in most cases, the advantages of the GIL outweigh the disadvantages; in the few cases where the GIL is a bottleneck, the application should be built around the multiprocessing structure. To help allow more parallelism, an improvement was released in October 2023 to allow a separate GIL per subinterpreter in a single Python process and have been described as "threads with opt-in sharing".[3][4]
+After several debates, a project was launched in 2023 to propose making the GIL optional from version 3.13 of Python,[5] which is scheduled for release in October 2024.[6]
+
+History[edit]
+Main article: History of Python
+Unladen Swallow[edit]
+Unladen Swallow was an optimization branch of CPython, intended to be fully compatible and significantly faster. It aimed to achieve its goals by supplementing CPython's custom virtual machine with a just-in-time compiler built using LLVM.
+The project had stated a goal of a speed improvement by a factor of five over CPython;[7] this goal was not met.[8]
+The project was sponsored by Google, and the project owners, Thomas Wouters, Jeffrey Yasskin, and Collin Winter, are full-time Google employees; however, most project contributors were not Google employees.[9] Unladen Swallow was hosted on Google Code.[10]
+Like many things regarding the Python language, the name Unladen Swallow is a Monty Python reference, specifically to the joke about the airspeed velocity of unladen swallows in Monty Python and the Holy Grail.
+Although it fell short of all published goals, Unladen Swallow did produce some code that got added to the main Python implementation, such as improvements to the cPickle module.[11]
+In July 2010, some observers speculated on whether the project was dead or dying since the 2009 Q4 milestone had not yet been released.[12] The traffic on Unladen's mailing list had decreased from 500 messages in January 2010 to fewer than 10 in September 2010.[13] It has also been reported that Unladen lost Google's funding.[14] In November 2010, one of the main developers announced that "Jeffrey and I have been pulled on to other projects of higher importance to Google."[15]
+The 2009 Q4 development branch was created on 26 January 2010,[16] but no advertising was made on the website. Further, regarding the long-term plans, and as the project missed the Python 2.7 release, a Python Enhancement Proposal (PEP)[8] was accepted, which proposed a merge of Unladen Swallow into a special py3k-jit branch of Python's official repository. As of July 2010, this work was ongoing.[17] This merging would have taken some time, since Unladen Swallow was originally based on Python 2.6[18] with which Python 3 broke compatibility (see Python 3000 for more details). However, the PEP was subsequently withdrawn.
+In early 2011, it became clear that the project was stopped.[19]
+
+Unladen Swallow release history[edit]
+2009 Q1[20]
+2009 Q2[21]
+2009 Q3: reduce memory use, improve speed[22]
+Distribution[edit]
+Officially supported tier-1 platforms are Windows, Linux, and macOS. (Also Raspberry Pi OS, and Linux for s390x on lower tier.)
+More platforms have working implementations, including:[23]
+
+Unix-like
+
+
+AIX
+BSD
+Darwin
+FreeBSD
+HP-UX
+illumos
+Linux
+macOS
+NetBSD
+OpenBSD
+Plan 9
+Solaris
+Tru64
+Special and embedded
+
+
+Android
+Apple iOS (support for outdated Python 3.6 and 2.7 available)
+BlackBerry 10
+GP2X
+iPodLinux
+Nintendo DS
+GameCube
+Symbian OS Series60
+Nokia 770 Internet Tablet
+Nokia N800
+Nokia N810
+Nokia N900
+Openmoko
+Palm OS
+PlayStation 2
+PlayStation 3 (FreeBSD)
+Psion
+QNX
+Sharp Zaurus
+Xbox/XBMC
+VxWorks
+Other
+
+
+AROS
+OS/390
+Windows Vista and later
+z/OS[citation needed]
+PEP 11[24] lists platforms which are not supported in CPython by the Python Software Foundation. These platforms can still be supported by external ports. These ports include:
+
+
+AtheOS (unsupported since 2.6)
+BeOS (unsupported since 2.6)
+DOS (unsupported since 2.0)
+IRIX 4 (unsupported since 2.3)
+IRIX 5 and later (unsupported since 3.2, 3.7)[25]
+Mac OS 9 (unsupported since 2.4)
+MINIX (unsupported since 2.3)
+OpenVMS (unsupported since 3.3)
+OS/2 (unsupported since 3.3)
+RISC OS (unsupported since 3.0)
+Windows XP (unsupported since 3.5)
+Windows 2000 (unsupported since 3.3)
+Windows 3.x (unsupported since 2.0)
+Windows 9x (unsupported since 2.6)
+Windows NT4 (unsupported since 2.6)
+External ports not integrated to Python Software Foundation's official version of CPython, with links to its main development site, often include additional modules for platform-specific functionalities, like graphics and sound API for PSP and SMS and camera API for S60. These ports include:
+
+
+Amiga: AmigaPython[26]
+IBM i: iSeriesPython[27]
+DOS using DJGPP: PythonD[28]
+MorphOS: Python 2 and 3[29]
+PlayStation Portable: Stackless Python for PSP[30]
+Symbian OS: Python for S60
+Windows CE/Pocket PC: Python Windows CE port[31]
+OpenVMS: Ports of Python 3.x are maintained by VSI[32]
+Enterprise Linux[edit]
+These Python versions are distributed with currently-supported enterprise Linux distributions.[33] The support status of Python in the table refers to support from the Python core team, and not from the distribution maintainer.
+
+
+Enterprise Linux
+
+
+Distribution version
+
+Distribution end-of-life
+
+Python version
+
+
+Ubuntu 22.04 LTS (Jammy Jellyfish)
+
+
+
+
+
+3.10 [1]
+
+
+Ubuntu 20.04 LTS (Focal Fossa)
+
+2030-04[34][needs update]
+
+[35]
+
+Older version, yet still maintained: 3.8[36]
+
+
+Ubuntu 18.04 LTS (Bionic Beaver)
+
+2028-04[37]
+
+Old version, no longer maintained: 2.7[38]
+
+Old version, no longer maintained: 3.6[39]
+
+
+Ubuntu 16.04 LTS (Xenial Xerus)
+
+2021-04-30[40][needs update]
+
+Old version, no longer maintained: 2.7[38]
+
+Old version, no longer maintained: 3.5[39]
+
+
+Debian 12
+
+2028-06[41]
+
+
+
+Older version, yet still maintained: 3.11[41]
+
+
+Debian 11
+
+2026-06[42]
+
+
+
+Older version, yet still maintained: 3.9[42]
+
+
+Debian 10
+
+2024-06[43]
+
+Old version, no longer maintained: 2.7[44]
+
+Older version, yet still maintained: 3.7[45][needs update]
+
+
+Debian 9
+
+2022-06-30[46][needs update]
+
+Old version, no longer maintained: 2.7[47]
+
+Old version, no longer maintained: 3.5[48]
+
+
+Red Hat Enterprise Linux 8
+
+2029
+
+Old version, no longer maintained: 2.7[49]
+
+Old version, no longer maintained: 3.6
+
+
+Red Hat Enterprise Linux 7
+
+2024-11-30[50]
+
+Old version, no longer maintained: 2.7[51]
+
+
+
+
+CentOS 8
+
+2029-05-31
+
+Old version, no longer maintained: 2.7
+
+Old version, no longer maintained: 3.6
+
+
+CentOS 7
+
+2024-06-30
+
+Old version, no longer maintained: 2.7[52]
+
+
+
+
+SUSE Linux Enterprise Server 15
+
+2031-07-31
+
+Old version, no longer maintained: 2.7[53]
+
+Old version, no longer maintained: 3.6
+
+
+SUSE Linux Enterprise Server 12
+
+2027-10-31
+
+Old version, no longer maintained: 2.7[54]
+
+
+
+
+SUSE Linux Enterprise Server 11
+
+2022-03-31[needs update]
+
+Old version, no longer maintained: 2.7[54]
+
+
+
+
+Legend:Old versionOlder version, still maintainedLatest versionLatest preview versionFuture release
+
+Alternatives[edit]
+CPython is one of several "production-quality" Python implementations including: Jython, written in Java for the Java virtual machine (JVM), PyPy, written in RPython and translated into C, and IronPython, which is written in C# for the Common Language Infrastructure. There are also several experimental implementations.[55]
+
+References[edit]
+
+
+^ Thomas Wouters (2 October 2023). "Python 3.12.0 (final) is here".
+
+^ "Initialization, Finalization, and Threads". Python v3.8.3 documentation. Retrieved 2020-06-04.
+
+^ Jake Edge (August 15, 2023). "A per-interpreter GIL". LWN. Retrieved 2024-01-13.
+
+^ "PEP 684 – A Per-Interpreter GIL | peps.python.org". Retrieved 2024-01-13.
+
+^ "PEP 703 – Making the Global Interpreter Lock Optional in CPython | peps.python.org". peps.python.org. Retrieved 2023-09-17.
+
+^ "PEP 719 – Python 3.13 Release Schedule | peps.python.org". peps.python.org. Retrieved 2023-09-17.
+
+^ Paul, Ryan (2009-03-26). "Ars Technica report on Unladen Swallow goals". Arstechnica.com. Retrieved 2011-08-19.
+
+^ a b Winter, Collin; Yasskin, Jeffrey; Kleckner, Reid (2010-03-17). "PEP 3146 - Merging Unladen Swallow into CPython". Python.org.
+
+^ "People working on Unladen Swallow". Archived from the original on 2015-10-29. Retrieved 2019-08-08.
+
+^ "Unladen Swallow project page". Retrieved 2011-08-19.
+
+^ "Issue 9410: Add Unladen Swallow's optimizations to Python 3's pickle. - Python tracker". bugs.python.org. Retrieved 2019-08-08.
+
+^ "Message on comp.lang.python". Retrieved 2011-08-19.
+
+^ "Unladen Swallow | Google Groups". Retrieved 2011-08-19.
+
+^ "reddit post by an Unladen committer". Reddit.com. 2010-06-24. Retrieved 2011-08-19.
+
+^ Winter, Collin (8 November 2010). "Current status of Unladen-Swallow".
+
+^ "2009 Q4 release branch creation". 2010-01-26. Retrieved 2011-08-19.
+
+^ "Developers focus on merge into py3k-jit". 2010-07-13. Retrieved 2011-08-19.
+
+^ "Unladen Swallow baseline". Python.org. Retrieved 2011-08-19.
+
+^ Kleckner, Reid (26 March 2011). "Unladen Swallow Retrospective". QINSB is not a Software Blog (qinsb.blogspot.com).
+
+^ "Unladen Swallow 2009Q1". unladen-swallow, A faster implementation of Python. Retrieved 19 October 2012.
+
+^ "Unladen Swallow 2009Q2". unladen-swallow, A faster implementation of Python. Retrieved 19 October 2012.
+
+^ "Unladen Swallow 2009Q3". unladen-swallow, A faster implementation of Python. Retrieved 19 October 2012.
+
+^ "PythonImplementations". Retrieved 19 July 2012.
+
+^ "PEP 11 -- Removing support for little used platforms". Python.org. Retrieved 2019-08-08.
+
+^ "Irix still supported?". 14 February 2009.
+
+^ AmigaPython
+
+^ iSeriesPython
+
+^ PythonD
+
+^ http://yellowblue.free.fr/yiki/doku.php/en:dev:python:start Python 2 and 3
+
+^ Stackless Python for PSP
+
+^ Python Windows CE port
+
+^ "Python". VSI. Retrieved 2021-08-31.
+
+^ "Support Life Cycles for Enterprise Linux Distributions". Archived from the original on 2022-08-30. Retrieved 2017-10-15.
+
+^ "Ubuntu release cycle". Ubuntu. Retrieved 2021-01-18.
+
+^ "With Python 2 EOL'ed, Ubuntu 20.04 LTS Moves Along With Its Python 2 Removal - Phoronix". phoronix.com. Retrieved 2020-04-01.
+
+^ "Binary package "python3" in ubuntu focal". Launchpad.net.
+
+^ "Ubuntu 18.04 extended to 2028". ServerWatch.com. 2018-11-15. Retrieved 2019-09-09.
+
+^ a b "python-defaults package: Ubuntu". Canonical Ltd. 2018-06-08. Retrieved 2018-06-08.
+
+^ a b "python3-defaults package: Ubuntu". Canonical Ltd. 2018-06-08. Retrieved 2018-06-08.
+
+^ Science, Carnegie Mellon University School of Computer. "Ubuntu 16.04 - End of Life in 2021 - SCS Computing Facilities - Carnegie Mellon University". computing.cs.cmu.edu. Retrieved 2021-02-15.
+
+^ a b "Debian 12 bookworm released". debian.org.
+
+^ a b "Debian -- News -- Debian 11 "bullseye" released". debian.org. Retrieved 2022-01-04.
+
+^ "LTS - Debian Wiki". wiki.debian.org. Retrieved 2021-02-15.
+
+^ "Debian -- Details of package python in buster". packages.debian.org. Retrieved 2019-09-13.
+
+^ "Debian -- News -- Debian 10 "buster" released". debian.org. Retrieved 2019-08-09.
+
+^ "Debian -- News -- Debian 8 Long Term Support reaching end-of-life". debian.org. Retrieved 2021-02-15.
+
+^ "DistroWatch.com: Debian". DistroWatch.com. 2017-10-15. Retrieved 2017-10-15.
+
+^ "Debian -- Details of package python3 in stretch". Retrieved 2017-12-19.
+
+^ "Python in RHEL 8". Red Hat Developer Blog. 2018-11-14. Archived from the original on 2019-05-10. Retrieved 2019-05-10.
+
+^ "Red Hat Enterprise Linux Life Cycle". Red Hat Customer Portal. Retrieved 2020-04-01.
+
+^ "DistroWatch.com: Red Hat Enterprise Linux". DistroWatch.com. 2017-09-07. Retrieved 2017-10-15.
+
+^ "DistroWatch.com: CentOS". DistroWatch.com. 2017-09-14. Retrieved 2017-10-15.
+
+^ "Release Notes | SUSE Linux Enterprise Desktop/SUSE Linux Enterprise Workstation Extension 15 GA". suse.com. Retrieved 2019-08-08.
+
+^ a b "DistroWatch.com: openSUSE". DistroWatch.com. 2017-10-14. Retrieved 2017-10-15.
+
+^ Martelli, Alex (2006). Python in a Nutshell (2nd ed.). O'Reilly. pp. 5–7. ISBN 978-0-596-10046-9.
+
+
+Further reading[edit]
+Shaw, Anthony (2021). CPython Internals: Your Guide to the Python 3 Interpreter. Real Python. ISBN 9781775093343.
+External links[edit]
+CPython on GitHub
+Downloads: https://www.python.org/downloads/
+vtePythonImplementations
+CircuitPython
+CLPython
+CPython
+Cython
+MicroPython
+Numba
+IronPython
+Jython
+Psyco
+PyPy
+Python for S60
+Shed Skin
+Stackless Python
+Unladen Swallow
+more...
+IDE
+Boa
+Eric Python IDE
+IDLE
+PyCharm
+PyDev
+Ninja-IDE
+more...
+Topics
+WSGI
+ASGI
+
+software (list)
+Python Software Foundation
+PyCon
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=CPython&oldid=1195370678"
+Categories: Free compilers and interpretersFree software programmed in CFree software programmed in PythonPython (programming language) implementationsSoftware using the PSF licenseStack-based virtual machinesHidden categories: Articles with short descriptionShort description matches WikidataWikipedia articles needing rewrite from January 2020All articles needing rewriteArticles lacking reliable references from November 2010All articles lacking reliable referencesArticles needing cleanup from September 2022Articles with bare URLs for citations from September 2022All articles with bare URLs for citationsArticles covered by WikiProject Wikify from September 2022All articles covered by WikiProject WikifyArticles with multiple maintenance issuesAll articles with unsourced statementsArticles with unsourced statements from August 2019Wikipedia articles in need of updating from April 2021All Wikipedia articles in need of updatingWikipedia articles scheduled for update taggingWikipedia articles in need of updating from June 2023Wikipedia articles in need of updating from June 2022Wikipedia articles in need of updating from March 2022
+
+
+
+
+
+
+ This page was last edited on 13 January 2024, at 15:24 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

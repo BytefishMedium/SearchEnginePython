@@ -1,0 +1,597 @@
+
+
+
+
+General-purpose programming language - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1History
+
+
+
+
+
+
+
+2GPL vs. DSL
+
+
+
+Toggle GPL vs. DSL subsection
+
+
+
+
+
+2.1Advantages and disadvantages
+
+
+
+
+
+
+
+
+
+3Examples
+
+
+
+Toggle Examples subsection
+
+
+
+
+
+3.1C
+
+
+
+
+
+
+
+3.2C++
+
+
+
+
+
+
+
+3.3Python
+
+
+
+
+
+
+
+
+
+4List
+
+
+
+
+
+
+
+5References
+
+
+
+
+
+
+
+6See also
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+General-purpose programming language
+
+
+
+19 languages
+
+
+
+
+العربيةAzərbaycancaBosanskiCatalàDeutschEsperantoفارسیFrançais한국어हिन्दीIdoMagyar日本語PortuguêsSimple EnglishSuomiУкраїнськаTiếng Việt中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Programming language used in many domains
+In computer software, a general-purpose programming language (GPL) is a programming language for building software in a wide variety of application domains. Conversely, a domain-specific programming language (DSL) is used within a specific area. For example, Python is a GPL, while SQL is a DSL for querying relational databases.
+
+
+History[edit]
+Early programming languages were designed for scientific computing (numerical calculations) or commercial data processing, as was computer hardware. Scientific languages such as Fortran and Algol supported floating-point calculations and multidimensional arrays, while business languages such as COBOL supported fixed-field file formats and data records. Much less widely used were specialized languages such as IPL-V and LISP for symbolic list processing; COMIT for string manipulation; APT for numerically controlled machines. Systems programming requiring pointer manipulation was typically done in assembly language, though JOVIAL was used for some military applications.[1]
+IBM's System/360, announced in 1964, was designed as a unified hardware architecture supporting both scientific and commercial applications, and IBM developed PL/I for it as a single, general-purpose language that supported scientific, commercial, and systems programming. Indeed, a subset of PL/I was used as the standard systems programming language for the Multics operating system.
+Since PL/I, the distinction between scientific and commercial programming languages has diminished, with most languages supporting the basic features required by both, and much of the special file format handling delegated to specialized database management systems.
+Many specialized languages were also developed starting in the 1960s: GPSS and Simula for discrete event simulation; MAD, BASIC, Logo, and Pascal for teaching programming; C for systems programming; JOSS and APL\360 for interactive programming.[1]
+
+GPL vs. DSL[edit]
+The distinction between general-purpose programming languages and domain-specific programming languages is not always clear.[2] A programming language may be created for a specific task, but used beyond that original domain and thus be considered a general purpose programming language.  For example, COBOL, Fortran, and Lisp were created as DSLs (for business processing, numeric computation, and symbolic processing), but became GPL's over time.[dubious  – discuss] Inversely, a language may be designed for general use but only applied in a specific area in practice.[3] A programming language that is well suited for a problem, whether it be general-purpose language or DSL, should minimize the level of detail required while still being expressive enough in the problem domain.[4] As the name suggests, general-purpose language is "general" in that it cannot provide support for domain-specific notation while DSLs can be designed in diverse problem domains to handle this problem.[4] General-purpose languages are preferred to DSLs when an application domain is not well understood enough to warrant its own language. In this case, a general-purpose language with an appropriate library of data types and functions for the domain may be used instead.[5] While DSLs are usually smaller than GPL in that they offer a smaller range of notations of abstractions, some DSLs actually contain an entire GPL as a sublanguage. In these instances, the DSLs are able to offer domain-specific expressive power along with the expressive power of GPL.[6]
+General Purpose programming languages are all Turing complete, meaning that they can theoretically solve any computational problem. Domain-specific languages are often similarly Turing complete but are not exclusively so.
+
+Advantages and disadvantages[edit]
+General-purpose programming languages are more commonly used by programmers. According to a study, C, Python, and Java were the most commonly used programming languages in 2021.[7] One argument in favor of using general-purpose programming languages over domain-specific languages is that more people will be familiar with these languages, overcoming the need to learn a new language.
+Additionally, for many tasks (e.g., statistical analysis, machine learning, etc.) there are libraries that are extensively tested and optimized. Theoretically, the presence of these libraries should bridge the gap between general-purpose and domain-specific languages.[4]
+An empirical study in 2010 sought to measure problem-solving and productivity between GPLs and DSLs by giving users problems who were familiar with the GPL (C#) and unfamiliar with the DSL (XAML). Ultimately, users of this specific domain-specific language performed better by a factor of 15%, even though they were more familiar with GPL, warranting further research.[4]
+
+Examples[edit]
+C[edit]
+The predecessor to C, B, was developed largely for a specific purpose: systems programming.[8] By contrast, C has found use in a variety of computational domains, such as operating systems, device drivers, application software, and embedded systems.
+C is suitable for use in a variety of areas because of its generality. It provides economy of expression, flow control, data structures, and a rich set of operators, but does not constrain its users to use it in any one context.[9] As a result, though it was first used by its creators to rewrite the kernel of the Unix operating system,[10] it was easily adapted for use in application development, embedded systems (e.g., microprocessor programming), video games (e.g., Doom), and so on. Today, C remains one of the most popular and widely-used programming languages.[11]
+
+C++[edit]
+Conceived as an extension to C, C++ introduced object-oriented features, as well as other conveniences like references, operator overloading, and default arguments. Like C, C++'s generality allowed it to be used in a wide range of areas. While its C++'s core area of application is in systems programming (because of C++'s ability to grant access to low-level architecture),[12] it has been used extensively to build desktop applications, video games, databases, financial systems, and much more.[13] Major software and finance companies, such as Microsoft, Apple, Bloomberg, and Morgan Stanley, still widely use C++ in their internal and external applications.[13]
+
+Python[edit]
+Python was conceived as a language that emphasized code readability and extensibility.[14][15] The former allowed non-software engineers to easily learn and write computer programs, while the latter allowed domain specialists to easily create libraries suited to their own use cases. For these reasons, Python has been used across a wide range of domains.
+Below are some of the areas where Python is used:[16]
+
+Web Development: Frameworks like Django and Flask have allowed web developers to create robust web servers that can also take advantage of the wider Python ecosystem.
+Science and Academia: Scientific and data libraries, like SciPy and Pandas, have enabled Python's use in scientific research.[17]
+Machine Learning: Libraries like scikit-learn and Tensorflow have increased the accessibility of machine learning to developers.[18]
+General Software Development: Developing user applications, web scraping programs, games, and other general software.
+List[edit]
+Main article: List of programming languages
+The following are some general-purpose programming languages:
+
+
+C
+C++
+C#
+Clojure
+Crystal
+D
+Dart
+Delphi
+Elixir
+Erlang
+F#
+Go
+Harbour
+Haskell
+Java
+JavaScript
+Julia
+Kotlin
+Lua
+Modula-2
+Oberon
+Objective-C
+OCaml
+Perl
+PHP
+Pike
+PL/I
+Python
+Racket
+Ruby
+Rust
+Scala
+Swift
+Tcl
+V
+Visual Basic
+Visual Basic .NET
+Zig
+References[edit]
+
+^ a b Jean E. Sammet, "Programming Languages: History and Future", Communications of the ACM 15:7:601-610 (July 1972) doi:10.1145/361454.361485
+
+^ "Domain-Specific Languages: An Annotated Bibliography". CiteSeerX 10.1.1.33.8207. {{cite journal}}: Cite journal requires |journal= (help)
+
+^ Berry, Gerard (May 2006). "Real time programming: special purpose or general purpose languages". HAL Open Science.
+
+^ a b c d Kosar, Tomaz (May 2010). "Comparing General-Purpose and Domain-Specific Languages: An Empirical Study" (PDF). Computer Science and Information Systems. 7 (2): 247–264. doi:10.2298/CSIS1002247K.
+
+^ van Deursen, Arie (December 1998). "Little languages: little maintenance?". Journal of Software Maintenance: Research and Practice. 10 (2): 75–92. doi:10.1002/(SICI)1096-908X(199803/04)10:2<75::AID-SMR168>3.0.CO;2-5.
+
+^ van Deursen, Arie; Klint, Paul; Visser, Joost (June 2000). "Domain-specific languages: an annotated bibliography". ACM SIGPLAN Notices. 35 (6): 26–36. doi:10.1145/352029.352035. ISSN 0362-1340. S2CID 1049872.
+
+^ "The Most Popular Programming Languages - 1965/2021 - New Update - Statistics and Data". statisticsanddata.org. Retrieved 2022-06-03.
+
+^ Thompson, K. (1972-01-07). "Cover sheet for technical memorandum" (PDF). Bell Telephone Laboratories. Archived (PDF) from the original on 2015-06-11. Retrieved 2022-06-03.
+
+^ W., Kernighan, Brian (2016). The C programming language. Prentice Hall. ISBN 978-0-13-110370-2. OCLC 1004153413.{{cite book}}:  CS1 maint: multiple names: authors list (link)
+
+^ Ritchie, Dennis (April 1993). "The development of the C language" (PDF). ACM SIGPLAN Notices. 28 (3): 201–208. doi:10.1145/155360.155580.
+
+^ "TIOBE Index". TIOBE. Retrieved 2022-06-03.
+
+^ Stroustrup, Bjarne (1995). The C++ Programming Language. Addison-Wesley.
+
+^ a b "C++ Applications". www.stroustrup.com. Retrieved 2022-06-03.
+
+^ "artima - The Making of Python". www.artima.com. Retrieved 2022-06-03.
+
+^ "General Python FAQ — Python 3.10.4 documentation". docs.python.org. Retrieved 2022-06-03.
+
+^ "Applications for Python". Python.org. Retrieved 2022-06-03.
+
+^ "Programming Languages Popularity in 12,086 Research Papers – Quantifying Health". Retrieved 2022-06-03.
+
+^ Pedregosa, Fabian (2011). "Scikit-learn: Machine learning in Python" (PDF). The Journal of Machine Learning Research. 12: 2825–2830. arXiv:1201.0490. Bibcode:2011JMLR...12.2825P.
+
+
+See also[edit]
+General-purpose markup language
+General-purpose modeling language
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=General-purpose_programming_language&oldid=1206017538"
+Category: Programming languagesHidden categories: CS1 errors: missing periodicalCS1 maint: multiple names: authors listArticles with short descriptionShort description is different from WikidataAll accuracy disputesArticles with disputed statements from December 2022
+
+
+
+
+
+
+ This page was last edited on 11 February 2024, at 00:55 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

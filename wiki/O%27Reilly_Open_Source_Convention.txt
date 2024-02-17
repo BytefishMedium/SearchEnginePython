@@ -1,0 +1,663 @@
+
+
+
+
+O'Reilly Open Source Convention - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1History
+
+
+
+
+
+
+
+2Layout
+
+
+
+
+
+
+
+3Locations
+
+
+
+
+
+
+
+4See also
+
+
+
+
+
+
+
+5References
+
+
+
+
+
+
+
+6External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+O'Reilly Open Source Convention
+
+
+
+5 languages
+
+
+
+
+DeutschEspañolفارسیFrançaisРусский
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+		In other projects
+	
+
+
+Wikimedia Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+1999–2019 American annual free and open-source software convention
+O'Reilly Open Source ConventionOSCON flagStatusInactiveGenreOpen Source (mainly software)Location(s)Portland, Oregon (exceptions)CountryUnited StatesInaugurated1999; 25 years ago (1999)Most recent2019; 5 years ago (2019)Organized byO'Reilly MediaWebsitewww.oscon.com
+Robin Hanson at OSCON 2007
+Overview of OSCON 2009
+Michal Migurski, Tim O'Reilly, and Jared Smith at OSCON 2013
+The O'Reilly Open Source Convention (OSCON) was an American annual convention for the discussion of free and open-source software. It was organized by publisher O'Reilly Media and was held each summer, mostly in Portland, Oregon, from 1999 to 2019.
+
+
+History[edit]
+OSCON grew out of The Perl Conference, but the amount of Perl content has continued to decline each year. The first Perl Conference took place in 1997. The first OSCON was held in 1999.[1]
+[2]
+
+Notable events
+The OpenOffice.org open source project was announced at the 2000 conference in Monterey.[3]
+The OpenStack open source project was launched at the 2010 conference.[4]
+OSCON has been the host to Larry Wall's State of the Onion keynotes.
+All O'Reilly events were cancelled in response to the COVID-19 pandemic, and the company closed the in-person conference portion of their business.[5]
+Layout[edit]
+This section possibly contains original research. Please improve it by verifying the claims made and adding inline citations. Statements consisting only of original research should be removed. (January 2015) (Learn how and when to remove this template message)Throughout the week in which OSCON is hosted, there are workshops and presentations, most of which are conducted in meeting rooms. These sessions are primarily focused on the use and development of upcoming and current open source software, and there are usually a few sessions addressing the open source community itself. In the past few years, the main topics have been cloud computing, distributed computing, virtualization, minimizing downtime, big data, and information technology. Certain sessions are sponsored by companies and are free and open to the public.
+During the convention, OSCON throws various parties for the attendees. Many of these are sponsored, with some parties being held at sponsoring companies' facilities throughout the city.
+At the OSCON expo, vendors and other organizations showcase their latest innovations, offer short classes, give away swag, and answer questions about their products. Some companies that have had larger booths over the years include Linode, Rackspace, HP, Bluehost, and Microsoft.
+Tables are usually set up outside the meeting rooms where attendees can rest or work. There is also a sponsored "hack zone" outside the Expo Hall where attendees may use fast networking and power strips to hack, socialize, or take a break. Through the main hallway, there is usually a large black box referred to as "The Chalkboard", where attendees can use chalk to scribble logos, slogans, names, and ideas.
+
+Locations[edit]
+
+
+2020
+
+Portland, OR (cancelled)
+
+July 13–16, 2020
+
+
+2019
+
+Portland, OR
+
+July 15–18, 2019
+
+
+2018
+
+Portland, OR
+
+July 16–19, 2018
+
+
+2017
+
+Austin, TX
+
+May 8–11, 2017
+
+
+2016
+
+Austin, TX
+
+May 16–19, 2016
+
+
+2015
+
+Portland, OR
+
+July 20–24, 2015
+
+
+2014
+
+Portland, OR
+
+July 20–24, 2014
+
+
+2013
+
+Portland, OR
+
+July 22–26, 2013
+
+
+2012
+
+Portland, OR
+
+July 16–20, 2012
+
+
+2011
+
+Portland, OR
+
+July 25–29, 2011
+
+
+2010
+
+Portland, OR
+
+July 19–23, 2010
+
+
+2009
+
+San Jose, CA
+
+July 20–24, 2009
+
+
+2008
+
+Portland, OR
+
+July 21–25, 2008
+
+
+2007
+
+Portland, OR
+
+July 23–27, 2007
+
+
+2006
+
+Portland, OR
+
+July 24–28, 2006
+
+
+2005
+
+Portland, OR
+
+August 1–5, 2005
+
+
+2004
+
+Portland, OR
+
+July 26–30, 2004
+
+
+2003
+
+Portland, OR
+
+July 7–11, 2003
+
+
+2002
+
+San Diego, CA
+
+July 22–26, 2002
+
+
+2001
+
+San Diego, CA
+
+July 22–26, 2001
+
+
+2000
+
+Monterey, CA
+
+July 17–20, 2000[6]
+
+
+1999
+
+Monterey, CA
+
+August 21–24, 1999[1][2]
+
+
+See also[edit]
+O'Reilly Open Source Award
+List of free-software events
+References[edit]
+
+
+^ a b "OSCON Celebrates 10th Year: Annual O'Reilly Open Source Convention Opens Registration and Announces Program". 2008-04-15. Retrieved 2013-03-04.
+
+^ a b "Perl Foundation Conferences". YAPC.
+
+^ Phipps, Simon (18 October 2006). "Birthday Presents". Blogs.Sun.Com. Sun Microsystems. Archived from the original on 17 April 2014. Retrieved 16 April 2014.
+
+^ "OpenStack Launch Bash". O'Reilly Media. 20 July 2010. Retrieved 16 April 2014.
+
+^ "From O'Reilly President, Laura Baldwin: O'Reilly's events business". 2020-03-24. Retrieved 2020-03-24.
+
+^ Guido van Rossum (2000-01-27). "Call for Participation: Open Source Convention in Monterey (July)". python.org.
+
+
+External links[edit]
+Official website, oscon.com
+
+
+
+Wikimedia Commons has media related to Open Source Convention.
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=O%27Reilly_Open_Source_Convention&oldid=1207188675"
+Categories: O'Reilly MediaFree-software conferencesHidden categories: Articles with short descriptionShort description is different from WikidataArticles that may contain original research from January 2015All articles that may contain original researchCommons category link is on WikidataArticles containing video clips
+
+
+
+
+
+
+ This page was last edited on 14 February 2024, at 05:52 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

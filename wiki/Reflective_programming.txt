@@ -1,0 +1,1110 @@
+
+
+
+
+Reflective programming - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Historical background
+
+
+
+
+
+
+
+2Uses
+
+
+
+
+
+
+
+3Implementation
+
+
+
+
+
+
+
+4Security considerations
+
+
+
+
+
+
+
+5Examples
+
+
+
+Toggle Examples subsection
+
+
+
+
+
+5.1Common Lisp
+
+
+
+
+
+
+
+5.2C#
+
+
+
+
+
+
+
+5.3Delphi / Object Pascal
+
+
+
+
+
+
+
+5.4eC
+
+
+
+
+
+
+
+5.5Go
+
+
+
+
+
+
+
+5.6Java
+
+
+
+
+
+
+
+5.7JavaScript
+
+
+
+
+
+
+
+5.8Julia
+
+
+
+
+
+
+
+5.9Objective-C
+
+
+
+
+
+
+
+5.10Perl
+
+
+
+
+
+
+
+5.11PHP
+
+
+
+
+
+
+
+5.12Python
+
+
+
+
+
+
+
+5.13R
+
+
+
+
+
+
+
+5.14Ruby
+
+
+
+
+
+
+
+5.15Xojo
+
+
+
+
+
+
+
+
+
+6See also
+
+
+
+
+
+
+
+7References
+
+
+
+Toggle References subsection
+
+
+
+
+
+7.1Citations
+
+
+
+
+
+
+
+7.2Sources
+
+
+
+
+
+
+
+
+
+8Further reading
+
+
+
+
+
+
+
+9External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Reflective programming
+
+
+
+25 languages
+
+
+
+
+العربيةAzərbaycancaCatalàČeštinaDeutschΕλληνικάEspañolفارسیFrançais한국어ItalianoעבריתLietuviųമലയാളംBahasa MelayuNederlands日本語PolskiPortuguêsРусскийSlovenščinaСрпски / srpskiУкраїнськаTiếng Việt中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Ability of a process to examine and modify itself
+Not to be confused with Reflection (computer graphics).
+In computer science, reflective programming or reflection is the ability of a process to examine, introspect, and modify its own structure and behavior.[1]
+
+
+Historical background[edit]
+The earliest computers were programmed in their native assembly languages, which were inherently reflective, as these original architectures could be programmed by defining instructions as data and using self-modifying code. As the bulk of programming moved to higher-level compiled languages such as Algol, Cobol, Fortran, Pascal, and C, this reflective ability largely disappeared until new programming languages with reflection built into their type systems appeared.[citation needed]
+Brian Cantwell Smith's 1982 doctoral dissertation introduced the notion of computational reflection in procedural programming languages and the notion of the meta-circular interpreter as a component of 3-Lisp.[2][3]
+
+Uses[edit]
+Reflection helps programmers make generic software libraries to display data, process different formats of data, perform serialization and deserialization of data for communication, or do bundling and unbundling of data for containers or bursts of communication.
+Effective use of reflection almost always requires a plan: A design framework, encoding description, object library, a map of a database or entity relations.
+Reflection makes a language more suited to network-oriented code. For example, it assists languages such as Java to operate well in networks by enabling libraries for serialization, bundling and varying data formats. Languages without reflection such as C are required to use auxiliary compilers for tasks like Abstract Syntax Notation to produce code for serialization and bundling.
+Reflection can be used for observing and modifying program execution at runtime. A reflection-oriented program component can monitor the execution of an enclosure of code and can modify itself according to a desired goal of that enclosure. This is typically accomplished by dynamically assigning program code at runtime.
+In object-oriented programming languages such as Java, reflection allows inspection of classes, interfaces, fields and methods at runtime without knowing the names of the interfaces, fields, methods at compile time. It also allows instantiation of new objects and invocation of methods.
+Reflection is often used as part of software testing, such as for the runtime creation/instantiation of mock objects.
+Reflection is also a key strategy for metaprogramming.
+In some object-oriented programming languages such as C# and Java, reflection can be used to bypass member accessibility rules. For C#-properties this can be achieved by writing directly onto the (usually invisible) backing field of a non-public property. It is also possible to find non-public methods of classes and types and manually invoke them. This works for project-internal files as well as external libraries such as .NET's assemblies and Java's archives.
+
+Implementation[edit]
+This section does not cite any sources. Please help improve this section by adding citations to reliable sources. Unsourced material may be challenged and removed. (January 2008) (Learn how and when to remove this template message)
+A language supporting reflection provides a number of features available at runtime that would otherwise be difficult to accomplish in a lower-level language. Some of these features are the abilities to:
+
+Discover and modify source-code constructions (such as code blocks, classes, methods, protocols, etc.) as first-class objects at runtime.
+Convert a string matching the symbolic name of a class or function into a reference to or invocation of that class or function.
+Evaluate a string as if it were a source-code statement at runtime.
+Create a new interpreter for the language's bytecode to give a new meaning or purpose for a programming construct.
+These features can be implemented in different ways. In MOO, reflection forms a natural part of everyday programming idiom. When verbs (methods) are called, various variables such as verb (the name of the verb being called) and this (the object on which the verb is called) are populated to give the context of the call. Security is typically managed by accessing the caller stack programmatically: Since callers() is a list of the methods by which the current verb was eventually called, performing tests on callers()[0] (the command invoked by the original user) allows the verb to protect itself against unauthorised use.
+Compiled languages rely on their runtime system to provide information about the source code. A compiled Objective-C executable, for example, records the names of all methods in a block of the executable, providing a table to correspond these with the underlying methods (or selectors for these methods) compiled into the program. In a compiled language that supports runtime creation of functions, such as Common Lisp, the runtime environment must include a compiler or an interpreter.
+Reflection can be implemented for languages without built-in reflection by using a program transformation system to define automated source-code changes.
+
+Security considerations[edit]
+Reflection may allow a user to create unexpected control flow paths through an application, potentially bypassing security measures. This may be exploited by attackers.[4] Historical vulnerabilities in Java caused by unsafe reflection allowed code retrieved from potentially untrusted remote machines to break out of the Java sandbox security mechanism. A large scale study of 120 Java vulnerabilities in 2013 concluded that unsafe reflection is the most common vulnerability in Java, though not the most exploited.[5]
+
+Examples[edit]
+The following code snippets create an instance foo of class Foo and invoke its method PrintHello. For each programming language, normal and reflection-based call sequences are shown.
+
+Common Lisp[edit]
+The following is an example in Common Lisp using the Common Lisp Object System:
+
+(defclass foo () ())
+(defmethod print-hello ((f foo)) (format T "Hello from ~S~%" f))
+
+;; Normal, without reflection
+(let ((foo (make-instance 'foo)))
+  (print-hello foo))
+
+;; With reflection to look up the class named "foo" and the method
+;; named "print-hello" that specializes on "foo".
+(let* ((foo-class (find-class (read-from-string "foo")))
+       (print-hello-method (find-method (symbol-function (read-from-string "print-hello"))
+                                        nil (list foo-class))))
+  (funcall (sb-mop:method-generic-function print-hello-method)
+           (make-instance foo-class)))
+
+
+
+C#[edit]
+The following is an example in C#:
+
+// Without reflection
+var foo = new Foo();
+foo.PrintHello();
+
+// With reflection
+Object foo = Activator.CreateInstance("complete.classpath.and.Foo");
+MethodInfo method = foo.GetType().GetMethod("PrintHello");
+method.Invoke(foo, null);
+
+Delphi / Object Pascal[edit]
+This Delphi/Object Pascal example assumes that a TFoo class has been declared in a unit called Unit1:
+
+uses RTTI, Unit1;
+
+procedure WithoutReflection;
+var
+  Foo: TFoo;
+begin
+  Foo := TFoo.Create;
+  try
+    Foo.Hello;
+  finally
+    Foo.Free;
+  end;
+end;
+
+procedure WithReflection;
+var
+  RttiContext: TRttiContext;
+  RttiType: TRttiInstanceType;
+  Foo: TObject;
+begin
+  RttiType := RttiContext.FindType('Unit1.TFoo') as TRttiInstanceType;
+  Foo := RttiType.GetMethod('Create').Invoke(RttiType.MetaclassType, []).AsObject;
+  try
+    RttiType.GetMethod('Hello').Invoke(Foo, []);
+  finally
+    Foo.Free;
+  end;
+end;
+
+eC[edit]
+The following is an example in eC:
+
+// Without reflection
+Foo foo { };
+foo.hello();
+
+// With reflection
+Class fooClass = eSystem_FindClass(__thisModule, "Foo");
+Instance foo = eInstance_New(fooClass);
+Method m = eClass_FindMethod(fooClass, "hello", fooClass.module);
+((void (*)())(void *)m.function)(foo);
+
+Go[edit]
+The following is an example in Go:
+
+import "reflect"
+
+// Without reflection
+f := Foo{}
+f.Hello()
+
+// With reflection
+fT := reflect.TypeOf(Foo{})
+fV := reflect.New(fT)
+
+m := fV.MethodByName("Hello")
+if m.IsValid() {
+    m.Call(nil)
+}
+
+Java[edit]
+The following is an example in Java:
+
+import java.lang.reflect.Method;
+
+// Without reflection
+Foo foo = new Foo();
+foo.hello();
+
+// With reflection
+try {
+    Object foo = Foo.class.getDeclaredConstructor().newInstance();
+
+    Method m = foo.getClass().getDeclaredMethod("hello", new Class<?>[0]);
+    m.invoke(foo);
+} catch (ReflectiveOperationException ignored) {}
+
+JavaScript[edit]
+The following is an example in JavaScript:
+
+// Without reflection
+const foo = new Foo()
+foo.hello()
+
+// With reflection
+const foo = Reflect.construct(Foo)
+const hello = Reflect.get(foo, 'hello')
+Reflect.apply(hello, foo, [])
+
+// With eval
+eval('new Foo().hello()')
+
+Julia[edit]
+The following is an example in Julia (programming language):
+
+julia> struct Point
+           x::Int
+           y
+       end
+
+# Inspection with reflection
+julia> fieldnames(Point)
+(:x, :y)
+
+julia> fieldtypes(Point)
+(Int64, Any)
+
+julia> p = Point(3,4)
+
+# Access with reflection
+julia> getfield(p, :x)
+3
+
+Objective-C[edit]
+The following is an example in Objective-C, implying either the OpenStep or Foundation Kit framework is used:
+
+// Foo class.
+@interface Foo : NSObject
+- (void)hello;
+@end
+
+// Sending "hello" to a Foo instance without reflection.
+Foo *obj = [[Foo alloc] init];
+[obj hello];
+
+// Sending "hello" to a Foo instance with reflection.
+id obj = [[NSClassFromString(@"Foo") alloc] init];
+[obj performSelector: @selector(hello)];
+
+Perl[edit]
+The following is an example in Perl:
+
+# Without reflection
+my $foo = Foo->new;
+$foo->hello;
+
+# or
+Foo->new->hello;
+
+# With reflection
+my $class = "Foo"
+my $constructor = "new";
+my $method = "hello";
+
+my $f = $class->$constructor;
+$f->$method;
+
+# or
+$class->$constructor->$method;
+
+# with eval
+eval "new Foo->hello;";
+
+PHP[edit]
+The following is an example in PHP:[6]
+
+// Without reflection
+$foo = new Foo();
+$foo->hello();
+
+// With reflection, using Reflections API
+$reflector = new ReflectionClass("Foo");
+$foo = $reflector->newInstance();
+$hello = $reflector->getMethod("hello");
+$hello->invoke($foo);
+
+Python[edit]
+The following is an example in Python:
+
+# Without reflection
+obj = Foo()
+obj.hello()
+
+# With reflection
+obj = globals()["Foo"]()
+getattr(obj, "hello")()
+
+# With eval
+eval("Foo().hello()")
+
+R[edit]
+The following is an example in R:
+
+# Without reflection, assuming foo() returns an S3-type object that has method "hello"
+obj <- foo()
+hello(obj)
+
+# With reflection
+class_name <- "foo"
+generic_having_foo_method <- "hello"
+obj <- do.call(class_name, list())
+do.call(generic_having_foo_method, alist(obj))
+
+Ruby[edit]
+The following is an example in Ruby:
+
+# Without reflection
+obj = Foo.new
+obj.hello
+
+# With reflection
+obj = Object.const_get("Foo").new
+obj.send :hello
+
+# With eval
+eval "Foo.new.hello"
+
+Xojo[edit]
+The following is an example using Xojo:
+
+' Without reflection
+Dim fooInstance As New Foo
+fooInstance.PrintHello
+
+' With reflection
+Dim classInfo As Introspection.Typeinfo = GetTypeInfo(Foo)
+Dim constructors() As Introspection.ConstructorInfo = classInfo.GetConstructors
+Dim fooInstance As Foo = constructors(0).Invoke
+Dim methods() As Introspection.MethodInfo = classInfo.GetMethods
+For Each m As Introspection.MethodInfo In methods
+  If m.Name = "PrintHello" Then
+    m.Invoke(fooInstance)
+  End If
+Next
+
+See also[edit]
+List of reflective programming languages and platforms
+Mirror (programming)
+Programming paradigms
+Self-hosting (compilers)
+Self-modifying code
+Type introspection
+typeof
+References[edit]
+Citations[edit]
+
+
+^ A Tutorial on Behavioral Reflection and its Implementation by Jacques Malenfant et al. (PDF), unknown, archived from the original (PDF) on 21 August 2017, retrieved 23 June 2019
+
+^ Brian Cantwell Smith, Procedural Reflection in Programming Languages, Department of Electrical Engineering and Computer Science, Massachusetts Institute of Technology, PhD dissertation, 1982.
+
+^ Brian C. Smith. Reflection and semantics in a procedural language Archived 2015-12-13 at the Wayback Machine. Technical Report MIT-LCS-TR-272, Massachusetts Institute of Technology, Cambridge, Massachusetts, January 1982.
+
+^ Barros, Paulo; Just, René; Millstein, Suzanne; Vines, Paul; Dietl, Werner; d'Amorim, Marcelo; Ernst, Michael D. (August 2015). Static Analysis of Implicit Control Flow: Resolving Java Reflection and Android Intents (PDF) (Report). University of Washington. UW-CSE-15-08-01. Retrieved October 7, 2021.
+
+^ Eauvidoum, Ieu; disk noise (October 5, 2021). "Twenty years of Escaping the Java Sandbox". Phrack. Vol. 10, no. 46. Retrieved October 7, 2021.
+
+^ "PHP: ReflectionClass - Manual". www.php.net.
+
+
+Sources[edit]
+
+Jonathan M. Sobel and Daniel P. Friedman. An Introduction to Reflection-Oriented Programming (1996), Indiana University.
+Anti-Reflection technique using C# and C++/CLI wrapper to prevent code thief
+
+Further reading[edit]
+Ira R. Forman and Nate Forman, Java Reflection in Action (2005), ISBN 1-932394-18-4
+Ira R. Forman and Scott Danforth, Putting Metaclasses to Work (1999), ISBN 0-201-43305-2
+External links[edit]
+Reflection in logic, functional and object-oriented programming: a short comparative study
+An Introduction to Reflection-Oriented Programming
+Brian Foote's pages on Reflection in Smalltalk
+Java Reflection API Tutorial from Oracle
+vteProgramming paradigms (Comparison by language)ImperativeStructured
+Jackson structures
+Block-structured
+Modular
+Non-structured
+Procedural
+Programming in the large and in the small
+Design by contract
+Invariant-based
+Nested function
+Object-oriented(Comparison, List)
+Agent
+Class-based
+Prototype-based
+Object-based
+Immutable object
+Persistent
+Uniform Function Call Syntax
+DeclarativeFunctional(Comparison)
+Recursive
+Anonymous function (Partial application)
+Higher-order
+Purely functional
+Total
+Strict
+GADTs
+Dependent types
+Functional logic
+Point-free style
+Expression-oriented
+Applicative / Concatenative
+Function-level / Value-level
+Dataflow
+Flow-based
+Reactive (Functional reactive)
+Signals
+Streams
+Synchronous
+Logic
+Abductive logic
+Answer set
+Constraint (Constraint logic)
+Inductive logic
+Nondeterministic
+Ontology
+Probabilistic logic
+Query
+DSL
+Algebraic modeling
+Array
+Automata-based (Action)
+Command (Spacecraft)
+Differentiable
+End-user
+Grammar-oriented
+Interface description
+Language-oriented
+List comprehension
+Low-code
+Modeling
+Natural language
+Non-English-based
+Page description
+Pipes and filters
+Probabilistic
+Quantum
+Scientific
+Scripting
+Set-theoretic
+Simulation
+Stack-based
+System
+Tactile
+Templating
+Transformation (Graph rewriting, Production, Pattern)
+Visual
+Concurrent/Distributed/Parallel
+Actor-based
+Automatic mutual exclusion
+Choreographic programming
+Concurrent logic (Concurrent constraint logic)
+Concurrent OO
+Macroprogramming
+Multitier programming
+Organic computing
+Parallel programming models
+Partitioned global address space
+Process-oriented
+Relativistic programming
+Service-oriented
+Structured concurrency
+Metaprogramming
+Attribute-oriented
+Automatic (Inductive)
+Dynamic
+Extensible
+Generic
+Homoiconicity
+Interactive
+Macro (Hygienic)
+Metalinguistic abstraction
+Multi-stage
+Program synthesis (Bayesian, Inferential, by demonstration, by example)
+Reflective
+Self-modifying code
+Symbolic
+Template
+Separation of concerns
+Aspects
+Components
+Data-driven
+Data-oriented
+Event-driven
+Features
+Intentional
+Literate
+Roles
+Subjects
+
+vteTypes of programming languagesParadigm
+Actor-based
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Dataflow
+Declarative
+Differentiable
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Stack-oriented
+Synchronous
+Tactile
+Template
+Level
+Machine
+Assembly
+Compiled
+Interpreted
+Low-level
+High-level
+Very high-level
+Generation
+First
+Second
+Third
+Fourth
+Fifth
+Related
+Non-English-based
+Visual
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Reflective_programming&oldid=1202030562"
+Category: Programming constructsHidden categories: Webarchive template wayback linksArticles with short descriptionShort description matches WikidataAll articles with unsourced statementsArticles with unsourced statements from July 2015Articles needing additional references from January 2008All articles needing additional referencesArticles with example Python (programming language) code
+
+
+
+
+
+
+ This page was last edited on 1 February 2024, at 22:11 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

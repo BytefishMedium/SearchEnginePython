@@ -1,0 +1,473 @@
+
+
+
+
+Backporting - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Overview
+
+
+
+
+
+
+
+2Procedures
+
+
+
+
+
+
+
+3Examples
+
+
+
+
+
+
+
+4See also
+
+
+
+
+
+
+
+5References
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Backporting
+
+
+
+12 languages
+
+
+
+
+العربيةČeštinaDeutschEspañolفارسیFrançais한국어Italiano日本語PolskiРусский中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Process for fixing older software versions
+Backporting is the action of taking parts from a newer version of a software system or software component and porting them to an older version of the same software. It forms part of the maintenance step in a software development process, and it is commonly used for fixing security issues in older versions of the software and also for providing new features to older versions.
+
+
+Overview[edit]
+The simplest and probably most common situation of backporting is a fixed security hole in a newer version of a piece of software. Consider this simplified example:
+
+Software v2.0 had a security vulnerability that is fixed by changing the text 'is_unsecured' to 'is_secured'.
+The same security hole exists in Software v1.0, from which the codebase for the newer version is derived, but there the text may read 'is_notsecure'.
+By taking the modification that fixes Software v2.0 and changing it so that it applies to Software v1.0, one has effectively backported the fix.[1]
+In real-life situations, the modifications that a single aspect of the software has undergone may be simple (only a few lines of code have changed) up to heavy and massive (many modifications spread across multiple files of the code). In the latter case, backporting may become tedious and inefficient and should only be undergone if the older version of the software is really needed in favour of the newer (if, for example, the newer version still suffers stability problems that prevent its use in mission-critical situations).[2]
+
+Procedures[edit]
+The process of backporting can be roughly divided into these steps:[1]
+
+identification of the problem in the older version of the software that needs to be fixed by a backport
+finding out which (usually recent) modification of the code fixed the problem
+adapting the modification to the old code situation (the proper backporting)
+one or several levels of quality control –  testing whether the backported version maintains previous functionality as well as if it properly implements the new functionality.
+Usually, multiple such modifications are bundled in a patch set.
+Backports can be provided by the core developer group of the software. Since backporting needs access to the source code of a piece of software, this is the only way that backporting is done for closed source software –  the backports will usually be incorporated in binary upgrades along the old version line of the software. With open-source software, backports are sometimes created by software distributors and later sent upstream (that is, submitted to the core developers of the afflicted software).[2]
+
+Examples[edit]
+Many features of Windows Vista were backported to Windows XP when Service Pack 3 was released for Windows XP, thereby facilitating compatibility of applications (mostly games) originally with Vista as a minimum requirement to run on XP SP3 as a minimum requirement instead.[3]
+The Debian Project since September 2010[4] has provided an official backporting service for some Debian Linux software packages, and Ubuntu Linux also supports backports, [5] however Ubuntu Backports receives no support at all from Canonical, and is entirely community-maintained.[citation needed]
+
+See also[edit]
+Backward compatibility
+Retrofitting
+Java backporting tools
+References[edit]
+
+
+^ a b "Backporting Security Fixes". Red Hat. Retrieved 2020-05-11.
+
+^ a b Rahul Sundaram (2016-01-14). "Staying close to upstream projects". Fedora Project. Retrieved 2020-05-11.
+
+^ Donald Melanson (2007-10-09). "Microsoft backports Vista features for new Windows XP SP3 beta". Engadget. Retrieved 2020-05-11.
+
+^ "Backports service becoming official". Debian Project. 2010-09-05. Retrieved 2020-05-11.
+
+^ "UbuntuBackports". Ubuntu Project. 2015-11-29. Retrieved 2020-05-11.
+
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Backporting&oldid=1202944879"
+Categories: Software maintenanceSoftware qualityPatch utilitiesHidden categories: Articles with short descriptionShort description matches WikidataAll articles with unsourced statementsArticles with unsourced statements from February 2024
+
+
+
+
+
+
+ This page was last edited on 3 February 2024, at 21:53 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

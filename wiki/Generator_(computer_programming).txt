@@ -1,0 +1,1166 @@
+
+
+
+
+Generator (computer programming) - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Uses
+
+
+
+
+
+
+
+2Timeline
+
+
+
+Toggle Timeline subsection
+
+
+
+
+
+2.1Lisp
+
+
+
+
+
+
+
+2.2CLU
+
+
+
+
+
+
+
+2.3Icon
+
+
+
+
+
+
+
+2.4C
+
+
+
+
+
+
+
+2.5C++
+
+
+
+
+
+
+
+2.6Perl
+
+
+
+
+
+
+
+2.7Raku
+
+
+
+
+
+
+
+2.8Tcl
+
+
+
+
+
+
+
+2.9Haskell
+
+
+
+
+
+
+
+2.10Racket
+
+
+
+
+
+
+
+2.11PHP
+
+
+
+
+
+
+
+2.12Ruby
+
+
+
+
+
+
+
+2.13Java
+
+
+
+
+
+
+
+2.14C#
+
+
+
+
+
+
+
+2.15XL
+
+
+
+
+
+
+
+2.16F#
+
+
+
+
+
+
+
+2.17Python
+
+
+
+
+
+2.17.1Generator expressions
+
+
+
+
+
+
+
+
+
+2.18ECMAScript
+
+
+
+
+
+
+
+2.19R
+
+
+
+
+
+
+
+2.20Smalltalk
+
+
+
+
+
+
+
+
+
+3See also
+
+
+
+
+
+
+
+4Notes
+
+
+
+
+
+
+
+5References
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Generator (computer programming)
+
+
+
+17 languages
+
+
+
+
+العربيةČeštinaDeutschEspañolفارسیFrançaisItalianoעבריתNederlands日本語PolskiPortuguêsРусскийСрпски / srpskiSrpskohrvatski / српскохрватскиУкраїнська中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+For other uses, see Generator (disambiguation) § Computing.
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed.Find sources: "Generator" computer programming – news · newspapers · books · scholar · JSTOR (July 2007) (Learn how and when to remove this template message)
+In computer science, a generator is a routine that can be used to control the iteration behaviour of a loop. All generators are also iterators.[1] A generator is very similar to a function that returns an array, in that a generator has parameters, can be called, and generates a sequence of values. However, instead of building an array containing all the values and returning them all at once, a generator yields the values one at a time, which requires less memory and allows the caller to get started processing the first few values immediately.  In short, a generator looks like a function but behaves like an iterator.
+Generators can be implemented in terms of more expressive control flow constructs, such as coroutines or first-class continuations.[2] Generators, also known as semicoroutines,[3] are a special case of (and weaker than) coroutines, in that they always yield control back to the caller (when passing a value back), rather than specifying a coroutine to jump to; see comparison of coroutines with generators.
+
+
+Uses[edit]
+Generators are usually invoked inside loops.[4]  The first time that a generator invocation is reached in a loop, an iterator object is created that encapsulates the state of the generator routine at its beginning, with arguments bound to the corresponding parameters.  The generator's body is then executed in the context of that iterator until a special yield action is encountered; at that time, the value provided with the yield action is used as the value of the invocation expression.  The next time the same generator invocation is reached in a subsequent iteration, the execution of the generator's body is resumed after the yield action, until yet another yield action is encountered.  In addition to the yield action, execution of the generator body can also be terminated by a finish action, at which time the innermost loop enclosing the generator invocation is terminated. In more complicated situations, a generator may be used manually outside of a loop to create an iterator, which can then be used in various ways.
+Because generators compute their yielded values only on demand, they are useful for representing streams, such as sequences that would be expensive or impossible to compute at once. These include e.g. infinite sequences and live data streams.
+When eager evaluation is desirable (primarily when the sequence is finite, as otherwise evaluation will never terminate), one can either convert to a list, or use a parallel construction that creates a list instead of a generator. For example, in Python a generator g can be evaluated to a list l via l = list(g), while in F# the sequence expression seq { ... } evaluates lazily (a generator or sequence) but [ ... ] evaluates eagerly (a list).
+In the presence of generators, loop constructs of a language – such as for and while – can be reduced into a single loop ... end loop construct; all the usual loop constructs can then be comfortably simulated by using suitable generators in the right way. For example, a ranged loop like for x = 1 to 10 can be implemented as iteration through a generator, as in Python's for x in range(1, 10). Further, break can be implemented as sending finish to the generator and then using continue in the loop.
+
+Timeline[edit]
+Generators first appeared in CLU (1975),[5] were a prominent feature in the string manipulation language Icon (1977) and are now available in Python (2001),[6] C#,[7] Ruby, PHP,[8] ECMAScript (as of ES6/ES2015), and other languages.  In CLU and C#, generators are called iterators, and in Ruby, enumerators.
+
+Lisp[edit]
+The final Common Lisp standard does not natively provide generators, yet various library implementations exist, such as SERIES documented in CLtL2 or pygen.
+
+CLU[edit]
+A yield statement is used to implement iterators over user-defined data abstractions.[9]
+
+string_chars = iter (s: string) yields (char);
+  index: int := 1;
+  limit: int := string$size (s);
+  while index <= limit do
+    yield (string$fetch(s, index));
+    index := index + 1;
+    end;
+end string_chars;
+
+for c: char in string_chars(s) do
+   ...
+end;
+
+Icon[edit]
+Every expression (including loops) is a generator. The language has many generators built-in and even implements some of the logic semantics using the generator mechanism (logical disjunction or "OR" is done this way).
+Printing squares from 0 to 20 can be achieved using a co-routine by writing:
+
+   local squares, j
+   squares := create (seq(0) ^ 2)
+   every j := |@squares do
+      if j <= 20 then
+         write(j)
+      else
+         break
+
+However, most of the time custom generators are implemented with the "suspend" keyword which functions exactly like the "yield" keyword in CLU.
+
+C[edit]
+C does not have generator functions as a language construct, but, as they are a subset of coroutines, it is simple to implement them using any framework that implements stackful coroutines, such as libdill.[10] On POSIX platforms, when the cost of context switching per iteration is not a concern, or full parallelism rather than merely concurrency is desired, a very simple generator function framework can be implemented using pthreads and pipes.
+
+C++[edit]
+It is possible to introduce generators into C++ using pre-processor macros. The resulting code might have aspects that are very different from native C++, but the generator syntax can be very uncluttered.[11] The set of pre-processor macros defined in this source allow generators defined with the syntax as in the following example:
+
+$generator(descent)
+{
+   int i;
+
+   // place the constructor of our generator, e.g. 
+   // descent(int minv, int maxv) {...}
+   
+   // from $emit to $stop is a body of our generator:
+    
+   $emit(int) // will emit int values. Start of body of the generator.
+      for (i = 10; i > 0; --i)
+         $yield(i); // similar to yield in Python,
+                    // returns next number in [1..10], reversed.
+   $stop; // stop, end of sequence. End of body of the generator.
+};
+
+This can then be iterated using:
+
+int main(int argc, char* argv[])
+{
+  descent gen;
+  for (int n; gen(n);) // "get next" generator invocation
+    printf("next number is %d\n", n);
+  return 0;
+}
+
+Moreover, C++11 allows foreach loops to be applied to any class that provides the begin and end functions. It's then possible to write generator-like classes by defining both the iterable methods (begin and end) and the iterator methods (operator!=, operator++ and operator*) in the same class. For example, it is possible to write the following program:
+
+#include <iostream>
+int main()
+{
+    for (int i: range(10))
+    {
+        std::cout << i << std::endl;
+    }
+    return 0;
+}
+
+A basic range implementation would look like that:
+
+class range
+{
+private:
+    int last;
+    int iter;
+
+public:
+    range(int end):
+        last(end),
+        iter(0)
+    {}
+
+    // Iterable functions
+    const range& begin() const { return *this; }
+    const range& end() const { return *this; }
+
+    // Iterator functions
+    bool operator!=(const range&) const { return iter < last; }
+    void operator++() { ++iter; }
+    int operator*() const { return iter; }
+};
+
+Perl[edit]
+Perl does not natively provide generators, but support is provided by the Coro::Generator module which uses the Coro co-routine framework.  Example usage:
+
+use strict;
+use warnings;
+# Enable generator { BLOCK } and yield
+use Coro::Generator;
+# Array reference to iterate over
+my $chars = ['A'...'Z'];
+
+# New generator which can be called like a coderef.
+my $letters = generator {
+    my $i = 0;
+    for my $letter (@$chars) {
+        # get next letter from $chars
+        yield $letter;
+    }
+};
+
+# Call the generator 15 times.
+print $letters->(), "\n" for (0..15);
+
+Raku[edit]
+Example parallel to Icon uses Raku (formerly/aka Perl 6) Range class as one of several ways to achieve generators with the language.
+Printing squares from 0 to 20 can be achieved by writing:
+
+for (0 .. *).map(* ** 2) -> $i {
+    last if $i > 20;
+    say $i
+}
+
+However, most of the time custom generators are implemented with "gather" and "take" keywords in a lazy context.
+
+Tcl[edit]
+In Tcl 8.6, the generator mechanism is founded on named coroutines.
+
+proc generator {body} {
+    coroutine gen[incr ::disambiguator] apply {{script} {
+        # Produce the result of [generator], the name of the generator
+        yield [info coroutine]
+        # Do the generation
+        eval $script
+        # Finish the loop of the caller using a 'break' exception
+        return -code break
+    }} $body
+}
+
+# Use a simple 'for' loop to do the actual generation
+set count [generator {
+    for {set i 10} {$i <= 20} {incr i} {
+        yield $i
+    }
+}]
+
+# Pull values from the generator until it is exhausted
+while 1 {
+    puts [$count]
+}
+
+Haskell[edit]
+In Haskell, with its lazy evaluation model, every datum created with a non-strict data constructor is generated on demand. For example,
+
+countFrom :: Integer -> [Integer]
+countFrom n = n : countFrom (n + 1)
+
+from10to20 :: [Integer]
+from10to20 = takeWhile (<= 20) $ countFrom 10
+
+primes :: [Integer]
+primes = 2 : 3 : nextPrime 5
+  where
+    nextPrime n
+        | notDivisible n = n : nextPrime (n + 2)
+        | otherwise = nextPrime (n + 2)
+    notDivisible n =
+        all ((/= 0) . (rem n)) $ takeWhile ((<= n) . (^ 2)) $ tail primes
+
+where (:) is a non-strict list constructor, cons, and $ is just a "called-with" operator, used for parenthesization. This uses the standard adaptor function,
+
+takeWhile p [] = []
+takeWhile p (x:xs) | p x = x : takeWhile p xs
+                   | otherwise = []
+
+which walks down the list and stops on the first element that doesn't satisfy the predicate. If the list has been walked before until that point, it is just a strict data structure, but if any part hadn't been walked through before, it will be generated on demand. List comprehensions can be freely used:
+
+squaresUnder20 = takeWhile (<= 20) [x * x | x <- countFrom 10]
+squaresForNumbersUnder20 = [x * x | x <- takeWhile (<= 20) $ countFrom 10]
+
+Racket[edit]
+Racket provides several related facilities for generators.  First, its for-loop forms work with sequences, which are a kind of a producer:
+
+(for ([i (in-range 10 20)])
+  (printf "i = ~s\n" i))
+
+and these sequences are also first-class values:
+
+(define 10-to-20 (in-range 10 20))
+(for ([i 10-to-20])
+  (printf "i = ~s\n" i))
+
+Some sequences are implemented imperatively (with private state variables) and some are implemented as (possibly infinite) lazy lists.  Also, new struct definitions can have a property that specifies how they can be used as sequences.
+But more directly, Racket comes with a generator library for a more traditional generator specification.  For example,
+
+#lang racket
+(require racket/generator)
+(define (ints-from from)
+  (generator ()
+    (for ([i (in-naturals from)]) ; infinite sequence of integers from 0
+      (yield i))))
+(define g (ints-from 10))
+(list (g) (g) (g)) ; -> '(10 11 12)
+
+Note that the Racket core implements powerful continuation features, providing general (re-entrant) continuations that are composable, and also delimited continuations.  Using this, the generator library is implemented in Racket.
+
+PHP[edit]
+The community of PHP implemented generators in PHP 5.5. Details can be found in the original Request for Comments: Generators.
+Infinite Fibonacci sequence:
+
+function fibonacci(): \Generator
+{
+    $last = 0;
+    $current = 1;
+    yield 1;
+    while (true) {
+        $current = $last + $current;
+        $last = $current - $last;
+        yield $current;
+    }
+}
+
+foreach (fibonacci() as $number) {
+    echo $number, "\n";
+}
+
+Fibonacci sequence with limit:
+
+function fibonacci(int $limit): generator 
+{
+    yield $a = $b = $i = 1;
+ 
+    while (++$i < $limit) {
+        yield $a = ($b = $a + $b) - $a;
+    }
+}
+
+foreach (fibonacci(10) as $number) {
+    echo "$number\n";
+}
+
+Any function which contains a yield statement is automatically a generator function.
+
+Ruby[edit]
+Ruby supports generators (starting from version 1.9) in the form of the built-in Enumerator class.
+
+# Generator from an Enumerator object
+chars = Enumerator.new(['A', 'B', 'C', 'Z'])
+
+4.times { puts chars.next }
+
+# Generator from a block
+count = Enumerator.new do |yielder|
+  i = 0
+  loop { yielder.yield i += 1 }
+end
+
+100.times { puts count.next }
+
+Java[edit]
+Java has had a standard interface for implementing iterators since its early days, and since Java 5, the "foreach" construction makes it easy to loop over objects that provide the java.lang.Iterable interface. (The Java collections framework and other collections frameworks, typically provide iterators for all collections.)
+
+record Pair(int a, int b) {};
+
+Iterable<Integer> myIterable = Stream.iterate(new Pair(1, 1), p -> new Pair(p.b, p.a + p.b))
+        .limit(10)
+        .map(p -> p.a)::iterator;
+
+myIterable.forEach(System.out::println);
+
+Or get an Iterator from the Java 8 super-interface BaseStream of Stream interface.
+
+record Pair(int a, int b) {};
+
+// Save the iterator of a stream that generates fib sequence
+Iterator<Integer> myGenerator = Stream
+        // Generates Fib sequence
+        .iterate(new Pair(1, 1), p -> new Pair(p.b, p.a + p.b))
+        .map(p -> p.a).iterator();
+
+// Print the first 5 elements
+for (int i = 0; i < 5; i++) {
+    System.out.println(myGenerator.next());
+}
+
+System.out.println("done with first iteration");
+
+// Print the next 5 elements
+for (int i = 0; i < 5; i++) {
+    System.out.println(myGenerator.next());
+}
+
+Output:
+
+1
+1
+2
+3
+5
+done with first iteration
+8
+13
+21
+34
+55
+
+C#[edit]
+An example C# 2.0 generator (the yield is available since C# version 2.0):
+Both of these examples utilize generics, but this is not required. yield keyword also helps in implementing custom stateful iterations over a collection as discussed in this discussion.[12]
+
+// Method that takes an iterable input (possibly an array)
+// and returns all even numbers.
+public static IEnumerable<int> GetEven(IEnumerable<int> numbers)
+{
+    foreach (int number in numbers)
+    {
+        if ((number % 2) == 0)
+        {
+            yield return number;
+        }
+    }
+}
+
+It is possible to use multiple yield return statements and they are applied in sequence on each iteration:
+
+public class CityCollection : IEnumerable<string>
+{
+    public IEnumerator<string> GetEnumerator()
+    {
+        yield return "New York";
+        yield return "Paris";
+        yield return "London";
+    }
+}
+
+XL[edit]
+In XL, iterators are the basis of 'for' loops:
+
+import IO = XL.UI.CONSOLE
+
+iterator IntegerIterator (var out Counter : integer; Low, High : integer) written Counter in Low..High is
+    Counter := Low
+    while Counter <= High loop
+        yield
+        Counter += 1
+
+// Note that I needs not be declared, because declared 'var out' in the iterator
+// An implicit declaration of I as an integer is therefore made here
+for I in 1..5 loop
+    IO.WriteLn "I=", I
+
+F#[edit]
+Further information: Sequence expression
+F# provides generators via sequence expressions, since version 1.9.1.[13] These can define a sequence (lazily evaluated, sequential access) via seq { ... }, a list (eagerly evaluated, sequential access) via [ ... ] or an array (eagerly evaluated, indexed access) via [| ... |] that contain code that generates values. For example,
+
+seq { for b in 0 .. 25 do
+          if b < 15 then
+              yield b * b }
+
+forms a sequence of squares of numbers from 0 to 14 by filtering out numbers from the range of numbers from 0 to 25.
+
+Python[edit]
+Generators were added to Python in version 2.2 in 2001.[6] An example generator:
+
+from typing import Iterator
+
+def countfrom(n: int) -> Iterator[int]:
+    while True:
+        yield n
+        n += 1
+
+# Example use: printing out the integers from 10 to 20.
+# Note that this iteration terminates normally, despite
+# countfrom() being written as an infinite loop.
+
+for i in countfrom(10):
+    if i <= 20:
+        print(i)
+    else:
+        break
+
+# Another generator, which produces prime numbers indefinitely as needed.
+import itertools
+
+def primes() -> Iterator[int]:
+    """Generate prime numbers indefinitely as needed."""
+    yield 2
+    n = 3
+    p = []
+    while True:
+        # If dividing n by all the numbers in p, up to and including sqrt(n),
+        # produces a non-zero remainder then n is prime.
+        if all(n % f > 0 for f in itertools.takewhile(lambda f: f * f <= n, p)):
+            yield n
+            p.append(n)
+        n += 2
+
+In Python, a generator can be thought of as an iterator that contains a frozen stack frame. Whenever next() is called on the iterator, Python resumes the frozen frame, which executes normally until the next yield statement is reached. The generator's frame is then frozen again, and the yielded value is returned to the caller.
+PEP 380 (implemented in Python 3.3) adds the yield from expression, allowing a generator to delegate part of its operations to another generator or iterable.[14]
+
+Generator expressions[edit]
+Python has a syntax modeled on that of list comprehensions, called a generator expression that aids in the creation of generators.
+The following extends the first example above by using a generator expression to compute squares from the countfrom generator function:
+
+squares = (n * n for n in countfrom(2))
+
+for j in squares:
+    if j <= 20:
+        print(j)
+    else:
+        break
+
+ECMAScript[edit]
+ECMAScript 6 (a.k.a. Harmony) introduced generator functions.
+An infinite Fibonacci sequence can be written using a function generator:
+
+function* fibonacci(limit) {
+    let [prev, curr] = [0, 1];
+    while (!limit || curr <= limit) {
+        yield curr;
+        [prev, curr] = [curr, prev + curr];
+    }
+}
+
+// bounded by upper limit 10
+for (const n of fibonacci(10)) {
+    console.log(n);
+}
+
+// generator without an upper bound limit
+for (const n of fibonacci()) {
+    console.log(n);
+    if (n > 10000) break;
+}
+
+// manually iterating
+let fibGen = fibonacci();
+console.log(fibGen.next().value); // 1
+console.log(fibGen.next().value); // 1
+console.log(fibGen.next().value); // 2
+console.log(fibGen.next().value); // 3
+console.log(fibGen.next().value); // 5
+console.log(fibGen.next().value); // 8
+
+// picks up from where you stopped
+for (const n of fibGen) {
+    console.log(n);
+    if (n > 10000) break;
+}
+
+R[edit]
+The iterators package can be used for this purpose.[15][16]
+
+library(iterators)
+
+# Example ------------------
+abc <- iter(c('a','b','c'))
+nextElem(abc)
+
+Smalltalk[edit]
+Example in Pharo Smalltalk:
+The Golden ratio generator below returns to each invocation 'goldenRatio next' a better approximation to the Golden Ratio. 
+
+goldenRatio := Generator on: [ :g | | x y z r | 
+	x := 0.
+	y := 1.
+	[  
+		z := x + y.
+		r := (z / y) asFloat.
+		x := y.
+		y := z.
+		g yield: r
+	] repeat	
+].
+
+goldenRatio next.
+
+The expression below returns the next 10 approximations.
+
+Character cr join: ((1 to: 10) collect: [ :dummy | ratio next ]).
+
+See more in A hidden gem in Pharo: Generator.
+
+See also[edit]
+List comprehension for another construct that generates a sequence of values
+Iterator for the concept of producing a list one element at a time
+Iteratee for an alternative
+Lazy evaluation for producing values when needed
+Corecursion for potentially infinite data by recursion instead of yield
+Coroutine for even more generalization from subroutine
+Continuation for generalization of control flow
+Notes[edit]
+
+^ What is the difference between an Iterator and a Generator?
+
+^ Kiselyov, Oleg (January 2004). "General ways to traverse collections in Scheme".
+
+^ Anthony Ralston (2000). Encyclopedia of computer science. Nature Pub. Group. ISBN 978-1-56159-248-7. Retrieved 11 May 2013.
+
+^ The Icon Programming Language utilizes generators to implement its goal directed evaluation. In Icon, generators can be invoked in contexts outside of the normal looping control structures.
+
+^ Liskov, Barbara (April 1992). "A History of CLU" (PDF). Archived from the original (PDF) on 2003-09-17. Retrieved 2006-01-05.
+
+^ a b 
+Python Enhancement Proposals:
+PEP 255: Simple Generators,
+PEP 289: Generator Expressions,
+PEP 342: Coroutines via Enhanced Generators
+
+^ 
+yield (C# Reference)
+
+^ "PHP: Generators overview - Manual".
+
+^ Liskov, B.; Snyder, A.; Atkinson, R.; Schaffert, C. (1977). "Abstraction mechanisms in CLU". Communications of the ACM. 20 (8): 564–576. CiteSeerX 10.1.1.112.656. doi:10.1145/359763.359789. S2CID 17343380.
+
+^ "Structured Concurrency for C".
+
+^ "Generators in C++". 21 September 2008.
+
+^ "What is the yield keyword used for in C#?". stackoverflow.com. Retrieved 2018-01-01.
+
+^ "Some Details on F# Computation Expressions". Retrieved 2007-12-14.
+
+^ PEP 380 -- Syntax for Delegating to a Subgenerator
+
+^ Generator functions in R
+
+^ "Infinite generators in R". 5 January 2013.
+
+
+References[edit]
+Stephan Murer, Stephen Omohundro, David Stoutamire and Clemens Szyperski: Iteration abstraction in Sather.  ACM Transactions on Programming Languages and Systems, 18(1):1-15 (1996) [1]
+Authority control databases: National 
+France
+BnF data
+Germany
+Israel
+United States
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Generator_(computer_programming)&oldid=1188107527"
+Categories: Programming constructsIteration in programmingHidden categories: Articles needing additional references from July 2007All articles needing additional referencesArticles with BNF identifiersArticles with BNFdata identifiersArticles with GND identifiersArticles with J9U identifiersArticles with LCCN identifiersArticles with example Python (programming language) codeArticles with example Haskell codeArticles with example Ruby codeArticles with example C Sharp codeArticles with example Java codeArticles with example Perl codeArticles with example Tcl codeArticles with example Racket codeArticles with example R code
+
+
+
+
+
+
+ This page was last edited on 3 December 2023, at 10:58 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

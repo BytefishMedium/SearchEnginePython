@@ -1,0 +1,580 @@
+
+
+
+
+Backward compatibility - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Usage
+
+
+
+Toggle Usage subsection
+
+
+
+
+
+1.1In hardware
+
+
+
+
+
+
+
+1.2In software
+
+
+
+
+
+
+
+
+
+2Tradeoffs
+
+
+
+Toggle Tradeoffs subsection
+
+
+
+
+
+2.1Benefits
+
+
+
+
+
+
+
+2.2Costs
+
+
+
+
+
+
+
+
+
+3See also
+
+
+
+
+
+
+
+4References
+
+
+
+
+
+
+
+5External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Backward compatibility
+
+
+
+28 languages
+
+
+
+
+العربيةAzərbaycancaCatalàČeštinaDeutschEestiEspañolEsperantoفارسیFrançais한국어IdoItalianoעבריתҚазақшаNederlands日本語Norsk bokmålPolskiPortuguêsРусскийSimple EnglishSlovenčinaSuomiSvenskaTürkçeУкраїнська中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+		In other projects
+	
+
+
+Wikimedia Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Technological ability to interact with older technologies
+The first model of the Wii features backward compatibility with its predecessor, the GameCube, having the ability to run its discs and use its controllers and memory cards. Later versions of the system removed this feature.
+Backward compatibility (sometimes known as backwards compatibility) is a property of an operating system, software, real-world product, or technology that allows for interoperability with an older legacy system, or with input designed for such a system, especially in telecommunications and computing.
+Modifying a system in a way that does not allow backward compatibility is sometimes called "breaking" backward compatibility.[1] Such breaking usually incurs various types of costs, such as switching cost.
+A complementary concept is forward compatibility. A design that is forward-compatible usually has a roadmap for compatibility with future standards and products.[2]
+
+
+Usage[edit]
+In hardware[edit]
+A simple example of both backward and forward compatibility is the introduction of FM radio in stereo. FM radio was initially mono, with only one audio channel represented by one signal. With the introduction of two-channel stereo FM radio, many listeners had only mono FM receivers. Forward compatibility for mono receivers with stereo signals was achieved by sending the sum of both left and right audio channels in one signal and the difference in another signal. That allows mono FM receivers to receive and decode the sum signal while ignoring the difference signal, which is necessary only for separating the audio channels. Stereo FM receivers can receive a mono signal and decode it without the need for a second signal, and they can separate a sum signal to left and right channels if both sum and difference signals are received. Without the requirement for backward compatibility, a simpler method could have been chosen.[3]
+Full backward compatibility is particularly important in computer instruction set architectures, two of the most successful being the IBM 360/370/390/Zseries families of mainframes, and the Intel x86 family of microprocessors.
+IBM announced the first 360 models in 1964 and has continued to update the series ever since, with migration over the decades from 32-bit register/24-bit addresses to 64-bit registers and addresses.
+Intel announced the first Intel 8086/8088 processors in 1978, again with migrations over the decades from 16-bit to 64-bit. (The 8086/8088, in turn, were designed with easy machine-translatability of programs written for its predecessor in mind, although they were not instruction-set compatible with the 8-bit Intel 8080 processor of 1974. The Zilog Z80, however, was fully backward compatible with the Intel 8080.)
+Fully backward compatible processors can process the same binary executable software instructions as their predecessors, allowing the use of a newer processor without having to acquire new applications or operating systems.[4] Similarly, the success of the Wi-Fi digital communication standard is attributed to its broad forward and backward compatibility; it became more popular than other standards that were not backward compatible.[5]
+
+In software[edit]
+See also: Binary-code compatibility, DLL Hell, and Opaque pointer
+In software development or backward compatibility is a general notion of interoperation between software pieces that will not produce any errors when its functionality is invoked via API.[6] The software is considered stable when its API that is used to invoke functions is stable across different versions.[6] In operating systems upgraded to a newer versions are said to be backward compatible if executable and other files from previous versions will work as usual.[7]
+In compilers backward compatibility may refer to the ability of a compiler of a newer version of the language to accept source code of programs or data that worked under the previous version.[8]
+A data format is said to be backward compatible when a newer version of program that can open it opens it without errors just like its predecessor.[9]
+
+Tradeoffs[edit]
+This section focuses only on one specialized aspect of the subject. Please help improve this article by adding general information and discuss at the talk page. (May 2023)
+Benefits[edit]
+There are several incentives for a company to implement backward compatibility. Backward compatibility can be used to preserve older software that would have otherwise been lost when a manufacturer decides to stop supporting older hardware. Classic video games are a common example used when discussing the value of supporting older software. The cultural impact of video games is a large part of their continued success, and some believe ignoring backward compatibility would cause these titles to disappear.[10] Backward compatibility also acts as a selling point for new hardware, as an existing player base can more affordably upgrade to subsequent generations of a console. This also helps to make up for  lack of content at the launch of new systems, as users can pull from the previous console's library of games while developers transition to the new hardware.[11] Moreover, studies in the mid-1990s found that even consumers who never play older games after purchasing a new system consider backward compatibility a highly desirable feature, valuing the mere ability to continue to play an existing collection of games even if they choose never to do so.[12] Backward compatibility with the original PlayStation (PS) software discs and peripherals is considered to have been a key selling point for the PlayStation 2 (PS2) during its early months on the market.[13]
+Despite not being included at launch, Microsoft slowly incorporated backward compatibility for select titles on the Xbox One several years into its product life cycle.[14] Players have racked up over a billion hours with backward-compatible games on Xbox, and the newest generation of consoles such as PlayStation 5[15] and Xbox Series X/S also support this feature. A large part of the success and implementation of this feature is that the hardware within newer generation consoles is both powerful and similar enough to legacy systems that older titles can be broken down and re-configured to run on the Xbox One.[16] This program has proven incredibly popular with Xbox players and goes against the recent trend of studio made remasters of classic titles, creating what some believe to be an important shift in console maker's strategies.[14]
+
+Costs[edit]
+The monetary costs of supporting old software is considered a large drawback to the usage of backward compatibility.[11][12] The associated costs of backward compatibility are a larger bill of materials if hardware is required to support the legacy systems; increased complexity of the product that may lead to longer time to market, technological hindrances, and slowing innovation; and increased expectations from users in terms of compatibility.[1] Because of this, several console manufacturers phased out backward compatibility toward the end of the console generation in order to reduce cost and briefly reinvigorate sales before the arrival of newer hardware.[17]
+It is possible to bypass some of the hardware costs. In earlier versions of the PS2, a CPU core identical to that of the PS serves a dual purpose, either as the main CPU in PS mode, or upclocking itself to offload I/O in PS2 mode. Such an approach can backfire, however, as in the case of the Super Nintendo Entertainment System (Super NES), which opted for the peculiar 65C816 over more popular 16-bit microprocessors on the basis that it would allow easy compatibility with the original NES, but NES compatibility ultimately did not prove workable once the rest of the Super NES's architecture was designed.[18]
+Backward compatibility introduces the risk that developers will favor developing games that are compatible with both the old and new systems, since this gives them a larger base of potential buyers, resulting in a dearth of software which uses the advanced features of the new system.[12]
+With the decline in physical game sales and the rise of digital storefronts and downloads, some believe backward compatibility will soon be obsolete.[17] Many game studios are re-mastering and re-releasing their most popular titles by improving the quality of graphics and adding new content. These remasters have found success by appealing both to nostalgic players who remember enjoying the original versions, and to newcomers who may not have had the original system it was released on. For most consumers, digital remasters are more appealing than hanging on to obsolete hardware. For the manufacturers of consoles, digital re-releases of classic titles are a large benefit. It not only removes the financial drawbacks of supporting older hardware, but also shifts all of the costs of updating software to the developers. The manufacturer gets a new addition to their system with name recognition, and the studio does not have to develop a new game.
+
+See also[edit]
+
+Bug compatibility, backward compatibility that maintains known flaws
+Compatibility mode
+Computer compatibility
+Deprecation
+Downgrade attack
+Emulator
+Flag day (computing)
+Legacy mode
+List of backward-compatible games for Xbox One and Series X/S
+List of Xbox games compatible with Xbox 360
+ReactOS
+Shim (computing)
+Software regression
+Vendor lock-in
+References[edit]
+
+
+^ a b Belleflamme, Paul; Peitz, Martin (2010), "Strategies in standard wars", Industrial Organization: Markets and Strategies, Cambridge University Press, ISBN 9780521862998
+
+^ Zeldman, Jeffrey (2006). Designing with Web Standards. Peachpit Press. pp. 15–16. ISBN 0-321-38555-1.
+
+^ Winder, Steve; Carr, Joseph (2002), Newnes Radio and RF Engineering Pocket Book (3 ed.), Newnes, pp. 121–123, ISBN 9780080497471
+
+^ Naresh Jotwani (2009), Computer System Organization, Tata McGraw-Hill Education, pp. 320–324, ISBN 9781259081217
+
+^ Perahia, Eldad; Stacey, Robert (2013), "Foreword", Next Generation Wireless LANs: 802.11n and 802.11ac, Cambridge University Press, ISBN 9781107016767
+
+^ a b etc1M (2019-12-18). "Backward Compatibility in Software Development: What and Why". Red Star IT. Retrieved 2023-05-13.
+
+^ "What is Backward Compatible?". Computer Hope. December 31, 2022. Retrieved 2023-05-13.
+
+^ Kay, Michael (2004). XSLT 2.0 Programmer's Reference. Wiley. p. 123. ISBN 0-7645-6909-0. forward compatibility.
+
+^ Bos, Bert (2003). "Backwards Compatibility". What is a Good Standard?. Archived from the original on March 11, 2016. Retrieved July 12, 2016.
+
+^ "Backwards Compatibility is the Only Way Forward". PopMatters. 2015-04-10. Archived from the original on 2019-09-29. Retrieved 2019-11-05.
+
+^ a b "Understanding Backwards Compatibility and How It Benefits Gamers". Tech Magazine. 2018-08-14. Archived from the original on 2019-10-02. Retrieved 2019-11-05.
+
+^ a b c "Backward Compatibility for PlayStation 2?". Next Generation. No. 39. Imagine Media. March 1998. p. 22.
+
+^ "Sony Playstation 2(PS2)". Pnpgames. Archived from the original on July 13, 2020. Retrieved March 15, 2020.
+
+^ a b "Remasters aren't needed if the PS5 is completely backward compatible". Android Central. 2019-09-24. Archived from the original on 2019-11-10. Retrieved 2019-11-10.
+
+^ Wales, Matt (March 20, 2020). "Sony clarifies "overwhelming majority" of PS4 games will be backward compatible on PS5". Eurogamer. Archived from the original on April 6, 2020. Retrieved April 8, 2020.
+
+^ Leadbetter, Richard (2017-12-09). "Xbox One Backwards Compatibility: How Does It Actually Work?". Eurogamer. Archived from the original on 2019-01-14. Retrieved 2019-11-10.
+
+^ a b Stein, Scott. "Game consoles and the death of backward-compatibility: Why we don't care". CNET. Archived from the original on 2019-09-29. Retrieved 2019-11-05.
+
+^ "The SNES Was Supposed to be Backwards Compatible?". Gaming Reinvented. 2015-08-10. Archived from the original on 2022-02-24. Retrieved 2022-02-24.
+
+
+External links[edit]
+ Media related to Backward compatibility at Wikimedia Commons
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Backward_compatibility&oldid=1208235406"
+Categories: Backward compatibilityInteroperabilityHidden categories: Articles with short descriptionShort description is different from WikidataWikipedia articles needing context from May 2023Commons category link from Wikidata
+
+
+
+
+
+
+ This page was last edited on 16 February 2024, at 21:10 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

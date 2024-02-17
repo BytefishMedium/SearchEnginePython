@@ -1,0 +1,614 @@
+
+
+
+
+Arbitrary code execution - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Vulnerability types
+
+
+
+
+
+
+
+2Methods
+
+
+
+Toggle Methods subsection
+
+
+
+
+
+2.1Combining with privilege escalation
+
+
+
+
+
+
+
+
+
+3Examples
+
+
+
+
+
+
+
+4See also
+
+
+
+
+
+
+
+5References
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Arbitrary code execution
+
+
+
+16 languages
+
+
+
+
+DeutschEspañolفارسیFrançais한국어ItalianoLombardമലയാളം日本語PortuguêsРусскийSimple EnglishکوردیTürkçe粵語中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+(Redirected from Remote code execution)
+Cyber attack where any code can be run
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed.Find sources: "Arbitrary code execution" – news · newspapers · books · scholar · JSTOR (March 2019) (Learn how and when to remove this template message)
+"Remote code execution" redirects here. For the science fiction novel, see RCE - Remote Code Execution.
+In computer security, arbitrary code execution (ACE) is an attacker's ability to run any commands or code of the attacker's choice on a target machine or in a target process.[1] An arbitrary code execution vulnerability is a security flaw in software or hardware allowing arbitrary code execution. A program that is designed to exploit such a vulnerability is called an arbitrary code execution exploit. The ability to trigger arbitrary code execution over a network (especially via a wide-area network such as the Internet) is often referred to as remote code execution (RCE).
+Arbitrary code execution signifies that if someone sends a specially designed set of data to a computer, they can make it do whatever they want. Even though this particular weakness may not cause actual problems in the real world, researchers have discussed whether it suggests a natural tendency for computers to have vulnerabilities that allow unauthorized code execution.[2]
+
+
+Vulnerability types[edit]
+There are a number of classes of vulnerability that can lead to an attacker's ability to execute arbitrary commands or code. For example:
+
+Memory safety vulnerabilities such as buffer overflows or over-reads.
+Deserialization vulnerabilities[3]
+Type confusion vulnerabilities[4][5]
+GNU LDD arbitrary code execution[6]
+Methods[edit]
+Arbitrary code execution is commonly achieved through control over the instruction pointer (such as a jump or a branch) of a running process. The instruction pointer points to the next instruction in the process that will be executed. Control over the value of the instruction pointer therefore gives control over which instruction is executed next. In order to execute arbitrary code, many exploits inject code into the process (for example by sending input to it which gets stored in an input buffer in RAM) and use a vulnerability to change the instruction pointer to have it point to the injected code. The injected code will then automatically get executed. This type of attack exploits the fact that most computers (which use a Von Neumann architecture) do not make a general distinction between code and data,[7][8] so that malicious code can be camouflaged as harmless input data. Many newer CPUs have mechanisms to make this harder, such as a no-execute bit.[9][10]
+
+Combining with privilege escalation[edit]
+Main article: Privilege escalation
+On its own, an arbitrary code execution exploit will give the attacker the same privileges as the target process that is vulnerable.[11] For example, if exploiting a flaw in a web browser, an attacker could act as the user, performing actions such as modifying personal computer files or accessing banking information, but would not be able to perform system-level actions (unless the user in question also had that access).
+To work around this, once an attacker can execute arbitrary code on a target, there is often an attempt at a privilege escalation exploit in order to gain additional control. This may involve the kernel itself or an account such as Administrator, SYSTEM, or root. With or without this enhanced control, exploits have the potential to do severe damage or turn the computer into a zombie—but privilege escalation helps with hiding the attack from the legitimate administrator of the system.
+
+Examples[edit]
+Retrogaming hobbyists have managed to find vulnerabilities in classic video games that allow them to execute arbitrary code, usually using a precise sequence of button inputs in a tool-assisted superplay to cause a buffer overflow, allowing them to write to protected memory. At Awesome Games Done Quick 2014, a group of speedrunning enthusiasts managed to code and run versions of the games Pong and Snake in a copy of Super Mario World[12] by utilizing a buffer overflow to write arbitrary code to memory.
+On June 12, 2018, Bosnian security researcher Jean-Yves Avenard of Mozilla discovered an ACE vulnerability in Windows 10.[13]
+On May 1, 2018, a security researcher discovered an ACE vulnerability in the 7-Zip file archiver.[14]
+PHP has been the subject of numerous ACE vulnerabilities.[15][16][17]
+On December 9, 2021, a RCE vulnerability called "Log4Shell" was discovered in popular logging framework Log4j, affecting many services including iCloud, Minecraft: Java Edition and Steam, and characterized as "the single biggest, most critical vulnerability of the last decade".[18][19]
+
+See also[edit]
+Computer security
+BlueKeep
+Follina (security vulnerability)
+References[edit]
+
+
+^ Team, KernelCare (25 January 2021). "Remote code execution attack: what it is, how to protect your systems". blog.kernelcare.com. Retrieved 2021-09-22.
+
+^ Johnson, Pontus (2021). "Intrinsic Propensity for Vulnerability in Computers? Arbitrary Code Execution in the Universal Turing Machine". arXiv:2105.02124. {{cite journal}}: Cite journal requires |journal= (help)
+
+^ "Deserialization of untrusted data". owasp.org.
+
+^ "Understanding type confusion vulnerabilities: CVE-2015-0336". microsoft.com. 18 June 2015.
+
+^ "Exploiting CVE-2018-19134: remote code execution through type confusion in Ghostscript". lgtm.com. 5 February 2019.
+
+^ "LDD arbitrary code execution".
+
+^ Gilreath, William F.; Laplante, Phillip A. (2003-03-31). Computer Architecture: A Minimalist Perspective. Springer Science & Business Media. ISBN 9781402074165.
+
+^ Reilly, Edwin D. (2003). Milestones in Computer Science and Information Technology. Greenwood Publishing Group. p. 245. ISBN 9781573565219.
+
+^ "Tech Insight: Execute Disable Bit (XD-Bit)" (PDF). Toshiba Polska. 2005. Archived from the original (PDF) on 2018-10-31. Retrieved 2018-10-31.
+
+^ "AMD has you covered" (PDF). AMD. 2012. Archived from the original (PDF) on Mar 5, 2019.
+
+^ "Remote Code Execution - an overview". ScienceDirect Topics. Retrieved 2021-12-05.
+
+^ Orland, Kyle (14 January 2014). "How an emulator-fueled robot reprogrammed Super Mario World on the fly". Ars Technica. Retrieved 27 July 2016.
+
+^ "Microsoft Windows CVE-2018-8213 Arbitrary Code Execution Vulnerability". Symantec. Archived from the original on Oct 31, 2018. Retrieved 2018-10-31.
+
+^ "A Vulnerability in 7-Zip Could Allow for Arbitrary Code Execution". New York State Office of Information Technology Services. Archived from the original on 2021-08-15. Retrieved 2018-10-31.
+
+^ "NVD - CVE-2017-12934". nvd.nist.gov. Retrieved 2018-10-31.
+
+^ "File Operation Induced Unserialization via the "phar://" Stream Wrapper" (PDF). Secarma Labs. 2018.
+
+^ "NVD - CVE-2017-12933". nvd.nist.gov. Retrieved 2018-10-31.
+
+^ "Zeroday in ubiquitous Log4j tool poses a grave threat to the Internet". Ars Technica. December 9, 2021. Retrieved December 11, 2021.
+
+^ "Recently uncovered software flaw 'most critical vulnerability of the last decade'". The Guardian. 11 December 2021. Retrieved December 11, 2021.
+
+
+vteInformation securityRelated security categories
+Computer security
+Automotive security
+Cybercrime
+Cybersex trafficking
+Computer fraud
+Cybergeddon
+Cyberterrorism
+Cyberwarfare
+Electromagnetic warfare
+Information warfare
+Internet security
+Mobile security
+Network security
+Copy protection
+Digital rights management
+vectorial versionThreats
+Adware
+Advanced persistent threat
+Arbitrary code execution
+Backdoors
+Hardware backdoors
+Code injection
+Crimeware
+Cross-site scripting
+Cross-site leaks
+DOM clobbering
+History sniffing
+Cryptojacking
+Botnets
+Data breach
+Drive-by download
+Browser Helper Objects
+Viruses
+Data scraping
+Denial-of-service attack
+Eavesdropping
+Email fraud
+Email spoofing
+Exploits
+Hacktivism
+Keystroke loggers
+Logic bombs
+Time bombs
+Fork bombs
+Zip bombs
+Fraudulent dialers
+Malware
+Payload
+Phishing
+Voice
+Polymorphic engine
+Privilege escalation
+Ransomware
+Rootkits
+Scareware
+Shellcode
+Spamming
+Social engineering
+Spyware
+Software bugs
+Trojan horses
+Hardware Trojans
+Remote access trojans
+Vulnerability
+Web shells
+Wiper
+Worms
+SQL injection
+Rogue security software
+Zombie
+Defenses
+Application security
+Secure coding
+Secure by default
+Secure by design
+Misuse case
+Computer access control
+Authentication
+Multi-factor authentication
+Authorization
+Computer security software
+Antivirus software
+Security-focused operating system
+Data-centric security
+Obfuscation (software)
+Data masking
+Encryption
+Firewall
+Intrusion detection system
+Host-based intrusion detection system (HIDS)
+Anomaly detection
+Security information and event management (SIEM)
+Mobile secure gateway
+Runtime application self-protection
+Site isolation
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Arbitrary_code_execution&oldid=1196470627"
+Category: Injection exploitsHidden categories: CS1 errors: missing periodicalArticles with short descriptionShort description is different from WikidataArticles needing additional references from March 2019All articles needing additional references
+
+
+
+
+
+
+ This page was last edited on 17 January 2024, at 16:27 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

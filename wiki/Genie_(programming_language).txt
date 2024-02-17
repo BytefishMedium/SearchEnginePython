@@ -1,0 +1,718 @@
+
+
+
+
+Genie (programming language) - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Code samples
+
+
+
+Toggle Code samples subsection
+
+
+
+
+
+1.1"Hello World"
+
+
+
+
+
+
+
+1.2Objects
+
+
+
+
+
+
+
+
+
+2Criticism
+
+
+
+
+
+
+
+3References
+
+
+
+
+
+
+
+4External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Genie (programming language)
+
+
+
+6 languages
+
+
+
+
+EspañolفارسیമലയാളംBahasa Melayu粵語中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Not to be confused with ALGOL 68 Genie, or Geany.
+GenieParadigmmulti-paradigm: imperative, structured, object-orientedDesigned byJamie McCrackenFirst appeared2008; 16 years ago (2008)Stable release0.52.3
+   /    May 1, 2021; 2 years ago (2021-05-01)
+Typing disciplinestatic, strongOSCross-platform (every platform supported by GLib)LicenseLGPLv2.1+Filename extensions.gsWebsitewiki.gnome.org/Projects/Genie Influenced byPython, Boo, D, Object Pascal
+
+Free and open-source software portal
+Genie is a modern, general-purpose high-level programming language in development since 2008.[1] It was designed as an alternative, simpler and cleaner dialect for the Vala compiler, while preserving the same functionality of the Vala language. Genie uses the same compiler and libraries as Vala; the two can indeed be used alongside each other.[2] The differences are only syntactic.
+Genie's syntax is derived from numerous modern languages like Python, Boo, D and Delphi. In the vein of Python, Genie uses indentation rather than explicit block delimiters (like, for example, curly brackets) to delimit blocks.
+Like Vala, Genie uses the GObject type system to create classes and interfaces declared in Genie source code, without imposing additional runtime requirements (i.e., unlike Python, Java or C#, it does not require a virtual machine).
+Genie allows access to C libraries, especially those based in GObject (like GTK), without using a different application binary interface (ABI). During compilation, the code is first translated to C source and header files, which are then compiled to platform-specific machine code using any available C compiler like GCC, thus allowing cross-platform software development.
+Programs developed in Vala and Genie do not depend on the GNOME Desktop Environment, usually requiring only GLib.
+
+
+Code samples[edit]
+"Hello World"[edit]
+This sample explicitly uses four spaces for indentation.
+
+[indent=4]
+
+init
+    print "Hello, world!"
+
+Objects[edit]
+With no explicit indentation declaration, the default is tabs.
+
+class Sample
+
+	def run()
+		stdout.printf("Hello, world! \n ")
+
+init
+	var sample = new Sample()
+	sample.run() 
+
+Criticism[edit]
+This section has multiple issues. Please help improve it or discuss these issues on the talk page. (Learn how and when to remove these template messages)
+
+The neutrality of this section is disputed. Relevant discussion may be found on the talk page. Please do not remove this message until conditions to do so are met. (March 2023) (Learn how and when to remove this template message)
+This section needs to be updated. Please help update this article to reflect recent events or newly available information. (June 2019)
+
+ (Learn how and when to remove this template message)
+As of 2013[update], Genie "for"  loops are inclusive, which makes handling of empty lists cumbersome:[3]
+
+var l = new list of string
+if l.size > 0
+    for var i = 0 to (l.size - 1)
+        print l.@get(i)
+
+However, one can also iterate over lists via the for-in construct. This is easy and straightforward:[4]
+
+var l = new list of string
+for s in l:
+   print s
+
+References[edit]
+
+
+^ Jamie McCracken (2008). "Introducing Genie - the smart programming language". Archived from the original on 2011-08-18.
+
+^ Using Genie and Vala together
+
+^ Tal Liron (11 January 2013). Genie.  Event occurs at 32:29. Archived from the original on 2021-12-20.
+
+^ "Projects/Genie - GNOME Wiki!".
+
+
+External links[edit]
+Official website 
+Barry Kauler's page on Genie at the Wayback Machine (archived February 17, 2010)
+Using the Genie programming language under Puppy Linux
+Puppy Linux: Vala and Genie Programming
+API Documentation
+search github projects written in genie
+vteProgramming languages
+Comparison
+Timeline
+History
+
+Ada
+ALGOL
+APL
+ArkTS
+Assembly
+BASIC
+C
+C++
+C#
+Classic Visual Basic
+COBOL
+Erlang
+Forth
+Fortran
+Go
+Haskell
+Java
+JavaScript
+Julia
+Kotlin
+Lisp
+Lua
+MATLAB
+ML
+Object Pascal
+Pascal
+Perl
+PHP
+Prolog
+Python
+R
+Ruby
+Rust
+SQL
+Scratch
+Shell
+Simula
+Smalltalk
+Swift
+Visual Basic
+more...
+
+ Lists: Alphabetical
+Categorical
+Generational
+Non-English-based
+ Category
+
+vteGNOMECore Applications
+Boxes
+Calculator
+Calendar
+Character Map
+Dictionary
+Disks
+Evince
+Files
+Loupe
+Text Editor
+Software
+Snapshot
+Terminal
+Videos
+Web
+ExtrasDevelopment
+Anjuta
+Builder
+Glade Interface Designer
+Meld
+GNOME Devhelp
+Nemiver
+Geany
+Gtranslator
+Office
+AbiWord
+Dia
+Evolution
+GNOME LaTeX
+Gnumeric
+OCRFeeder
+Graphics
+F-Spot
+GIMP
+gThumb
+Inkscape
+Shotwell
+Simple Scan
+Internet
+Balsa
+Empathy
+Ekiga
+Geary
+GNOME Connections
+GNOME Fractal
+Gobby
+Jami
+Transmission-gtk
+Media
+Banshee
+EasyTag
+Pitivi
+Rhythmbox
+Sound Juicer
+SoundConverter
+sushi
+Games
+GNOME Games
+Chess
+Mines
+gbrainy
+PyChess
+Utilities
+Archive Manager
+Brasero
+dconf-editor
+gedit
+gnote
+GParted
+Seahorse
+Tomboy
+Yelp
+ComponentsUser interfaceGNOME 40
+Mutter on GSK
+…
+GNOME 3
+Client-Side Decoration
+Cantarell
+GDM
+Mutter
+GNOME Shell
+Tango Desktop Project
+Orca
+GNOME 2
+Metacity
+GNOME Panel
+Clearlooks
+Other
+Adwaita
+Cinnamon
+MATE
+Diodon
+GNOME Do
+Avant Window Navigator
+GNOME Base
+GTK
+GDK
+GSK
+ATK
+Clutter
+Pango
+GLib
+GObject
+GIO
+IBus
+Other
+dconf
+Genie
+Keyring
+GNOME-DB
+GVfs
+GnomeVFS
+Librsvg
+Tracker
+Vala
+libxslt
+libxml2
+freedesktop.org
+AppStream
+D-Bus
+GStreamer
+NetworkManager
+Poppler
+Wayland
+X.Org Server
+PulseAudio
+PackageKit
+HarfBuzz
+Cairo
+Community
+GNOME Foundation
+GUADEC
+The GNOME Project
+Outreachy
+People
+Miguel de Icaza
+Luis Villa
+Havoc Pennington
+Karen Sandler
+
+ Linux portal
+ Free and open-source software portal
+ Category
+ Commons
+ WikiProject
+
+
+
+This programming-language-related article is a stub. You can help Wikipedia by expanding it.vte
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Genie_(programming_language)&oldid=1161389577"
+Categories: 2008 softwareCross-platform free softwareGTK language bindingsHigh-level programming languagesObject-oriented programming languagesProgramming languages created in 2008Software using the LGPL licenseStatically typed programming languagesProgramming language topic stubsHidden categories: Wikipedia neutral point of view disputes from March 2023All Wikipedia neutral point of view disputesWikipedia articles in need of updating from June 2019All Wikipedia articles in need of updatingArticles with multiple maintenance issuesArticles containing potentially dated statements from 2013All articles containing potentially dated statementsWebarchive template wayback linksAll stub articles
+
+
+
+
+
+
+ This page was last edited on 22 June 2023, at 11:03 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

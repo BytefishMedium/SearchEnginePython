@@ -1,0 +1,468 @@
+
+
+
+
+Alex Martelli - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Bibliography
+
+
+
+
+
+
+
+2References
+
+
+
+
+
+
+
+3External resources
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Alex Martelli
+
+
+
+2 languages
+
+
+
+
+EspañolItaliano
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+		In other projects
+	
+
+
+Wikimedia Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+This biography of a living person needs additional citations for verification. Please help by adding reliable sources. Contentious material about living persons that is unsourced or poorly sourced must be removed immediately from the article and its talk page, especially if potentially libelous.Find sources: "Alex Martelli" – news · newspapers · books · scholar · JSTOR (February 2022) (Learn how and when to remove this template message)
+Alex MartelliAlex Martelli in Argentina (Cafeconf 2006)Born (1955-10-05) October 5, 1955 (age 68)Occupationcomputer engineerKnown forcontributions to the Python community
+Alex Martelli (born October 5, 1955) is an Italian computer engineer and Fellow of the Python Software Foundation. Since early 2005, he worked for Google, Inc. in Mountain View, California, for the first few years as "Über Tech Lead," then as "Senior Staff Engineer," lastly in charge of "long tail" community support for Google Cloud Platform. He retired in August, 2023.
+He holds a Laurea in Electrical Engineering from Bologna University (1980); he is the author of Python in a Nutshell (recently out in a fourth edition, which Martelli wrote with three co-authors), co-editor of the Python Cookbook's first two editions, and has written other (mostly Python-related) materials. Martelli won the 2002 Activators' Choice Award, and the 2006 Frank Willison award for outstanding contributions to the Python community.
+Before joining Google, Martelli spent a year designing computer chips with Texas Instruments; eight years with IBM Research, gradually shifting from hardware to software, and winning three Outstanding Technical Achievement Awards; 12 as Senior Software Consultant at think3, Inc., developing libraries, network protocols, GUI engines, event frameworks, and web access frontends; and three more as a freelance consultant, working mostly for Open End AB, a Python-centered software house (formerly known as Strakt AB) located in Gothenburg, Sweden.
+He has taught courses on programming, development methods, object-oriented design, cloud computing, and numerical computing, at Ferrara University and other schools. Martelli was also the keynote speaker for the 2008 SciPy Conference, and various editions of Pycon APAC and Pycon Italia conferences.
+
+Bibliography[edit]
+Martelli, Alex (July 2006). Python in a Nutshell. O'Reilly Media. ISBN 0-596-10046-9.
+Martelli, Alex; David Ascher; Anna Ravenscroft (March 2005). Python Cookbook. O'Reilly Media. ISBN 0-596-00797-3.
+References[edit]
+This article is based on autobiographical material at http://www.aleax.it/bio.txt, released as GFDL.
+External resources[edit]
+Much of Martelli's writing can be found at his personal home page.
+Introductory Lecture on Python on YouTube
+Stack Overflow profile
+Authority control databases International
+ISNI
+VIAF
+National
+Norway
+France
+BnF data
+Germany
+Israel
+United States
+Japan
+Czech Republic
+Netherlands
+Poland
+Academics
+CiNii
+Other
+IdRef
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Alex_Martelli&oldid=1187701072"
+Categories: 1955 birthsLiving peopleGoogle employeesComputer programmersItalian computer scientistsEngineers from BolognaPython (programming language) peopleItalian emigrants to the United StatesHidden categories: BLP articles lacking sources from February 2022All BLP articles lacking sourcesArticles with hCardsArticles with ISNI identifiersArticles with VIAF identifiersArticles with BIBSYS identifiersArticles with BNF identifiersArticles with BNFdata identifiersArticles with GND identifiersArticles with J9U identifiersArticles with LCCN identifiersArticles with NDL identifiersArticles with NKC identifiersArticles with NTA identifiersArticles with PLWABN identifiersArticles with CINII identifiersArticles with SUDOC identifiers
+
+
+
+
+
+
+ This page was last edited on 30 November 2023, at 22:31 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

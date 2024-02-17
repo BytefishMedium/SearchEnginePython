@@ -1,0 +1,495 @@
+
+
+
+
+End-of-life product - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Product support
+
+
+
+
+
+
+
+2Computing
+
+
+
+
+
+
+
+3See also
+
+
+
+
+
+
+
+4References
+
+
+
+
+
+
+
+5Further reading
+
+
+
+
+
+
+
+6External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+End-of-life product
+
+
+
+9 languages
+
+
+
+
+العربيةCatalàDanskDeutschFrançais日本語PortuguêsРусский中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Product lifecycle management
+"End-of-sale" redirects here. For the discount sale of inventory by retail or wholesale, see Closeout (sale).
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed.Find sources: "End-of-life product" – news · newspapers · books · scholar · JSTOR (August 2014) (Learn how and when to remove this template message)
+Milestones in a product life cycle: general availability (GA), end of life announcement (EOLA), last order date (LOD), and end-of-life (EOL)
+An end-of-life product (EOL product) is a product at the end of the product lifecycle which prevents users from receiving updates, indicating that the product is at the end of its useful life (from the vendor's point of view). At this stage, a vendor stops the marketing, selling, or provisioning of parts, services, or software updates for the product. The vendor may simply intend to limit or end support for the product. In the specific case of product sales, a vendor may employ the more specific term "end-of-sale" ("EOS"). All users can continue to access discontinued products, but cannot receive security updates and technical support. The time-frame after the last production date depends on the product and relates to the expected product lifetime from a customer's point of view.  Different lifetime examples include toys from fast food chains (weeks or months), mobile phones (3 years) and cars (10 years).[citation needed]
+
+
+Product support[edit]
+Product support during EOL varies by product. For hardware with an expected lifetime of 10 years after production ends, the support includes spare parts, technical support and service. Spare-part lifetimes are price-driven due to increasing production costs, as high-volume production sites are often closed when series production ends. Manufacturers may also continue to offer parts and services even when it is not profitable, to demonstrate good faith and to retain a reputation of durability. Minimum service lifetimes are also mandated by law for some products in some jurisdictions. Alternatively, some producers may discontinue maintenance of a product in order to force customers to upgrade to newer products.
+
+Computing[edit]
+In the computing arena, the concept of end-of-life has significance in the production, supportability and purchase of software and hardware products. For example, Microsoft marked Windows 98 for end-of-life on June 30, 2006. Software produced after that date may not work for it. Microsoft's product Office 2007 (released on November 30, 2006), for instance, is not installable on Windows Me or any prior versions of Windows. Depending on the vendor, end-of-life may differ from end of service life, which has the added distinction that a vendor of systems or software will no longer provide maintenance, troubleshooting or other support.[1] Such software which is abandoned service-wise by the original developers is also called abandonware. Sometimes, software vendors hand over software on end-of-life, end-of-sale or end-of-service to the user community, to allow them to provide service and further upgrades themselves.[2][3][4] Notable examples are the web browser Netscape Communicator, which was released in 1998 by Netscape Communications under an open-source license to the public,[5][6] and the office suite StarOffice which was released by Sun Microsystems in October 2000 as OpenOffice.org (LibreOffice forked from this).[7] Sometimes, software communities continue the support on end-of-official-support even without endorsement of the original developer, such developments are then called unofficial patches, existing for instance for Windows 98[8][9] or many PC games.[10][11]
+
+See also[edit]
+Backward compatibility
+End of Life Vehicles Directive, a directive of the European Union
+Digital obsolescence
+Planned obsolescence
+Phase-out of fossil fuel vehicles#Unintended side-effects
+Product life cycle management
+Product lifetime
+Product change notification
+Service life
+Software release life cycle
+References[edit]
+
+
+^ "End of Service Life". MidcomData. 5 June 2014. Archived from the original on 2014-07-25. Retrieved 2014-07-16.
+
+^ Bell, John (October 1, 2009). "Opening the Source of Art". Technology Innovation Management Review. Archived from the original on March 30, 2014. Retrieved December 30, 2012. [...]that no further patches to the title would be forthcoming. The community was predictably upset. Instead of giving up on the game, users decided that if Activision wasn't going to fix the bugs, they would. They wanted to save the game by getting Activision to open the source so it could be kept alive beyond the point where Activision lost interest. With some help from members of the development team that were active on fan forums, they were eventually able to convince Activision to release Call to Power II's source code in October of 2003.
+
+^ Largent, Andy (October 8, 2003). "Homeworld Source Code Released". www.insidemacgames.com. Archived from the original on October 12, 2013. Retrieved November 24, 2012. With the release of Homeworld 2 for the PC, Relic Entertainment has decided to give back to their impressive fan community by releasing the source code to the original Homeworld.
+
+^ Colayco, Bob (February 6, 2004). "Microsoft pledges Allegiance to its fanbase". gamespot.com. Archived from the original on December 10, 2013. Retrieved July 22, 2011. The release of the source code came in response to the enthusiasm of Allegiance's small-but-dedicated fanbase. Microsoft's Joel Dehlin commented that the development team has "been amazed at the level to which some of the Allegiance fans have remained hard-core. We're astounded at the progress that has been made at creating new factions, hosting new servers, replacing authentication, etc. It seems that Allegiance hasn't really died. With that in mind, we're releasing the Allegiance source code to the community."
+
+^ "Netscape Announces Plans to Make Next-Generation Communicator Source Code Available Free on the Net". Netscape Communications Corporation. January 22, 1998. Archived from the original (Press Release) on April 1, 2007. Bold move to harness creative power of thousands of internet developers; company makes Netscape Navigator and Communicator 4.0 immediately free for all users, seeding market for Enterprise and Netcenter businesses
+
+^ Netscape Communications (April 1, 1999). "Netscape Celebrates First Anniversary of Open Source Software Release To mozilla.org". PRNewswire Services. Archived from the original (Press Release) on March 26, 2014. [...]The organization that manages open source developers working on the next generation of Netscape's browser and communication software. This event marked a historical milestone for the Internet as Netscape became the first major commercial software company to open its source code, a trend that has since been followed by several other corporations. Since the code was first published on the Internet, thousands of individuals and organizations have downloaded it and made hundreds of contributions to the software. Mozilla.org is now celebrating this one-year anniversary with a party Thursday night in San Francisco.
+
+^ Proffitt, Brian (October 13, 2000). "StarOffice Code Released in Largest Open Source Project". linuxtoday.com. Archived from the original on October 16, 2013. Retrieved January 10, 2013. Sun's joint effort with CollabNet kicked into high gear on the OpenOffice Web site at 5 a.m. PST this morning with the release of much of the source code for the upcoming 6.0 version of StarOffice. According to Sun, this release of 9 million lines of code under GPL is the beginning of the largest open source software project ever.
+
+^ Dirscherl, Hans-Christian (November 29, 2005). "Nicht tot zu kriegen: Win 98 Service Pack 2.1" (in German). PCWelt.de. Archived from the original on 2013-10-12. Retrieved 2011-04-06.
+
+^ Kuhbach, Sebastian (August 4, 2005). "Inoffizielles Win98 SE Service Pack - neue Version" (in German). winfuture.de. Archived from the original on 2011-05-02. Retrieved 2011-04-06.
+
+^ Sharkey, Mike (March 14, 2012). "Unofficial Skyrim Patch Fixes Myriad Skyrim Bugs - Fan created uber patch designed to fix Skyrim's many problems". gamespy.com. Archived from the original on 2012-11-19. Retrieved 2012-12-22.
+
+^ Thompson, Michael (October 6, 2009). "Fan-restored KOTOR II content creates refined, expanded game KOTOR II wasn't the most complete Star Wars title ever released, due to an …". arstechnica.com. Archived from the original on 2012-04-22. Retrieved 2013-09-05. After years of development, the cut content has been finally restored and the most of the bugs have been fixed, thanks to a project known as known as the "Restored Content Mod.
+
+
+JEDEC standard EOL : JESD48
+JEDEC standard PCN : JESD46
+Further reading[edit]
+Scharnhorst, W., Althaus, H.-J., Hilty, L. and Jolliet, O.: Environmental assessment of End-of-Life treatment options for an GSM 900 antenna rack, Int J LCA., 11 (6), pp: 426–436. 2006
+Scharnhorst, W., Althaus, H.-J., Classen, M., Jolliet, O. and Hilty, L. M.: End of Life treatment of second generation mobile phone networks: strategies to reduce the environmental impact, Env Imp Ass Rev 25 (5), pp: 540–566. 2005
+External links[edit]
+endoflife.date
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=End-of-life_product&oldid=1189258338"
+Categories: Product expirationSoftware releaseHidden categories: CS1 German-language sources (de)Articles with short descriptionShort description is different from WikidataArticles needing additional references from August 2014All articles needing additional referencesAll articles with unsourced statementsArticles with unsourced statements from November 2020
+
+
+
+
+
+
+ This page was last edited on 10 December 2023, at 19:16 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

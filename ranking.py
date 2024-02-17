@@ -64,7 +64,7 @@ def search(query: str) -> dict[str, float]:
     url_scores = dict(sorted(url_scores.items(), key=lambda item: item[1], reverse=True))
 
     # only need top 10
-    url_scores = dict(list(url_scores.items())[:10])
+    url_scores = dict(list(url_scores.items())[:5])
     return url_scores
 
 if __name__ == "__main__":
@@ -75,7 +75,7 @@ if __name__ == "__main__":
 
     query = "what is python flask"
     result = search(query)
-    print(f"Search result for query:", result)
+    print(f"Search result for '{query}' is: ", result)
 
     # read param from user input and get the urls
     while True:

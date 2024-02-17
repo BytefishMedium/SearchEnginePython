@@ -1,0 +1,583 @@
+
+
+
+
+Extensibility - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Extensible design
+
+
+
+
+
+
+
+2Importance
+
+
+
+
+
+
+
+3Classification of extensibility mechanisms
+
+
+
+Toggle Classification of extensibility mechanisms subsection
+
+
+
+
+
+3.1White-Box
+
+
+
+
+
+3.1.1Open-Box
+
+
+
+
+
+
+
+3.1.2Glass-Box
+
+
+
+
+
+
+
+
+
+3.2Black-Box
+
+
+
+
+
+
+
+3.3Gray-Box
+
+
+
+
+
+
+
+
+
+4Extensibility vs. reusability
+
+
+
+
+
+
+
+5Security
+
+
+
+
+
+
+
+6See also
+
+
+
+
+
+
+
+7References
+
+
+
+
+
+
+
+8External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Extensibility
+
+
+
+7 languages
+
+
+
+
+العربيةFrançaisMagyar日本語Português粵語中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Measure of the capability and required effort to extend a given system's functionality
+For other uses, see Extension (disambiguation).
+This article has multiple issues. Please help improve it or discuss these issues on the talk page. (Learn how and when to remove these template messages)
+
+This article possibly contains original research. Please improve it by verifying the claims made and adding inline citations. Statements consisting only of original research should be removed. (November 2011) (Learn how and when to remove this template message)
+This article or section possibly contains synthesis of material which does not verifiably mention or relate to the main topic. Relevant discussion may be found on the talk page. (November 2011) (Learn how and when to remove this template message)
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed.Find sources: "Extensibility" – news · newspapers · books · scholar · JSTOR (April 2014) (Learn how and when to remove this template message)
+
+ (Learn how and when to remove this template message)
+Extensibility is a software engineering and systems design principle that provides for future growth. Extensibility is a measure of the ability to extend a system and the level of effort required to implement the extension.  Extensions can be through the addition of new functionality or through modification of existing functionality.  The principle provides for enhancements without impairing existing system functions.
+An extensible system is one whose internal structure and dataflow are minimally or not affected by new or modified functionality, for example recompiling or changing the original source code might be unnecessary when changing a system’s behavior, either by the creator or other programmers.[1] Because software systems are long lived and will be modified for new features and added functionalities demanded by users, extensibility enables developers to expand or add to the software’s capabilities and facilitates systematic reuse. Some of its approaches include facilities for allowing users’ own program routines to be inserted and the abilities to define new data types as well as to define new formatting markup tags.[2]
+
+
+Extensible design[edit]
+Extensible design in software engineering is to accept that not everything can be designed in advance. A light software framework which allows for changes is provided instead. Small commands are made to prevent losing the element of extensibility, following the principle of separating work elements into comprehensible units, in order to avoid traditional software development issues including low cohesion and high coupling and allow for continued development. Embracing change is essential to the extensible design, in which additions will be continual. Each chunk of the system will be workable with any changes, and the idea of change through addition is the center of the whole system design.
+Extensible design supports frequent re-prioritization and allows functionality to be implemented in small steps upon request, which are the principles advocated by the Agile methodologies and iterative development. Extensibility imposes fewer and cleaner dependencies during development, as well as reduced coupling and more cohesive abstractions, plus well defined interfaces.[3]
+
+Importance[edit]
+Fickleness lies at the basis of all software because of human phenomena since software is an "evolving entity" which is developed and maintained by human beings, yielding ongoing system changes in software specification and implementation. Components of a software are often developed and deployed by unrelated parties independently. Adaptable software components are necessary since components from external vendors are unlikely to fit into a specific deployment scenario off-the-rack, taking third party users other than the manufacturer into consideration. Many software systems and software product-lines are derived from a base system, which share a common software architecture or sometimes large parts of the functionality and implementation but are possibly equipped with different components that require an extensible base system.[4]
+Building software systems that are independently extensible is an important challenge.
+An independently extensible system not only allows two people to independently develop extensions to the system, but also allows the two extensions to be combined without a global integrity check.[5]
+
+Classification of extensibility mechanisms[edit]
+There are three different forms of software extensibility: white-box extensibility, gray-box extensibility, and black-box extensibility, which are based on what artifacts and the way they are changed.
+
+White-Box[edit]
+Under this form of extensibility, a software system can be extended by modifying the source code, and it is the most flexible and the least restrictive form. There are two sub-forms of extensibility, open-box extensibility and glass-box extensibility, depending on how changes are applied.
+
+Open-Box[edit]
+Changes are performed invasively in open-box extensible systems; i.e. original source code is directly being hacked into. It requires available source code and the modification permitted source code license. Open-box extensibility is most relevant to bug fixing, internal code refactoring, or production of next version of a software product.
+
+Glass-Box[edit]
+Glass-box extensibility (also called architecture driven frameworks) allows a software system to be extended with available source code, but may not allow the code to be modified. Extensions have to be separated from the original system in a way that the original system is not affected. One example of this form of extensibility is object-oriented application frameworks which achieve extensibility typically by using inheritance and dynamic binding.
+
+Black-Box[edit]
+In black-box extensibility (also called data-driven frameworks) no details about a system’s implementation are used for implementing deployments or extensions; only interface specifications are provided. This type of approach is more limited than the various white-box approaches. Black-box extensions are typically achieved through system configuration applications or the use of application-specific scripting languages by defining components interfaces.
+
+Gray-Box[edit]
+Gray-box extensibility is a compromise between a pure white-box and a pure black-box approach, which does not rely fully on the exposure of source code. Programmers could be given the system’s specialization interface which lists all available abstractions for refinement and specifications on how extensions should be developed.[6]
+
+Extensibility vs. reusability[edit]
+Extensibility and reusability have many emphasized properties in common, including low coupling, modularity and high risk elements’ ability to construct for many different software systems, which is motivated by the observation of software systems often sharing common elements. Reusability together with extensibility allows a technology to be transferred to another project with less development and maintenance time, as well as enhanced reliability and consistency.[7]
+
+Security[edit]
+Modern operating systems support extensibility through device drivers and loadable kernel modules.  Many modern applications support extensibility through plug-ins, extension languages, applets, etc.  The trend of increasing extensibility negatively affects software security.[8]
+CGI is one of the primary means by which web servers provide extensibility.  Some people see CGI scripts as "an enormous security hole".[9]
+
+See also[edit]
+Extensible programming
+Polymorphism
+Software metric
+Scalability
+XML
+References[edit]
+
+
+^ Johansson, Niklas, and Anton Löfgren. Designing for Extensibility: An Action Research Study of Maximizing Extensibility by Means of Design Principles. N.p.: n.p., n.d. University of Gothenburg Department of Applied Information Technology, 29 May 2009. Web. 26 Apr. 2014. <https://gupea.ub.gu.se/bitstream/2077/20561/1/gupea_2077_20561_1.pdf>.
+
+^ Rouse, Margaret. "Extensible." SearchSAO. N.p., Mar. 2007. Web. 27 Apr. 2014. <http://searchsoa.techtarget.com/definition/extensible>.
+
+^ Kelly, Allan. "The Philosophy of Extensible Software." ACCU-Professionalism in Programming (2002): Web. 27 Apr. 2014. <http://accu.org/index.php/journals/391>.
+
+^ Zenger, Matthias. "1.2 Characteristics of Extensibility Mechanisms." Programming Language Abstractions for Extensible Software Components. Lausanne: Swiss Federal Institute of Technology, 2004. N. pag. Web. 26 Apr. 2014. <http://zenger.org/papers/thesis.pdf>.
+
+^ 
+Martin Rytter and Bo Nørregaard Jørgensen.
+"Independently Extensible Contexts".
+Published in
+"Software Architecture: 4th European Conference , ECSA 2010, Copenhagen, Denmark, August 23-26, 2010, Proceedings".
+2010.
+p. 327.
+
+^ Zenger, Matthias. "1.3 Classification of Extensibility Mechanisms." Programming Language Abstractions for Extensible Software Components. Lausanne: Swiss Federal Institute of Technology, 2004. N. pag. Web. 26 Apr. 2014.
+
+^ Zenger, Matthias. "1.1.1 Reusability." Programming Language Abstractions for Extensible Software Components. Lausanne: Swiss Federal Institute of Technology, 2004. N. pag. Web. 26 Apr. 2014.
+
+^ 
+Gary McGraw."Software Security: Building Security in".2006.p. 9.
+
+^ Len Bass, Paul Clements, Rick Kazman. "Software Architecture in Practice". 2003. p. 339.
+
+
+External links[edit]
+ The dictionary definition of extensibility at Wiktionary
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Extensibility&oldid=1178032749"
+Category: Software architectureHidden categories: Articles with short descriptionShort description is different from WikidataArticles that may contain original research from November 2011All articles that may contain original researchArticles needing additional references from April 2014All articles needing additional referencesArticles with multiple maintenance issues
+
+
+
+
+
+
+ This page was last edited on 1 October 2023, at 05:46 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

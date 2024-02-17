@@ -1,0 +1,420 @@
+
+
+
+
+Cache poisoning - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1References
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Cache poisoning
+
+
+
+1 language
+
+
+
+
+Čeština
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Not to be confused with cache pollution.
+Cache poisoning refers to a computer security vulnerability where invalid entries can be placed into a cache, which are then assumed to be valid when later used.[1]  Two common varieties are DNS cache poisoning[2] and ARP cache poisoning. Web cache poisoning involves the poisoning of web caches[3] (which has led to security issues in programming languages, including all Python versions at the time in 2021, and expedited security updates[4]). Attacks on other, more specific, caches also exist.[5][6][7]
+
+References[edit]
+
+
+^ "CAPEC-141: Cache Poisoning". CAPEC. Archived from the original on 2021-01-22. Retrieved 2021-01-22.
+
+^ Wu, Hao; Dang, Xianglei; Wang, Lidong; He, Longtao (2016). "Information fusion‐based method for distributed domain name system cache poisoning attack detection and identification". IET Information Security. 10 (1): 37–44. doi:10.1049/iet-ifs.2014.0386. ISSN 1751-8717. S2CID 45091791.
+
+^ Nguyen, Hoai Viet; Iacono, Luigi Lo; Federrath, Hannes (6 November 2019). "Your Cache Has Fallen: Cache-Poisoned Denial-of-Service Attack". Proceedings of the 2019 ACM SIGSAC Conference on Computer and Communications Security. pp. 1915–1936. doi:10.1145/3319535.3354215. ISBN 9781450367479. S2CID 207958900.
+
+^ "CVE - CVE-2021-23336". cve.mitre.org. Retrieved 2023-10-13.
+
+^ Hensler, Christopher; Tague, Patrick (15 May 2019). "Using bluetooth low energy spoofing to dispute device details". Proceedings of the 12th Conference on Security and Privacy in Wireless and Mobile Networks. pp. 340–342. doi:10.1145/3317549.3326321. ISBN 9781450367264. S2CID 160010874.
+
+^ Daswani, Neil; Garcia-Molina, Hector (2004). "Pong-cache poisoning in GUESS". Proceedings of the 11th ACM conference on Computer and communications security. pp. 98–109. doi:10.1145/1030083.1030099. ISBN 1581139616. S2CID 416914.
+
+^ Wang, Dong; Dong, Wei Yu (April 2019). "Attacking Intel UEFI by Using Cache Poisoning". Journal of Physics: Conference Series. 1187 (4): 042072. Bibcode:2019JPhCS1187d2072W. doi:10.1088/1742-6596/1187/4/042072.
+
+
+This computer security article is a stub. You can help Wikipedia by expanding it.vte
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Cache_poisoning&oldid=1179944847"
+Categories: Computer security exploitsCache (computing)Computer security stubsHidden category: All stub articles
+
+
+
+
+
+
+ This page was last edited on 13 October 2023, at 13:36 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

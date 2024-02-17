@@ -10,7 +10,7 @@ HTML_TEMPLATE = '''
 <body>
   <h1>Simple Search Engine</h1>
   <form action="/" method="post">
-    <input type="text" name="query"/>
+    <input type="text" name="query" value="{{query}}"/>
     <input type="submit" value="Search" />
   </form>
   {% if results %}
@@ -34,7 +34,7 @@ def index():
 def search_page():
     query = request.form['query']
     results = search(query)  # get the search results
-    return render_template_string(HTML_TEMPLATE, results=results)
+    return render_template_string(HTML_TEMPLATE, results=results, query=query)
 
 
 if __name__ == '__main__':

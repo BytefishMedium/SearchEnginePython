@@ -1,0 +1,585 @@
+
+
+
+
+Cobra (programming language) - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Features
+
+
+
+
+
+
+
+2Examples
+
+
+
+Toggle Examples subsection
+
+
+
+
+
+2.1Hello World
+
+
+
+
+
+
+
+2.2A simple class
+
+
+
+
+
+
+
+
+
+3References
+
+
+
+
+
+
+
+4External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Cobra (programming language)
+
+
+
+8 languages
+
+
+
+
+العربيةDeutschفارسیFrançaisItalianoമലയാളംРусскийSvenska
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+CobraParadigmMulti-paradigm: object-orientedDesigned byCharles EsterbrookDeveloperCobra Language LLCFirst appeared2006; 18 years ago (2006)Final release0.9.6
+   /    December 23, 2013; 10 years ago (2013-12-23)
+Typing disciplinestrong, static, dynamic, inferredOSMicrosoft .NET, MonoLicenseMITFilename extensions.cobraWebsitecobra-language.comInfluenced byPython, Eiffel, C#, Objective-C
+
+Free and open-source software portal
+Cobra is a discontinued general-purpose, object-oriented programming language.[1] Cobra is designed by Charles Esterbrook, and runs on the Microsoft .NET and Mono platforms.[2] It is strongly influenced by Python, C#, Eiffel, Objective-C, and other programming languages.[3] It supports both static and dynamic typing.[4][5] It has support for unit tests and contracts.[4] It has lambda expressions, closures, list comprehensions, and generators.[6]
+Cobra is an open-source project; it was released under the MIT License on February 29, 2008.[7][8]
+
+
+Features[edit]
+Object-oriented
+
+Namespaces
+Classes, interfaces, structs, extensions, enumerations
+Methods, properties, indexers
+Mixins, extension methods
+Generics, attributes
+Quality control
+
+Contracts, assertions
+Unit tests, docstrings
+Compile-time nil-tracking
+Expressiveness
+
+Static and dynamic binding
+List, dictionary, and set literals
+in and implies operator
+for expressions
+Slicing
+Interpolated strings
+Compile-time type inference
+Lambdas and closures
+General productivity
+
+Exception handling
+Postmortem exception report
+Garbage collection
+Scripting conveniences
+
+Clean syntax
+Dynamic binding
+One-step run
+Shebang line (#!)
+Miscellaneous
+
+Documentation tool (cobra -doc)
+Syntax highlighting tool (cobra -highlight)
+Examples[edit]
+The following examples can be run from a file using cobra <filename>.
+
+Hello World[edit]
+class Hello
+    def main
+        print 'HELLO WORLD'
+
+A simple class[edit]
+class Person
+
+    var _name as String
+    var _age as int
+
+    cue init(name as String, age as int)
+        _name, _age = name, age
+
+    def toString as String is override
+        return 'My name is [_name] and I am [_age] years old.'
+
+References[edit]
+
+
+^ "The Cobra Programming Language". Cobra Language LLC. Retrieved 2012-09-26.
+
+^ Charles Esterbrook (Jan 28, 2008). Lang.NET Symposium 2008 – The Cobra Programming Language. Microsoft. Archived from the original (wmv) on March 26, 2009. Retrieved 2010-08-31.
+
+^ Bridgwater, Adrian (5 March 2008). "Cobra takes a bite at open source". ZDNet UK. Retrieved 2010-08-31.
+
+^ a b Neward, Ted (June 2009). "Reaping the Benefits of Cobra". MSDN Magazine.
+
+^ Erickson, Jonathan (April 2008). "Was George Costanza a Computer Programmer?". Dr. Dobb's Journal.
+
+^ Morris, Richard (April 2010). "Chuck Esterbrook: Geek of the Week". Simple-talk.
+
+^ Krill, Paul (Feb 7, 2008). "Cobra language slithering to open source". InfoWorld. Retrieved 2010-08-31.
+
+^ "The Cobra Programming Language". Cobra Language LLC. Retrieved 2008-02-29.
+
+
+External links[edit]
+Official website
+The Cobra blog by Charles Esterbrook
+Cobra News Index
+vteCommon Language InfrastructureArchitecture
+Application domain
+Code Access Security
+Common Intermediate Language
+instructions
+Common Type System
+Platform Invocation Services
+Virtual Execution System
+Components
+Assembly
+Delegate
+Global Assembly Cache
+Manifest
+Metadata
+Standard Libraries
+ImplementationsMicrosoft
+.NET
+.NET Framework
+.NET Compact Framework
+.NET Micro Framework
+Other
+Mono
+DotGNU
+LanguagesMajor languages
+C#
+Visual Basic
+F#
+PowerShell
+Other
+Axum
+A#
+Boo
+Cobra
+C++/CLI
+IronScheme
+IronPython
+IronRuby
+JScript .NET
+J#
+Nemerle
+Oxygene
+Phalanger
+Q#
+Scala
+Small Basic
+X#
+Comparison
+C# and Java
+C# and Visual Basic .NET
+Java and .NET platforms
+Visual Basic and Visual Basic .NET
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Cobra_(programming_language)&oldid=1208394275"
+Categories: .NET programming languagesObject-oriented programming languagesProgramming languages created in 2006Software using the MIT license
+
+
+
+
+
+
+ This page was last edited on 17 February 2024, at 09:34 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

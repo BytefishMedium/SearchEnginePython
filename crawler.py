@@ -19,9 +19,13 @@ def scrape_wikipedia_page(url):
         return
 
     # save the page to a file
+    # title example: https://en.wikipedia.org/wiki/Python_(programming_language)
+    # to get the title, we can split the url by `/` and get the last part
     title = url.split("/")[-1]
-    with open(f"./wiki/{title}.html", "w") as f:
-        f.write(response.text)
+    with open(f"./wiki/{title}.txt", "w") as f:
+        # extract visible text from the page
+        text = soup.get_text()
+        f.write(text)
 
     # find all the wiki links in the page
     for link in soup.find_all('a', href=True):
@@ -53,4 +57,4 @@ if __name__ == "__main__":
         os.makedirs(folder_name)
 
     # Start scraping
-    scrape_wikipedia(start_url, 500)
+    scrape_wikipedia(start_url, 120)

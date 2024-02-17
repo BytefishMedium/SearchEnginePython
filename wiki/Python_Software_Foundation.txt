@@ -1,0 +1,528 @@
+
+
+
+
+Python Software Foundation - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Overview
+
+
+
+
+
+
+
+2Membership
+
+
+
+
+
+
+
+3Code of Conduct
+
+
+
+
+
+
+
+4See also
+
+
+
+
+
+
+
+5References
+
+
+
+
+
+
+
+6Further reading
+
+
+
+
+
+
+
+7External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Python Software Foundation
+
+
+
+24 languages
+
+
+
+
+العربيةবাংলাBân-lâm-gúCatalàDeutschΕλληνικάEspañolFrançais한국어മലയാളംBahasa MelayuNederlands日本語PolskiPortuguêsРусскийShqipSimple EnglishతెలుగుไทยTürkçeУкраїнськаاردو中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+American nonprofit organization
+Python Software FoundationAbbreviationPSFFormationMarch 6, 2001Type501(c)(3) nonprofit organizationPurposePromote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers[1]HeadquartersWilmington, Delaware, United StatesRegion served WorldwideOfficial language EnglishPresidentGuido van RossumChairmanThomas WoutersRevenue (2018) $3.1 million[2]Websitewww.python.org/psf-landing/
+The Python Software Foundation (PSF) is an American nonprofit organization devoted to the Python programming language,[3] launched on March 6, 2001. The mission of the foundation is to foster development of the Python community and is responsible for various processes within the Python community, including developing the core Python distribution, managing intellectual rights, developer conferences including the Python Conference (PyCon), and raising funds.
+In 2005, the Python Software Foundation received the Computerworld Horizon Award for "cutting-edge" technology.[4][5]
+
+
+Overview[edit]
+The PSF focuses on empowering and supporting people within the Python community with grant programs that support sprints, conferences, meetups, user groups, and Python development.  The PSF runs Python Conference (PyCon) US, the leading Python community conference.  The PSF is the primary point of contact for organizations that wish to work with Python, to support Python, or sponsor Python development. The PSF provides a structure by which work, donations, and sponsorships are coordinated worldwide. The PSF also possesses and protects intellectual property associated with Python and the Python community, such as the word "Python," the two-snakes logo, and the terms "PyLadies" and "PyCon."[6]
+
+Membership[edit]
+There are five tiers of membership within the PSF. These tiers include:
+
+Basic members – Basic members are individuals or entities who are part of the Python language community and who have decided to declare their support for Python and agree to the community Code of Conduct.
+Supporting members – Supporting members make an annual donation to the PSF to sustain the foundation and support the Python community. Supporting members are eligible to vote.
+Managing members – Managing members are people who commit to working at least five hours per month to support the Python ecosystem, by organizing Python events, managing or contributing to PSF projects, running infrastructure, participating in one of the PSF's working groups, etc. Managing members are eligible to vote.
+Contributing members – Contributing members are people who dedicate at least five hours per month working on projects that advance the mission of the PSF, where the work relates to the creation or maintenance of open source software available to the public at no charge. Contributing members are eligible to vote.
+ Fellows – Fellows are members who have been nominated by their extraordinary efforts and impact upon Python, the community, and the broader Python ecosystem. Fellows are nominated from the broader community and elevated by a vote of the members. Fellow members are eligible to vote.[7]
+Code of Conduct[edit]
+Since late 2012, the Python Software Foundation started recommending that all Python conferences create and apply a code of conduct. This is mandatory to any event to be granted funds by the Python Software Foundation.[8]
+
+See also[edit]
+PyLadies
+PyCon
+References[edit]
+
+
+^ "Mission". Python Software Foundation. Retrieved 28 March 2018.
+
+^ "ProPublica report for Python Software Foundation". ProPublica. ProPublica. 9 May 2013. Retrieved 23 January 2021.
+
+^ Deibel, Stephan (March 2008). "Executive Summary: The Python Software Foundation". Retrieved 2016-10-05.
+
+^ "Python Software Foundation Wins Computerworld Horizon Award for Popular Python Programming Language" (Press release). 2005-09-15. Archived from the original on 2015-05-01. Retrieved 2016-10-05.
+
+^ "Computerworld Horizon Awards 2005 Honorees". Computerworld. 2005-09-12. Archived from the original on 2019-07-31. Retrieved 2016-10-05.
+
+^ "PSF Membership FAQ". python.org. Retrieved 24 October 2020.
+
+^ "PSF Membership FAQ". python.org. Retrieved 24 October 2020.
+
+^ Endsley, Rikki (17 May 2013). "7 open source projects to cut your teeth on (and the ones to avoid)". IT World. Retrieved 17 June 2017.
+
+
+Further reading[edit]
+Jyh-An Lee (2012). Nonprofit Organizations and the Intellectual Commons. Edward Elgar Publishing. ISBN 978-1-78100-158-5. OCLC 1027550705.
+External links[edit]
+Python Software Foundation
+vtePythonImplementations
+CircuitPython
+CLPython
+CPython
+Cython
+MicroPython
+Numba
+IronPython
+Jython
+Psyco
+PyPy
+Python for S60
+Shed Skin
+Stackless Python
+Unladen Swallow
+more...
+IDE
+Boa
+Eric Python IDE
+IDLE
+PyCharm
+PyDev
+Ninja-IDE
+more...
+Topics
+WSGI
+ASGI
+
+software (list)
+Python Software Foundation
+PyCon
+
+
+
+This article about an organization in the United States is a stub. You can help Wikipedia by expanding it.vte
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Python_Software_Foundation&oldid=1199183584"
+Categories: 501(c)(3) organizationsFree software project foundations in the United StatesPython (programming language)Organizations established in 2001United States organization stubsHidden categories: Articles with short descriptionShort description matches WikidataAll stub articles
+
+
+
+
+
+
+ This page was last edited on 26 January 2024, at 08:46 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

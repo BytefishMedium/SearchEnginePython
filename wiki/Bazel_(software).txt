@@ -1,0 +1,583 @@
+
+
+
+
+Bazel (software) - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Rationale
+
+
+
+Toggle Rationale subsection
+
+
+
+
+
+1.1Starlark language
+
+
+
+
+
+
+
+
+
+2Sandbox
+
+
+
+
+
+
+
+3Logo
+
+
+
+
+
+
+
+4See also
+
+
+
+
+
+
+
+5References
+
+
+
+
+
+
+
+6External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Bazel (software)
+
+
+
+2 languages
+
+
+
+
+Français한국어
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Software tool that automates software builds and tests
+This article contains content that is written like an advertisement. Please help improve it by removing promotional content and inappropriate external links, and by adding encyclopedic content written from a neutral point of view. (October 2019) (Learn how and when to remove this template message)
+BazelDeveloper(s)GoogleInitial releaseMarch 2015; 8 years ago (2015-03)Stable release7.0.2
+   / 25 January 2024; 22 days ago (2024-01-25)[1]
+Repositorygithub.com/bazelbuild/bazel 
+Written inJava[2]Operating systemCross-platformLicenseApache License 2.0Websitebazel.build 
+Bazel (/ˈbeɪzəl/[3]) is a free and open-source software tool used for the automation of building and testing software.[2] Google uses the build tool Blaze internally[4] and released an open-sourced port of the Blaze tool as Bazel, named as an anagram of Blaze.[5] Bazel was first released in March 2015 and was in beta status by September 2015.[6] Version 1.0 was released in October 2019.[7]
+Similar to build tools like Make, Apache Ant, and Apache Maven,[2][5] Bazel builds software applications from source code using rules. Rules and macros are created in the Starlark language (previously called Skylark),[8] a dialect of Python.[5] There are built-in rules for building software written in Java, Kotlin, Scala, C, C++, Go, Python, Rust, JavaScript, Objective-C, and bash scripts.[5][6] Bazel can produce software application packages suitable for deployment for the Android and iOS operating systems.[9]
+
+
+Rationale[edit]
+One of Bazel's goals is to establish a build system in which the inputs and outputs of build targets are fully specified, ensuring precise knowledge within the build system.[9] This allows a more accurate analysis and determination of out-of-date build artifacts within the build system's dependency graph. Making the dependency graph analysis more deterministic leads to potential improvements in build times by avoiding re-executing unnecessary build targets. Build reliability is improved by avoiding errors where build targets might depend on out-of-date input artifacts.
+Bazel uses content digests rather than file-based timestamps. File timestamps are commonly used to detect changes in tools like Make or Apache Ant. Timestamps can be problematic when builds are distributed across multiple hosts due to issues with clock synchronization.[10] Another of Bazel's goals is to enable distributed and parallel builds on a remote cloud infrastructure. It is also designed to scale up to very large build repositories which may not be practical to download to an individual developer's work machine.[11]
+Bazel provides tooling which helps developers to create bit-identical reproducible build outputs. Bazel's implemented rules avoid typical pitfalls such as embedding timestamps in generated outputs to ensure content digest matches. This, in turn, allows the build system to reliably cache (memoize) the outputs of intermediate build steps. Furthermore, reproducible build makes it possible to share intermediate build results between teams or departments in an organization, using dedicated build servers or distributed caches. Therefore, Bazel is particularly well-suited for larger organizations and software projects that have a significant number of build dependencies. A deterministic build and an ability to precisely analyze build input and output artifacts across the dependency graph lends itself to the parallel execution of build steps.
+
+Starlark language[edit]
+Bazel is extensible with its custom Starlark programming language. Starlark uses a syntax that is a subset of the syntax of the Python programming language. However, it doesn't implement many of Python's language features, such as the ability to mutate collections or access the file I/O, in order to avoid extensions that could create side-effects or create build outputs not known to the build system itself. Such side-effects could potentially lead to incorrect analysis of the build dependency graph.
+Bazel was designed as a multi-language build system. Many commonly used build systems are designed with a preference for a specific programming language. Examples of such systems include Ant and Maven for Java, Leiningen for Clojure, sbt for Scala, etc. In a multi-language project, combining separate build systems and achieving the build speed and correctness benefits described above can be difficult and problematic.
+Bazel also provides sandboxed build execution. This can be used to ensure all build dependencies have been properly specified and the build does not depend, for example, on libraries installed only locally on a developer's work computer. This helps to ensure that builds remain portable and can be executed in other (remote) environments.
+Build systems most similar to Bazel are Pants,[12] Buck, and Please.[13][14] Pants and Buck both aim for similar technical design goals as Bazel and were inspired by the Blaze build system used internally at Google. Blaze is also the predecessor to Bazel. Bazel, Pants, Buck, and Please adopted Starlark as a BUILD file parser, respective to its BUILD file syntax. Independently developed build systems with similar goals of efficient dependency graph analysis and automated build artifact tracking have been implemented in build systems such as tup.[15]
+
+Sandbox[edit]
+One of the key features that differentiate Bazel and similar systems from earlier build systems is using a sandbox for compilation steps. When Bazel performs a separate compilation, it creates a new directory and fills it with symlinks to the explicit input dependencies for the rule. For languages like C/C++, this provides a significant safety net for the inclusion of header files: it ensures that the developer is aware of the files that are used in compilation, and it prevents the unexpected inclusion of a similarly named header file from another including directory.
+This sandbox approach leads to issues with common build tools, resulting in a number of workarounds required to correctly compile code under different architectures. For example, when performing separate compilation for Mac/Darwin architectures, the compiler writes the input paths into SO and OSO symbols in the Mach-O binary, which can be seen with a command like nm -a mybinary | grep SO. These paths are needed for finding symbols during debugging. As a result, builds in Bazel must correct the compiled objects after the fact, trying to correct path-related issues that arose from the sandbox construction using flags like -fdebug-prefix-map and -oso_prefix, the latter having become available in Xcode 11.0. Similar handling needs to take place in linking phases, rewriting the rpath values in shared object libraries with a command like install_name_tool.[16]
+
+Logo[edit]
+Old Bazel logo
+Since Bazel's initial release the logo was a green letter "b" stylized into a stem of a basil plant with two leaves.
+On July 5, 2017, the Bazel Blog announced a new logo,[17] consisting of three green building blocks arranged to shape a heart.
+
+See also[edit]
+
+Computer programming portal
+List of build automation software
+Monorepo
+References[edit]
+
+
+^ "Releases · bazelbuild/bazel". GitHub.
+
+^ a b c Yegulalp, Serdar (Sep 11, 2015). "Google open-sources language-agnostic, scalable software tool". InfoWorld. Archived from the original on 25 October 2017. Retrieved 25 June 2016.
+
+^ "FAQ - Bazel". bazel.build. Archived from the original on 2016-11-06. 
+
+^ Beyer, Betsy; Jones, Chris; Petoff, Jennifer; Murphy, Niall Richard (23 March 2016). Site Reliability Engineering: How Google Runs Production Systems. "O'Reilly Media, Inc.". p. 90. ISBN 9781491951187. Retrieved 25 June 2016.
+
+^ a b c d Bolton, David (27 April 2015). "Bazel, Google's Open Source Build System - The New Stack". thenewstack.io. The New Stack. Archived from the original on 24 October 2017. Retrieved 25 June 2016.
+
+^ a b Daws, Ryan (10 September 2015). "Google's software build tool Bazel heads into beta". www.developer-tech.com. Developer Tech. Archived from the original on 23 October 2017. Retrieved 25 June 2016.
+
+^ "Bazel 1.0". blog.bazel.build. Retrieved 2023-10-29.
+
+^ "Starlark - Bazel". blog.bazel.build. Retrieved 2018-10-18.
+
+^ a b "FAQ - Bazel". bazel.build. Retrieved 25 June 2016.
+
+^ "What's Wrong With GNU make?". Archived from the original on 2016-08-13. Retrieved 2017-04-23.
+
+^ York, Nathan (23 September 2011). "Build in the Cloud: Distributing Build Steps". google-engtools.blogspot.com.
+
+^ "Pants: A fast, scalable build system".
+
+^ "Buck: A high-performance build tool".
+
+^ Please FAQ
+
+^ Shal, Mike (2009). "Build System Rules and Algorithms" (PDF).
+
+^ "tools/cpp/osx_cc_wrapper.sh". Github. 5 February 2022.
+
+^ Giannini, Steren (5 July 2017). "A new logo and homepage for Bazel".
+
+
+External links[edit]
+Official website 
+vteGoogle free and open-source softwareSoftwareApplications
+Chromium
+OpenRefine
+Tesseract
+Programming languages
+Carbon
+Dart
+Go
+Sawzall
+Frameworks anddevelopment tools
+AMP
+Angular
+AngularJS
+Beam
+Bazel
+Blockly
+Closure Tools
+Cpplint
+FlatBuffers
+Flutter
+Gears
+Gerrit
+Guava
+gRPC
+Gson
+Guetzli
+Guice
+gVisor
+Kubernetes
+LevelDB
+libvpx
+NaCl
+OR-Tools
+Polymer
+Protocol Buffers
+TensorFlow
+V8
+Operating systems
+AOSP
+ChromiumOS
+Fuchsia
+gLinux
+Goobuntu
+Related
+Code-in
+Google LLC v. Oracle America, Inc.
+Open Source Security Foundation
+Summer of Code
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Bazel_(software)&oldid=1202409021"
+Categories: Build automationCompiling toolsGoogle softwareSoftware using the Apache licenseHidden categories: Articles with short descriptionShort description matches WikidataArticles with a promotional tone from October 2019All articles with a promotional tone
+
+
+
+
+
+
+ This page was last edited on 2 February 2024, at 18:12 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

@@ -1,0 +1,652 @@
+
+
+
+
+PyPy - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Details and motivation
+
+
+
+Toggle Details and motivation subsection
+
+
+
+
+
+1.1RPython
+
+
+
+
+
+
+
+
+
+2Project status
+
+
+
+Toggle Project status subsection
+
+
+
+
+
+2.1History
+
+
+
+
+
+
+
+2.2Funding
+
+
+
+
+
+
+
+
+
+3See also
+
+
+
+
+
+
+
+4Notes
+
+
+
+
+
+
+
+5References
+
+
+
+
+
+
+
+6External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+PyPy
+
+
+
+20 languages
+
+
+
+
+العربيةCatalàDeutschEspañolفارسیFrançais한국어Bahasa IndonesiaItalianoമലയാളംBahasa MelayuNederlands日本語PolskiPortuguêsРусскийSuomiTürkçeУкраїнська中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Alternative implementation of the Python programming language
+Not to be confused with PyPI, the Python official third-party software repository.
+Initial releasemid 2007; 17 years ago (2007)Stable release7.3.14[1]  (25 December 2023; 53 days ago (25 December 2023))
+   
+Repositoryfoss.heptapod.net/pypy/pypy 
+Written inRPythonOperating systemCross-platformTypePython interpreter and compiler toolchainLicenseMITWebsitepypy.org 
+PyPy (/ˈpaɪpaɪ/) is an implementation of the Python programming language.[2] PyPy often runs faster than the standard implementation CPython because PyPy uses a just-in-time compiler.[3] Most Python code runs well on PyPy except for code that depends on CPython extensions, which either does not work or incurs some overhead when run in PyPy. Internally, PyPy uses a technique known as meta-tracing, which transforms an interpreter into a tracing just-in-time compiler. Since interpreters are usually easier to write than compilers, but run slower, this technique can make it easier to produce efficient implementations of programming languages. PyPy's meta-tracing toolchain is called RPython.
+PyPy does not have full compatibility with more recent versions of the CPython ecosystem. While it claims compatibility with Python 2.7, 3.7, 3.8 and 3.9 ("a drop-in replacement for CPython"), it lacks some of the newer features and syntax in Python 3.10, such as syntax for pattern matching.[4]
+
+
+Details and motivation[edit]
+PyPy aims to provide a common translation and support framework for producing implementations of dynamic languages, emphasizing a clean separation between language specification and implementation aspects. It also aims to provide a compliant, flexible and fast implementation of the Python programming language using the above framework to enable new advanced features without having to encode low-level details into it.[5][6]
+
+RPython[edit]
+The PyPy interpreter itself is written in a restricted subset of Python called RPython (Restricted Python).[7] RPython puts some constraints on the Python language such that a variable's type can be inferred at compile time.[8]
+The PyPy project has developed a toolchain that analyzes RPython code and translates it into a form of byte code, which can be lowered into C. There used to be other backends in addition to C (Java, C#, and Javascript), but those suffered from bitrot and have been removed. Thus, the recursive logo of PyPy is a snake swallowing itself since the RPython is translated by a Python interpreter. The code can also be run untranslated for testing and analysis, which provides a nice test-bed for research into dynamic languages.
+It allows for pluggable garbage collectors, as well as optionally enabling Stackless Python features. Finally, it includes a just-in-time (JIT) generator that builds a just-in-time compiler into the interpreter, given a few annotations in the interpreter source code. The generated JIT compiler is a tracing JIT.[9]
+RPython is now also used to write non-Python language implementations, such as Pixie.[10]
+
+Project status[edit]
+PyPy as of version 7.3.7 is compatible with three CPython versions: 2.7, 3.7 and 3.8.[11][12] The first PyPy version compatible with CPython v3 is PyPy v2.3.1 (2014).[13] The PyPy interpreter compatible with CPython v3 is also known as PyPy3.
+PyPy has JIT compilation support on 32-bit/64-bit x86 and 32-bit/64-bit ARM processors.[14] It is tested nightly on Windows, Linux, OpenBSD and Mac OS X. PyPy is able to run pure Python software that does not rely on implementation-specific features.[15]
+There is a compatibility layer for CPython C API extensions called CPyExt, but it is incomplete and experimental. The preferred way of interfacing with C shared libraries is through the built-in C foreign function interface (CFFI) or ctypes libraries.
+
+History[edit]
+PyPy is a followup to the Psyco project, a just-in-time specializing compiler for Python, developed by Armin Rigo between 2002 and 2010. PyPy's aim is to have a just-in-time specializing compiler with scope, which was not available for Psyco.[clarification needed] Initially, the RPython could also be compiled into Java bytecode, CIL and JavaScript, but these backends were removed due to lack of interest.
+PyPy was initially a research and development-oriented project. Reaching a mature state of development and an official 1.0 release in mid-2007, its next focus was on releasing a production-ready version with more CPython compatibility. Many of PyPy's changes have been made during coding sprints.
+
+In August 2008, PyPy was able to run some popular Python libraries like Pylons,[16] Pyglet,[17] Nevow[18] and Django.[19]
+On 12 March 2010, PyPy 1.2 was released, focusing on speed. It included a working, though not yet stable, just-in-time compiler.[20]
+On 30 April 2011, PyPy version 1.5 was released, which reached compatibility with CPython 2.7.[21]
+On 9 May 2013, PyPy 2.0 was released, which introduced alpha-quality support for JIT compilation on ARMv6 and ARMv7 JIT, and included CFFI in the standard library.[22][23]
+On 20 June 2014, PyPy3 was declared stable[13] and introduced compatibility with the more modern Python 3. It was released alongside PyPy 2.3.1 and bears the same version number.
+On 21 March 2017, the PyPy project released version 5.7 of both PyPy and PyPy3, with the latter introducing beta-quality support for Python 3.5.[24]
+On 26 April 2018, version 6.0 was released, with support for Python 2.7 and 3.5 (still beta-quality on Windows).[25]
+On 11 February 2019, version 7.0 was released, with support for Python 2.7 and 3.5.[26]
+On 14 October 2019, version 7.2 was released, with support for Python 3.6.9.[27]
+On 24 December 2019, version 7.3 was released, with support for Python 3.6.9.[28]
+On 16 February 2020, the PyPy team announced the move of the source code hosting from Bitbucket to heptapod.net with the repositories of the CFFI (C Foreign Function Interface) project. A new logo and website design are also published. However, the author and the license of the new logo are unknown.[29]
+On 29 December 2023, PyPy announced hosting has moved to GitHub and development will now be tracked with git.[30]
+Funding[edit]
+PyPy was funded by the European Union being a Specific Targeted Research Project[31] between December 2004 and March 2007. In June 2008, PyPy announced funding being part of the Google Open Source programs and has agreed to focus on making PyPy more compatible with CPython. In 2009 Eurostars, a European Union funding agency specially focused on SMEs,[32] accepted a proposal from PyPy project members titled "PYJIT – a fast and flexible toolkit for dynamic programming languages based on PyPy". Eurostars funding lasted until August 2011.[33]
+At PyCon US 2011, the Python Software Foundation provided a $10,000 grant for PyPy to continue work on performance and compatibility with newer versions of the language.[34]
+The port to ARM architecture was sponsored in part by the Raspberry Pi Foundation.[22]
+The PyPy project also accepts donations through its status blog pages.[35] As of 2013, a variety of sub-projects had funding: Python 3 version compatibility, built-in optimized NumPy support for numerical calculations and software transactional memory support to allow better parallelism.[22]
+
+See also[edit]
+
+Free software portalComputer programming portal
+Bootstrapping (compilers)
+Cython
+GraalVM
+Partial evaluation
+Psyco
+Self-hosting
+Self-interpreter
+Unladen Swallow
+Notes[edit]
+
+
+^ Error: Unable to display the reference properly. See the documentation for details.
+
+^ "Interview Maciej Fijalkowski PyPy". 29 November 2015.
+
+^ "PyPy Speed". speed.pypy.org. Retrieved 2019-12-01.
+
+^ "PEP 634 -- Structural Pattern Matching: Specification". Python.org. Retrieved 2021-02-15.
+
+^ Samuele Pedroni (March 2007). "PyPy – Goals and Architecture Overview". Archived from the original on 2012-06-14.
+
+^ "PyPy – Goals and Architecture Overview – Mission Statement". Retrieved 11 October 2013.
+
+^ Our runtime interpreter is “RPython”, Coding Guide – PyPy documentation
+
+^ "It is a proper subset of Python, restricted in a way that enables easy analysis and efficient code generation", Ancona et al., 2007.
+
+^ Bolz, Carl; Cuni, Antonio; Fijalkowski, Maciej; Rigo, Armin. Tracing the Meta-Level: PyPy's Tracing JIT Compiler. ICOOOLPS '09. doi:10.1145/1565824.1565827.
+
+^ Timothy Balridge interview.
+
+^ "PyPy – Python compatibility". pypy.org. 28 December 2019. Retrieved 2020-12-15.
+
+^ "PyPy v7.3.7: bug-fix release of 3.7, 3.8". pypy.org. 25 October 2021. Retrieved 2021-11-10.
+
+^ a b the PyPy team (20 June 2014). "PyPy3 2.3.1 – Fulcrum". PyPy blog.
+
+^ "PyPy v7.2.0: release of 2.7, and 3.6". pypy.org. 16 October 2019.
+
+^ "PyPy – Python compatibility". 28 December 2019.
+
+^ "Running pylons on top of PyPy". 10 June 2008.
+
+^ "Running Pyglet on top of PyPy". 20 February 2008.
+
+^ "Running Nevow on top of PyPy". 20 June 2008.
+
+^ "PyPy runs unmodified django 1.0 beta". 19 August 2008.
+
+^ "Introducing the PyPy 1.2 release". 30 April 2011.
+
+^ "PyPy 1.5 Released: Catching Up". 12 March 2010.
+
+^ a b c Jake Edge (15 May 2013). "A look at the PyPy 2.0 release". LWN.net.
+
+^ "PyPy 2.0 – Einstein Sandwich". 9 May 2013.
+
+^ "PyPy2.7 and PyPy3.5 v5.7 – two in one release". 21 March 2017.
+
+^ "PyPy2.7 and PyPy3.5 v6.0 dual release". 26 April 2018.
+
+^ Cuni, Antonio (2019-02-11). "PyPy Status Blog: PyPy v7.0.0: triple release of 2.7, 3.5 and 3.6-alpha". PyPy Status Blog. Retrieved 2020-08-17.
+
+^ Mattip (2019-10-14). "PyPy Status Blog: PyPy v7.2 released". PyPy Status Blog. Retrieved 2020-08-17.
+
+^ Mattip (2019-12-24). "PyPy Status Blog: PyPy v7.3.0 released". PyPy Status Blog.
+
+^ "PyPy and CFFI have moved to Heptapod". 16 February 2020.
+
+^ "PyPy has moved to Git, GitHub". 29 December 2023.
+
+^ "EU Community Research and Development Information Service Entry".
+
+^ "Eurostars – Aim Higher".
+
+^ "Project Page on Eureka Network". Archived from the original on 2012-04-03. Retrieved 2011-10-17.
+
+^ "A thank you to the PSF". 22 March 2011.
+
+^ "PyPy Status Blog: Oh, and btw: PyPy gets funding through "Eurostars"". 10 December 2010.
+
+
+References[edit]
+
+Davide Ancona, Massimo Ancona, Antonio Cuni, Nicholas D. Matsakis, 2007. RPython: a Step Towards Reconciling Dynamically and Statically Typed OO Languages. In Proc. Dynamic Language Symposium (DLS), 2007. ACM Press.
+Carl Friedrich Bolz, Antonio Cuni, Maciej Fijalkowski, 2009. Tracing the meta-level: PyPy's Tracing JIT Compiler. In Proc. ICOOOLPS, 2009. ACM Press.
+Corbet, Jonathan (11 May 2011). "A brief experiment with PyPy". LWN.net.
+von Eitzen, Chris (21 November 2011). "PyPy 1.7 widens the performance "sweet spot"". The H. Heinz Heise.
+Rose, John (2 December 2011). "A Day with PyPy". Oracle developer blog.
+"Interview Maciej Fijalkowski pypy". Decisionstats blog. 29 November 2015.
+
+External links[edit]
+Official website 
+vtePythonImplementations
+CircuitPython
+CLPython
+CPython
+Cython
+MicroPython
+Numba
+IronPython
+Jython
+Psyco
+PyPy
+Python for S60
+Shed Skin
+Stackless Python
+Unladen Swallow
+more...
+IDE
+Boa
+Eric Python IDE
+IDLE
+PyCharm
+PyDev
+Ninja-IDE
+more...
+Topics
+WSGI
+ASGI
+
+software (list)
+Python Software Foundation
+PyCon
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=PyPy&oldid=1197733321"
+Categories: 2007 softwareFP6 projectsFree software programmed in PythonPython (programming language) implementationsPython (programming language) softwareSoftware using the MIT licenseStack-based virtual machinesHidden categories: Module:Wd reference errorsArticles with short descriptionShort description is different from WikidataWikipedia articles needing clarification from May 2013
+
+
+
+
+
+
+ This page was last edited on 21 January 2024, at 18:53 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

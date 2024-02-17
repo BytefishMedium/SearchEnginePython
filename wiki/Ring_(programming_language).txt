@@ -1,0 +1,1161 @@
+
+
+
+
+Ring (programming language) - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1History
+
+
+
+
+
+
+
+2Goals
+
+
+
+
+
+
+
+3Examples
+
+
+
+Toggle Examples subsection
+
+
+
+
+
+3.1Hello World program
+
+
+
+
+
+
+
+3.2Change the keywords and operators
+
+
+
+
+
+
+
+3.3Loop command
+
+
+
+
+
+
+
+3.4Object-oriented orogramming
+
+
+
+
+
+
+
+
+
+4Implementation
+
+
+
+Toggle Implementation subsection
+
+
+
+
+
+4.1Compiler and virtual machine
+
+
+
+
+
+
+
+4.2Extensions
+
+
+
+
+
+
+
+4.3Libraries
+
+
+
+
+
+
+
+4.4Applications
+
+
+
+
+
+
+
+4.5Tools
+
+
+
+
+
+
+
+4.6Documentation
+
+
+
+
+
+
+
+
+
+5Reception
+
+
+
+Toggle Reception subsection
+
+
+
+
+
+5.1Popularity
+
+
+
+
+
+
+
+5.2Criticism
+
+
+
+
+
+5.2.1The list index starts from 1 instead of 0
+
+
+
+
+
+
+
+5.2.2Implicit type conversions
+
+
+
+
+
+
+
+
+
+
+
+6See also
+
+
+
+
+
+
+
+7References
+
+
+
+
+
+
+
+8Further reading
+
+
+
+
+
+
+
+9External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Ring (programming language)
+
+
+
+5 languages
+
+
+
+
+العربيةفارسیFrançaisമലയാളം日本語
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+		In other projects
+	
+
+
+Wikimedia CommonsWikibooks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Dynamically typed, general-purpose programming language
+RingParadigmMulti-paradigm: object-oriented, imperative, functional, procedural, reflective, declarative, natural language programmingDesigned byMahmoud Samir Fayed[1]DeveloperThe Ring Development TeamFirst appearedJanuary 25, 2016; 8 years ago (2016-01-25)Stable release1.19[2] 
+   / 31 December 2023; 47 days ago (31 December 2023)
+Typing disciplineDynamicImplementation languageCOSWindows, Linux and macOSLicenseMIT LicenseFilename extensions.ring, .rh, .rformWebsitehttp://ring-lang.netInfluenced byLua, Python, Ruby, C, C#, BASIC, QML, xBase, SupernovaInfluencedSimpleLang,[3] DragonLang [4]
+ Ring at Wikibooks
+
+Ring is a dynamically typed, general-purpose programming language. It can be embedded in C/C++ projects, extended using C/C++ code and/or used as a standalone language.[5] The supported programming paradigms are imperative, procedural, object-oriented, functional, meta, declarative using nested structures, and natural programming.[6][7] The language is portable (Windows, Linux, macOS, Android,[8] WebAssembly,[9] etc.)[10] and can be used to create console, GUI, web, game and mobile applications.[11][12][13][14]
+
+
+History[edit]
+Ring IDE (Ring Notepad - Form Designer)
+In 2009, Mahmoud Samir Fayed created a minor domain-specific language called Supernova that focuses on User interface (UI) creation and uses some ideas related to Natural Language Programming, then he realized the need for a new language that is general-purpose and can increase the productivity of natural language creation. Ring aims to offer a language focused on helping the developer with building natural interfaces and declarative DSLs.[15][16][17][18]
+
+Goals[edit]
+PWCT 2.0 (Android) - Under development using Ring
+The general goals behind Ring:[19]
+[20]
+
+Applications programming language.
+Productivity and developing high quality solutions that can scale.
+Small and flexible language that can be embedded in C/C++ projects.
+Simple language that can be used in education and introducing Compiler/VM concepts.
+General-Purpose language that can be used for creating domain-specific libraries, frameworks and tools.
+Practical language designed for creating the next version of the Programming Without Coding Technology software.[21]
+Examples[edit]
+Different styles for writing the source code
+Declarative Programming (Web Development)
+Natural Language Programming
+Testing TreeView Control Performance using RingQt
+Hello World program[edit]
+The same program can be written using different styles. Here is an example of the standard "Hello, World!" program using four different styles.
+The first style:
+
+see "Hello, World!"
+
+The second style:
+
+put "Hello, World!"
+
+The third style:
+
+print("Hello, World!")
+
+Another style: similar to xBase languages like Clipper and Visual FoxPro
+
+? "Hello, World!"
+
+Change the keywords and operators[edit]
+Ring supports changing the language keywords and operators.
+This could be done many times in the same source file, and is useful for
+
+Translating the keywords from English to other human languages (Non-English-based programming languages)
+Customizing the language for use of a favorite style
+Porting Legacy code written in other languages
+Translate Ring keywords to Japanese
+
+ChangeRingKeyword  See 手紙を出す
+ChangeRingOperator + そして
+改行 = nl
+します。 = :します。
+
+手紙を出す "こんにちは、世界" そして 改行 します。
+
+ChangeRingKeyword 手紙を出す See // キーワードの復旧
+ChangeRingOperator そして     + // 演算子の復旧
+
+Translate Ring keywords to Arabic
+
+ChangeRingKeyword  See إطبع
+
+إطبع "Hello, World!"
+
+ChangeRingKeyword إطبع See
+
+Use style similar to the Pascal programming language
+
+ChangeRingKeyword func function
+ChangeRingKeyword see  write
+begin = :begin
+
+function main
+begin
+write("Hello, World!");
+return 0;
+end
+
+ChangeRingKeyword function func
+ChangeRingKeyword write see
+
+[22][23][24]
+
+Loop command[edit]
+The Loop command can take an integer to apply the continue semantics to enclosing outer loops[25]
+
+changeRingKeyword loop continue
+count = 2
+for x in 1:5
+    for y = 1 to 2
+        if x = 3
+            ? "About to execute 'loop', count = " + count
+            continue count
+        ok
+        ? "x: " + x + ", y: " + y
+    next
+next
+
+Object-oriented orogramming[edit]
+Ring supports object-oriented programming (classes, objects, composition, inheritance, encapsulation, etc.)[26]
+
+new point {            # Create new object from the Point class the access the object using braces
+x=10  y=20  z=30       # Set the object attributes
+print()                # Call the print() method
+}                      # end of object access using braces
+class point            # Define the class
+x y z                  # Define the attributes (x,y,z)
+func print             # Define the print() method
+? x + nl + y + nl + z  # Print the attributes values (nl means printing a new line)
+
+In Ring classes can be defined at runtime using the Eval() function[27]
+
+? "Creating a new class dynamically..."
+eval("class DynamicClass a b")
+
+? "Printing the instance..."
+? new DynamicClass {a=1 b=2}
+
+Implementation[edit]
+Compiler and virtual machine[edit]
+Ring VM implementation using PWCT - Virtual Machine Instructions
+Ring VM implementation using PWCT - List Structure
+Ring programs are not interpreted directly from the textual Ring file, but are compiled into bytecode, which is then run on the Ring virtual machine. The compilation process is typically invisible to the user and is performed at run-time, but it can be done offline in order to increase loading performance or reduce the memory footprint of the host environment by leaving out the compiler.
+The compiler and the virtual machine are designed using visual programming through the Programming Without Coding Technology software then the C code is generated.
+
+Extensions[edit]
+Online Form Designer (WebAssembly) - Using RingQt
+Sokoban Implementation using Ring Game Engine for 2D Games
+Using Qt3D through RingQt
+The following are extensions that can be used immediately after the installation of the full installation version (with a file size of about 280 MB for Ring 1.12). Since these are officially provided and maintained on the Ring side, the users are not bothered by library dependencies that may cause problems in other languages, and there is a concern that they can not be used suddenly even if there are destructive language specification changes.
+The extensions are implemented in approximately 500,000 lines of C and C++ code.
+
+RingAllegro (Allegro Game Library)
+RingConsoleColor (Text coloring library for command prompt or the terminal)
+RingCurl (CURL Library)
+RingFreeGLUT (FreeGLUT)
+RingInternet (Internet related library)
+RingLibUV (LibUV-asynchronous I / O library)
+RingMurMurHash (Hash Function Library)
+RingMySQL (MySQL)
+RingODBC (Open Database Connectivity)
+RingOpenGL (OpenGL 1.1-4.6)
+RingOpenSSL (OpenSSL)
+RingPostgreSQL (PostgreSQL)
+RingQt (Qt framework)
+RingRayLib (raylib)
+RingSDL (SDL-Simple DirectMedia Layer Library)
+RingSQLite (SQLite)
+RingWinAPI (Windows API)
+RingWinCREG (Windows Registry)
+RingZIP (zip file processing library)
+[28]
+
+Libraries[edit]
+Ring comes with libraries written in Ring itself, such as libraries related to web and game development.
+
+
+
+Library Name
+
+Description
+
+
+Standard Library
+
+General Classes and functions.
+
+
+GUI Library
+
+Classes and functions for creating GUI applications
+
+
+Objects Library
+
+Classes and functions for creating GUI applications using the MVC design pattern
+
+
+Web Library
+
+Simple framework for developing web applications using the MVC design pattern
+
+
+Game Engine
+
+Support developing 2D Games for Desktop and Mobile using Declarative Programming based on Allegro and LibSDL
+
+
+Natural Library
+
+General-Purpose Natural Language Programming Library.
+
+
+Trace Library
+
+A library for debugging applications.
+
+
+Type Hints
+
+A library for adding type hints to functions.
+
+
+Big Number Library
+
+Support arithmetic operations on huge numbers.
+
+
+Fox Ring Library
+
+Contains functions similar to Visual FoxPro.
+
+
+ZeroLib Library
+
+Contains classes where the Index starts from 0 instead of 1.
+
+[29][30]
+
+Applications[edit]
+Gold Magic 800 Game - Using RingAllegro and RingOpenGL
+Online Othello Game (WebAssembly) - Using RingQt
+Ring is distributed with over 60 applications written in the language.
+Some of these applications are
+
+Analog Clock application
+Calculator application
+The Checkers Game
+The Chess Game
+Fifteen Puzzle 3D Game
+Game 2048
+Knight Tour Game
+Minesweeper Game
+Othello Game
+Sokoban Game
+Sudoku Game
+Tic-tac-toe 3D Game
+Video Music Player application
+Windows Startup Manager application
+[31][32]
+
+Tools[edit]
+Running the Tetris game using the Ring Package Manager
+Ring is distributed with a Standard IDE that includes the following tools:
+
+Ring REPL (Read–eval–print loop)
+Ring2EXE (Distributing executable applications)
+RingPM (The Ring Package manager)
+Ring Notepad (Source-code editor)
+Form Designer (WYSIWYG GUI designer)
+Ring is also distributed with extensions for many code editors such as Emacs, Notepad++, Geany, Atom, Sublime Text 2, and Visual Studio Code.
+
+Documentation[edit]
+Ring is distributed with documentation written using Sphinx. A Japanese translation of the documentation is also available.[33]
+
+Reception[edit]
+Popularity[edit]
+Ring had a rapid rise and fall in popularity as measured by the TIOBE Programming Community Index. In February 2018, Ring broke into the top 50 for the first time (position 45).[34] As of October 2020, Ring holds position 93 on the TIOBE index.[35] Ring is listed by GitHub in the list of programming languages that are actively developed.[36]
+
+Criticism[edit]
+Ring critics pointed to some features in Ring that are not common in widely used programming languages.[37]
+
+The list index starts from 1 instead of 0 (See: Zero-based numbering)
+Implicit type conversions  (See: Implicit type conversions and "type punning")
+The list index starts from 1 instead of 0[edit]
+In Ring, the index of the first item in lists and the first character in strings is 1.
+
+cName = "Ring"
+? cName[1]      # print R
+aList = ["One","Two","Three"]
+? aList[1]      # print One
+
+Implicit type conversions[edit]
+The language can automatically convert between numbers and strings.[38]
+
+/*
+** Rules:
+** <NUMBER> + <STRING> --> <NUMBER>
+** <STRING> + <NUMBER> --> <STRING>
+*/
+
+x    = 10                # x is a number
+y    = "20"              # y is a string
+nSum = x + y             # nSum is a number (y will be converted to a number)
+cMsg = "Sum = " + nSum   # cMsg is a string (nSum will be converted to a string)
+
+See also[edit]
+
+Free and open-source software portalComputer programming portal
+Tcl
+Lua
+Python
+Ruby
+Squirrel
+Gambas
+References[edit]
+
+
+^ M. Ayouni (29 July 2020). "A Dialogue with Mahmoud Fayed" (PDF). Springer.
+
+^ "Release 1.19". 31 December 2023. Retrieved 2 January 2024.
+
+^ Azeez Adewale. "The Simple programming language".
+
+^ Aavesh Jilani. "The Dragon programming language".
+
+^ Dr. Rangarajan Krishnamoorthy (7 August 2021). "First Encounter with the Ring Programming Language". rangakrish.com. Archived from the original on 2021-08-09.
+
+^ Omar Selim (January 2018). "The Ring programming language Review" (PDF). BIMArabia Magazine.
+
+^ Ahmed Tartour (January 2020). "Your way to programming (Arabic Book, Pages 56-57) talk about Ring" (PDF). Kotobna.
+
+^ Bernhard Lauer (14 August 2018). "Ring: flexible, simple, fast". Dotnetpro.
+
+^ Paul Krill (24 August 2020). "Ring language upgrade focuses on WebAssembly". InfoWorld.
+
+^ Ghanem, Mohamed (2021). Developing Poet Software using Ring language (PDF). MetaBook (Egypt - Mansoura). ISBN 978-977-6928-38-1.
+
+^ Beginning Ring Programming - From Novice to Professional | Mansour Ayouni | Apress.
+
+^ Hany Salah (11 January 2016). "Ring: A New programming language". youm7.com. youm7.
+
+^ Ahmed Mohammed Hassan. "Ring: A programming language developed by Arab". muslims-res.com. Retrieved 2020-09-28.
+
+^ Abedallah Salehani. "A book about the Ring programming language". muslims-res.com. Retrieved 2020-09-28.
+
+^ Ring Team (September 2021). "Ring Language - Frequently Asked Questions (FAQ)". Ring Team.
+
+^ Fayed (April 2010). "Supernova programming language". Code Project.
+
+^ Omnia (December 2011). "Supernova language by Egyptian programmer". Youm7.
+
+^ Softpedia Team (23 October 2021). "Ring 1.16 review". Softpedia.
+
+^ Naveen Verma (14 Aug 2018). "Ring Programming Language: What Do You Need To Know?". Medium.
+
+^ Mones Hawas (29 May 2018). "Progress in developing PWCT 2.0 using Ring". youm7.com. youm7.
+
+^ Fayed, Mahmoud S.; Al-Qurishi, Muhammad; Alamri, Atif; Hossain, M. Anwar; Al-Daraiseh, Ahmad A. (October 2020). "PWCT: a novel general-purpose visual programming language in support of pervasive application development". CCF Transactions on Pervasive Computing and Interaction. 2 (3): 164–177. doi:10.1007/s42486-020-00038-y. S2CID 225395711.
+
+^ Rubin Liu (28 December 2017). "Different styles for writing Hello World program in the Ring programming language". codeproject.com. Code Project.
+
+^ Roshan Ali (4 June 2018). "Ring programming tutorial". YouTube.
+
+^ https://ring-lang.github.io/doc1.19/getting_started3.html
+
+^ Dr. Rangarajan Krishnamoorthy (21 August 2021). ""Loop" Command in Ring Programming Language". rangakrish.com. Archived from the original on 2023-03-23.
+
+^ "Object Oriented Programming (OOP) — Ring 1.16 documentation".
+
+^ Dr. Rangarajan Krishnamoorthy (4 September 2021). "Ring Language: Dynamic Behavior of Classes and Objects". rangakrish.com. Archived from the original on 2023-05-29.
+
+^ Majdi Sobain (2 May 2017). "Squares Puzzle using RingAllegro". codeproject.com. Code Project.
+
+^ Fayed (11 August 2017). "Using the Natural Language Programming Library (NLPL) in the Ring Programming Language". codeproject.com. Code Project.
+
+^ Fayed (12 October 2016). "Natural Language Programming in the Ring Programming Language". codeproject.com. Code Project.
+
+^ Open Source Developers (15 June 2019). "Applications written in Ring". Ring Team.
+
+^ Etqan Company (25 September 2018). "Gold Magic 800 Game by Etqan Company". Steam (software).
+
+^ "ようこそ Ring 取扱説明書へ！ — プログラミング言語 Ring 1.16 取扱説明書".
+
+^ "TIOBE Index | TIOBE - the Software Quality Company". www.tiobe.com. Archived from the original on 21 February 2018. Retrieved 28 February 2022.
+
+^ Emma White (6 October 2020). "Top 100 Programming Languages". BairesDev. Retrieved 2020-10-06.
+
+^ "Build software better, together". GitHub.
+
+^ Ciklum (12 December 2017). "New Programming Languages – A Hype Or Reality?". ciklum.com. Ciklum.
+
+^ "Variables — Ring 1.16 documentation".
+
+
+Further reading[edit]
+Ghanem (2021) Developing Poet Software using Ring language (Arabic Book), MetaBook (Egypt - Mansoura)
+Ayouni (2020) Beginning Ring Programming, Apress (part of Springer Nature)
+Hassouna (2019) Ring Basics (Arabic Book), Hassouna Academy
+Sobain (2017) RingWinCReg Extension Documentation, SourceForge
+Fayed (2016) The Ring Programming Language, CodeProject
+External links[edit]
+
+
+
+Wikibooks has a book on the topic of: Ring
+
+Ring home page
+RosettaCode samples
+Ring Documentation (Japanese)
+Online Form Designer (WebAssembly)
+vteFree and open-source softwareGeneral
+Alternative terms for free software
+Comparison of open-source and closed-source software
+Comparison of source-code-hosting facilities
+Free software
+Free software project directories
+Gratis versus libre
+Long-term support
+Open-source software
+Open-source software development
+Outline
+Timeline
+Softwarepackages
+Audio
+Bioinformatics
+Codecs
+Configuration management
+Drivers
+Graphics
+Wireless
+Health
+Mathematics
+Office Suites
+Operating systems
+Routing
+Television
+Video games
+Web applications
+E-commerce
+Android apps
+iOS apps
+Commercial
+Formerly proprietary
+Formerly open-source
+Community
+Free software movement
+History
+Open-source-software movement
+Events
+Organisations
+Free Software Movement of India
+Free Software Foundation
+Licenses
+AFL
+Apache
+APSL
+Artistic
+Beerware
+BSD
+Creative Commons
+CDDL
+EPL
+Free Software Foundation
+GNU GPL
+GNU AGPL
+GNU LGPL
+ISC
+MIT
+MPL
+Python
+Python Software Foundation License
+Shared Source Initiative
+Sleepycat
+Unlicense
+WTFPL
+zlib
+Types and standards
+Comparison of licenses
+Contributor License Agreement
+Copyleft
+Debian Free Software Guidelines
+Definition of Free Cultural Works
+Free license
+The Free Software Definition
+The Open Source Definition
+Open-source license
+Permissive software license
+Public domain
+Viral license
+
+Challenges
+Digital rights management
+License proliferation
+Mozilla software rebranding
+Proprietary device drivers
+Proprietary firmware
+Proprietary software
+SCO/Linux controversies
+Software patents
+Software security
+Trusted Computing
+Related topics
+Forking
+GNU Manifesto
+Microsoft Open Specification Promise
+Open-core model
+Open-source hardware
+Shared Source Initiative
+Source-available software
+The Cathedral and the Bazaar
+Revolution OS
+
+ Portal
+ Category
+
+vteProgramming languages
+Comparison
+Timeline
+History
+
+Ada
+ALGOL
+APL
+ArkTS
+Assembly
+BASIC
+C
+C++
+C#
+Classic Visual Basic
+COBOL
+Erlang
+Forth
+Fortran
+Go
+Haskell
+Java
+JavaScript
+Julia
+Kotlin
+Lisp
+Lua
+MATLAB
+ML
+Object Pascal
+Pascal
+Perl
+PHP
+Prolog
+Python
+R
+Ruby
+Rust
+SQL
+Scratch
+Shell
+Simula
+Smalltalk
+Swift
+Visual Basic
+more...
+
+ Lists: Alphabetical
+Categorical
+Generational
+Non-English-based
+ Category
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Ring_(programming_language)&oldid=1202037514"
+Categories: Programming languagesCross-platform free softwareProgramming languages created in 2016High-level programming languages2016 softwareDynamically typed programming languagesEgyptian inventionsFree software projectsSoftware using the MIT licenseFree software programmed in CMulti-paradigm programming languagesExtensible syntax programming languagesHidden categories: Articles with short descriptionShort description matches Wikidata
+
+
+
+
+
+
+ This page was last edited on 1 February 2024, at 22:30 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

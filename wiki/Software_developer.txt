@@ -1,0 +1,1001 @@
+
+
+
+
+Software development - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Methodologies
+
+
+
+
+
+
+
+2Activities
+
+
+
+Toggle Activities subsection
+
+
+
+
+
+2.1Identification of need
+
+
+
+
+
+
+
+2.2Planning process
+
+
+
+
+
+
+
+
+
+3Workforce
+
+
+
+
+
+
+
+4View model
+
+
+
+
+
+
+
+5Business process and data modelling
+
+
+
+
+
+
+
+6CASE
+
+
+
+
+
+
+
+7Modeling language
+
+
+
+
+
+
+
+8Programming paradigm
+
+
+
+
+
+
+
+9See also
+
+
+
+Toggle See also subsection
+
+
+
+
+
+9.1Roles and industry
+
+
+
+
+
+
+
+
+
+10References
+
+
+
+
+
+
+
+11Further reading
+
+
+
+
+
+
+
+12External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Software development
+
+
+
+47 languages
+
+
+
+
+AfrikaansالعربيةAzərbaycancaবাংলাБългарскиCatalàČeštinaDanskDeutschEestiEspañolفارسیFrançais한국어हिन्दीIdoBahasa IndonesiaItalianoעבריתJawaLatviešuLietuviųMagyarമലയാളംBahasa MelayuМонголမြန်မာဘာသာ日本語Norsk bokmålPolskiPortuguêsRomânăRuna SimiРусскийShqipSimple EnglishکوردیСрпски / srpskiSuomiSvenskaதமிழ்TürkçeУкраїнськаاردوTiếng Việt粵語中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+		In other projects
+	
+
+
+Wikimedia Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+(Redirected from Software developer)
+Creation and maintenance of computer programs and applications
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page. (Learn how and when to remove these template messages)
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed.Find sources: "Software development" – news · newspapers · books · scholar · JSTOR (December 2021) (Learn how and when to remove this template message)
+This article needs to be updated. Please help update this article to reflect recent events or newly available information. (February 2022)
+Some of this article's listed sources may not be reliable. Please help improve this article by looking for better, more reliable sources. Unreliable citations may be challenged and removed. (February 2022) (Learn how and when to remove this template message)
+This article possibly contains original research. Please improve it by verifying the claims made and adding inline citations. Statements consisting only of original research should be removed. (February 2022) (Learn how and when to remove this template message)
+This article may need to be rewritten to comply with Wikipedia's quality standards. You can help. The talk page may contain suggestions. (February 2022)
+
+ (Learn how and when to remove this template message)
+Part of a series onSoftware development
+Core activities
+Data modeling
+Processes
+Requirements
+Design
+Construction
+Engineering
+Testing
+Debugging
+Deployment
+Maintenance
+
+Paradigms and models
+Agile
+Cleanroom
+Incremental
+Prototyping
+Spiral
+V model
+Waterfall
+
+Methodologies and frameworks
+ASD
+DevOps
+DAD
+DSDM
+FDD
+IID
+Kanban
+Lean SD
+LeSS
+MDD
+MSF
+PSP
+RAD
+RUP
+SAFe
+Scrum
+SEMAT
+TDD
+TSP
+OpenUP
+UP
+XP
+
+Supporting disciplines
+Configuration management
+Documentation
+Software quality assurance
+Project management
+User experience
+
+Practices
+ATDD
+BDD
+CCO
+CI
+CD
+DDD
+PP
+SBE
+Stand-up
+TDD
+
+Tools
+Compiler
+Debugger
+Profiler
+GUI designer
+UML Modeling
+IDE
+Build automation
+Release automation
+Infrastructure as code
+
+Standards and bodies of knowledge
+CMMI
+IEEE standards
+ISO 9001
+ISO/IEC standards
+PMBOK
+SWEBOK
+ITIL
+IREB
+OMG
+
+Glossaries
+Artificial intelligence
+Computer science
+Electrical and electronics engineering
+
+Outlines
+Outline of software development
+vte
+Software development is the process used to conceive, specify, design, program, document, test, and bug fix in order to create and maintain applications, frameworks, or other software components. Software development involves writing and maintaining the source code, but in a broader sense, it includes all processes from the conception of the desired software through the final manifestation, typically in a planned and structured process often overlapping with software engineering. Software development also includes research, new development, prototyping, modification, reuse, re-engineering, maintenance, or any other activities that result in software products.[1]
+
+
+Methodologies[edit]
+Main article: Software development methodology
+One system development methodology is not necessarily suitable for use by all projects.
+Each of the available methodologies are best suited to specific kinds of projects, based on various technical, organizational, project, and team considerations.[2]
+
+Activities[edit]
+Identification of need[edit]
+The sources of ideas for software products are plentiful. These ideas can come from market research including the demographics of potential new customers, existing customers, sales prospects who rejected the product, other internal software development staff, or a creative third party. Ideas for software products are usually first evaluated by marketing personnel for economic feasibility, fit with existing channels of distribution, possible effects on existing product lines, required features, and fit with the company's marketing objectives. In the marketing evaluation phase, the cost and time assumptions become evaluated. A decision is reached early in the first phase as to whether, based on the more detailed information generated by the marketing and development staff, the project should be pursued further.[3]
+In the book "Great Software Debates", Alan M. Davis states in the chapter "Requirements", sub-chapter "The Missing Piece of Software Development"
+
+Students of engineering learn engineering and are rarely exposed to finance or marketing. Students of marketing learn marketing and are rarely exposed to finance or engineering. Most of us become specialists in just one area. To complicate matters, few of us meet interdisciplinary people in the workforce, so there are few roles to mimic. Yet, software product planning is critical to the development success and absolutely requires knowledge of multiple disciplines.[4]
+Planning process[edit]
+An important task in creating software is requirements analysis. Customers typically have an abstract idea of what they want as an end result but do not know what software should do. Skilled and experienced software engineers recognize incomplete, ambiguous, or even contradictory requirements at this point.  Frequently demonstrating live code may help reduce the risk that the requirements are incorrect.
+"Although much effort is put in the requirements phase to ensure that requirements are complete and consistent, rarely that is the case; leaving the software design phase as the most influential one when it comes to minimizing the effects of new or changing requirements. Requirements volatility is challenging because they impact future or already going development efforts."[5]
+
+Workforce[edit]
+A software developer is a person or company engaged in a software development process, including research, design, programming, testing, and other facets of creating computer software. Other job titles for people with similar meanings include programmer, software analyst, or software engineer. Companies specializing in software may be called software houses. In a large company, there may be employees whose sole responsibility consists of only one of the disciplines. In smaller development environments, a few people or a single person might handle the complete process. Collaborative environments, such as open-source software, can bring together many developers.
+
+View model[edit]
+The TEAF Matrix of Views and Perspectives
+A view model is a framework that provides the viewpoints on the system and its environment, to be used in the software development process. It is a graphical representation of the underlying semantics of a view.
+The purpose of viewpoints and views is to enable human engineers to comprehend very complex systems and to organize the elements of the problem around domains of expertise. In the engineering of physically intensive systems, viewpoints often correspond to capabilities and responsibilities within the engineering organization.[6]
+
+Business process and data modelling[edit]
+Graphical representation of the current state of information provides a very effective means for presenting information to both users and system developers.
+
+Example of the interaction between business process and data models[7]
+A business model illustrates the functions associated with the business process being modeled and the organizations that perform these functions. By depicting activities and information flows, a foundation is created to visualize, define, understand, and validate the nature of a process.
+A data model provides the details of information to be stored and is of primary use when the final product is the generation of computer software code for an application or the preparation of a functional specification to aid a computer software make-or-buy decision. See the figure on the right for an example of the interaction between business process and data models.[7]
+Usually, a model is created after conducting an interview, referred to as business analysis. The interview consists of a facilitator asking a series of questions designed to extract required information that describes a process. The interviewer is called a facilitator to emphasize that it is the participants who provide the information. The facilitator should have some knowledge of the process of interest, but this is not as important as having a structured methodology by which the questions are asked of the process expert. The methodology is
+important because usually a team of facilitators is collecting information across the facility and the results of the information from all the interviewers must fit together once completed.[7]
+The models are developed as defining either the current state of the process, in which case the final product is called the "as-is" snapshot model, or a collection of ideas of what the process should contain, resulting in a "what-can-be" model. Generation of process and data models can be used to determine if the existing processes and information systems are sound and only need minor modifications or enhancements, or if re-engineering is required as a corrective action. The creation of business models is more than a way to view or automate your information process. Analysis can be used to fundamentally reshape the way your business or organization conducts its operations.[7]
+
+CASE[edit]
+Computer-aided software engineering (CASE) is the scientific application of a set of software tools and methods to the development of software to help achieve high-quality, defect-free, and maintainable software products.[8] It also refers to methods for the development of information systems together with automated tools that can be used in the software development process.[9] The term "computer-aided software engineering" (CASE) can refer to the software used for the automated development of systems software, i.e., computer code. The CASE functions include analysis, design, and programming. CASE tools automate methods for designing, documenting, and producing structured computer code in the desired programming language.[10]
+Two key ideas of Computer-aided Software System Engineering (CASE) are:[11]
+
+Foster computer assistance in software development and software maintenance processes, and
+An engineering approach to software development and maintenance.
+Typical CASE tools exist for configuration management, data modeling, model transformation, refactoring, source code generation.
+
+Anjuta, a C and C++ IDE for the GNOME environment
+Modeling language[edit]
+A modeling language is any artificial language that can be used to express information or knowledge or systems in a structure that is defined by a consistent set of rules. The rules are used for interpretation of the meaning of components in the structure. A modeling language can be graphical or textual.[12]
+
+Programming paradigm[edit]
+A programming paradigm is a fundamental style of computer programming, which is not generally dictated by the project management methodology (such as waterfall or agile). Paradigms differ in the concepts and abstractions used to represent the elements of a program (such as objects, functions, variables, constraints) and the steps that comprise a computation (such as assignations, evaluation, continuations, data flows).  Sometimes the concepts asserted by the paradigm are utilized cooperatively in high-level system architecture design; in other cases, the programming paradigm's scope is limited to the internal structure of a particular program or module. Example: Grady Booch's object-oriented design (OOD), also known as object-oriented analysis and design (OOAD). The Booch model includes six diagrams: class, object, state transition, interaction, module, and process.[13]
+
+See also[edit]
+Continuous integration
+Custom software
+Functional specification
+Programming productivity
+Software blueprint
+Software design
+Systems design
+Software development effort estimation
+Software development process
+Software industry
+Software project management
+Specification and Description Language
+User experience
+Video game development
+Web development
+Roles and industry[edit]
+Computer programmer
+Consulting software engineer
+Offshore software development
+Software engineer
+Software publisher
+References[edit]
+
+
+^ DRM Associates (2002). "New Product Development Glossary". Archived from the original on 13 July 2018. Retrieved 29 October 2006.
+
+^ System Development Methodologies for Web-Enabled E-Business: A Customization Framework
+Linda V. Knight (DePaul University, USA), Theresa A. Steinbach (DePaul University, USA) and Vince Kellen (Blue Wolf, USA)
+
+^ Joseph M. Morris (2001). Software Industry Accounting. p.1.10
+
+^ Alan M. Davis. Great Software Debates (October 8, 2004), pp:125-128 Wiley-IEEE Computer Society Press
+
+^ Otero, Carlos. "Software Design Challenges". IT Performance Improvement. Taylor & Francis LLC. Archived from the original on 28 October 2017. Retrieved 19 October 2017.
+
+^ Edward J. Barkmeyer ea (2003). Concepts for Automating Systems Integration Archived 25 January 2017 at the Wayback Machine NIST 2003.
+
+^ a b c d Paul R. Smith & Richard Sarfaty (1993). Creating a strategic plan for configuration management using Computer Aided Software Engineering (CASE) tools. Paper For 1993 National DOE/Contractors and Facilities CAD/CAE User's Group.
+
+^ Kuhn, D.L (1989). "Selecting and effectively using a computer-aided software engineering tool". Annual Westinghouse computer symposium; 6–7 Nov 1989; Pittsburgh, PA (USA); DOE Project.
+
+^ P. Loucopoulos and V. Karakostas (1995). System Requirements Engineering. McGraw-Hill.
+
+^ CASE Archived 2012-02-18 at the Wayback Machine definition In: Telecom Glossary 2000 Archived 2005-11-22 at the Wayback Machine. Retrieved 26 Oct 2008.
+
+^ K. Robinson (1992). Putting the Software Engineering into CASE. New York : John Wiley and Sons Inc.
+
+^ Xiao He (2007). "A metamodel for the notation of graphical modeling languages". In: Computer Software and Applications Conference, 2007. COMPSAC 2007 – Vol. 1. 31st Annual International, Volume 1, Issue, 24–27 July 2007, pp 219–224.
+
+^ Merx, Georges G.; Norman, Ronald J. (2006). Unified Software Engineering with Java. Prentice-Hall, Inc. p. 201. ISBN 0130473766.
+
+
+Further reading[edit]
+
+Kit, Edward (1992). Software Testing in The Real World. Addison-Wesley Professional. ISBN 0201877562.
+McCarthy, Jim (1995). Dynamics of Software Development. Microsoft Press. ISBN 1556158238.
+Conde, Dan (2002). Software Product Management: Managing Software Development from Idea to Product to Marketing to Sales. Aspatore Books. ISBN 1587622025.
+Davis, A. M. (2005). Just enough requirements management: Where software development meets marketing. Dorset House Publishing Company, Incorporated. ISBN 0932633641.
+Hasted, Edward (2005). Software That Sells: A Practical Guide to Developing and Marketing Your Software Project. Wiley Publishing. ISBN 0764597833.
+Hohmann, Luke (2003). Beyond Software Architecture: Creating and Sustaining Winning Solutions. Addison-Wesley Professional. ISBN 0201775948.
+John W. Horch (2005). "Two Orientations On How To Work With Objects." In: IEEE Software. vol. 12, no. 2, pp. 117–118, Mar., 1995.
+Rittinghouse, John (2003). Managing Software Deliverables: A Software Development Management Methodology. Digital Press. ISBN 155558313X.
+Wiegers, Karl E. (2005). More About Software Requirements: Thorny Issues and Practical Advice. Microsoft Press. ISBN 0735622671.
+Wysocki, Robert K. (2006). Effective Software Project Management. Wiley. ISBN 0764596365.
+
+External links[edit]
+ Media related to Software development at Wikimedia Commons
+vteSoftware engineeringFields
+Computer programming
+DevOps
+Formal methods
+Requirements engineering
+Site reliability engineering
+Software deployment
+Software design
+Software maintenance
+Software testing
+Systems analysis
+Concepts
+Data modeling
+Enterprise architecture
+Functional specification
+Modeling language
+Programming paradigm
+Software
+Software archaeology
+Software architecture
+Software configuration management
+Software development process/methodology
+Software quality
+Software quality assurance
+Software verification and validation
+Structured analysis
+Essential analysis
+CI/CD
+Orientations
+Agile
+Aspect-oriented
+Object orientation
+Ontology
+Service orientation
+SDLC
+ModelsDevelopmental
+Agile
+EUP
+Executable UML
+Incremental model
+Iterative model
+Prototype model
+RAD
+UP
+Scrum
+Spiral model
+V-model
+Waterfall model
+XP
+Model-driven engineering
+Round-trip engineering
+Other
+SPICE
+CMMI
+Data model
+ER model
+Function model
+Information model
+Metamodeling
+Object model
+Systems model
+View model
+Languages
+IDEF
+UML
+USL
+SysML
+Related fields
+Computer science
+Computer engineering
+Information science
+Project management
+Risk management
+Systems engineering
+
+ Commons
+ Category
+
+vteComputer scienceNote: This template roughly follows the 2012 ACM Computing Classification System.Hardware
+Printed circuit board
+Peripheral
+Integrated circuit
+Very Large Scale Integration
+Systems on Chip (SoCs)
+Energy consumption (Green computing)
+Electronic design automation
+Hardware acceleration
+Computer systems organization
+Computer architecture
+Embedded system
+Real-time computing
+Dependability
+Networks
+Network architecture
+Network protocol
+Network components
+Network scheduler
+Network performance evaluation
+Network service
+Software organization
+Interpreter
+Middleware
+Virtual machine
+Operating system
+Software quality
+Software notations and tools
+Programming paradigm
+Programming language
+Compiler
+Domain-specific language
+Modeling language
+Software framework
+Integrated development environment
+Software configuration management
+Software library
+Software repository
+Software development
+Control variable
+Software development process
+Requirements analysis
+Software design
+Software construction
+Software deployment
+Software engineering
+Software maintenance
+Programming team
+Open-source model
+Theory of computation
+Model of computation
+Formal language
+Automata theory
+Computability theory
+Computational complexity theory
+Logic
+Semantics
+Algorithms
+Algorithm design
+Analysis of algorithms
+Algorithmic efficiency
+Randomized algorithm
+Computational geometry
+Mathematics of computing
+Discrete mathematics
+Probability
+Statistics
+Mathematical software
+Information theory
+Mathematical analysis
+Numerical analysis
+Theoretical computer science
+Information systems
+Database management system
+Information storage systems
+Enterprise information system
+Social information systems
+Geographic information system
+Decision support system
+Process control system
+Multimedia information system
+Data mining
+Digital library
+Computing platform
+Digital marketing
+World Wide Web
+Information retrieval
+Security
+Cryptography
+Formal methods
+Security hacker
+Security services
+Intrusion detection system
+Hardware security
+Network security
+Information security
+Application security
+Human–computer interaction
+Interaction design
+Social computing
+Ubiquitous computing
+Visualization
+Accessibility
+Concurrency
+Concurrent computing
+Parallel computing
+Distributed computing
+Multithreading
+Multiprocessing
+Artificial intelligence
+Natural language processing
+Knowledge representation and reasoning
+Computer vision
+Automated planning and scheduling
+Search methodology
+Control method
+Philosophy of artificial intelligence
+Distributed artificial intelligence
+Machine learning
+Supervised learning
+Unsupervised learning
+Reinforcement learning
+Multi-task learning
+Cross-validation
+Graphics
+Animation
+Rendering
+Photograph manipulation
+Graphics processing unit
+Mixed reality
+Virtual reality
+Image compression
+Solid modeling
+Applied computing
+Quantum Computing
+E-commerce
+Enterprise software
+Computational mathematics
+Computational physics
+Computational chemistry
+Computational biology
+Computational social science
+Computational engineering
+Differentiable computing
+Computational healthcare
+Digital art
+Electronic publishing
+Cyberwarfare
+Electronic voting
+Video games
+Word processing
+Operations research
+Educational technology
+Document management
+
+ Category
+ Outline
+WikiProject
+ Commons
+
+
+
+Authority control databases: National 
+Spain
+Germany
+Israel
+United States
+Japan
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Software_development&oldid=1208074516#Workforce"
+Categories: Software developmentSoftware project managementComputer occupationsProduct developmentHidden categories: Webarchive template wayback linksArticles with short descriptionShort description is different from WikidataUse dmy dates from December 2021Articles needing additional references from December 2021All articles needing additional referencesWikipedia articles in need of updating from February 2022All Wikipedia articles in need of updatingArticles lacking reliable references from February 2022All articles lacking reliable referencesArticles that may contain original research from February 2022All articles that may contain original researchWikipedia articles needing rewrite from February 2022All articles needing rewriteArticles with multiple maintenance issuesCommons category link is on WikidataEngvarB from December 2021Articles with BNE identifiersArticles with GND identifiersArticles with J9U identifiersArticles with LCCN identifiersArticles with NDL identifiers
+
+
+
+
+
+
+ This page was last edited on 16 February 2024, at 11:57 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

@@ -1,0 +1,672 @@
+
+
+
+
+Exception handling - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Definition
+
+
+
+
+
+
+
+2History
+
+
+
+
+
+
+
+3Hardware exceptions
+
+
+
+
+
+
+
+4IEEE 754 floating-point exceptions
+
+
+
+
+
+
+
+5In programming languages
+
+
+
+
+
+
+
+6In user interfaces
+
+
+
+
+
+
+
+7See also
+
+
+
+
+
+
+
+8References
+
+
+
+
+
+
+
+9External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Exception handling
+
+
+
+36 languages
+
+
+
+
+العربيةবাংলাБългарскиCatalàČeštinaDeutschEestiEspañolفارسیFrançais한국어हिन्दीHrvatskiBahasa IndonesiaÍslenskaItalianoעבריתಕನ್ನಡMagyarNederlands日本語Norsk bokmålPolskiPortuguêsРусскийSimple EnglishSlovenščinaСрпски / srpskiSuomiSvenskaதமிழ்ไทยTürkçeУкраїнська粵語中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Programming language construct for special conditions
+"Error handling" redirects here. Not to be confused with Error detection and correction.
+This article is about computing. For knowledge, see fact checking and problem solving.
+In computing and computer programming, exception handling is the process of responding to the occurrence of exceptions – anomalous or exceptional conditions requiring special processing – during the execution of a program. In general, an exception breaks the normal flow of execution and executes a pre-registered exception handler; the details of how this is done depend on whether it is a hardware or software exception and how the software exception is implemented. 
+Exceptions are defined by different layers of a computer system, and the typical layers are CPU-defined interrupts, operating system (OS)-defined signals, programming language-defined exceptions. Each layer requires different ways of exception handling although they may be interrelated, e.g. a CPU interrupt could be turned into an OS signal. Some exceptions, especially hardware ones, may be handled so gracefully that execution can resume where it was interrupted.
+
+
+Definition[edit]
+Further information: Interrupt § Terminology
+The definition of an exception is based on the observation that each procedure has a precondition, a set of circumstances for which it will terminate "normally".[1] An exception handling mechanism allows the procedure to raise an exception[2] if this precondition is violated,[1] for example if the procedure has been called on an abnormal set of arguments. The exception handling mechanism then handles the exception.[3]
+The precondition, and the definition of exception, is subjective. The set of "normal" circumstances is defined entirely by the programmer, e.g. the programmer may deem division by zero to be undefined, hence an exception, or devise some behavior such as returning zero or a special "ZERO DIVIDE" value (circumventing the need for exceptions).[4] Common exceptions include an invalid argument (e.g. value is outside of the domain of a function),[5] an unavailable resource (like a missing file,[6] a network drive error,[7] or out-of-memory errors[8]), or that the routine has detected a normal condition that requires special handling, e.g., attention, end of file.[9] Social pressure is a major influence on the scope of exceptions and use of exception-handling mechanisms, i.e. "examples of use, typically found in core libraries, and code examples in technical books, magazine articles, and online discussion forums, and in an organization’s code standards".[10]
+Exception handling solves the semipredicate problem, in that the mechanism distinguishes normal return values from erroneous ones. In languages without built-in exception handling such as C, routines would need to signal the error in some other way, such as the common return code and errno pattern.[11] Taking a broad view, errors can be considered to be a proper subset of exceptions,[12] and explicit error mechanisms such as errno can be considered (verbose) forms of exception handling.[11] The term "exception" is preferred to "error" because it does not imply that anything is wrong - a condition viewed as an error by one procedure or programmer may not be viewed that way by another.[13]
+The term "exception" may be misleading because its connotation of "anomaly" indicates that raising an exception is abnormal or unusual,[14] when in fact raising the exception may be a normal and usual situation in the program.[13] For example, suppose a lookup function for an associative array throws an exception if the key has no value associated. Depending on context, this "key absent" exception may occur much more often than a successful lookup.[15]
+
+History[edit]
+Main articles: Interrupt § History, IEEE 754 § History, and Exception handling (programming) § History
+The first hardware exception handling was found in the UNIVAC I from 1951. 
+Arithmetic overflow executed two instructions at address 0 which could transfer control or fix up the result.[16]
+Software exception handling developed in the 1960s and 1970s. Exception handling was subsequently widely adopted by many programming languages from the 1980s onward.
+
+Hardware exceptions[edit]
+Main article: Interrupt
+There is no clear consensus as to the exact meaning of an exception with respect to hardware.[17] From the implementation point of view, it is handled identically to an interrupt: the processor halts execution of the current program, looks up the interrupt handler in the interrupt vector table for that exception or interrupt condition, saves state, and switches control.
+
+IEEE 754 floating-point exceptions[edit]
+Main article: IEEE 754 § Exception handling
+Exception handling in the IEEE 754 floating-point standard refers in general to exceptional conditions and defines an exception as "an event that occurs when an operation on some particular operands has no outcome suitable for every reasonable application. That operation might signal one or more exceptions by invoking the default or, if explicitly requested, a language-defined alternate handling."
+By default, an IEEE 754 exception is resumable and is handled by substituting a predefined value for different exceptions, e.g. infinity for a divide by zero exception, and providing status flags for later checking of whether the exception occurred (see C99 programming language for a typical example of handling of IEEE 754 exceptions). An exception-handling style enabled by the use of status flags involves: first computing an expression using a fast, direct implementation; checking whether it failed by testing status flags; and then, if necessary, calling a slower, more numerically robust, implementation.[18]
+The IEEE 754 standard uses the term "trapping" to refer to the calling of a user-supplied exception-handling routine on exceptional conditions, and is an optional feature of the standard. The standard recommends several usage scenarios for this, including the implementation of non-default pre-substitution of a value followed by resumption, to concisely handle removable singularities.[18][19][20]
+The default IEEE 754 exception handling behaviour of resumption following pre-substitution of a default value avoids the risks inherent in changing flow of program control on numerical exceptions. For example, the 1996 Cluster spacecraft launch ended in a catastrophic explosion due in part to the Ada exception handling policy of aborting computation on arithmetic error. William Kahan claims the default IEEE 754 exception handling behavior would have prevented this.[19]
+
+In programming languages[edit]
+This section is an excerpt from Exception handling (programming).[edit]
+In computer programming, several language mechanisms exist for exception handling. The term exception is typically used to denote a data structure storing information about an exceptional condition. One mechanism to transfer control, or raise an exception, is known as a throw; the exception is said to be thrown. Execution is transferred to a catch.
+In user interfaces[edit]
+Front-end web development frameworks, such as React and Vue, have introduced error handling mechanisms where errors propagate up the user interface (UI) component hierarchy, in a way that is analogous to how errors propagate up the call stack in executing code.[21][22] Here the error boundary mechanism serves as an analogue to the typical try-catch mechanism. Thus a component can ensure that errors from its child components are caught and handled, and not propagated up to parent components.
+
+For example, in Vue, a component would catch errors by implementing errorCapturedVue.component('parent', {
+    template: '<div><slot></slot></div>',
+    errorCaptured: (err, vm, info) => alert('An error occurred');
+})
+Vue.component('child', {
+    template: '<div>{{ cause_error() }}</div>'
+})
+When used like this in markup:<parent>
+    <child></child>
+</parent>
+The error produced by the child component is caught and handled by the parent component.[23]
+See also[edit]
+Triple fault
+Data validation
+References[edit]
+
+
+^ a b Cristian, Flaviu (1980). "Exception Handling and Software Fault Tolerance". Proc. 10th Int. Symp. On Fault Tolerant Computing (FTCS-25 reprint ed.) (6): 531–540. CiteSeerX 10.1.1.116.8736. doi:10.1109/TC.1982.1676035. OCLC 1029229019. S2CID 18345469.
+
+^ Goodenough 1975b, pp. 683–684.
+
+^ Goodenough 1975b, p. 684.
+
+^ Black 1982, pp. 13–15.
+
+^ Keeton, Cavaness & Friesen 2001: ArrayIndexOutOfBoundsException
+
+^ Keeton, Cavaness & Friesen 2001: FileNotFoundException
+
+^ "Unusual error message : java.io.SyncFailedException: sync failed". groups.google.com. Retrieved 17 November 2023.
+
+^ "Understand the OutOfMemoryError Exception". docs.oracle.com. Retrieved 17 November 2023.
+
+^ Java: FileNotFoundException
+
+^ Kiniry, J. R. (2006). "Exceptions in Java and Eiffel: Two Extremes in Exception Design and Application". Advanced Topics in Exception Handling Techniques (PDF). Lecture Notes in Computer Science. Vol. 4119. pp. 288–300. doi:10.1007/11818502_16. ISBN 978-3-540-37443-5. S2CID 33283674.
+
+^ a b Lang, Jun; Stewart, David B. (March 1998). "A study of the applicability of existing exception-handling techniques to component-based real-time software technology". ACM Transactions on Programming Languages and Systems. 20 (2): 276. CiteSeerX 10.1.1.33.3400. doi:10.1145/276393.276395. S2CID 18875882. Perhaps the most common form of exception-handling method used by software programmers is the "return-code" technique that was popularized as part of C and UNIX.
+
+^ Levin 1977, p. 5.
+
+^ a b Liskov, B.H.; Snyder, A. (November 1979). "Exception Handling in CLU" (PDF). IEEE Transactions on Software Engineering. SE-5 (6): 546–558. doi:10.1109/TSE.1979.230191. S2CID 15506879. Retrieved 19 December 2021.
+
+^ "Thesaurus results for EXCEPTION". www.merriam-webster.com. Retrieved 17 November 2023.
+
+^ Levin 1977, p. 4.
+
+^ Smotherman, Mark. "Interrupts". Retrieved 4 January 2022.
+
+^ Hyde, Randall. "Art of Assembly: Chapter Seventeen". www.plantation-productions.com. Retrieved 22 December 2021.
+
+^ a b Xiaoye Li; James Demmel (1994). "Faster Numerical Algorithms via Exception Handling, IEEE Transactions on Computers, 43(8)": 983–992. {{cite journal}}: Cite journal requires |journal= (help)
+
+^ a b W.Kahan (July 5, 2005). "A Demonstration of Presubstitution for ∞/∞" (PDF). Archived (PDF) from the original on March 10, 2012.
+
+^ Hauser, John R. (March 1996). "Handling floating-point exceptions in numeric programs". ACM Transactions on Programming Languages and Systems. 18 (2): 139–174. doi:10.1145/227699.227701. S2CID 9820157.
+
+^ "Error Boundaries". React. Retrieved 2018-12-10.
+
+^ "Vue.js API". Vue.js. Retrieved 2018-12-10.
+
+^ "Error handling with Vue.js". CatchJS. Retrieved 2018-12-10.
+
+
+
+Black, Andrew P. (January 1982). Exception handling: The case against (PDF) (PhD). University of Oxford. CiteSeerX 10.1.1.94.5554. OCLC 123311492.
+Gabriel, Richard P.; Steele, Guy L. (2008). A Pattern of Language Evolution (PDF). LISP50: Celebrating the 50th Anniversary of Lisp. pp. 1–10. doi:10.1145/1529966.1529967. ISBN 978-1-60558-383-9.
+Goodenough, John B. (1975a). Structured exception handling. Proceedings of the 2nd ACM SIGACT-SIGPLAN symposium on Principles of programming languages - POPL '75. pp. 204–224. doi:10.1145/512976.512997.
+Goodenough, John B. (1975). "Exception handling: Issues and a proposed notation" (PDF). Communications of the ACM. 18 (12): 683–696. CiteSeerX 10.1.1.122.7791. doi:10.1145/361227.361230. S2CID 12935051.
+Levin, Roy (June 1977). Program Structures for Exceptional Condition Handling (PDF) (PhD). Carnegie-Mellon University. DTIC ADA043449. Archived (PDF) from the original on December 22, 2021.
+Stroustrup, Bjarne (1994). The design and evolution of C++ (1st ed.). Reading, Mass.: Addison-Wesley. ISBN 0-201-54330-3.
+White, Jon L (May 1979). NIL - A Perspective (PDF). Proceedings of the 1979 Macsyma User's Conference.
+Keeton, Brian; Cavaness, Chuck; Friesen, Geoff (2001). Special Edition Using Java 2 Standard Edition. Que Publishing. ISBN 978-0-7897-2468-7.
+
+External links[edit]
+A Crash Course on the Depths of Win32 Structured Exception Handling by Matt Pietrek - Microsoft Systems Journal (1997)
+Article "C++ Exception Handling" by Christophe de Dinechin
+Article "Exceptional practices" by Brian Goetz
+Article "Object Oriented Exception Handling in Perl" by Arun Udaya Shankar
+Article "Programming with Exceptions in C++" by Kyle Loudon
+Article "Unchecked Exceptions - The Controversy"
+Conference slides Floating-Point Exception-Handling policies (pdf p. 46)  by William Kahan
+Descriptions from Portland Pattern Repository
+Does Java Need Checked Exceptions?
+vteData typesUninterpreted
+Bit
+Byte
+Trit
+Tryte
+Word
+Bit array
+Numeric
+Arbitrary-precision or bignum
+Complex
+Decimal
+Fixed point
+Floating point
+Reduced precision
+Minifloat
+Half precision
+bfloat16
+Single precision
+Double precision
+Quadruple precision
+Octuple precision
+Extended precision
+Long double
+Integer
+signedness
+Interval
+Rational
+Pointer
+Address
+physical
+virtual
+Reference
+Text
+Character
+String
+null-terminated
+Composite
+Algebraic data type
+generalized
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+Intersection
+List
+Object
+metaobject
+Option type
+Product
+Record or Struct
+Refinement
+Set
+Union
+tagged
+Other
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Strongly typed identifier
+Top type
+Type class
+Empty type
+Unit type
+Void
+Relatedtopics
+Abstract data type
+Boxing
+Data structure
+Generic
+Kind
+metaclass
+Parametric polymorphism
+Primitive data type
+Interface
+Subtyping
+Type constructor
+Type conversion
+Type system
+Type theory
+Variable
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Exception_handling&oldid=1187744531"
+Categories: Control flowSoftware anomaliesHidden categories: Articles with example Java codeCS1 errors: missing periodicalArticles with short descriptionShort description is different from WikidataArticles with excerpts
+
+
+
+
+
+
+ This page was last edited on 1 December 2023, at 04:12 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

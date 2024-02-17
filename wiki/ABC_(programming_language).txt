@@ -1,0 +1,472 @@
+
+
+
+
+ABC (programming language) - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Features
+
+
+
+
+
+
+
+2Example
+
+
+
+
+
+
+
+3References
+
+
+
+
+
+
+
+4External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+ABC (programming language)
+
+
+
+32 languages
+
+
+
+
+العربيةAzərbaycancaবাংলাБългарскиČeštinaDeutschEspañolفارسیFrançaisGalego한국어ՀայերենItalianoעבריתMagyarമലയാളംBahasa MelayuNederlands日本語Oʻzbekcha / ўзбекчаਪੰਜਾਬੀPolskiPortuguêsRomânăРусскийSlovenčinaСрпски / srpskiSvenskaTürkçeУкраїнська粵語中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Programming language
+ABCParadigmsmulti-paradigm: imperative, procedural, structuredDesigned byLeo Geurts, Lambert Meertens, Steven PembertonDeveloperCentrum Wiskunde & Informatica (CWI)First appearedJanuary 1987; 37 years ago (1987-01)Stable release1.05.02
+   / 1990; 34 years ago (1990)
+Typing disciplinestrong, polymorphicOSUnix-like, Windows, MacOS, and Atari TOSWebsitehomepages.cwi.nl/~steven/abc/Influenced bySETL, ALGOL 68[1]InfluencedPython
+ABC is an imperative general-purpose programming language and integrated development environment (IDE) developed at Centrum Wiskunde & Informatica (CWI), Netherlands by Leo Geurts, Lambert Meertens, and Steven Pemberton.[2] It is interactive, structured, high-level, and intended to be used instead of BASIC, Pascal, or AWK. It is intended for teaching or prototyping, but not as a systems-programming language.
+ABC had a major influence on the design of the language Python, developed by Guido van Rossum, who formerly worked for several years on the ABC system in the mid-1980s.[3][4]
+
+
+Features[edit]
+Its designers claim that ABC programs are typically around a quarter the size of the equivalent Pascal or C programs, and more readable.[5] Key features include:
+
+Only five basic data types
+No required variable declarations
+Explicit support for top-down programming
+Statement nesting is indicated by indentation, via the off-side rule
+Infinite precision arithmetic, unlimited-sized lists and strings, and other features supporting orthogonality and ease of use by novices
+ABC was originally a monolithic implementation, leading to an inability to adapt to new requirements, such as creating a graphical user interface (GUI). ABC could not directly access the underlying file system and operating system.
+The full ABC system includes a programming environment with a structure editor (syntax-directed editor), suggestions, static variables (persistent), and multiple workspaces, and is available as an interpreter–compiler. As of 2020[update], the latest version is 1.05.02, and it is ported to Unix, DOS, Atari, and Apple MacOS.
+
+Example[edit]
+An example function to collect the set of all words in a document:
+
+HOW TO RETURN words document:
+   PUT {} IN collection
+   FOR line IN document:
+      FOR word IN split line:
+         IF word not.in collection:
+            INSERT word IN collection
+   RETURN collection
+
+References[edit]
+
+
+^ Biancuzzi, Federico; Warden, Shane (April 2009). Masterminds of Programming: Conversations with the Creators of Major Programming Languages. O'Reilly Media. p. 32. ISBN 978-0-596-51517-1. Retrieved December 14, 2009. He [Lambert Meertens] was clearly influenced by ALGOL 68's philosophy of providing constructs that can be combined in many different ways to produce all sorts of different data structures or ways of structuring a program. – Guido van Rossum
+
+^ Pemberton, Steven (January 1987). "An Alternative Simple Language and Environment for PCs". IEEE Software. 4 (1): 56–64. doi:10.1109/MS.1987.229797. S2CID 12788361.
+
+^ Hamilton, Naomi (2008-05-08). "The A-Z of Programming Languages: Python". Computerworld. IDG Communications. Archived from the original on 2008-12-29. Retrieved 2020-09-04. ... I figured I could design and implement a language 'almost, but not quite, entirely unlike' ABC, improving upon ABC's deficiencies, ...
+
+^ Stewart, Bruce (2002-06-04). "An Interview with Guido van Rossum". ONLamp.com. O’Reilly Media. Archived from the original on 2013-03-13. Retrieved 2020-09-04. ... in my head I had analyzed some of the reasons it had failed.
+
+^ Pemberton, Steven (2012-02-22). "The ABC Programming Language: a short introduction". Centrum Wiskunde & Informatica (CWI). Amsterdam. Retrieved 2020-09-04.
+
+
+External links[edit]
+ABC Programmer's Handbook
+Authority control databases: National 
+Israel
+United States
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=ABC_(programming_language)&oldid=1184746985"
+Categories: Computer science in the NetherlandsDutch inventionsEducational programming languagesInformation technology in the NetherlandsPersistent programming languagesProcedural programming languagesProgramming languages created in the 1980sHidden categories: Articles with short descriptionShort description matches WikidataArticles containing potentially dated statements from 2020All articles containing potentially dated statementsArticles with J9U identifiersArticles with LCCN identifiers
+
+
+
+
+
+
+ This page was last edited on 12 November 2023, at 10:35 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

@@ -1,0 +1,1047 @@
+
+
+
+
+MicroPython - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1History
+
+
+
+
+
+
+
+2Features
+
+
+
+Toggle Features subsection
+
+
+
+
+
+2.1Ability to run Python
+
+
+
+
+
+
+
+2.2Code portability
+
+
+
+
+
+
+
+2.3Modules
+
+
+
+
+
+
+
+2.4Read–eval–print loop
+
+
+
+
+
+
+
+2.5Limitations
+
+
+
+
+
+
+
+
+
+3Syntax and semantics
+
+
+
+Toggle Syntax and semantics subsection
+
+
+
+
+
+3.1Code blocks
+
+
+
+
+
+
+
+3.2Operations
+
+
+
+
+
+
+
+3.3Libraries
+
+
+
+
+
+
+
+3.4Custom MicroPython libraries
+
+
+
+
+
+
+
+
+
+4Supporting hardware
+
+
+
+Toggle Supporting hardware subsection
+
+
+
+
+
+4.1Executing code
+
+
+
+
+
+
+
+4.2Pyboard
+
+
+
+
+
+4.2.1The booting process
+
+
+
+
+
+
+
+4.2.2Boot modes
+
+
+
+
+
+
+
+4.2.3Errors
+
+
+
+
+
+
+
+
+
+
+
+5Programming examples[20]
+
+
+
+
+
+
+
+6Bytecode
+
+
+
+
+
+
+
+7Implementation and uses
+
+
+
+
+
+
+
+8References
+
+
+
+
+
+
+
+9External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+MicroPython
+
+
+
+15 languages
+
+
+
+
+العربيةDeutschEspañolفارسیFrançais한국어ItalianoLatviešuമലയാളംNederlands日本語Norsk bokmålРусскийУкраїнська中文
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+		In other projects
+	
+
+
+Wikimedia Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Microcontroller software based on Python
+
+
+MicroPythonDeveloper(s)Damien P. GeorgeInitial release3 May 2014; 9 years ago (2014-05-03)Stable release1.22.1[1] 
+   / 5 January 2024; 38 days ago (5 January 2024)
+Repositorygithub.com/micropython/micropython 
+Written inCPlatformARM Cortex-M, STM32, ESP8266, ESP32, 16-bit PIC, Unix, Microsoft Windows, Zephyr, JavaScript, RP2040LicenseMIT license[2]Websitemicropython.org
+MicroPython is a software implementation of a programming language largely compatible with Python 3, written in C, that is optimized to run on a microcontroller.[3][4]
+MicroPython consists of a Python compiler to bytecode and a runtime interpreter of that bytecode. The user is presented with an interactive prompt (the REPL) to execute supported commands immediately. Included are a selection of core Python libraries; MicroPython includes modules which give the programmer access to low-level hardware.[5]
+MicroPython does have an inline assembler, which lets the code run at full speed, but it is not portable across different microcontrollers.
+The source code for the project is available on GitHub under the MIT License.[6]
+
+
+History[edit]
+A Casio FX-9860GIII calculator which was introduced in 2020, and came with built-in MicroPython
+MicroPython was originally created by the Australian programmer Damien George, after a successful Kickstarter-backed campaign in 2013.[7] While the original Kickstarter campaign released MicroPython with an STM32F4-powered development board "pyboard", MicroPython supports a number of ARM based architectures.[8] The ports supported in the mainline are ARM Cortex-M (many STM32[9] boards, RP2040 boards, TI CC3200/WiPy, Teensy boards, Nordic nRF series, SAMD21 and SAMD51), ESP8266, ESP32,[10] 16-bit PIC, Unix, Windows, Zephyr, and JavaScript.[11] Also, there are many forks for a variety of systems and hardware platforms not supported in the mainline.[12]
+In 2016, a version of MicroPython for the BBC Micro Bit was created as part of the Python Software Foundation's contribution to the Micro Bit partnership with the BBC.[13]
+In July 2017, MicroPython was forked to create CircuitPython, a version of MicroPython with emphasis on education and ease of use. MicroPython and CircuitPython support somewhat different sets of hardware (e.g. CircuitPython supports Atmel SAM D21 and D51 boards, but dropped support for ESP8266). As of version 4.0, CircuitPython is based on MicroPython version 1.9.4.[14]
+In 2017, Microsemi made a MicroPython port for RISC-V (RV32 and RV64) architecture.[15]
+In April 2019, a version of MicroPython for the Lego Mindstorms EV3 was created.[16]
+In January 2021, a MicroPython port for the RP2040 (ARM Cortex-M0+, on Raspberry Pi Pico and others) was created.[17]
+
+Features[edit]
+Ability to run Python[edit]
+MicroPython has the ability to run Python, allowing users to create simple and easy-to-understand programs.[18]  MicroPython supports many standard Python libraries, supporting more than 80% of the features of Python's most used libraries.[18] MicroPython was designed specifically to support the typical performance gap between microcontrollers and Python.[19] Python code is able to directly access and interact with hardware, with increased hardware possibilities that are not available using a normal Python application that is run on an operating system.[20]
+
+Code portability[edit]
+MicroPython's utilisation of hardware abstraction layer (HAL) technology allows developed code to be portable among different microcontrollers within the same family or platform and on devices that support and can download MicroPython. Programs are often developed and tested on high-performance microcontrollers and distributed with the final application used on lower-performance microcontrollers.[21]
+
+Modules[edit]
+MicroPython offers functionality, once new code has been written, to create a frozen module and use it as a library which can be a part of developed firmware. This feature assists with avoiding repetitive downloading of the same, already error-free, tested code into a MicroPython environment. This type of module will be saved to a microcontroller's modules directory for compiling and uploading to the microcontroller where the library will be available using Python's import command to be used repeatedly.[21]
+
+Read–eval–print loop[edit]
+The read–eval–print loop (REPL) allows a developer to enter individual lines of code and have them run immediately on a terminal.[22] Linux-based and macOS systems have terminal emulators that can be used to create a direct connection to a MicroPython device's REPL using a serial USB connection. The REPL assists with the immediate testing of parts of an application as you can run each part of the code and visually see the results. Once different parts of your code is loaded into the REPL you can use additional REPL features to experiment with your code's functionality.[18]
+Helpful REPL commands (once connected to a serial console):[22]
+
+CTRL + C: keyboard interrupt
+CTRL + D: reload
+help(): help message
+help("modules"): lists built-in modules
+import board [ENTER] dir(board): lists all the pins on your microcontroller board that are available to be used in a program's code
+Limitations[edit]
+Although MicroPython fully implements Python language version 3.4 and much of 3.5, it does not implement all language features introduced from 3.5 onwards,[23] though some new syntax from 3.6 and more recent features from later versions, e.g. from 3.8 (assignment expressions) and 3.9. It includes a subset of the standard library.[24]
+MicroPython has more limited hardware support in the microcontroller market than other popular platforms, like Arduino with a smaller number of microcontroller choices that support the language.[19] MicroPython does not include an integrated development environment (IDE) or specific editor unlike other platforms.[19]
+
+Syntax and semantics[edit]
+MicroPython's syntax is adopted from Python, due to its clear and easy-to-understand style and power.[25] Unlike most other programming languages less punctuation is used with fewer syntactical machinations in order to prioritise readability.[18]
+
+Code blocks[edit]
+MicroPython adopts Python's code block style, with code specific to a particular function, condition or loop being indented.[18] This differs from most other languages which typically use symbols or keywords to delimit blocks.[18]  This assists with the readability of MicroPython code as the visual structure mirrors the semantic structure. This key feature is simple but important as misused indentation can result in code executing under a wrong condition or an overall error from the interpreter.[18]
+A colon (:) is the key symbol used to indicate the ending of a condition statement.[18] The indent size is equivalent to one tab or 4 spaces.
+
+Operations[edit]
+MicroPython has the ability to perform various mathematical operations using primitive and logical operations.[20]
+
+
+Supported operations[20]
+
+
+Type
+Operator
+Name
+Example
+
+
+Arithmetic
++
+Addition
+variable + 1
+
+
+
+-
+Subtraction
+variable - 1
+
+
+
+*
+Multiplication
+variable * 4
+
+
+
+/
+Division
+variable / 4
+
+
+
+%
+Modulo division
+variable % 4
+
+
+Comparison
+==
+Equals
+expression1 == expression2
+
+
+
+!=
+Not equal
+expression1 != expression2
+
+
+
+<
+Less than
+expression1 < expression2
+
+
+
+>
+Greater than
+expression1 > expression2
+
+
+
+<=
+Less than or equals
+expression1 <= expression2
+
+
+
+>=
+Greater than or equals
+expression1 >= expression2
+
+
+Logical
+&
+bitwise and
+variable1 & variable2
+
+
+
+|
+bitwise or
+variable1 | variable2
+
+
+
+^
+bitwise exclusive or
+variable1 ^ variable2
+
+
+
+~
+bitwise complement
+~variable1
+
+
+
+and
+logical and
+variable1 and variable2
+
+
+
+or
+logical or
+variable1 or variable2
+
+Libraries[edit]
+MicroPython is a lean and efficient implementation of Python with libraries similar to those in Python.[26] Some standard Python libraries have an equivalent library in MicroPython renamed to distinguish between the two. MicroPython libraries are smaller with less popular features removed or modified to save memory.[20]
+The three types of libraries in MicroPython:[20]
+
+derived from a standard Python library (built-in libraries)
+specific MicroPython libraries
+specific libraries to assist with hardware functionality
+MicroPython is highly customisable and configurable, with language differing between each board (microcontroller) and the availability of libraries may differ. Some functions and classes in a module or the entire module may be unavailable or altered.[20]
+
+
+Standard Python libraries in MicroPython[5]
+
+
+Library name
+Description
+
+
+array
+operations on arrays
+
+
+cmath
+provides math functions for complex numbers
+
+
+gc
+garbage collector
+
+
+math
+provides basic math operations for floating-point numbers
+
+
+sys
+system-level functions; provides access to variables used by the interpreter
+
+
+binascii
+functions for converting between binary and ASCII
+
+
+collections
+operations for collections and container types that hold various objects
+
+
+errno
+provides access to error codes
+
+
+hashlib
+operations for binary hash algorithms
+
+
+heapq
+operations to implement heap queue algorithm
+
+
+io
+operations for handling input/output streams
+
+
+json
+handles conversion between JSON documents and Python objects
+
+
+os
+functions for filesystem access and basic operating system functions
+
+
+re
+implements regular expression matching operations
+
+
+select
+functions for handling events on multiple streams
+
+
+socket
+connecting to sockets (networks), providing access to socket interface
+
+
+struct
+performs conversions to Python objects by packing and unpacking primitive data types
+
+
+time
+provides time and date function, including measuring time intervals and implementing delays
+
+
+zlib
+operations to decompress binary data
+
+
+MicroPython-specific libraries[5]
+
+
+Library name
+Description
+
+
+framebuf
+provides a frame buffer that can be used to create bitmap images to be sent to a display
+
+
+machine
+functions assisting with accessing and interacting with hardware blocks
+
+
+micropython
+access and control of MicroPython internals
+
+
+network
+assists with installing network driver, allowing interactions through networks
+
+
+ctypes
+access binary data structures
+
+Custom MicroPython libraries[edit]
+When developers begin to create a new application, standard MicroPython libraries and drivers may not meet the requirements, with insufficient operations or calculations. Similar to Python, there is the possibility of extending MicroPython's functionality with custom libraries which extend the ability of the existing libraries and firmware.[21]
+In MicroPython, files ending with .py take preference over other library aliases which allows users to extend the use and implementation of the existing libraries.[20]
+
+Supporting hardware[edit]
+As MicroPython's implementation and popularity continues to grow, more boards have the ability to run MicroPython. Many developers are building processor specific versions that can be downloaded onto different microcontrollers.[20] Installing MicroPython on microcontrollers is well documented and user-friendly.[21] MicroPython allows interactions between microcontroller hardware and applications to be simple, allowing access to a range of functionality while working in a resource constrained environment, with a strong level of responsiveness.[18]
+The two types of boards used to run MicroPython:[20]
+
+MicroPython loaded when manufactured, meaning only MicroPython can be run.
+boards that have firmware that allows MicroPython to be installed to the board.
+Executing code[edit]
+To move a program onto a MicroPython board, create a file and copy it onto the microcontroller in order to execute. With the hardware connected to a device, such as a computer, the board's flash drive will appear on the device allowing files to be moved to the flash drive. There will be two existing python files, boot.py and main.py that are typically not modified, main.py may be modified if you wish to run the program every time the microcontroller is booted, otherwise, programs will be run using the REPL console.[20]
+
+Pyboard[edit]
+The pyboard is the official MicroPython microcontroller board which fully supports MicroPython's software features. The pyboard's hardware features include:[5]
+
+microcontroller (MCU, CPU, flash ROM and RAM)
+microUSB connector
+micro-SD card slot
+IO pins
+switches, LEDs, servo ports, real time clock, accelerometer
+The booting process[edit]
+The pyboard contains an internal drive (filesystem) named /flash which is stored within the board's flash memory, additionally, a microSD card can be inserted into a slot and is accessible through /sd. When booted up, a pyboard must select a filesystem to boot from either /flash or /sd with the current directory being set to either /flash or /sd. By default, if an SD card is inserted, /sd will be used, if not, /flash is used. If needed, the use of the SD card for the booting process can be avoided by creating an empty file called /flash/SKIPSD which will remain on the board and exist when the pyboard is booted up and will skip the SD card for the booting process.[5]
+
+Boot modes[edit]
+When the pyboard is powered up normally or the reset button is pressed then the pyboard is booted in a standard mode, meaning that the boot.py file is executed, then the USB configured and finally the python program will run.[5]
+There is an ability to override the standard boot sequence through holding down the user switch whilst the board is in the booting process and then pressing reset as you continue to hold the user switch. The pyboard's LEDs will flick between modes and once the LEDs have reached the mode wanted by the user, they can let go of the user switch and the board will boot in the specific mode.[5]
+the boot modes are:[5]
+
+standard boot: green LED only (runs boot.py then python program)
+safe boot: orange LED only (does not run any scripts during boot-up)
+filesystem reset: green and orange LED together (resets flash drive to factory state and boots in safe mode)
+used as a fix when filesystem is corrupted
+Errors[edit]
+if red and green LEDs flash alternatively then the python script has an error, and you must use the REPL to debug.
+if all 4 LEDs cycle on and off then there is a hard fault which cannot be recovered from and requires a hard reset.[5]
+Programming examples[20][edit]
+Hello world program:
+
+# print to serial console
+
+print('Hello, World!')
+
+Importing + turning on a LED:
+
+import pyb
+
+# turn LED on
+
+pyb.LED(1).on()
+
+Reading a file + loop:
+
+import os
+
+# open and read a file
+
+with open('/readme.txt') as f:
+	print(f.read())
+
+Bytecode[edit]
+MicroPython includes a cross compiler which generates MicroPython bytecode (file extension .mpy). The Python code can be compiled into the bytecode either directly on a microcontroller or it can be precompiled elsewhere.
+MicroPython firmware can be built without the compiler, leaving only the virtual machine which can run the precompiled mpy programs.
+
+Implementation and uses[edit]
+MicroPython is utilised through firmware being loaded by standard software onto a particular microcontroller into flash memory, communicating using a terminal application loaded onto a computer that emulates a serial interface.[21]
+The main uses of MicroPython can be generalised into 3 categories:[21]
+
+educational purposes: using MicroPython's read–eval–print Loop (REPL) to interact with a microcontroller, it is possible to visually explain the concepts of data processing and communicating with boards in a simpler way than more complicated programming languages.
+developing and testing device and sensor designs: MicroPython offers verified, bug-free, and thoroughly tested reference implementations of interfaces used in microcontrollers solving a common developer's task of implementing peripheral communication setup and control. MicroPython offers direct and interactive accessibility to device registers which makes it easy to verify functionality and develop and test hardware parts and devices and algorithms for control and acquiring data from a device.
+monitoring and configuring tool for design of complex applications: certain applications require specific applications on high performing microcontrollers. MicroPython is able to assist with state monitoring and set-up of system parameters.
+Implementation of MicroPython can differ depending on the availability of standard and supporting libraries and the microcontroller's flash memory and RAM size.[21]
+
+References[edit]
+
+
+^ "Release 1.22.1". 5 January 2024. Retrieved 19 January 2024.
+
+^ George, Damien P. (4 May 2014). "micropython/LICENSE at master · micropython/micropython". GitHub. Retrieved 11 February 2017.
+
+^ Venkataramanan, Madhumita (6 December 2013). "Micro Python: more powerful than Arduino, simpler than the Raspberry Pi". Wired. Retrieved 15 December 2016.
+
+^ Yegulalp, Serdar (5 July 2014). "Micro Python's tiny circuits: Python variant targets microcontrollers". InfoWorld. Retrieved 15 December 2016.
+
+^ a b c d e f g h i "MicroPython - Python for microcontrollers". micropython.org. Retrieved 12 August 2017.
+
+^ "MicroPython on GitHub". GitHub. 7 February 2022.
+
+^ "Micro Python: Python for microcontrollers". Kickstarter. Retrieved 15 December 2016.
+
+^ Beningo, Jacob (11 July 2016). "Prototype to production: MicroPython under the hood". EDN Network. Retrieved 15 December 2016.
+
+^ "MicroPython on Nucleo STM32, STM32F411CE, and STM32F401CC: flashing firmware and basic tools". Mischianti. August 2023.
+
+^ "MicroPython with esp8266 and esp32: flashing firmware and programming with basic tools". Mischianti. 7 June 2023.
+
+^ George, Damien P. "micropython/ports at master · micropython/micropython". GitHub. Retrieved 22 October 2019.
+
+^ Sokolovsky, Paul. "Awesome MicroPython". GitHub. Retrieved 22 October 2019.
+
+^ Williams, Alun (7 July 2015). "Hands on with the BBC Micro-Bit user interface". ElectronicsWeekly.com. Retrieved 8 July 2015.
+
+^ Shawcroft, Scott (22 May 2019). "CircuitPython 4.0.1 released!". Adafruit Blog. Adafruit Industries. Retrieved 11 June 2019.
+
+^ "RISC-V Poster Preview — 7th RISC-V Workshop" (PDF). 28 November 2017. Retrieved 17 December 2018.
+
+^ "LEGO releases MicroPython for EV3 based on ev3dev and Pybricks". www.ev3dev.org. Retrieved 21 April 2020.
+
+^ "Meet Raspberry Silicon: Raspberry Pi Pico now on sale at $4". www.raspberrypi.org. 21 January 2021. Retrieved 21 January 2021.
+
+^ a b c d e f g h i Alsabbagh, Marwan (2019). MicroPython Cookbook. Birmingham, UK: Packt Publishing.
+
+^ a b c Bruno, P. (25 November 2021). "An Introduction to MicroPython". All3DP. Retrieved 9 May 2022.
+
+^ a b c d e f g h i j k Bell, Charles (2017). MicroPython for the Internet of Things. Berkeley, USA: Apress.
+
+^ a b c d e f g Gaspar, G.; Kuba, P.; Flochova, J.; Dudak, J.; Florkova, Z. (2020). Development of IoT applications based on the MicroPython platform for Industry 4.0 implementation. 2020 19th International Conference on Mechatronics – Mechatronika (ME). pp. 1–7.
+
+^ a b Rembor, K. "The REPL". Welcome to CircuitPython!. Adafruit Learning System. Retrieved 9 May 2022.
+
+^ "MicroPython differences from CPython — MicroPython latest documentation". docs.micropython.org.
+
+^ "MicroPython - Python for microcontrollers". micropython.org.
+
+^ Wang, L.; Li, Y.; Zhang, H.; Han, Q.; Chen, L. (2021). An Efficient Control-flow based Obfuscator for Micropython Bytecode. 2021 7th International Symposium on System and Software Reliability (ISSSR). pp. 54–63.
+
+^ Khamphroo, M.; Kwankeo, N.; Kaemarungsi, K.; Fukawa, K. (2017). MicroPython-based educational mobile robot for computer coding learning. 2017 8th International Conference of Information and Communication Technology for Embedded Systems (IC-ICTES). pp. 1–6.
+
+
+External links[edit]
+Official website
+micropython on GitHub
+GOTO 2016 • MicroPython & the Internet of Things • Damien George on YouTube
+MicroPython playlist on YouTube • Tutorials by Tony DiCola / Adafruit
+vtePythonImplementations
+CircuitPython
+CLPython
+CPython
+Cython
+MicroPython
+Numba
+IronPython
+Jython
+Psyco
+PyPy
+Python for S60
+Shed Skin
+Stackless Python
+Unladen Swallow
+more...
+IDE
+Boa
+Eric Python IDE
+IDLE
+PyCharm
+PyDev
+Ninja-IDE
+more...
+Topics
+WSGI
+ASGI
+
+software (list)
+Python Software Foundation
+PyCon
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=MicroPython&oldid=1190910633"
+Categories: BBC computer literacy projectsFree software programmed in CMicrocontroller softwarePython (programming language)Software using the MIT licenseHidden categories: Articles with short descriptionShort description matches WikidataUse dmy dates from April 2022
+
+
+
+
+
+
+ This page was last edited on 20 December 2023, at 15:39 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+

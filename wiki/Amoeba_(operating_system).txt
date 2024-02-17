@@ -1,0 +1,605 @@
+
+
+
+
+Amoeba (operating system) - Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jump to content
+
+
+
+
+
+
+
+Main menu
+
+
+
+
+
+Main menu
+move to sidebar
+hide
+
+
+
+		Navigation
+	
+
+
+Main pageContentsCurrent eventsRandom articleAbout WikipediaContact usDonate
+
+
+
+
+
+		Contribute
+	
+
+
+HelpLearn to editCommunity portalRecent changesUpload file
+
+
+
+
+
+Languages
+
+Language links are at the top of the page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create account
+
+Log in
+
+
+
+
+
+
+
+
+Personal tools
+
+
+
+
+
+ Create account Log in
+
+
+
+
+
+		Pages for logged out editors learn more
+
+
+
+ContributionsTalk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+move to sidebar
+hide
+
+
+
+
+(Top)
+
+
+
+
+
+1Overview
+
+
+
+
+
+
+
+2See also
+
+
+
+
+
+
+
+3References
+
+
+
+
+
+
+
+4External links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle the table of contents
+
+
+
+
+
+
+
+Amoeba (operating system)
+
+
+
+19 languages
+
+
+
+
+العربيةCatalàČeštinaDeutschEspañolفارسیFrançais한국어ItalianoമലയാളംNederlands日本語Norsk bokmålPolskiPortuguêsРусскийSlovenčinaTürkçeУкраїнська
+
+Edit links
+
+
+
+
+
+
+
+
+
+
+
+ArticleTalk
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReadEditView history
+
+
+
+
+
+
+
+Tools
+
+
+
+
+
+Tools
+move to sidebar
+hide
+
+
+
+		Actions
+	
+
+
+ReadEditView history
+
+
+
+
+
+		General
+	
+
+
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLDownload QR codeWikidata item
+
+
+
+
+
+		Print/export
+	
+
+
+Download as PDFPrintable version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Wikipedia, the free encyclopedia
+
+
+Distributed operating system
+AmoebaDeveloperAndrew S. TanenbaumFrans KaashoekOS familyUnix-likeLatest release5.3 / 30 July 1996; 27 years ago (1996-07-30)[1]Available inEnglishPlatformsi386/i486, MIPS, Motorola 68030, NS 32016, Sun 3/50 and 3/60, SPARC, VAXKernel typeMicrokernelLicenseMIT License[2]Official websitewww.cs.vu.nl/pub/amoeba/
+Amoeba is a distributed operating system developed by Andrew S. Tanenbaum and others at the Vrije Universiteit Amsterdam. The aim of the Amoeba project was to build a timesharing system that makes an entire network of computers appear to the user as a single machine.  Development at the Vrije Universiteit was stopped: the source code of the latest version (5.3) was last modified on 30 July 1996.[1]
+The Python programming language was originally developed for this platform.[4]
+
+
+Overview[edit]
+The goal of the Amoeba project was to construct an operating system for networks of computers that would present the network to the user as if it were a single machine. An Amoeba network consists of a number of workstations connected to a "pool" of processors, and executing a program from a terminal causes it to run on any of the available processors, with the operating system providing load balancing.[3] Unlike the contemporary Sprite, Amoeba does not support process migration.[5]
+The workstations would typically function as networked terminals only. Aside from workstations and processors, additional machines operate as servers for files, directory services, TCP/IP communications etc.[3]
+Amoeba is a microkernel-based operating system. It offers multithreaded programs and a remote procedure call (RPC) mechanism for communication between threads, potentially across the network; even kernel-threads use this RPC mechanism for communication. Each thread is assigned a 48-bit number called its "port", which serves as its unique, network-wide "address" for communication.[3]
+The user interface and APIs of Amoeba were modeled after Unix and compliance with the POSIX standard was partially implemented; some of the Unix emulation code consists of utilities ported over from Tanenbaum's other operating system, MINIX. Early versions used a "homebrew" window system, which the Amoeba authors considered "faster ... in our view, cleaner ... smaller and much easier to understand", but version 4.0 uses the X Window System (and allows X terminals as terminals).[3]
+The system uses FLIP as a network protocol.
+
+See also[edit]
+Distributed computing
+Multikernel
+Plan 9 from Bell Labs
+References[edit]
+
+
+^ a b "Amoeba FTP". cs.vu.nl.[permanent dead link]
+
+^ "Licence". cs.vu.nl. Retrieved 19 July 2023.
+
+^ a b c d e Andrew S. Tanenbaum, M. Frans Kaashoek, Robbert van Renesse and Henri E. Bal (1991). The Amoeba distributed operating system — a status report. Computer Communications 14.
+
+^ "Why was Python created in the first place?". Python FAQ. Archived from the original on 23 February 2008. Retrieved 2008-02-11.
+
+^ Fred Douglis, M. Frans Kaashoek, Andrew S. Tanenbaum and John Ousterhout (1991). A comparison of two distributed systems: Amoeba and Sprite. Computing Systems 4(4), pp. 353–384.
+
+
+External links[edit]
+Amoeba home page (static page, ftp links are dead)
+FSD-Amoeba page at Sourceforge (file downloads give 403 errors)
+ArchiveOS mirror of Amoeba 5.3
+vteDistributed operating systemsCurrent
+Barrelfish
+HarmonyOS
+OpenHarmony
+HarmonyOS NEXT
+Inferno
+Plan 9 from Bell Labs
+QNX
+Historic
+Amoeba
+Cambridge Distributed Computing System
+ChorusOS
+Domain/OS
+HeliOS
+LOCUS
+MOSIX
+Sprite
+V
+Projects
+Cairo
+
+ Category
+
+vteMicrokernels-nanokernelsKernelsL4 family
+Eumel → L3 → L4°
+OKL4°
+Macintosh hosted
+Mac OS nanokernel
+NuKernel
+Psion
+EKA1 → EKA2^°
+Amiga-type
+Exec
+ExecSG
+Quark
+WarpOS
+
+ADEOS°
+EROS^°
+K42°
+Little Kernel
+Mach°
+GNU Mach°
+MicroEmpix
+µ-velOSity^
+nucleus
+Off++ → Plan B
+Opus
+PowerUP
+RTLinux°
+TI-RTOS kernel^°
+VanguardOperatingsystemsPOSIX supportUnix-like
+ARX
+GNU Hurd°
+Lites
+MeikOS
+Minix°
+Minix-vmd°
+Minix 3°
+MkLinux°
+Multi-Environment Real-Time^ (MERT – Unix-RT)
+OS2000
+QNX^
+Redox°
+Spring
+Tinix
+UNICOS
+VSTa
+Partial
+ChorusOS^
+Integrity^
+Nucleus RTOS^
+NuttX^°
+OSE^
+RIOT^°
+Capability-based
+GNOSIS → KeyKOS → EROS → CapROS
+Hydra
+seL4^°
+Midori
+NLTSS
+HarmonyOS NEXT(OpenHarmony) → HarmonyOS
+L4 kernel
+L4Linux^°
+PikeOS^
+REX OS^
+Wombat^°
+Java virtual machine
+JavaOS (Chorus/Jazz^ integrates ChorusOS^)
+JX°
+Macintosh hostedUnix-like
+MachTen
+MacMach
+
+Copland
+Classic Mac OS (PowerPC kernel)Psion
+EPOC → Symbian OS^°
+Amiga-type
+AmigaOS
+AROS°
+AspireOS°
+Broadway°
+Icaros Desktop°
+MorphOS
+Microsoft
+Singularity
+ThreadX^
+Verve
+AIM alliance
+Pink → Taligent OS → Workplace OS
+
+Amoeba°
+BeRTOS^°
+ChibiOS/RT^°
+FreeRTOS^°
+HelenOS°
+µC/OS^°
+MQX^
+OpenComRTOS^
+Phantom OS^°
+RC 4000
+SharpOS°
+SPIN°
+Thoth^ → Harmony^ → V
+VRTX^
+Zephyr^°Frameworks, kits
+Cosmos°
+Genode°
+TI-RTOS^°
+Developers
+Gordon Bell
+Thomas Bushnell
+David Cheriton
+Dan Dodge
+Per Brinch Hansen
+Gernot Heiser
+Jochen Liedtke
+James G. Mitchell
+Ike Nassi
+Richard Rashid
+Andrew S. Tanenbaum
+Avie Tevanian
+William Wulf
+
+Italics = discontinued
+^ = Real-time
+° = Open-source software Category: Microkernel-based operating systems  Category: Microkernels
+
+
+
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Amoeba_(operating_system)&oldid=1198573190"
+Categories: Microkernel-based operating systemsDistributed computing architectureDistributed operating systemsComputer science in the NetherlandsInformation technology in the NetherlandsMicrokernelsHidden categories: All articles with dead external linksArticles with dead external links from July 2017Articles with permanently dead external linksArticles with short descriptionShort description is different from Wikidata
+
+
+
+
+
+
+ This page was last edited on 24 January 2024, at 13:14 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike License 4.0;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle limited content width
+
+
+
+
+
+
+
